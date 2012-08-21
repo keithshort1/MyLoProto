@@ -1,0 +1,84 @@
+@base <http://mylo.com/schema>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix myloFB: <http://facebook.mylo.com/>.
+@prefix mylo: <http://mylo.com/schema/>.
+
+mylo:Person a rdfs:Class .
+
+mylo:HasActivity a rdfs:Property;
+		rdfs:domain mylo:Person ;
+		rdfs:range mylo:Activity .
+
+
+mylo:Group a rdfs:Class .
+
+
+mylo:FacebookPerson a rdfs:Class;
+		rdfs:subClassOf mylo:Person .
+
+
+mylo:Household a rdfs:Class;
+		rdfs:subClassOf mylo:Group .
+
+
+mylo:Organization a rdfs:Class;
+		rdfs:subClassOf mylo:Group .
+
+
+mylo:Community a rdfs:Class;
+		rdfs:subClassOf mylo:Group .
+
+
+mylo:Activity a rdfs:Class .
+
+
+mylo:HasLocation a rdfs:Property;
+		rdfs:domain mylo:Activity;
+		rdfs:range mylo:Location .
+
+
+mylo:HasTimePeriod a rdfs:Property;
+		rdfs:domain mylo:Activity;
+		rdfs:range mylo:TimePeriod .
+
+
+mylo:FacebookPost a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+		
+
+mylo:FacebookCheckin a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:Event a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:FacebookPost a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:Trip a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:Location a rdfs:Class .
+
+
+mylo:TimePeriod a rdfs:Class .
+
+
+mylo:PointInTime a rdfs:Class;
+		rdfs:subClassOf mylo:TimePeriod .
+
+mylo:HasTimeValue a rdfs:Property;
+		rdfs:domain mylo:PointInTime;
+		rdfs:range rdfs:Literal .
+
+
+mylo:Interval a rdfs:Class;
+		rdfs:subClassOf mylo:TimePeriod .

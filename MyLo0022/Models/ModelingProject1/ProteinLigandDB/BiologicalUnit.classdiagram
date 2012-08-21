@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0de1b2f2-aa61-4841-86db-7e403aa5b1fb" name="UMLClassDiagram2" linkedPackageId="53502ed8-fc20-46fa-8bb6-439ced05e318" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="cf7b3ba6-6aab-4d5f-b723-d2e0c26e46a3">
+      <profileInstance Id="d3f2fa4d-c304-4619-b016-fa6876d2df5c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1bea0916-1e94-4206-acda-54a01909098a">
+      <profileInstance Id="0764f2c3-c669-4a7a-ae97-734faba92052" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="53c060cb-cdc6-44aa-b5c0-d634f308fe1b">
+      <profileInstance Id="286b13d9-bf26-42c8-93dc-0b3fcf9e708b" name="DBProfile">
+        <elementDefinition Id="2914e42c-411e-4ae8-a254-8dc0ddacde30" />
+      </profileInstance>
+      <elementDefinition Id="c75d42a1-a537-4429-bcc2-30d5eeb832fd" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="30f4282b-9118-4724-8da0-b34f60426c8d" name="BioPolymer" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="efe78d3a-757f-4880-b144-5df5dfbeee52" />
+        <targetEnds>
+          <association Id="243c89b7-0a39-4d05-b1b8-cbfeb8bbb521" isDerived="false" sourceEndRoleName="BioPolymer" targetEndRoleName="BiologicalUnit" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6960b481-3d48-4595-ae5e-090d55abb959" LastKnownName="BiologicalUnit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9a2a238-ddcd-43a6-a126-26848ed90547" name="BioPolymer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="f11e9ef5-47b2-41eb-9c25-dd8e8cb28e69" name="Lower" value="*">
+                      <elementDefinition Id="c0c07578-3e31-402e-85e4-6979e6f23c89" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="0897d4ee-1182-4bcb-aa27-c27b65d727c8" name="Upper" value="*">
+                      <elementDefinition Id="73c56c24-2510-4b0e-a23f-fb63ce58dcea" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="35cf1e92-ca71-4630-a164-49c9876098fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90211718-0414-4f73-9938-b80fc043f83e" name="BiologicalUnit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aad4d74c-256c-4c65-9219-351900f63a82" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f4f2b51f-10ad-4e6e-a5d8-458acd395ec5" name="Reference" profile="DBProfile">
+                <elementDefinition Id="05f2ec9b-17c3-4889-afd7-193bad958638" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0a01c446-bae3-428d-955a-e81397583413" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6960b481-3d48-4595-ae5e-090d55abb959" name="BiologicalUnit" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="e574a096-872a-46bf-8636-b49e3aa2eff2" name="Table" profile="DBProfile">
+            <elementDefinition Id="eeb73f8f-2310-4592-9837-911aa44b1062" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="735a3438-5428-4f53-8564-35c2f6893220" />
+        <ownedAttributesInternal>
+          <property Id="155944e2-458b-4425-b873-522f5e4cb2ea" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="2fda990d-a901-4b18-a086-338949bd6320" name="Column" profile="DBProfile">
+                <elementDefinition Id="738d77af-2d7e-4e52-afd0-f03f0438ce31" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a2d3d8dc-e1b4-44b7-8770-48495e899a44">
+                    <propertyInstance Id="01cc5335-ce35-48b7-b634-71313a60602c" name="PrimaryKey" value="true">
+                      <elementDefinition Id="23821f07-f44f-4d53-a830-b2479d9037d4" />
+                    </propertyInstance>
+                    <elementDefinition Id="b892e622-c4a1-4c9c-8abb-50ade88b374c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4d7cdb35-d415-4ce7-bc03-f554fc7c01a5">
+                    <propertyInstance Id="fdb77903-9f16-41e8-966d-322ec874cce0" name="DataType" value="bigint">
+                      <elementDefinition Id="eb17b8de-f988-4b64-9110-329dcefef2f4" />
+                    </propertyInstance>
+                    <elementDefinition Id="c7623527-81dd-4c4e-ada5-87583d5c874d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ce2c7ac0-97c9-4955-ba93-747737a56de4">
+                    <propertyInstance Id="772eafeb-74d0-477e-91fa-edbb6cf6a409" name="Length" value="24">
+                      <elementDefinition Id="ff38411c-9d04-4d50-88c7-4f655a04d53a" />
+                    </propertyInstance>
+                    <elementDefinition Id="581f6d6f-d5cf-4e61-ae08-6458a2d2dff5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="55806c37-71c4-4973-9c14-6bfc737730eb">
+                    <propertyInstance Id="f9c21b8a-192d-4c26-8bda-68d2e0b53486" name="AllowNulls" value="true">
+                      <elementDefinition Id="4c1dc38d-a883-4049-919c-8d5899663b52" />
+                    </propertyInstance>
+                    <elementDefinition Id="3cd351a4-6884-4411-a91a-691eaff66a34" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c15a4a90-fa05-4ec5-8868-93e0cdc023f7" />
+          </property>
+          <property Id="763df8ca-e22f-490b-aecb-5614f476f23e" name="Category" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="ede3f546-d0fb-4248-9a58-7daecde8a830" name="Column" profile="DBProfile">
+                <elementDefinition Id="c772e67a-e9a9-40ce-9cdf-0c37a6701fae" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f7733efa-3c30-4026-83b3-50547f9d6b37">
+                    <propertyInstance Id="40febe1a-9eb5-4253-9e43-3c217b7a6bed" name="PrimaryKey" value="false">
+                      <elementDefinition Id="fea20674-1f59-4b39-932f-b9dee8e7fdab" />
+                    </propertyInstance>
+                    <elementDefinition Id="3cdd0609-3a47-4f56-9b81-b6fd27de0961" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fb1cea80-0362-4451-bff9-dd29502f76de">
+                    <propertyInstance Id="62fcf18e-bb65-4633-8b36-f891bed4d7f3" name="DataType" value="varchar()">
+                      <elementDefinition Id="ae43c9dd-c868-4618-b011-29139f91e122" />
+                    </propertyInstance>
+                    <elementDefinition Id="8f9ecd12-0b83-4a60-9e0a-89b1aa945244" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1bb77790-cdc6-494e-9022-7913d399e91b">
+                    <propertyInstance Id="feac20cd-9b39-4303-a975-8d928923ffe9" name="Length" value="64">
+                      <elementDefinition Id="00410bcf-5850-4645-b9d1-c000ca52eddf" />
+                    </propertyInstance>
+                    <elementDefinition Id="98573bf4-4e3f-419a-8cc6-09dee1f3e8c8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6bc6f933-f0cb-437c-8191-cf2b63522acb">
+                    <propertyInstance Id="9996d1e4-b9bf-4508-906f-abbb1e0ade87" name="AllowNulls" value="true">
+                      <elementDefinition Id="ccc329fd-ff13-4c45-84f3-c32bd5a77eb0" />
+                    </propertyInstance>
+                    <elementDefinition Id="3b2826ef-4e39-4e62-ae57-4137a8d747ea" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="003210c0-5cc6-4126-8c74-c23af6b5dcb7" />
+          </property>
+          <property Id="cf30fdad-b1f9-461c-99b4-fc0f9a701dda" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="551a46ef-1885-4db7-a527-ea47ca6ee36a" name="Column" profile="DBProfile">
+                <elementDefinition Id="31b07e36-e559-46c4-90aa-10385aff092d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bbd181c3-0514-47af-bdef-2eaa527bc5be">
+                    <propertyInstance Id="37b4c290-341a-4afd-84f9-7671f8190bee" name="PrimaryKey" value="false">
+                      <elementDefinition Id="15a007a5-2680-49cb-a81b-540f8a1776b1" />
+                    </propertyInstance>
+                    <elementDefinition Id="61d24f2d-2099-4f76-aa77-5d819167b820" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ef76af40-635e-45e1-a7a1-36f25227b2e4">
+                    <propertyInstance Id="8e1e8960-b886-49f5-936c-ad3128340e4a" name="DataType" value="varchar()">
+                      <elementDefinition Id="8ccda335-e639-4e86-ae45-6111daaaa0c6" />
+                    </propertyInstance>
+                    <elementDefinition Id="790223cc-3f94-4f70-8a28-0352f7c44341" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8a03a2fe-a3ad-40ff-a537-5bc3fc51a86b">
+                    <propertyInstance Id="2838bdc9-2b9f-4d35-b2e4-b5d20da4e797" name="Length" value="512">
+                      <elementDefinition Id="17983748-cd58-44b5-9929-c39c4c941656" />
+                    </propertyInstance>
+                    <elementDefinition Id="d141d0b2-bf74-4eaa-9244-5d34cc3ab4a6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="be361c3b-5766-4cbc-b406-8e96bb8dfaa4">
+                    <propertyInstance Id="22774347-1ec7-45ca-9ee7-98dc082cce36" name="AllowNulls" value="true">
+                      <elementDefinition Id="ed3c7a78-6c85-4865-af4f-4d0b8588c641" />
+                    </propertyInstance>
+                    <elementDefinition Id="ade3bb12-3149-4fba-9f7e-19893263a922" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="70574567-7a54-440d-9365-babab5a33f43" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="48c4b150-39df-4b8d-95fa-454cad126dcb" name="BioPolymerInteraction" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="d6df0a7b-c13d-499f-a395-b8678a915a5b" name="Table" profile="DBProfile">
+            <elementDefinition Id="85f7303d-a343-43cc-a555-2f440df4a8b9" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="671b4611-0f12-4a39-8737-c81d2614dc5c" />
+        <targetEnds>
+          <association Id="e20aa839-6712-401f-b6fa-3992af5a0d10" isDerived="false" sourceEndRoleName="BioPolymerInteraction" targetEndRoleName="BiologicalUnit" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6960b481-3d48-4595-ae5e-090d55abb959" LastKnownName="BiologicalUnit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="28b54a0d-7a82-4f9c-b219-eeb9eb325464" name="BioPolymerInteraction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="8920d24d-29d9-4004-a22a-28579014a9f7" name="Lower" value="*">
+                      <elementDefinition Id="43db245b-21c6-41e6-872e-92c525f03f96" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="6be13e89-d810-4337-9768-c75c25c80e21" name="Upper" value="*">
+                      <elementDefinition Id="5a66699a-ac91-4047-a6a6-f6c917cb47c9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="cf5d10b1-221c-4e2c-bf42-0d2f058e494e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="41ff7687-e5dc-44c9-a94b-df14a72dfbdc" name="BiologicalUnit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="520497b5-bf1a-4bc5-8616-1d9c153cda29" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1559fc46-dea4-4066-93b7-2b4c2f610039" name="Reference" profile="DBProfile">
+                <elementDefinition Id="6e806301-e42d-47bd-b382-134d2563e62f" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="866b0aca-6c46-4755-8133-88cc626d0f20" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="5f939332-144e-4986-9264-943a70897415" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1e6e3daa-eb6a-4f89-8dbd-ba8b971cb907" name="Column" profile="DBProfile">
+                <elementDefinition Id="3e99e3a2-f9f4-4c78-bd01-a61e068d78f0" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="73230f35-fff4-462b-adef-170ea22e10f2">
+                    <propertyInstance Id="17884263-338b-476f-ad1f-b0221a69db44" name="PrimaryKey" value="true">
+                      <elementDefinition Id="3e72fc2b-ec4f-4d04-bfa5-def7f07d4e18" />
+                    </propertyInstance>
+                    <elementDefinition Id="721c1efc-b8e2-4afb-9c1d-69e27bbfa864" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9e0d378a-a7de-4949-b33f-bc4071ff064e">
+                    <propertyInstance Id="a6520fcc-03ed-4e0b-8fd5-8b60e3a907c2" name="DataType" value="bigint">
+                      <elementDefinition Id="f72d9c8c-90bf-401e-adfa-8a0f1a39ae88" />
+                    </propertyInstance>
+                    <elementDefinition Id="329cdfd9-04d5-464e-a3ce-090975a94c09" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="98becc82-3c78-4c8e-87fe-21cb2a71749e">
+                    <propertyInstance Id="6eb675b1-1177-40c0-9bed-1c1e78bc79bc" name="Length" value="24">
+                      <elementDefinition Id="5a8950eb-ab49-42ca-9d3e-c85f2eb39c06" />
+                    </propertyInstance>
+                    <elementDefinition Id="5cef54e7-8123-43fa-808a-5033e5f5caf1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cd171f81-d289-45dd-b433-ca3f73164081">
+                    <propertyInstance Id="7a5cc8ce-3282-4297-8f24-737b7017794f" name="AllowNulls" value="false">
+                      <elementDefinition Id="c3709fcc-30e7-418f-b5ff-5de91ed09573" />
+                    </propertyInstance>
+                    <elementDefinition Id="f903aa3a-652f-4b00-a770-609ea8207a5d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="71eaf9a8-c440-4d3f-95e3-54b630649ed5" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4fbdc15a-6f97-4002-98f5-c731f5774830" name="BioPolymerCompoundInteraction" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="93cfcb56-ecf7-4206-8987-736ca5714dbf" name="Table" profile="DBProfile">
+            <elementDefinition Id="a91e1c6d-2f86-49dc-a042-575992107c2a" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="a1498437-3196-4336-a7b4-2e8323565d95" />
+        <targetEnds>
+          <association Id="d6d8bd7f-4b82-461d-8f3a-6e1752fb5b67" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="43e0eee5-02a4-4866-b71a-acbc6847b7ff" LastKnownName="ChemicalCompound" />
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="24aa706e-62b8-484a-8f53-4986aa616702" name="AbstractReference" profile="DBProfile">
+                <elementDefinition Id="38ea7bd1-8092-4a5f-9dfa-ed0055efe48c" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="8ef6eea2-c418-418f-b20d-78cee79deca7" />
+          </association>
+          <association Id="f160822c-fb43-4ecb-ad73-9fe184e2eff8" isDerived="false" sourceEndRoleName="BioPolymerCompoundInteraction" targetEndRoleName="BiologicalUnit" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6960b481-3d48-4595-ae5e-090d55abb959" LastKnownName="BiologicalUnit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40a538ec-aade-4dad-848a-de299eab8910" name="BioPolymerCompoundInteraction" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="c36e78f8-2a74-4982-9dab-6d11af1ae500" name="Lower" value="*">
+                      <elementDefinition Id="0b0fa060-1842-48a3-9e1f-837dde5488ab" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b9bff469-c467-4a8f-a454-a9c34665ba10" name="Upper" value="*">
+                      <elementDefinition Id="288c5928-901b-4a25-8c3e-920260d0f579" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="303eb57b-a168-4007-b728-1dd8a8ed80ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a8852b44-efb9-4ad8-b419-bd16cee59350" name="BiologicalUnit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7a46d7a7-f17b-4ecb-bac1-627d17163704" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c6414a0e-9556-4032-8300-53acd1c5c9c8" name="Reference" profile="DBProfile">
+                <elementDefinition Id="262ba20d-5a7a-4fac-a31f-58b36b37a758" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="6f6f259b-c30f-46c2-80b6-181c13ea810e" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="952d9523-a16b-4393-97ff-c16d64587b48" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="b9de8da1-8d61-45ed-91d5-540a3cec33d7" name="Column" profile="DBProfile">
+                <elementDefinition Id="d3a71418-1816-4af8-aab0-6887fefbddc6" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f6aed3b4-c1c7-4169-90b6-87f1933f88d5">
+                    <propertyInstance Id="9e6b0926-7f37-4f6e-8b3d-7be255259a61" name="PrimaryKey" value="true">
+                      <elementDefinition Id="ff61d2d0-c1b5-4875-a5b8-5732fad0e503" />
+                    </propertyInstance>
+                    <elementDefinition Id="217e012d-0061-4eff-af03-9edbb3a19cf7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4b7b4d6e-6ef1-4a01-ac1e-ba1ac5787d13">
+                    <propertyInstance Id="afea15f8-df1a-4792-b744-fbc7b6a1b0c3" name="DataType" value="bigint">
+                      <elementDefinition Id="98131d07-af6a-4603-9801-a157c02e4fab" />
+                    </propertyInstance>
+                    <elementDefinition Id="2b18969c-3cd5-497b-9580-523c51da2b24" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1cdf7826-e1ea-489a-bb4d-7437b8ba35f6">
+                    <propertyInstance Id="d481e1e1-51b1-4c54-83d9-0446a098557a" name="Length" value="24">
+                      <elementDefinition Id="53263cba-7695-45c3-a02a-f6bdbe1bf2f9" />
+                    </propertyInstance>
+                    <elementDefinition Id="a22d3d83-c16c-4b8d-9513-954539726320" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0b4d6c7a-4e4d-422b-acb0-81c05bbb26c2">
+                    <propertyInstance Id="d11602ce-fbd7-4d56-b220-6c3b3007a801" name="AllowNulls" value="false">
+                      <elementDefinition Id="b47a4511-edec-4f3c-b5b2-e674b46fada9" />
+                    </propertyInstance>
+                    <elementDefinition Id="c454758c-40fd-4d1a-aee2-a834e36663cf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="9f4ac583-c6dd-4444-81ec-c989a39b494e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="43e0eee5-02a4-4866-b71a-acbc6847b7ff" name="ChemicalCompound" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9ba02332-b013-4797-9e36-630d6d6a79a9" />
+        <targetEnds>
+          <association Id="84fa00cc-dbe8-4d5d-8209-01697a7055e2" isDerived="false" sourceEndRoleName="ChemicalCompound" targetEndRoleName="BiologicalUnit" isLeaf="false" isAbstract="false">
+            <classMoniker Id="6960b481-3d48-4595-ae5e-090d55abb959" LastKnownName="BiologicalUnit" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dcd3217e-9254-4311-b8f2-84c256ac3c10" name="ChemicalCompound" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="99c5a17f-a8c9-4a44-bc7c-9093db0920f8" name="Lower" value="*">
+                      <elementDefinition Id="1c0cf3fc-1fc4-4c94-a5ce-ee5565fd2a87" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c106dfea-399e-437a-966c-d1ba88cc0277" name="Upper" value="*">
+                      <elementDefinition Id="3a6c8358-a416-4914-9a36-37bb1d7f82aa" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c458da0a-6573-4a34-bd90-eae18a024fd6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60e74951-9fe4-42cf-8433-d9d01efe90e6" name="BiologicalUnit" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5753206c-ec46-4aa0-8ea2-5e2d91b3d833" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="3b02d242-0dbb-476a-b8e4-22c31f02c196" name="Reference" profile="DBProfile">
+                <elementDefinition Id="7fce3aab-4801-47ef-80c4-6d721b45ed79" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2eff8805-83cf-4fa2-acf6-598ad65292b6" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="53502ed8-fc20-46fa-8bb6-439ced05e318" name="ProteinLigandDB">
+    <elementDefinition Id="733f38a9-eabe-4892-9928-8cdb0280f171" />
+  </package>
+</logicalClassDesignerModel>

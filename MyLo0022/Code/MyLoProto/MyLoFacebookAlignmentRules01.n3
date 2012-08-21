@@ -1,0 +1,106 @@
+@base <http://facebook.mylo.com/>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix api: <tag:graph.facebook.com,2011:/>.
+@prefix og: <http://ogp.me/ns#>.
+@prefix fb: <http://ogp.me/ns/fb#>.
+@prefix : <http://graph.facebook.com/schema/~/>.
+@prefix photo: <http://graph.facebook.com/schema/photo#>.
+@prefix checkin: <http://graph.facebook.com/schema/checkin#>.
+@prefix user: <http://graph.facebook.com/schema/user#>.
+@prefix page: <http://graph.facebook.com/schema/page#>.
+@prefix application: <http://graph.facebook.com/schema/application#>.
+@prefix myloFB: <http://facebook.mylo.com/>.
+@prefix mylo: <http://mylo.com/schema/>.
+@prefix event: <http://graph.facebook.com/schema/event#>.
+
+@forall :x, :y, :z .
+{	:x user:id :y . 
+	:x user:name :z } 
+=> 
+{	:x a user:type } .
+
+
+@forall :x, :y, :z .
+{	:x a user:type . 
+	:x user:id :y . 
+	:x user:name :z  } 
+=>
+{	:x a mylo:FacebookPerson . 
+	:x mylo:FacebookName :z . 
+	:x mylo:FacebookId :y } .
+
+
+
+@forall  :y, :z, :t, :p, :n, :id, :l, :glat, :glong .
+{	
+	:y a photo:type . 
+	:y photo:from :z . 
+	:z a mylo:FacebookPerson .  
+	:y photo:created_time :t .
+	:y photo:place :p .
+	:y photo:id :id .
+	:p page:name :n .
+	:p page:location :l .
+	:l :latitude :glat .
+	:l :longitude :glong } 
+=> 
+{	:z mylo:IsOwner "True" . 
+	:y a mylo:FacebookPost . 
+	:z mylo:HasActivity :y .
+	_:t a mylo:TimePeriod .
+	_:t a mylo:Instant .
+	_:t mylo:HasTimeValue :t .
+	:y mylo:HasTimePeriod _:t .
+	:y mylo:HasSourceId :id .
+	_:p a mylo:GeographicalPoint .
+	_:a a mylo:Address .
+	_:a mylo:HasAddressProps :l .
+	:y mylo:HasLocation _:p .
+	_:p mylo:HasAddress _:a .
+	_:p mylo:HasLocationName :n .
+	_:p mylo:HasGpsLatitude :glat .
+	_:p mylo:HasGpsLongitude :glong  } .
+
+
+@forall :x, :y, :z, :t, :p, :n, :id, :l, :glat, :glong .
+{	 
+	:y checkin:application :x . 
+	:y checkin:from :z . 
+	:z a mylo:FacebookPerson . 
+	:y checkin:created_time :t .
+	:y checkin:place :p .
+	:y checkin:id :id .
+	:p page:name :n .
+	:p page:location :l .
+	:l :latitude :glat .
+	:l :longitude :glong } 
+=> 
+{	:z mylo:IsOwner "True" .
+	:y a mylo:FacebookCheckin . 
+	:z mylo:HasActivity :y .
+	_:t a mylo:TimePeriod .
+	_:t a mylo:Instant .
+	_:t mylo:HasTimeValue :t .
+	:y mylo:HasTimePeriod _:t .
+	:y mylo:HasSourceId :id .
+	_:p a mylo:GeographicalPoint .
+	_:a a mylo:Address .
+	_:a mylo:HasAddressProps :l .
+	:y mylo:HasLocation _:p .
+	_:p mylo:HasAddress _:a .
+	_:p mylo:HasLocationName :n .
+	_:p mylo:HasGpsLatitude :glat .
+	_:p mylo:HasGpsLongitude :glong  } .
+
+@forall :x, :y, :z, :t, :d, :p .
+{	 
+	:y a photo:type . 
+	:y photo:tags :t . 
+	:t :data :d .
+	:d api:has :p }
+=>
+{   :y mylo:HasPersonTag :p } .

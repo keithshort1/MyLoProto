@@ -1,0 +1,8 @@
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#id , 817464644
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#name , Keith Short
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#first_name , Keith
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#last_name , Short
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#link , http://www.facebook.com/keith.short1
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#username , keith.short1
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#gender , male
+https://graph.facebook.com/817464644# , http://graph.facebook.com/schema/user#locale , en_US

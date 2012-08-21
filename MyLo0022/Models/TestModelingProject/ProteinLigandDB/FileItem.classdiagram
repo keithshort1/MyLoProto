@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="01d1e8f0-9de9-4c21-8ca1-18df25451fce" name="FileItem" linkedPackageId="193356f3-05f3-4d3a-9122-b707440aa34c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="7d77ebfd-a35a-49d1-9771-e7abade5e136">
+      <profileInstance Id="910ffedc-77ab-48eb-a6e8-5cbcbad0ab06" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0434100d-0619-42e9-932b-06d12e16172a">
+      <profileInstance Id="05169ef0-11fc-4313-9684-b3c81e9b9067" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="839a64b5-2d12-436b-a9a3-03dfa6778a45">
+      <profileInstance Id="a3613c2d-cd99-488a-a48a-ebc8c78e4957" name="DBProfile">
+        <elementDefinition Id="2914e42c-411e-4ae8-a254-8dc0ddacde30" />
+      </profileInstance>
+      <elementDefinition Id="c75d42a1-a537-4429-bcc2-30d5eeb832fd" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1b80c021-d130-4420-b517-848a37c11f06" name="FileItem" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0c2d5e64-fffd-4fa3-b994-97bb80223cb1" />
+        <ownedAttributesInternal>
+          <property Id="28970d7e-d6c0-4813-96ce-8159e6634efb" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="ce3b316f-1bea-4b93-bf64-3870bc1c2e82" name="Column" profile="DBProfile">
+                <elementDefinition Id="13253f46-f5ae-4748-8bdd-5f8ac62dc150" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="95d55377-c936-47db-978a-857a81ce1e40">
+                    <propertyInstance Id="1e4f6521-a9dd-40b7-9d3e-a06d5dd64fea" name="PrimaryKey" value="false">
+                      <elementDefinition Id="41f92815-eaeb-42bd-ab49-64e019c9bd5e" />
+                    </propertyInstance>
+                    <elementDefinition Id="7cc18584-e568-4916-87e1-70ae00fd2aeb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="22b87905-4eee-4ece-a95f-4c59a49612b4">
+                    <propertyInstance Id="1cc27e20-a62d-4863-9ec5-00ecbf8b43fd" name="DataType" value="varchar()">
+                      <elementDefinition Id="6cc7f9a8-54ed-4b86-8c42-6eb89bf9f00f" />
+                    </propertyInstance>
+                    <elementDefinition Id="82602e21-c218-485a-8d06-3f5922703ce8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0384f4e5-a032-4af3-9f39-8e4a8ce11abb">
+                    <propertyInstance Id="f033ed4e-676c-4549-b362-d3ec0bd71d4d" name="Length" value="128">
+                      <elementDefinition Id="7fbda7e6-309c-4640-a095-bdf9af1b7062" />
+                    </propertyInstance>
+                    <elementDefinition Id="6ef69ed5-0767-4ad0-9893-a02bbea56d47" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="eb600d7d-155d-44e2-bdaa-c73d187cbfb8">
+                    <propertyInstance Id="9f83a589-4555-486d-ba8a-b89618e4f3e8" name="AllowNulls" value="false">
+                      <elementDefinition Id="8141e96f-f061-4cb0-b237-c76858dfdba6" />
+                    </propertyInstance>
+                    <elementDefinition Id="d87f4d98-721c-4da5-a7d1-562474036a19" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="8fb41d3f-1f49-4ba1-8487-a6536e34b588" />
+          </property>
+          <property Id="90ba6b80-831f-400f-af03-1622fc6e0480" name="FileStorage" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="32da25ab-3603-476d-8558-0a014e588699" name="Column" profile="DBProfile">
+                <elementDefinition Id="718d6c09-17f3-47ce-9b88-b8e6a0ae1f08" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1fea8979-2f0d-49dc-bc95-c0b9186ac9fc">
+                    <propertyInstance Id="af32fb3f-b7e3-401a-bd05-3e130c2913e1" name="PrimaryKey" value="false">
+                      <elementDefinition Id="03521931-677a-49d6-a20a-c38ca27d148a" />
+                    </propertyInstance>
+                    <elementDefinition Id="8ba6d33f-2230-4cdd-bd28-dc19e3df96ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="116ae8e8-568e-4470-b204-7811a714cfcc">
+                    <propertyInstance Id="bbdfb0b4-1c24-4782-9e64-5edd1b69d1d3" name="DataType" value="blob">
+                      <elementDefinition Id="e3d4885d-bf6f-4419-a853-e37768ecefae" />
+                    </propertyInstance>
+                    <elementDefinition Id="efa4a453-0319-4b3b-a90f-98c7993e5780" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="78294053-19e1-4e60-a853-80f9084dd382">
+                    <propertyInstance Id="d6716aec-2270-4976-9a6e-e8c981ce28ee" name="Length">
+                      <elementDefinition Id="f2ab59b9-e9c5-45a4-ab73-929dc15046b1" />
+                    </propertyInstance>
+                    <elementDefinition Id="906a9053-b6ee-4247-988a-f3063f245a1f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="24c227b7-3293-4149-9a30-c1ea47eb45c7">
+                    <propertyInstance Id="a759413c-62f9-44dc-9e4f-71c80c742f90" name="AllowNulls" value="true">
+                      <elementDefinition Id="e5e69c1f-2968-475b-b170-8447746e592e" />
+                    </propertyInstance>
+                    <elementDefinition Id="d7bab063-9ec6-41b2-9e18-95f5459328c3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="588a921c-9897-4a92-bb84-14348237a964" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6fd2bbd-a76c-41c3-bb13-07ed7a29ea23" name="MaestroProject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="9b08a62c-ff7a-499b-a582-6c075bde23cb" name="Table" profile="DBProfile">
+            <elementDefinition Id="ed68366b-69be-4ca1-a6ab-233a86fc47fe" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="2d78d392-0300-4619-867b-47dbe405d010" />
+        <generalsInternal>
+          <generalization Id="c1fc3ec3-9558-40aa-8972-cd2cbcb2498a" isSubstitutable="false">
+            <classMoniker Id="1b80c021-d130-4420-b517-848a37c11f06" LastKnownName="FileItem" />
+            <elementDefinition Id="f60c9ab4-15c2-46b3-a1a1-47c378c2e4ef" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d1dc7eb5-ca36-42ee-b205-3de0ee4d49b4" name="WordDocument" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="4096ea11-1e60-4fe5-994f-172a1d42cee0" name="Table" profile="DBProfile">
+            <elementDefinition Id="3adcef31-e4aa-4e01-b35c-8618bb02a9ac" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="829351ff-296e-43dd-a3e8-bdc8c6801e12" />
+        <generalsInternal>
+          <generalization Id="269e7639-d939-49fa-9c16-90417c64ee4d" isSubstitutable="false">
+            <classMoniker Id="1b80c021-d130-4420-b517-848a37c11f06" LastKnownName="FileItem" />
+            <elementDefinition Id="ed0e9aa9-833c-4903-995d-5e7dd14674aa" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d9bede1f-aba9-4da3-babc-cac1d5f1344a" name="PowerPointDocument" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="65b1ccd6-fc22-4f57-a29f-3b5a859b69af" name="Table" profile="DBProfile">
+            <elementDefinition Id="9e7cfd2c-1253-4e6e-ad3b-dc4692fee64a" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="62209326-6999-416d-a674-e7aea82a8322" />
+        <generalsInternal>
+          <generalization Id="a67a107c-a17e-46d8-9842-1d22db96dca5" isSubstitutable="false">
+            <classMoniker Id="1b80c021-d130-4420-b517-848a37c11f06" LastKnownName="FileItem" />
+            <elementDefinition Id="8fae8824-556d-48a6-a0a8-53c6ff96e3a2" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="193356f3-05f3-4d3a-9122-b707440aa34c" name="ProteinLigandDB">
+    <elementDefinition Id="733f38a9-eabe-4892-9928-8cdb0280f171" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,499 @@
+@base <http://facebook.mylo.com/>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix api: <tag:graph.facebook.com,2011:/>.
+@prefix og: <http://ogp.me/ns#>.
+@prefix fb: <http://ogp.me/ns/fb#>.
+@prefix : <http://graph.facebook.com/schema/~/>.
+@prefix photo: <http://graph.facebook.com/schema/photo#>.
+@prefix checkin: <http://graph.facebook.com/schema/checkin#>.
+@prefix user: <http://graph.facebook.com/schema/user#>.
+@prefix page: <http://graph.facebook.com/schema/page#>.
+@prefix application: <http://graph.facebook.com/schema/application#>.
+
+_:autos1 api:has <http://facebook.mylo.com/10150672239072401#>,
+                 <http://facebook.mylo.com/10150689714914645#>,
+                 <http://facebook.mylo.com/10150859546274645#>,
+                 <http://facebook.mylo.com/10150859546389645#>,
+                 <http://facebook.mylo.com/10150859546449645#>,
+                 <http://facebook.mylo.com/10150859546544645#>,
+                 <http://facebook.mylo.com/10150859546654645#>,
+                 <http://facebook.mylo.com/10150859546754645#>,
+                 <http://facebook.mylo.com/10150859546844645#>,
+                 <http://facebook.mylo.com/10150859546899645#>,
+                 <http://facebook.mylo.com/10150859557514645#>,
+                 <http://facebook.mylo.com/10150859557579645#>,
+                 <http://facebook.mylo.com/10150859557674645#>,
+                 <http://facebook.mylo.com/10150859557729645#>,
+                 <http://facebook.mylo.com/10150859557819645#>,
+                 <http://facebook.mylo.com/10150859557919645#>,
+                 <http://facebook.mylo.com/10150859558019645#>,
+                 <http://facebook.mylo.com/10150859558114645#>,
+                 <http://facebook.mylo.com/10150859558189645#>,
+                 <http://facebook.mylo.com/10150859558314645#>,
+                 <http://facebook.mylo.com/10150859558379645#>,
+                 <http://facebook.mylo.com/10150860931164645#>.
+_:autos10 :city "Friday Harbor";
+          :country "United States";
+          :latitude 48.544372916222;
+          :longitude -123.00585865974;
+          :state "WA";
+          :zip 06040 .
+_:autos10 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:58:01+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos11 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos12 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:57:58+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos13 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos14 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:57:56+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos15 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos16 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:57:52+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos17 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos18 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:57:50+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos19 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos2 :next <https://graph.facebook.com/me/locations?access_token=AAAFpEKIeHg0BAG3xmX6Psa2HT3hPiv3kvw8U3rZBiQoK3bO0Oyhb0zKNZA9ZCHI0803e7bkXXRQzN2hAsf7aRYlC1Ov7gI9cs3P8Rw7PQZDZD&limit=25&until=1332797696&__paging_token=10150689714914645>;
+         :previous <https://graph.facebook.com/me/locations?access_token=AAAFpEKIeHg0BAG3xmX6Psa2HT3hPiv3kvw8U3rZBiQoK3bO0Oyhb0zKNZA9ZCHI0803e7bkXXRQzN2hAsf7aRYlC1Ov7gI9cs3P8Rw7PQZDZD&limit=25&since=1336491004&__paging_token=10150860931164645&__previous=1>.
+_:autos2 <http://mylo.com/schema/HasTimeValue> "2012-05-08T15:30:04+00:00"^^xsd:dateTime;
+         a <http://mylo.com/schema/PointInTime>,
+           <http://mylo.com/schema/TimePeriod>.
+_:autos20 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:57:47+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos21 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos22 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:57:45+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos23 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos24 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:57:41+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos25 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos26 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:52:12+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos27 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos28 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:52:10+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos29 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos3 :data _:autos4.
+_:autos3 <http://mylo.com/schema/HasName> "Florence, Italy";
+         a <http://mylo.com/schema/Location>.
+_:autos30 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:52:07+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos31 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos32 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:52:05+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos33 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos34 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:52:02+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos35 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos36 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:52:00+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos37 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos38 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:51:57+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos39 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos4 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:58:10+00:00"^^xsd:dateTime;
+         a <http://mylo.com/schema/PointInTime>,
+           <http://mylo.com/schema/TimePeriod>.
+_:autos4 api:has <http://facebook.mylo.com/1027747641#>,
+                 <http://facebook.mylo.com/1043972128#>,
+                 <http://facebook.mylo.com/1075027532#>,
+                 <http://facebook.mylo.com/574734108#>,
+                 <http://facebook.mylo.com/720436953#>,
+                 <http://facebook.mylo.com/729061612#>,
+                 <http://facebook.mylo.com/817464644#>.
+_:autos40 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:51:54+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos41 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+          a <http://mylo.com/schema/Location>.
+_:autos42 <http://mylo.com/schema/HasTimeValue> "2012-03-26T21:34:56+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos43 <http://mylo.com/schema/HasName> "San Juan Islands";
+          a <http://mylo.com/schema/Location>.
+_:autos44 <http://mylo.com/schema/HasTimeValue> "2012-04-14T04:45:07+00:00"^^xsd:dateTime;
+          a <http://mylo.com/schema/PointInTime>,
+            <http://mylo.com/schema/TimePeriod>.
+_:autos45 <http://mylo.com/schema/HasName> "rumor mill";
+          a <http://mylo.com/schema/Location>.
+_:autos5 :data _:autos6.
+_:autos5 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+         a <http://mylo.com/schema/Location>.
+_:autos6 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:58:07+00:00"^^xsd:dateTime;
+         a <http://mylo.com/schema/PointInTime>,
+           <http://mylo.com/schema/TimePeriod>.
+_:autos6 api:has <http://facebook.mylo.com/1027747641#>,
+                 <http://facebook.mylo.com/817464644#>.
+_:autos7 :latitude 43.7833;
+         :longitude 11.25.
+_:autos7 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+         a <http://mylo.com/schema/Location>.
+_:autos8 :latitude 43.095242695875;
+         :longitude 11.783766054673.
+_:autos8 <http://mylo.com/schema/HasTimeValue> "2012-05-08T02:58:03+00:00"^^xsd:dateTime;
+         a <http://mylo.com/schema/PointInTime>,
+           <http://mylo.com/schema/TimePeriod>.
+_:autos9 :city "Friday Harbor";
+         :country "United States";
+         :latitude 48.534367236609;
+         :longitude -123.01561219141;
+         :state "WA";
+         :street "175 1st St. PO Box 884";
+         :zip 98250 .
+_:autos9 <http://mylo.com/schema/HasName> "Montepulciano Tuscany";
+         a <http://mylo.com/schema/Location>.
+<http://facebook.mylo.com/#> :data _:autos1;
+                             :paging _:autos2.
+<http://facebook.mylo.com/10150672239072401#> checkin:application <http://facebook.mylo.com/6628568379#>;
+                                              checkin:created_time "2012-04-14T04:45:07+00:00"^^xsd:dateTime;
+                                              checkin:from <http://facebook.mylo.com/701042400#>;
+                                              checkin:id "10150672239072401";
+                                              checkin:place <http://facebook.mylo.com/116066955092245#>;
+                                              checkin:tags _:autos3;
+                                              <http://mylo.com/schema/HasLocation> _:autos45;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos44;
+                                              a checkin:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookCheckin>.
+<http://facebook.mylo.com/10150689714914645#> photo:created_time "2012-03-26T21:34:56+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150689714914645";
+                                              photo:place <http://facebook.mylo.com/162232420487732#>;
+                                              photo:tags _:autos5;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos43;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos42;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546274645#> photo:created_time "2012-05-08T02:51:54+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546274645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos41;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos40;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546389645#> photo:created_time "2012-05-08T02:51:57+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546389645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos39;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos38;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546449645#> photo:created_time "2012-05-08T02:52:00+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546449645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos37;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos36;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546544645#> photo:created_time "2012-05-08T02:52:02+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546544645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos35;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos34;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546654645#> photo:created_time "2012-05-08T02:52:05+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546654645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos33;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos32;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546754645#> photo:created_time "2012-05-08T02:52:07+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546754645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos31;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos30;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546844645#> photo:created_time "2012-05-08T02:52:10+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546844645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos29;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos28;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859546899645#> photo:created_time "2012-05-08T02:52:12+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859546899645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos27;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos26;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859557514645#> photo:created_time "2012-05-08T02:57:41+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859557514645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos25;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos24;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859557579645#> photo:created_time "2012-05-08T02:57:45+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859557579645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos23;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos22;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859557674645#> photo:created_time "2012-05-08T02:57:47+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859557674645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos21;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos20;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859557729645#> photo:created_time "2012-05-08T02:57:50+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859557729645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos19;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos18;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859557819645#> photo:created_time "2012-05-08T02:57:52+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859557819645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos17;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos16;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859557919645#> photo:created_time "2012-05-08T02:57:56+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859557919645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos15;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos14;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859558019645#> photo:created_time "2012-05-08T02:57:58+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859558019645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos13;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos12;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859558114645#> photo:created_time "2012-05-08T02:58:01+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859558114645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos11;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos10;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859558189645#> photo:created_time "2012-05-08T02:58:03+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859558189645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos9;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos8;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859558314645#> photo:created_time "2012-05-08T02:58:07+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859558314645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos7;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos6;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150859558379645#> photo:created_time "2012-05-08T02:58:10+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150859558379645";
+                                              photo:place <http://facebook.mylo.com/165318000202515#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos5;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos4;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/10150860931164645#> photo:created_time "2012-05-08T15:30:04+00:00"^^xsd:dateTime;
+                                              photo:from <http://facebook.mylo.com/817464644#>;
+                                              photo:id "10150860931164645";
+                                              photo:place <http://facebook.mylo.com/105782926129203#>;
+                                              :application <http://facebook.mylo.com/2305272732#>;
+                                              <http://mylo.com/schema/HasLocation> _:autos3;
+                                              <http://mylo.com/schema/HasTimePeriod> _:autos2;
+                                              a photo:type,
+                                                <http://mylo.com/schema/Activity>,
+                                                <http://mylo.com/schema/FacebookPost>.
+<http://facebook.mylo.com/1027747641#> user:id "1027747641";
+                                       user:name "Rebecca Short";
+                                       <http://mylo.com/schema/FacebookId> "1027747641";
+                                       <http://mylo.com/schema/FacebookName> "Rebecca Short";
+                                       a user:type,
+                                         <http://mylo.com/schema/FacebookPerson>,
+                                         <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/1043972128#> user:id "1043972128";
+                                       user:name "Hilary Croft";
+                                       <http://mylo.com/schema/FacebookId> "1043972128";
+                                       <http://mylo.com/schema/FacebookName> "Hilary Croft";
+                                       a user:type,
+                                         <http://mylo.com/schema/FacebookPerson>,
+                                         <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/105782926129203#> page:id "105782926129203";
+                                            page:location _:autos7;
+                                            page:name "Florence, Italy".
+<http://facebook.mylo.com/1075027532#> user:id "1075027532";
+                                       user:name "Andrea Aberman";
+                                       <http://mylo.com/schema/FacebookId> "1075027532";
+                                       <http://mylo.com/schema/FacebookName> "Andrea Aberman";
+                                       a user:type,
+                                         <http://mylo.com/schema/FacebookPerson>,
+                                         <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/116066955092245#> page:id "116066955092245";
+                                            page:location _:autos9;
+                                            page:name "rumor mill".
+<http://facebook.mylo.com/162232420487732#> page:id "162232420487732";
+                                            page:location _:autos10;
+                                            page:name "San Juan Islands".
+<http://facebook.mylo.com/165318000202515#> page:id "165318000202515";
+                                            page:location _:autos8;
+                                            page:name "Montepulciano Tuscany".
+<http://facebook.mylo.com/2305272732#> application:id "2305272732";
+                                       application:name "Photos".
+<http://facebook.mylo.com/574734108#> user:id "574734108";
+                                      user:name "Jane Stapleton";
+                                      <http://mylo.com/schema/FacebookId> "574734108";
+                                      <http://mylo.com/schema/FacebookName> "Jane Stapleton";
+                                      a user:type,
+                                        <http://mylo.com/schema/FacebookPerson>,
+                                        <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/6628568379#> application:id "6628568379";
+                                       application:name "Facebook for iPhone";
+                                       application:namespace "fbtouch".
+<http://facebook.mylo.com/701042400#> user:id "701042400";
+                                      user:name "Shy Aberman";
+                                      <http://mylo.com/schema/FacebookId> "701042400";
+                                      <http://mylo.com/schema/FacebookName> "Shy Aberman";
+                                      <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150672239072401#>;
+                                      <http://mylo.com/schema/IsOwner> "True";
+                                      a user:type,
+                                        <http://mylo.com/schema/FacebookPerson>,
+                                        <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/720436953#> user:id "720436953";
+                                      user:name "Stephen Stapleton";
+                                      <http://mylo.com/schema/FacebookId> "720436953";
+                                      <http://mylo.com/schema/FacebookName> "Stephen Stapleton";
+                                      a user:type,
+                                        <http://mylo.com/schema/FacebookPerson>,
+                                        <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/729061612#> user:id "729061612";
+                                      user:name "Mark A Croft";
+                                      <http://mylo.com/schema/FacebookId> "729061612";
+                                      <http://mylo.com/schema/FacebookName> "Mark A Croft";
+                                      a user:type,
+                                        <http://mylo.com/schema/FacebookPerson>,
+                                        <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/817464644#> user:id "817464644";
+                                      user:name "Keith Short";
+                                      <http://mylo.com/schema/FacebookId> "817464644";
+                                      <http://mylo.com/schema/FacebookName> "Keith Short";
+                                      <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150689714914645#>,
+                                                                           <http://facebook.mylo.com/10150859546274645#>,
+                                                                           <http://facebook.mylo.com/10150859546389645#>,
+                                                                           <http://facebook.mylo.com/10150859546449645#>,
+                                                                           <http://facebook.mylo.com/10150859546544645#>,
+                                                                           <http://facebook.mylo.com/10150859546654645#>,
+                                                                           <http://facebook.mylo.com/10150859546754645#>,
+                                                                           <http://facebook.mylo.com/10150859546844645#>,
+                                                                           <http://facebook.mylo.com/10150859546899645#>,
+                                                                           <http://facebook.mylo.com/10150859557514645#>,
+                                                                           <http://facebook.mylo.com/10150859557579645#>,
+                                                                           <http://facebook.mylo.com/10150859557674645#>,
+                                                                           <http://facebook.mylo.com/10150859557729645#>,
+                                                                           <http://facebook.mylo.com/10150859557819645#>,
+                                                                           <http://facebook.mylo.com/10150859557919645#>,
+                                                                           <http://facebook.mylo.com/10150859558019645#>,
+                                                                           <http://facebook.mylo.com/10150859558114645#>,
+                                                                           <http://facebook.mylo.com/10150859558189645#>,
+                                                                           <http://facebook.mylo.com/10150859558314645#>,
+                                                                           <http://facebook.mylo.com/10150859558379645#>,
+                                                                           <http://facebook.mylo.com/10150860931164645#>;
+                                      <http://mylo.com/schema/IsOwner> "True";
+                                      a user:type,
+                                        <http://mylo.com/schema/FacebookPerson>,
+                                        <http://mylo.com/schema/Person>.

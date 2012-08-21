@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MyLoTimeBasedResource">
+  <logicalClassDesignerModelMoniker Id="5d52ce1e-5c31-41ec-a83a-6c05dac755b3" />
+  <nestedChildShapes>
+    <classShape Id="d62cbd97-a81c-425f-bdd0-b9b0abe33fbf" absoluteBounds="4.875, 0.75, 2.375, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="0d046770-c67f-4684-bdba-c90914d79ae6" LastKnownName="TimeBasedResource" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="cac97ed8-31b2-4b33-b4ae-d923b904997d" absoluteBounds="4.89, 1.1400000000000001, 2.3449999999999998, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="af3e050c-aeee-4bac-93ae-e10a95bfc08e" absoluteBounds="4.89, 1.3511718675494193, 2.3449999999999998, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1941fadf-059d-4ee2-8563-1b27436c005f" absoluteBounds="4.25, 3.5, 1.5, 2.3089293346802382" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="acc065d8-5fc0-4f4c-b55c-cdb09c063c67" LastKnownName="TimePeriod" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="0cd3c09a-afd3-4690-bf6c-d3fbc5202ff3" absoluteBounds="4.265, 4.015335639317831, 1.4700000000000002, 1.4824218278129895" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="c36b09dc-7dee-40f3-ab81-c3637ba94315" absoluteBounds="4.265, 5.5077574671308192, 1.4700000000000002, 0.20117186754941985" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <commentShape Id="82a6ba83-953c-47d7-9d41-020f08ab8d6b" absoluteBounds="7, 4.75, 1.25, 0.375" customColor="251, 247, 200">
+      <commentMoniker Id="06659420-1fa7-4751-8d7d-35f737027fa7" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentConnector edgePoints="[(7 : 4.9375); (5.75 : 4.9375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="82a6ba83-953c-47d7-9d41-020f08ab8d6b" />
+        <classShapeMoniker Id="1941fadf-059d-4ee2-8563-1b27436c005f" />
+      </nodes>
+    </commentConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

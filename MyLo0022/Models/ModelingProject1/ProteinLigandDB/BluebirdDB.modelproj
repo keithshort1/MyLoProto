@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7c594bb1-add4-45c5-b285-6eb8e5d4c7f2}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>BluebirdDB</Name>
+    <RootNamespace>ProteinLigandDB</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="FileItem.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="FileItem.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>FileItem.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Interactions.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Interactions.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Interactions.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Method.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Method.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Method.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="PLDBChemicalEntity.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PLDBChemicalEntity.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PLDBChemicalEntity.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ProjectsAndItems.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ProjectsAndItems.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ProjectsAndItems.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ProteinSecondaryStructure.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ProteinSecondaryStructure.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ProteinSecondaryStructure.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="BiologicalEntity.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BiologicalEntity.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BiologicalEntity.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SiteItem.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SiteItem.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SiteItem.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="BiologicalUnit.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BiologicalUnit.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BiologicalUnit.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="BioPolymer.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="BioPolymer.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>BioPolymer.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ChemicalCompound.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ChemicalCompound.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ChemicalCompound.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ProteinLigandDB.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

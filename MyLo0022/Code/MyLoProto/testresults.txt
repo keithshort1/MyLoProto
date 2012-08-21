@@ -1,0 +1,208 @@
+PREFIX mylo: <http://mylo.com/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?fbname ?fbid
+WHERE {
+	?person rdf:type mylo:Person .
+	?person mylo:HasActivity ?activity .
+	?person mylo:FacebookName ?fbname .
+	?person mylo:FacebookId ?fbid .
+}
+
+
+PREFIX mylo: <http://mylo.com/schema/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?fbname ?placename ?time
+WHERE {
+	?person rdf:type mylo:Person .
+	?person mylo:HasActivity ?activity .
+	?person mylo:FacebookName ?fbname .
+	?activity mylo:HasTimePeriod ?p .
+	?p mylo:HasTimeValue ?time .
+	?activity mylo:HasLocation ?loc .
+	?loc mylo:HasLocationName ?placename .
+}
+
+PREFIX mylo: <http://mylo.com/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?loc ?lname ?lat ?long
+WHERE {
+	?activity rdf:type mylo:FacebookPost .
+	?activity mylo:HasLocation  ?loc .
+	?loc mylo:HasLocationName ?lname .
+	?loc mylo:HasGpsLatitude ?lat .
+	?loc mylo:HasGpsLongitude ?long .
+}
+
+
+PREFIX mylo: <http://mylo.com/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix : <http://graph.facebook.com/schema/~/>
+SELECT DISTINCT ?a ?ap ?c
+WHERE {
+	?a rdf:type mylo:Address  .
+	?a mylo:HasAddressProps ?ap .
+        ?ap :city ?c .
+}
+
+PREFIX mylo: <http://mylo.com/schema/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT DISTINCT ?activity ?time ?placename ?sourceId ?lat ?long ?state ?street ?city ?zip ?country 
+WHERE {
+      ?activity rdf:type mylo:Activity .
+      ?activity rdf:type mylo:FacebookCheckin .
+      ?activity mylo:HasLocation ?loc .
+      ?activity mylo:HasSourceId ?sourceId .
+      ?loc mylo:HasLocationName ?placename .
+      ?loc mylo:HasGpsLatitude ?lat .
+      ?loc mylo:HasGpsLongitude ?long .
+      ?activity mylo:HasTimePeriod ?period .
+      ?period rdf:type mylo:Instant .
+      ?period mylo:HasTimeValue ?time .
+      OPTIONAL { ?loc mylo:HasAddress ?adr }
+      OPTIONAL { ?adr mylo:HasState ?state }
+      OPTIONAL { ?adr mylo:HasCity ?city }
+      OPTIONAL { ?adr mylo:HasZip ?zip }
+      OPTIONAL { ?adr mylo:HasCountry ?country }
+      OPTIONAL { ?adr mylo:HasStreet ?street }
+}
+
+
+PREFIX mylo: <http://mylo.com/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix : <http://graph.facebook.com/schema/~/>
+SELECT DISTINCT ?a ?ap ?c
+WHERE {
+	?a rdf:type mylo:Address  .
+	?a mylo:HasAddressProps ?ap .
+        ?a mylo:HasCity ?c .
+}
+
+
+result2	{
+	"locations":{
+			"data":[
+				{
+					"id":"10150689720744645",
+					"from":{"name":"Keith Short","id":"817464644"},
+					"type":"photo",
+					"place":{
+							"id":"162232420487732",
+							"name":"San Juan Islands",
+							"location":{
+								"city":"Friday Harbor",
+								"state":"WA",
+								"country":"United States",
+								"zip":"06040",
+								"latitude":48.544372916222,
+								"longitude":-123.00585865974
+								}
+						},
+					"application":{"name":"Photos","id":"2305272732"},
+					"created_time":"2012-03-26T21:38:10+0000"
+				},
+				{
+					"id":"10150689715904645",
+					"from":{"name":"Keith Short","id":"817464644"},
+					"type":"photo",
+					"place":{
+							"id":"162232420487732",
+							"name":"San Juan Islands",
+							"location":{
+								"city":"Friday Harbor",
+								"state":"WA",
+								"country":"United States",
+								"zip":"06040",
+								"latitude":48.544372916222,
+								"longitude":-123.00585865974
+								}
+						},
+					"application":{"name":"Photos","id":"2305272732"},
+					"created_time":"2012-03-26T21:35:32+0000"
+				},
+				{
+					"id":"10150689715599645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:35:22+0000"
+				},
+				{
+					"id":"10150689715459645",
+					"from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:35:17+0000"
+				},
+				{
+					"id":"10150689715374645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:35:12+0000"
+				},{"id":"10150689715209645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:35:07+0000"
+				},
+				{"id":"10150689715094645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:35:02+0000"
+				},
+				{"id":"10150689715019645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:34:59+0000"
+				},
+				{"id":"10150689714914645","from":{"name":"Keith Short","id":"817464644"},"tags":{"data":[{"name":"Keith Short","id":"817464644"},{"name":"Rebecca Short","id":"1027747641"}]},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:34:56+0000"
+				},
+				{"id":"10150689714764645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:34:52+0000"},{"id":"10150689714679645","from":{"name":"Keith Short","id":"817464644"},"tags":{"data":[{"name":"Rebecca Short","id":"1027747641"}]},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:34:49+0000"},{"id":"10150689714509645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"162232420487732","name":"San Juan Islands","location":{"city":"Friday Harbor","state":"WA","country":"United States","zip":"06040","latitude":48.544372916222,"longitude":-123.00585865974}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-26T21:34:44+0000"
+				},
+				{
+					"id":"10150685573354645",
+					"from":{"name":"Keith Short","id":"817464644"},
+					"type":"checkin",
+					"place":{
+						"id":"215399528476163",
+						"name":"Henry Island SYC Out Station",
+						"location":{
+								"city":"Roche Harbor",
+								"state":"WA",
+								"country":"United States",
+								"latitude":48.60287835093,
+								"longitude":-123.17302850967
+							}
+						},
+					"application":{"name":"Facebook for iPad","id":"173847642670370"},
+					"created_time":"2012-03-24T22:37:33+0000"
+				},
+				{
+					"id":"10150684029719645","from":{"name":"Keith Short","id":"817464644"},"tags":{"data":[{"name":"Rebecca Short","id":"1027747641"}]},"type":"checkin","place":{"id":"116066955092245","name":"rumor mill","location":{"street":"175 1st St. PO Box 884","city":"Friday Harbor","state":"WA","country":"United States","zip":"98250","latitude":48.534367236609,"longitude":-123.01561219141}},"application":{"name":"Facebook for Windows Phone","id":"135892916448833"},"created_time":"2012-03-24T03:47:44+0000"
+				},
+				{
+					"id":"10150683821729645","from":{"name":"Keith Short","id":"817464644"},"type":"checkin","place":{"id":"247266025305464","name":"Seattle Yacht Club Friday Harbor Outstation","location":{"latitude":48.533068253054,"longitude":-123.00475938651}},"application":{"name":"Facebook for iPad","id":"173847642670370"},"created_time":"2012-03-24T00:58:16+0000"
+				},
+				{
+					"id":"10150672943899645",
+					"from":{"name":"Keith Short","id":"817464644"},
+					"tags":{
+						"data":[
+							{"name":"Keith Short","id":"817464644"},
+							{"name":"Rebecca Short","id":"1027747641"}
+							]
+						},
+					"type":"photo",
+					"place":{
+							"id":"200513986711161",
+							"name":"Wallace Falls State Park",
+							"location":{
+								"street":"14503 Wallace Lake Road ",
+								"city":"Gold Bar",
+								"state":"WA",
+								"country":"United States",
+								"zip":"98251",
+								"latitude":47.8669205071,
+								"longitude":-121.67813989543
+								}
+						},
+					"application":{"name":"Photos","id":"2305272732"},
+					"created_time":"2012-03-18T22:40:33+0000"
+				},
+				{"id":"10150672943814645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"200513986711161","name":"Wallace Falls State Park","location":{"street":"14503 Wallace Lake Road ","city":"Gold Bar","state":"WA","country":"United States","zip":"98251","latitude":47.8669205071,"longitude":-121.67813989543}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-18T22:40:29+0000"},{"id":"10150672943729645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"200513986711161","name":"Wallace Falls State Park","location":{"street":"14503 Wallace Lake Road ","city":"Gold Bar","state":"WA","country":"United States","zip":"98251","latitude":47.8669205071,"longitude":-121.67813989543}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-18T22:40:26+0000"},{"id":"10150672943624645","from":{"name":"Keith Short","id":"817464644"},"tags":{"data":[{"name":"Rebecca Short","id":"1027747641"}]},"type":"photo","place":{"id":"200513986711161","name":"Wallace Falls State Park","location":{"street":"14503 Wallace Lake Road ","city":"Gold Bar","state":"WA","country":"United States","zip":"98251","latitude":47.8669205071,"longitude":-121.67813989543}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-18T22:40:22+0000"},{"id":"10150672943279645","from":{"name":"Keith Short","id":"817464644"},"type":"photo","place":{"id":"200513986711161","name":"Wallace Falls State Park","location":{"street":"14503 Wallace Lake Road ","city":"Gold Bar","state":"WA","country":"United States","zip":"98251","latitude":47.8669205071,"longitude":-121.67813989543}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-03-18T22:40:10+0000"},{"id":"10150631415809645","from":{"name":"Keith Short","id":"817464644"},"tags":{"data":[{"name":"Keith Short","id":"817464644"},{"name":"Rebecca Short","id":"1027747641"}]},"type":"photo","place":{"id":"168910293155218","name":"Cabo San Lucas","location":{"city":"Cabo San Lucas","country":"Mexico","latitude":47.606862174286,"longitude":-122.32063956286}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-02-27T20:09:30+0000"},{"id":"10150631053039645","from":{"name":"Keith Short","id":"817464644"},"tags":{"data":[{"name":"Keith Short","id":"817464644"},{"name":"Rebecca Short","id":"1027747641"}]},"type":"photo","place":{"id":"169711139705848","name":"Pueblo Bonito Rose' Cabo San Lucas, Mexico","location":{"city":"Cabo San Lucas","country":"Mexico","zip":"23410","latitude":22.890166172893,"longitude":-109.90245882218}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-02-27T16:40:31+0000"},{"id":"10150556270184645","from":{"name":"Keith Short","id":"817464644"},"tags":{"data":[{"name":"Keith Short","id":"817464644"}]},"type":"photo","place":{"id":"144046975608060","name":"Longhorn Saloon","location":{"street":"4284 Mountain Square","city":"Whistler","state":"BC","country":"Canada","zip":"V0N 1B4","latitude":50.113298750761,"longitude":-122.95408772642}},"application":{"name":"Photos","id":"2305272732"},"created_time":"2012-01-29T01:27:33+0000"
+				}
+			],
+	"paging":{
+			"previous":"https://graph.facebook.com/me?access_token=AAAFpEKIeHg0BAFMdmRp3zCBduUObeoEZCFHyMB9kwbzFks99tif17kijrwgqsgwMMVEixSk89Tyrs2iNBhTgwgqE91j6CsH2Phv65YwZDZD&fields=locations&limit=25&since=1332797890&__paging_token=10150689720744645&__previous=1",
+			"next":"https://graph.facebook.com/me?access_token=AAAFpEKIeHg0BAFMdmRp3zCBduUObeoEZCFHyMB9kwbzFks99tif17kijrwgqsgwMMVEixSk89Tyrs2iNBhTgwgqE91j6CsH2Phv65YwZDZD&fields=locations&limit=25&until=1327800453&__paging_token=10150556270184645"
+		}
+	}
+}
+
+
+{"events":{"data":[{"name":"Happy Hour","start_time":"2012-04-12T17:00:00","end_time":"2012-04-12T20:00:00","timezone":"America/Los_Angeles","location":"Anthony's Restaurants","id":"366379250072643","rsvp_status":"attending"}],"paging":{"previous":"https://graph.facebook.com/me?access_token=AAAFpEKIeHg0BAO3SiZBKLZCiGLfkwlgPJXQGHKzWidtXlq9Adl6uZAa0Wrohcqp1FxAutt0ViiXM05ZBHAepgwLv9JD2r8FJQ3u0K1XmZBwZDZD&fields=events&limit=25&since=1334250000&__paging_token=366379250072643&__previous=1","next":"https://graph.facebook.com/me?access_token=AAAFpEKIeHg0BAO3SiZBKLZCiGLfkwlgPJXQGHKzWidtXlq9Adl6uZAa0Wrohcqp1FxAutt0ViiXM05ZBHAepgwLv9JD2r8FJQ3u0K1XmZBwZDZD&fields=events&limit=25&until=1334250000&__paging_token=366379250072643"}}}

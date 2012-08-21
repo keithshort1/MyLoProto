@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ABCEEEF9-1285-40A8-8B6B-1977F11A7AFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyLoPhotoViewerNS</RootNamespace>
+    <AssemblyName>MyLoPhotoViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyLoPhotoViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyLoPhotoViewerForm.Designer.cs">
+      <DependentUpon>MyLoPhotoViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BingMapsGeocode\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MyLoPhotoViewerForm.resx">
+      <DependentUpon>MyLoPhotoViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\BingMapsGeocode\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingMapsGeocode\common.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingMapsGeocode\contracts.wsdl" />
+    <None Include="Service References\BingMapsGeocode\contracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingMapsGeocode\geocode.wsdl" />
+    <None Include="Service References\BingMapsGeocode\geocode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingMapsGeocode\MyLoPhotoViewerNS.BingMapsGeocode.GeocodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BingMapsGeocode\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FacebookContextApp\FacebookContextApp.csproj">
+      <Project>{D2ACDD72-0DBC-483A-9FD2-31992FD93B29}</Project>
+      <Name>FacebookContextApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GPSlookup\GPSlookup.csproj">
+      <Project>{4492D9F1-DAD9-4EF2-B440-9B9C79EFCECA}</Project>
+      <Name>GPSlookup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLoCalendarContextReaderApp\MyLoCalendarContextReaderApp.csproj">
+      <Project>{1B60DB88-5C98-4161-8B1E-FF3DCD93F25F}</Project>
+      <Name>MyLoCalendarContextReaderApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLoDB\MyLoDB.csproj">
+      <Project>{477B3521-8B9C-4F99-A293-9CAAE5B7A1D8}</Project>
+      <Name>MyLoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLoExceptions\MyLoExceptions.csproj">
+      <Project>{D9BAC4E3-9611-4715-A39B-664EEF87E41D}</Project>
+      <Name>MyLoExceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLoIndexer\MyLoIndexer.csproj">
+      <Project>{19C2F065-4C65-4EDC-84B8-4737D4A3447B}</Project>
+      <Name>MyLoIndexer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLoPhotoBrowser\MyLoPhotoBrowser.csproj">
+      <Project>{BEA5E538-E0DB-4DCB-A13D-386D1A5E5614}</Project>
+      <Name>MyLoPhotoBrowser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhotoLoader\PhotoLoader.csproj">
+      <Project>{3D06C220-9A0D-4C08-9C1E-B1472C2FBCD9}</Project>
+      <Name>PhotoLoader</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BingMapsGeocode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BingMapsGeocode\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BingMapsGeocode\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BingMapsGeocode\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

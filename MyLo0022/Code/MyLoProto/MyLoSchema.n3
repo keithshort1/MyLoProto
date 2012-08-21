@@ -1,0 +1,131 @@
+@base <http://mylo.com/schema>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix myloFB: <http://facebook.mylo.com/>.
+@prefix mylo: <http://mylo.com/schema/>.
+
+mylo:Person a rdfs:Class .
+
+mylo:HasActivity a rdfs:Property;
+		rdfs:domain mylo:Person ;
+		rdfs:range mylo:Activity .
+
+
+mylo:Group a rdfs:Class .
+
+
+mylo:FacebookPerson a rdfs:Class;
+		rdfs:subClassOf mylo:Person .
+
+
+mylo:Household a rdfs:Class;
+		rdfs:subClassOf mylo:Group .
+
+
+mylo:Organization a rdfs:Class;
+		rdfs:subClassOf mylo:Group .
+
+
+mylo:Community a rdfs:Class;
+		rdfs:subClassOf mylo:Group .
+
+
+mylo:Activity a rdfs:Class .
+
+mylo:HasSourceId a rdfs:Property;
+		rdfs:domain mylo:Activity;
+		rdfs:range rdfs:Literal.
+
+
+mylo:HasLocation a rdfs:Property;
+		rdfs:domain mylo:Activity;
+		rdfs:range mylo:Location .
+
+
+mylo:HasTimePeriod a rdfs:Property;
+		rdfs:domain mylo:Activity;
+		rdfs:range mylo:TimePeriod .
+
+
+mylo:FacebookPost a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+		
+
+mylo:FacebookCheckin a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:Event a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:FacebookPost a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:Trip a rdfs:Class;
+		rdfs:subClassOf mylo:Activity .
+
+
+mylo:Location a rdfs:Class .
+
+mylo:HasLocationName a rdfs:Property;
+		rdfs:domain mylo:Location;
+		rdfs:range rdfs:Literal.
+
+mylo:GeographicalPoint a rdfs:Class;
+		rdfs:subClassOf mylo:Location.
+
+mylo:HasGpsLatitude a rdfs:Property;
+		rdfs:domain mylo:GeographicalPoint;
+		rdfs:range rdfs:Literal.
+
+mylo:HasGpsLongitude a rdfs:Property;
+		rdfs:domain mylo:GeographicalPoint;
+		rdfs:range rdfs:Literal.
+
+mylo:HasAddress a rdfs:Property;
+		rdfs:domain mylo:GeographicalPoint;
+		rdfs:range mylo:Address.
+
+
+mylo:Address a rdfs:Class;
+		rdfs:subClassOf mylo:Location.
+
+
+mylo:HasCity a rdfs:Property;
+		rdfs:domain mylo:Address;
+		rdfs:range rdfs:Literal.
+
+mylo:HasStreet a rdfs:Property;
+		rdfs:domain mylo:Address;
+		rdfs:range rdfs:Literal.
+
+mylo:HasCountry a rdfs:Property;
+		rdfs:domain mylo:Address;
+		rdfs:range rdfs:Literal.
+
+mylo:HasState a rdfs:Property;
+		rdfs:domain mylo:Address;
+		rdfs:range rdfs:Literal.
+
+mylo:HasZip a rdfs:Property;
+		rdfs:domain mylo:Address;
+		rdfs:range rdfs:Literal.
+
+mylo:TimePeriod a rdfs:Class .
+
+
+mylo:Instant a rdfs:Class;
+		rdfs:subClassOf mylo:TimePeriod .
+
+mylo:HasTimeValue a rdfs:Property;
+		rdfs:domain mylo:Instant;
+		rdfs:range rdfs:Literal .
+
+
+mylo:ProperInterval a rdfs:Class;
+		rdfs:subClassOf mylo:TimePeriod .

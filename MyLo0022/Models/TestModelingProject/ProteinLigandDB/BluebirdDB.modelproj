@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7c594bb1-add4-45c5-b285-6eb8e5d4c7f2}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>BluebirdDB</Name>
+    <RootNamespace>ProteinLigandDB</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="FileItem.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="FileItem.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>FileItem.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="PLDBChemicalEntity.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PLDBChemicalEntity.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PLDBChemicalEntity.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ProjectsAndItems.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ProjectsAndItems.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ProjectsAndItems.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="WorkflowItems.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="WorkflowItems.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>WorkflowItems.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ProteinLigandDB.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

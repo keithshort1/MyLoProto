@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="PLDBprofile.Microsoft.56b21dab-9e77-470c-b249-235dbfcf271c">
+    <Name>PLDBprofile</Name>
+    <Author>Keith Short</Author>
+    <Version>1.0</Version>
+    <Description xml:space="preserve">Empty VSIX Project.</Description>
+    <Locale>1033</Locale>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.0" MaxVersion="4.0" />
+  </Identifier>
+  <References />
+  <Content>
+    <CustomExtension Type="Microsoft.VisualStudio.UmlProfile">Database.profile</CustomExtension>
+    <MefComponent>|GenerateDBCommand|</MefComponent>
+    <MefComponent>|GenerateDBCommandMyISAM|</MefComponent>
+    <MefComponent>|PLDBValidation|</MefComponent>
+    <MefComponent>|GeneratePostgresCommand|</MefComponent>
+    <MefComponent>|Generators|</MefComponent>
+  </Content>
+</Vsix>

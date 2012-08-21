@@ -1,0 +1,1586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="8e279d1e-255c-4126-894c-6eb09d943005" name="ProjectsAndItems" linkedPackageId="7f6ab8b8-1091-4e98-8fbb-d0d0f93fdd85" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="1655c6d8-7e3f-4ae9-aa18-9e42e557a219">
+      <elementDefinition Id="721746a0-84ab-4bb4-b2c9-7998fff92122" />
+      <body>A new type of association called "AbstractReference" will be used for the associations from ReferencingItems to an Item. 
+
+Each ReferencingItem with a AbstractRefrence association causes a View to be generated named by the role name to Item, which joins the table to the specific kind of Item table. 
+
+For example:
+create view ProteinKeywords as 
+select p.id,  k.Keywords from Protein as p, Keywords as k
+ where k.KeywordForItemId = p.id and k.TableName = 'Protein';</body>
+    </comment>
+    <comment Id="078a53c7-f7f3-411a-b23d-2443f0911b62">
+      <elementDefinition Id="2bf5bb3e-2582-4a60-b2ca-611313e6b8ac" />
+      <body>We'll need to decide whether to add further properties or subtables to these to store details of IFD, GLIDE, other science processing, or whether to use generic annotation tables</body>
+      <annotatedElements>
+        <classMoniker Id="582292ab-1a84-4b38-a8d5-c2b2826de361" LastKnownName="ProteinLigandAtomicInteraction" />
+        <classMoniker Id="12995a2b-295d-44a6-bfc5-80ce6d06be19" LastKnownName="WaterInteraction" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f44a9fd9-ee82-4e09-9d0e-d3d7fd77086d" name="Folder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="fd625de1-bbd5-4b6c-9158-a8c48cf26c73" name="Table" profile="DBProfile">
+            <elementDefinition Id="64045fa5-5a9c-4ea6-8791-1bf30c25d30b" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="bbf1e1aa-88fd-43c6-ac86-8d60d5175cf4" />
+        <targetEnds>
+          <association Id="ced942e7-6549-488e-9ee0-1c119545a740" isDerived="false" sourceEndRoleName="Folders" targetEndRoleName="FolderTemplate" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ebb5821d-343d-4d91-84c7-b88f15e2d70c" LastKnownName="FolderTemplate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ddb0130a-ec1c-406b-bcc5-18d7f4e8574c" name="Folders" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="db05a821-fb10-4c69-8300-e338dcdc3297" name="Lower" value="*">
+                      <elementDefinition Id="587441b1-17ea-42a4-8a99-951222618a50" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c720cd6d-7ab6-45f7-98fc-faa9c13ab328" name="Upper" value="*">
+                      <elementDefinition Id="3d2786bd-4a2e-4bcc-8ff1-514177d672d4" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="8043f946-9d2d-4679-9eda-5b38b64e2101" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1f26bbbe-ef8a-4074-9e01-eab13d2921a4" name="FolderTemplate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="f59efef4-5edf-4f7f-96b7-f8f0c96bcf62" name="Lower" value="0">
+                      <elementDefinition Id="3deebceb-0e93-4edc-bfe1-c806e0e0e71c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="24fa408e-ba1d-4b39-93dc-0a866c2d8067" name="Upper" value="1">
+                      <elementDefinition Id="6a0b04a1-6005-4112-b7c4-a28976c467e5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="629866c1-bd64-45a0-bf49-b96d31ec3648" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f08c19d1-791c-4690-b50a-1eebb5424bb2" name="Reference" profile="DBProfile">
+                <elementDefinition Id="6acfae9e-ca0d-4857-9308-d2d1607eb0fd" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="b259a3b4-0f40-4c2f-a423-28897fe7d003" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="34edf036-9b77-4f5f-a88b-d4b55c33a8cd" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="33f999b9-b49b-4b3e-9b42-e693781a43a2" name="Column" profile="DBProfile">
+                <elementDefinition Id="86117587-946f-4ad2-b377-214334ba7f4a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="21e77dd9-69ee-400f-9f85-accbbe4b4971">
+                    <propertyInstance Id="372fe0d5-2a60-40ef-ad5b-40750a360e8d" name="PrimaryKey" value="true">
+                      <elementDefinition Id="8435dad7-df09-4422-846f-7ebb87871707" />
+                    </propertyInstance>
+                    <elementDefinition Id="5a128ea9-19b4-4a62-9d70-12e99293ce27" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="166e795b-a4cc-46de-8ab2-eeebbf1628b4">
+                    <propertyInstance Id="96ca73eb-96ab-43bc-9827-ee114031ca19" name="DataType" value="bigint">
+                      <elementDefinition Id="84daacb7-8518-4c6f-9685-a8b0cbe349f9" />
+                    </propertyInstance>
+                    <elementDefinition Id="f13109db-9f6d-4863-9bcf-9d815ea39888" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9cafc757-08aa-4aa1-aa57-d61cb9a1a637">
+                    <propertyInstance Id="2565366a-4c0b-4c67-be4f-c594ff496bd6" name="Length">
+                      <elementDefinition Id="76043161-ce43-4eef-bee7-6ceb853988c3" />
+                    </propertyInstance>
+                    <elementDefinition Id="ea85a64c-70fd-4cd1-8b11-419d3f69435c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c8f5296e-0b69-4b96-9727-b1c61564bfd9">
+                    <propertyInstance Id="2fc69c3b-4534-4bbc-a777-05e62f187332" name="AllowNulls" value="false">
+                      <elementDefinition Id="0d5e1c71-2a7d-44d2-a566-3f253967682e" />
+                    </propertyInstance>
+                    <elementDefinition Id="05e86952-4903-48fc-b56f-cd729f7ef18e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="83c6f016-9150-4df9-86be-b5cbaf2c0bca" />
+          </property>
+          <property Id="ea16027a-fe35-4e1d-af91-e69ae5273c9b" name="GlobalUniqueId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="297585ac-6b73-4a22-9eb4-e0b31c1d21ba" name="Column" profile="DBProfile">
+                <elementDefinition Id="f6589a4d-3dfa-45fc-99d2-5a5c41af8c4d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7cce9af0-3590-4206-9338-75e21de646fa">
+                    <propertyInstance Id="9d25648c-8c90-4a17-886a-d645ec04294c" name="PrimaryKey" value="false">
+                      <elementDefinition Id="6b9fbae0-9a42-4256-924b-e4c3a3534b42" />
+                    </propertyInstance>
+                    <elementDefinition Id="f3c9d465-b2b8-4d7a-9fa3-b92db3162744" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="253c3aa9-9d5f-48e2-b501-a39d8a4b6534">
+                    <propertyInstance Id="22f70031-fb95-4077-b0ed-dee26dda3bf9" name="DataType" value="varchar()">
+                      <elementDefinition Id="d1361ea9-44b3-44ac-8aa4-27105af9b4e1" />
+                    </propertyInstance>
+                    <elementDefinition Id="f1e52c6f-dc67-40ef-b899-2d75aa3c238f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="56ce964e-a1b6-44cb-914b-21c0bc3149a9">
+                    <propertyInstance Id="050637f8-1094-4e28-bcf1-00e35cab4a42" name="Length" value="128">
+                      <elementDefinition Id="f222864f-cf7f-4c1f-aa4a-b108933a0fa2" />
+                    </propertyInstance>
+                    <elementDefinition Id="df692ec2-f8bc-4091-adbd-07bbb3d275f1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="50be2caa-9e25-4a56-a15c-ee5896f71762">
+                    <propertyInstance Id="d1ce3fbb-5f99-46f7-855e-71c961ea28da" name="AllowNulls" value="false">
+                      <elementDefinition Id="729987f0-c239-489a-8059-42102f752c0d" />
+                    </propertyInstance>
+                    <elementDefinition Id="b9421c9c-a0b7-4faf-837b-9f8312cac900" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="861b1185-f29a-4ea3-917b-bef5039346b8" />
+          </property>
+          <property Id="84853646-015e-4542-92bc-2c697e530b2c" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="3bd362b2-5c6e-4034-87f9-aa89da0d4e1a" name="Column" profile="DBProfile">
+                <elementDefinition Id="caa21a75-9386-42e0-b8b2-0e7be5235b06" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a8d4da3b-53cb-4ce3-9978-2c4ff0ab995e">
+                    <propertyInstance Id="b499cd4d-c93d-41dc-b364-493c63a391e9" name="PrimaryKey" value="false">
+                      <elementDefinition Id="bd0c32f3-d61f-4d64-afc7-0667e654c318" />
+                    </propertyInstance>
+                    <elementDefinition Id="4124844e-c316-4213-a81b-894e62c9e673" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8dc6a919-55ff-4cdb-9f56-a17ce71b6f77">
+                    <propertyInstance Id="ba96c982-acf3-4b69-afb0-e57f1691ba1b" name="DataType" value="varchar()">
+                      <elementDefinition Id="d799007c-4f28-46d7-866d-0e9edf8b3b4b" />
+                    </propertyInstance>
+                    <elementDefinition Id="2581023b-2734-4d58-8b82-814ec367962e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1ca1aea3-517e-4bc2-9a16-fc71a24b2fb9">
+                    <propertyInstance Id="b4ec3136-6c78-403f-b226-ab7ad3319ef5" name="Length" value="96">
+                      <elementDefinition Id="cd023426-2dd0-4a02-a9ee-63e861f66fbe" />
+                    </propertyInstance>
+                    <elementDefinition Id="69ca0d67-047e-4073-bfd1-3db091a297ff" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9bd2e560-e74b-43d1-b719-c10dcb79dc43">
+                    <propertyInstance Id="12598af7-638a-4a77-818d-dee0131a8f2e" name="AllowNulls" value="false">
+                      <elementDefinition Id="0e59ddba-beb0-4439-956a-065d9b62af9b" />
+                    </propertyInstance>
+                    <elementDefinition Id="5df6d055-5962-4f88-9371-f21fabef5036" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c9a862cf-3c8f-4af0-81ab-bb30753acc63" />
+          </property>
+          <property Id="7adbbfca-846d-40cd-a3b5-62752bbc1d97" name="CreateDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="73030af0-4aca-4dc8-8355-bcbfce43387b" name="Column" profile="DBProfile">
+                <elementDefinition Id="1cbb4eff-5edb-4f6b-9d75-6a8ef3a4dee0" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="10a959d2-c47a-4379-9477-62a4c6ee4822">
+                    <propertyInstance Id="7f8377e5-8d46-4cee-8847-69f2b80da092" name="PrimaryKey" value="false">
+                      <elementDefinition Id="d83e50fb-cb9e-455e-8e79-102db03d563e" />
+                    </propertyInstance>
+                    <elementDefinition Id="d18165df-607f-4f22-b493-8d0361e68ef9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ef3d6c2a-2565-46ae-afe8-c0a08983f9fa">
+                    <propertyInstance Id="d30b06c9-cc96-4b8f-91a4-fd8343f62cf6" name="DataType" value="datetime">
+                      <elementDefinition Id="829c88b2-f583-4131-bbbe-d80d13e571eb" />
+                    </propertyInstance>
+                    <elementDefinition Id="45723050-313c-41a7-9973-5b0c11c3086e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e15ce499-19e9-4e30-9fb1-58dcb14f90d9">
+                    <propertyInstance Id="90b7f78f-ea93-46f1-9292-b88fbdefb781" name="Length">
+                      <elementDefinition Id="e225327b-7414-4138-99ae-7113eeb772c8" />
+                    </propertyInstance>
+                    <elementDefinition Id="37febe0e-c3c8-4656-b4f4-356c2d060553" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="28dd84d6-2046-4536-8576-a386ea9e5d55">
+                    <propertyInstance Id="8ab3f2d2-dd12-45fc-8210-a5e7cfb7f45a" name="AllowNulls" value="false">
+                      <elementDefinition Id="983fd87e-b4ab-4b20-9cd4-b8684330189a" />
+                    </propertyInstance>
+                    <elementDefinition Id="e9a4da0d-2153-4d76-947a-3c377c447109" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="cf74d404-e1a0-4ed6-b289-fc7cef2f2c23" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a09cbd91-c303-4b5e-b313-1189012facf0" name="ChemicalEntity" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="921cabfe-9b46-4e8d-9f80-03475f8d8959" />
+        <generalsInternal>
+          <generalization Id="416f9bec-b171-47ac-bec0-ffe95fb3e5dc" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="42271856-4cd4-4213-9a67-641ea32b0092" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4655f83f-414d-416f-aa61-1d3994264c81" name="Workflow" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1ff45d56-53c7-410c-903a-dbfa91a4abb8" />
+        <generalsInternal>
+          <generalization Id="cb41a1d3-c23a-464c-a445-b65be825d2b8" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="1da8accc-b935-469e-ab87-2bc10ece5ecb" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="0663110c-17ae-4a01-b528-81d6eeb9e919" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="26853f2c-8666-4534-893d-6caf01e287bb" name="Column" profile="DBProfile">
+                <elementDefinition Id="bd796ef8-5465-4d1d-80ff-5d3aa18dfd48" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7c225d00-0c15-4009-bfb9-8e5eabfe2567">
+                    <propertyInstance Id="43003b9f-1dcf-4099-9103-6ce2ed9c8535" name="PrimaryKey" value="false">
+                      <elementDefinition Id="1806c2b9-6df8-45dd-a40c-e125c9ed548e" />
+                    </propertyInstance>
+                    <elementDefinition Id="34d70299-9269-4e53-8b9a-726f246ec5dd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e0f3e598-c5fb-47f8-af77-5f12d01aa27b">
+                    <propertyInstance Id="37210606-2467-4687-aaca-8fe32e52512a" name="DataType" value="varchar()">
+                      <elementDefinition Id="acb7661a-2797-4003-9698-3cacecdf7e9e" />
+                    </propertyInstance>
+                    <elementDefinition Id="cedd4752-c250-4e4a-9600-2c099e35c0ca" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9ab5a916-1445-49bc-b679-c038327c335b">
+                    <propertyInstance Id="04bd2c6e-4035-4732-8f04-73e3df3e665f" name="Length" value="96">
+                      <elementDefinition Id="e0f4232e-692f-4317-adf8-a0d2828875fb" />
+                    </propertyInstance>
+                    <elementDefinition Id="194daeb5-f216-41e1-afb9-58a729a23e8d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c98889cc-c2c4-44d9-bd2a-5e8969fd40ca">
+                    <propertyInstance Id="2d8c13af-9ce0-43e7-b33a-e75119bae42c" name="AllowNulls" value="false">
+                      <elementDefinition Id="8e725fb9-5261-485f-85e3-d34f9c6764c2" />
+                    </propertyInstance>
+                    <elementDefinition Id="a6cb2947-4df5-4ebe-a08d-8954f8909177" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="00538911-b65f-463f-bfbb-252106dd5539" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ff6a5ad6-177c-4453-82ed-901939b709f8" name="AssayResult" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="a71f0873-cb9e-4436-9c29-aa1660ca6ae7" name="Table" profile="DBProfile">
+            <elementDefinition Id="b3e3d7ec-ca28-4e4b-9e47-9fcf9c22b051" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="e4f0c493-fea4-4fe4-a6fc-e4dd5c8dbd18" />
+        <generalsInternal>
+          <generalization Id="4a984325-77a9-48a0-a0b3-349ad28c4b97" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="4a32e994-626d-4e10-a682-7cf315ef38f2" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4f002cc4-f49e-4b32-9ac6-68db8da86a10" name="TeamMember" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="b38f97d7-2dad-4b15-87cc-8dcb6172a06b" name="Table" profile="DBProfile">
+            <elementDefinition Id="025a80c4-2efe-434a-955e-efda7538db08" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="834c6e2a-742a-45e8-90ad-e95bf39eaa62" />
+        <generalsInternal>
+          <generalization Id="55f811ef-6e05-49d1-aed4-93ef2a4a3d42" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="5971e4d1-1eff-48c1-b335-3c3cfa5d41a3" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="8454de45-191f-4d03-97c9-d92d9c140f60" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="fd88987c-ddd6-4283-8c2e-1504542ca6a0" name="Column" profile="DBProfile">
+                <elementDefinition Id="17f4c505-f7e4-4d21-8529-a3251da7227c" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="495b3653-5bf8-43eb-ac69-ec2c91d75e6d">
+                    <propertyInstance Id="b2d95ebb-0365-42ec-81d9-8a6c372701b2" name="PrimaryKey" value="false">
+                      <elementDefinition Id="00300287-cb85-454f-9b03-b2ad33043d11" />
+                    </propertyInstance>
+                    <elementDefinition Id="d8e04373-0de0-45c1-9a09-33549f200b3c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3a8d47b9-5217-4d9a-82a5-9ec9645d09f2">
+                    <propertyInstance Id="e285ebc3-9436-4a07-a104-662f4794a0fd" name="DataType" value="varchar()">
+                      <elementDefinition Id="87b1a11f-f7de-4c95-af8d-7e1b1732f217" />
+                    </propertyInstance>
+                    <elementDefinition Id="885f0722-5e7b-4273-9e0b-f434a14d905b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bb74e7ad-f012-4637-a7b3-a741a8cb88b7">
+                    <propertyInstance Id="7b5c6296-e461-42fa-a77b-f42d98b1740d" name="Length" value="96">
+                      <elementDefinition Id="5594793e-1345-4147-af28-d455cae1f2ba" />
+                    </propertyInstance>
+                    <elementDefinition Id="0b26eb76-27ef-4c77-9276-0c385ac9a9e4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cf8cd57b-b758-4c9c-a8a8-1f10d6319e6e">
+                    <propertyInstance Id="a82b6fae-9004-4ac4-8fba-cb7f1ffcf9af" name="AllowNulls" value="false">
+                      <elementDefinition Id="57ce6299-87db-4f8e-8c15-2be5f520eb52" />
+                    </propertyInstance>
+                    <elementDefinition Id="fb25e6bb-9bf4-4104-9335-4f86b159b261" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="db976f52-9fba-4cdc-ae31-25baf9c84472" />
+          </property>
+          <property Id="04ad0302-bcfd-41ca-85f8-185e07e551d3" name="EmailId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="12eb50e1-4f7d-4dc5-90c1-5d3212b6adab" name="Column" profile="DBProfile">
+                <elementDefinition Id="88b3551c-b468-4ae7-95d1-6bce92e34f52" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="14539edf-bf49-4fb3-85fd-765d1f44f621">
+                    <propertyInstance Id="6c5e9220-25c9-46b8-aa89-ca47256bb57e" name="PrimaryKey" value="false">
+                      <elementDefinition Id="578cd02e-ea39-41e7-8f41-edcb2a89362d" />
+                    </propertyInstance>
+                    <elementDefinition Id="1717998d-e18b-4109-a943-cf733202319e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="88e2fad4-8fff-4969-8d8b-0490ba325081">
+                    <propertyInstance Id="878fcb5a-b991-4a34-826c-25ecb4329ed6" name="DataType" value="varchar()">
+                      <elementDefinition Id="ec6e1fec-87f0-43a8-b50e-62cd67273937" />
+                    </propertyInstance>
+                    <elementDefinition Id="06b67708-5ec9-435e-a37a-49be7152270e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4d8922a1-8ea4-4819-86b5-1dd0d17914d5">
+                    <propertyInstance Id="d6662ae0-edd7-42b5-891a-84d73d522d16" name="Length" value="256">
+                      <elementDefinition Id="ffaa4c7e-1e8a-4624-9980-9ff3fed61f09" />
+                    </propertyInstance>
+                    <elementDefinition Id="db70b48f-1ae8-48b4-8e93-1d8f6420d127" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7faf18c9-cba5-4128-98ab-a67f4883571c">
+                    <propertyInstance Id="0a37421a-414b-4124-8178-635db2cadfa7" name="AllowNulls" value="false">
+                      <elementDefinition Id="e9830958-e18a-49f3-a1cd-f39d842f47a4" />
+                    </propertyInstance>
+                    <elementDefinition Id="7a3613b7-df58-439e-8ceb-5f315eda4cba" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a7115bed-a3da-46fe-8f62-a3fac83fd7f0" />
+          </property>
+          <property Id="8b910217-6582-4b32-8d35-aa7276352c94" name="IsSignedIn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="93a7df67-9add-480e-8c31-51dd6f5134a1" name="Column" profile="DBProfile">
+                <elementDefinition Id="84448c84-bd88-4eea-82fa-2d1401c70947" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5c1074ec-d1bc-4e9c-8461-ba125d2cc22f">
+                    <propertyInstance Id="d3f5cc71-7617-4bb6-bdda-5b665fba7df3" name="PrimaryKey" value="false">
+                      <elementDefinition Id="9332f414-9efa-4ab6-9666-26f6b20d66d4" />
+                    </propertyInstance>
+                    <elementDefinition Id="b7d651ac-f1a4-46f9-bd8d-db3ae9bf80e3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="af44b932-4574-4d0e-8fb1-11818d70fbde">
+                    <propertyInstance Id="3a1090e8-9793-4263-bca0-eea21c3e08a5" name="DataType" value="boolean">
+                      <elementDefinition Id="bdb34a48-3d36-443e-bf54-9e57d37f9115" />
+                    </propertyInstance>
+                    <elementDefinition Id="d6ea4efb-9eae-45d1-88a4-7b5d4b4c2a85" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aefeb0e6-2662-448a-ae38-0ca3ea1c3fbc">
+                    <propertyInstance Id="8102e6d3-6d1e-4b81-bd79-a994e5f3a649" name="Length" value="1">
+                      <elementDefinition Id="d570bd43-fac4-4be0-b0e0-4505af004d2d" />
+                    </propertyInstance>
+                    <elementDefinition Id="94d826ac-8a3d-42ae-b20c-3cc5f371e8f3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c84b6a59-833d-4831-9d12-76082735ab90">
+                    <propertyInstance Id="2b12a3b3-bfc9-416b-a621-653eae3d413f" name="AllowNulls" value="false">
+                      <elementDefinition Id="bafd0deb-2fba-4fed-950c-d599fde0f30c" />
+                    </propertyInstance>
+                    <elementDefinition Id="2706090a-f139-49d0-b159-847207f80dba" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="afe646a6-3920-42b1-912e-ab8c093f977e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="31fba5d5-4c7c-4099-9146-99421847bd90" name="ThreadedConversation" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="9015b3cf-e657-4660-b187-12af642566e4" name="Table" profile="DBProfile">
+            <elementDefinition Id="60751758-386e-49d0-bce3-9029c1194a49" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="20cee304-712d-495a-8445-e3b8b5349f36" />
+        <generalsInternal>
+          <generalization Id="f84a9309-acbe-4660-99d1-ca053f9ade06" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="21e54236-b584-4905-b72f-689d5063a286" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="276a5eac-1e30-429a-aa88-66349917605b" isDerived="false" sourceEndRoleName="ThreadedConversation" targetEndRoleName="ConversationItems" isLeaf="false" isAbstract="false">
+            <classMoniker Id="b01452db-7401-4f96-a226-14d1f06b941c" LastKnownName="ConversationItem" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce9c6c7e-7d67-48d4-8c3b-7615959653c5" name="ThreadedConversation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="64f97d10-173d-4621-bfaf-1aa66b4c4e97" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ebae4b1-fb89-481f-ba97-07702af74fd1" name="ConversationItems" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="5ef9b0f4-616a-43c3-a5f6-2056a1c5a4c1" name="Lower" value="*">
+                      <elementDefinition Id="66843420-5967-4a40-bf64-a1af494974d4" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="fcf5dbdc-5195-494f-b43a-d6087f779193" name="Upper" value="*">
+                      <elementDefinition Id="61d59fdb-6cbc-4c92-9c6a-9a0f4a7bc68a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7c71aa90-598d-45ee-8a30-4f65c0948cfe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="b5573ea1-4fe6-43d1-8122-18d925566896" name="ForeignKey" profile="DBProfile">
+                <elementDefinition Id="36fabff4-60e8-45e7-ab88-80eac73305c4" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b15feb99-3271-4468-aef7-0123ae0e780e">
+                    <propertyInstance Id="87192c57-f68e-4763-98ca-e8845737a774" name="DeleteRule" value="Cascade">
+                      <elementDefinition Id="a3a55302-0271-47d6-bebf-63f4da91dd0d" />
+                    </propertyInstance>
+                    <elementDefinition Id="d1b96b77-3519-489c-9525-b816b0986888" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="174c5e53-8c81-4f6a-8883-89ba3b64c61f">
+                    <propertyInstance Id="7ff9a688-bfe3-4531-9e4a-1eeb2409f1e5" name="UpdateRule" value="NoAction">
+                      <elementDefinition Id="ac7a373f-14ac-4886-bfbd-852f64d9c8e9" />
+                    </propertyInstance>
+                    <elementDefinition Id="0c2a3d6b-fb68-4a28-870e-7c41db75f562" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0f95efad-72fd-4465-af42-4cf497b3e97c" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b01452db-7401-4f96-a226-14d1f06b941c" name="ConversationItem" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="bf5db867-52d8-4cb1-8e18-1e242a88d42f" name="Table" profile="DBProfile">
+            <elementDefinition Id="59705b2c-b2a4-4cce-851c-e449a754c6ec" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="e8eae0e2-ff30-4d62-95be-32b81fc12fc0" />
+        <targetEnds>
+          <association Id="86e872d0-67de-4230-9e5b-ae349617cd97" isDerived="false" sourceEndRoleName="ConversationItems" targetEndRoleName="TeamMember" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4f002cc4-f49e-4b32-9ac6-68db8da86a10" LastKnownName="TeamMember" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2f77d833-f7cd-49ee-b9c0-7c26af0d5889" name="ConversationItems" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e6633e50-8391-429b-b989-119b0209b7ca" name="Lower" value="*">
+                      <elementDefinition Id="b740b370-d1e3-4770-adef-1c3cc6014ba3" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f91d003b-d243-40a7-8f73-be928c64cfba" name="Upper" value="*">
+                      <elementDefinition Id="a53ffd1f-2ee2-4645-80f2-ef886e2e7eb3" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="89eaed17-acb0-4007-8ffa-a5dc55a0c81e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="33e4ac0f-b207-4474-8ccf-787612b49146" name="TeamMember" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dab65acc-0908-4e87-bfcd-6e758ca14371" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="a7df0383-bdc5-4fff-ad75-359517cb468c" name="ForeignKey" profile="DBProfile">
+                <elementDefinition Id="913c1dc0-f701-45cc-b19e-6b72a5d19cf5" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ee75bb1b-2c23-425a-9a5e-6fe3e18b5c9d">
+                    <propertyInstance Id="3d3a181a-1607-42bb-8f91-789e5ccac732" name="DeleteRule" value="No Action">
+                      <elementDefinition Id="faf1b49e-6092-4947-a9d4-6fa7044369e5" />
+                    </propertyInstance>
+                    <elementDefinition Id="6fbc4a53-feb1-4300-a99f-870b7d4e8300" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="57c1df58-9049-46b7-818d-c14aa962b23d">
+                    <propertyInstance Id="4724724d-f9bf-427b-bde7-1877d1031623" name="UpdateRule" value="No Action">
+                      <elementDefinition Id="c0ff40f3-6706-47f8-95c7-38ab9223c16a" />
+                    </propertyInstance>
+                    <elementDefinition Id="ae6c3a6a-c306-4f15-bbc2-3c89db5dd8ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2723053d-1197-460a-ba80-ce09805a0c82" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="4dd50385-15ec-48fb-919e-b86b34fd8eea" name="Message" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c8743c4c-4274-4e84-8360-7b37dfad8e1b" name="Column" profile="DBProfile">
+                <elementDefinition Id="de2a8f37-0cfa-4158-9be9-2758e2ffcf0d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2a3a493d-2dd3-4f22-aa5c-ba2e17198bef">
+                    <propertyInstance Id="840f5215-7153-49e1-be73-53a07b5b3948" name="PrimaryKey" value="false">
+                      <elementDefinition Id="8c69ed8e-2743-4b3f-83b1-1c84f1ce28ef" />
+                    </propertyInstance>
+                    <elementDefinition Id="60520a34-e886-420e-900c-0f9269a85bb8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0352f7c8-22c0-4771-bb1b-875a6eb9dd2c">
+                    <propertyInstance Id="1c248ae1-7ed6-4e48-8946-4d4b80e6a618" name="DataType" value="varchar()">
+                      <elementDefinition Id="bae3d4ef-b89d-4af4-8c67-bebfa970790f" />
+                    </propertyInstance>
+                    <elementDefinition Id="f03fe748-6d86-4899-9612-1801428f4db3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="37e6161a-8fa1-4b56-a3b8-56940f49a0b9">
+                    <propertyInstance Id="8b2d333c-9b85-4755-828d-b84b12610526" name="Length" value="256">
+                      <elementDefinition Id="d9dc80bb-d86d-4b9d-bdfa-dc908dff8ca2" />
+                    </propertyInstance>
+                    <elementDefinition Id="84d5fa14-4816-4e7d-99e9-d0e2ebb1513c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="84432373-eceb-4748-99e1-5407db194d03">
+                    <propertyInstance Id="24a2fb5a-0ce9-492d-8025-df595d6d2a44" name="AllowNulls" value="true">
+                      <elementDefinition Id="7b6f6474-549f-48c5-a04c-3e92cdc71fae" />
+                    </propertyInstance>
+                    <elementDefinition Id="5afd09c9-7651-4679-9e88-ba0f9f6dd711" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2fb4df4f-6182-4e2a-88bc-5af7d625f2c1" />
+          </property>
+          <property Id="6e0bcaba-0bad-46db-b2ae-260fe2596da1" name="DateTime" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="211b72f1-bcb3-4114-8534-c8e44731d017" name="Column" profile="DBProfile">
+                <elementDefinition Id="69080e80-27ce-4a6e-a9ca-be0b71e2d821" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9355a9e1-a875-4b89-b876-56245178ab05">
+                    <propertyInstance Id="9955bae7-d39b-4fa6-baa9-8fb5d81bf8da" name="PrimaryKey" value="false">
+                      <elementDefinition Id="4a38cefd-90da-462a-8703-1b93f625f088" />
+                    </propertyInstance>
+                    <elementDefinition Id="d8aa6c47-76af-4485-ad66-127c349d868f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0bcbcac2-db93-4bb7-a87d-1f9bdeb4051d">
+                    <propertyInstance Id="8d0d2dee-a080-4020-97e1-c3ba71a9e1a5" name="DataType" value="datetime">
+                      <elementDefinition Id="57adc99c-d20f-40dd-93ba-351de0931a4c" />
+                    </propertyInstance>
+                    <elementDefinition Id="2d53cc55-889e-44fb-b003-9262259327b3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="abd0a3ff-2aeb-45da-8b06-0bba2f1e60a3">
+                    <propertyInstance Id="2197b69c-826b-41e8-a75f-3339f26b7e42" name="Length">
+                      <elementDefinition Id="3238330e-274e-42e9-bc2f-8f54d696f5b0" />
+                    </propertyInstance>
+                    <elementDefinition Id="766c778d-98e8-44bb-98b4-3779705349b7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="99836042-e0b0-4bfd-94f8-48790f045af8">
+                    <propertyInstance Id="223fec5c-13a3-4aae-98f8-4eee5e8ea285" name="AllowNulls" value="false">
+                      <elementDefinition Id="e0d2654a-fd2e-4180-978e-a02200150c46" />
+                    </propertyInstance>
+                    <elementDefinition Id="5b0d6aac-2e48-496f-af69-5df2452f5853" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="56ce7c83-6510-43a0-81b2-1fa7f4d7875b" />
+          </property>
+          <property Id="34a661f5-08fc-4c38-a954-efa89cf00420" name="SeqNumber" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="4a9f87bc-536f-41a2-bae7-2b22205c9619" name="Column" profile="DBProfile">
+                <elementDefinition Id="62def8c5-7441-427f-a6ad-3c4ea7c2ac2f" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c8beb84b-bea3-4c77-bd25-9cfa4a13a09d">
+                    <propertyInstance Id="f203be75-84a6-4bca-81e6-34f807bf9ae9" name="PrimaryKey" value="false">
+                      <elementDefinition Id="7d3f38d6-d723-49ac-83c0-aae7764820e6" />
+                    </propertyInstance>
+                    <elementDefinition Id="3c5fbbab-2dee-44e9-abfc-2d678aced993" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e19cbfcd-733c-4898-b4ef-67d2967f7b6e">
+                    <propertyInstance Id="bfa4d809-b932-479f-bc51-a21ecd2cafe4" name="DataType" value="int">
+                      <elementDefinition Id="c1dff0d0-a5a7-416e-84f1-03f2d45ebf30" />
+                    </propertyInstance>
+                    <elementDefinition Id="9a510805-a020-4dcc-9e1e-b82457260e09" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="17d16c30-b1e3-45a8-bed5-574d636292d0">
+                    <propertyInstance Id="519cc822-f0b9-444a-b071-3cfde75acbc0" name="Length" value="12">
+                      <elementDefinition Id="54794cfa-3016-4220-a7aa-485dcdca2cff" />
+                    </propertyInstance>
+                    <elementDefinition Id="24c7fbab-5c17-4945-b9b9-3d7dc6eb1c70" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f1cac136-12da-4372-8328-59c7f98ec7ba">
+                    <propertyInstance Id="7c20539c-6977-4d8e-9f65-9f4539ca00a5" name="AllowNulls" value="false">
+                      <elementDefinition Id="5a58ce7d-d7ca-4c3c-8b69-cd46e3f952ab" />
+                    </propertyInstance>
+                    <elementDefinition Id="0125520e-51d0-477e-be67-7af442b7a708" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="1ec88835-bbc3-47cb-a784-2983fba9b1b2" />
+          </property>
+          <property Id="00a156dd-ecf0-4dac-94f6-9e9e64d6ced0" name="ConversationItemId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6ceedaab-616c-46d9-8275-22deec79fdd5" name="Column" profile="DBProfile">
+                <elementDefinition Id="ccbc3635-83d4-4173-9b36-197ecf4ef760" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="29d2b13b-82d3-494a-b4a4-920f606d8726">
+                    <propertyInstance Id="145c2634-095a-492c-a862-f1b1cb460f20" name="PrimaryKey" value="true">
+                      <elementDefinition Id="6a15db8b-d1f7-483d-80e0-f8047548bde4" />
+                    </propertyInstance>
+                    <elementDefinition Id="1f30f4d8-9a31-43be-8837-e39c1947f3e7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0e112b6b-6278-47cb-ae3e-d404890d4f3c">
+                    <propertyInstance Id="fec955fc-2e8b-46b6-9b3f-2182e8bf6aca" name="DataType" value="bigint">
+                      <elementDefinition Id="a9c38b00-a0b3-4223-8377-cf83546485e4" />
+                    </propertyInstance>
+                    <elementDefinition Id="e3996856-ba56-48c1-be54-5d173cee466c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b100768e-8859-4aa0-be09-416bcc5b1b56">
+                    <propertyInstance Id="54f1d04d-6693-4190-b005-d12e4d76972f" name="Length" value="24">
+                      <elementDefinition Id="2a52d5b2-9643-44aa-bd30-e128ce5c493c" />
+                    </propertyInstance>
+                    <elementDefinition Id="8144d1d5-15c5-44c2-a631-cd872765be06" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9d0e4030-95ea-4118-9467-0f37f8cc2db2">
+                    <propertyInstance Id="d490df41-928f-4e77-a3eb-4662475b0160" name="AllowNulls" value="false">
+                      <elementDefinition Id="cc749ee2-c446-4d4b-a858-8f87a55fe14f" />
+                    </propertyInstance>
+                    <elementDefinition Id="74053e4f-4c13-48eb-b824-af208eff6061" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f068fbf3-ef67-4b84-ac5c-a285cfa1251e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="582292ab-1a84-4b38-a8d5-c2b2826de361" name="ProteinLigandAtomicInteraction" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="fe813408-fe7d-43fd-a72f-13e1a1d8433f" name="Table" profile="DBProfile">
+            <elementDefinition Id="e3dcfa73-5467-4541-8818-3ccce95537df" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="eb8e6c39-a7f1-4203-8a9b-8ec680ec4ba6" />
+        <generalsInternal>
+          <generalization Id="8bf0e1b9-defd-42eb-b174-5123f0a4e7b6" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="cc77e6ad-1199-4be5-b4d9-52a1cf74acac" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="ce4719b6-1767-4aff-9642-94b506472bae" name="Distance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="fa094b92-b40f-49a4-a614-3c7ad64d9771" name="Column" profile="DBProfile">
+                <elementDefinition Id="a2d5b3f5-aac4-4d56-872a-1bc19850c462" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0e5e3a68-c9f1-48f4-9c86-2302dd3901ec">
+                    <propertyInstance Id="55d28c68-754c-489c-930e-354dcc2207e3" name="PrimaryKey" value="false">
+                      <elementDefinition Id="b87373a3-627f-413a-9b82-b386e66c7561" />
+                    </propertyInstance>
+                    <elementDefinition Id="9f889e3f-f9de-495b-ae38-ed1cf8fe71f9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d77b9d87-580a-4c3c-b736-c58daa058aa5">
+                    <propertyInstance Id="a4354b7a-d458-4905-9487-06afab82b9a7" name="DataType" value="float()">
+                      <elementDefinition Id="59aec05c-1ede-43d2-95cb-ca8282701a29" />
+                    </propertyInstance>
+                    <elementDefinition Id="220db96e-28df-43c1-8c63-297c8353fcd3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bf29afa1-21ef-4bce-9230-bc1fcd11a9a9">
+                    <propertyInstance Id="684b82a9-5518-40fb-9a58-73a51b2b76c2" name="Length" value="4,2">
+                      <elementDefinition Id="92524694-9bd1-48d2-9f02-1b171f8b89eb" />
+                    </propertyInstance>
+                    <elementDefinition Id="66fd6b87-93fd-47c9-8ba7-6a2dc826bd5a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a1477869-a72b-470a-ba9d-f2c95be58202">
+                    <propertyInstance Id="cafd598f-958a-4e1b-85b0-0328a37c240f" name="AllowNulls" value="false">
+                      <elementDefinition Id="c8cf8865-5fc0-49bb-972b-a2b54ffd4b3b" />
+                    </propertyInstance>
+                    <elementDefinition Id="57598b6c-c9fa-4338-99fb-bcc42112f978" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2b87fe19-1c1d-49a7-863b-6a621661ec6e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="62ea160a-12b8-4f0d-8aad-f77395149aa4" LastKnownName="UnlimitedNatural" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="62ea160a-12b8-4f0d-8aad-f77395149aa4" name="UnlimitedNatural" isAbstract="false" isLeaf="false" cachedFullName="UnlimitedNatural">
+        <elementDefinition Id="3ab42e7d-4969-445a-b209-471f5cb8209c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="12995a2b-295d-44a6-bfc5-80ce6d06be19" name="WaterInteraction" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="89afdc93-5690-4c40-afc3-76b502121643" name="Table" profile="DBProfile">
+            <elementDefinition Id="9bc5a542-a961-4b41-90a0-4417e368012e" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="84d5db59-35fb-4c40-b6df-51a136dc007d" />
+        <generalsInternal>
+          <generalization Id="1001ccbe-f01d-4f4d-802a-32dc59529cb1" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="05a11799-6b82-4840-bce3-2969e711f00f" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="93ae815d-3296-4401-a437-06c887c302a1" name="AwDistance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="5b545892-73ca-41a4-a788-353be3a51743" name="Column" profile="DBProfile">
+                <elementDefinition Id="b94a9427-fd5b-4da9-960c-0aed11648e97" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e1a849de-ca85-4f91-8674-d19adb1be971">
+                    <propertyInstance Id="07ef4250-cdaa-4fc5-b4ee-ebe9734576af" name="PrimaryKey" value="false">
+                      <elementDefinition Id="60190208-afe7-490c-b633-0dfdb57e6a27" />
+                    </propertyInstance>
+                    <elementDefinition Id="57b86944-45fc-426e-907c-ffc7dcd08704" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5794eb33-37ad-407a-9e90-d0d60742fb35">
+                    <propertyInstance Id="fc6729e1-4ca0-4d12-a927-d7e282a9c49d" name="DataType" value="float()">
+                      <elementDefinition Id="4c5ace41-6c2e-41bd-96a7-908d3f6cc2e0" />
+                    </propertyInstance>
+                    <elementDefinition Id="f7811766-d16c-43a7-94d5-4a9a755c3790" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="67392022-68ac-4521-bed7-fa679ab881eb">
+                    <propertyInstance Id="09d9e04f-a2f2-4645-a68c-7a25e502bd85" name="Length" value="4,2">
+                      <elementDefinition Id="3a19e5d4-e79e-47f3-a84d-6620bdf10359" />
+                    </propertyInstance>
+                    <elementDefinition Id="da3b4d52-52df-412e-b829-45990db89eb8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4239d6c9-7dee-4c32-b7b0-0a33b556124c">
+                    <propertyInstance Id="8c497d4c-c723-4115-8892-5f7145b9bdc4" name="AllowNulls" value="false">
+                      <elementDefinition Id="201b1a25-46f7-4244-a01d-9b1a70ceadae" />
+                    </propertyInstance>
+                    <elementDefinition Id="874abbf3-1b3b-4bcd-936a-207a7edcf66a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="e1e3b531-708c-434b-a2dc-3b53c1a010a7" />
+          </property>
+          <property Id="40effdce-7f3b-4e7c-9320-6cf46e369473" name="HwDistance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="73ff28e0-df54-4ab9-b23c-4ac4046203b5" name="Column" profile="DBProfile">
+                <elementDefinition Id="242df638-e42c-4eaa-bf83-6335523307bf" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="30914d6b-0721-4af4-8659-0797f684b9bd">
+                    <propertyInstance Id="e866add6-745c-41ce-a0bf-33e64cd2cb2a" name="PrimaryKey" value="false">
+                      <elementDefinition Id="d5f646cf-90e1-4ce1-8ff4-c3a681683717" />
+                    </propertyInstance>
+                    <elementDefinition Id="c3b3179e-6a0d-47aa-9c02-fd6b6ea0a4ec" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6b54e4e4-bf7b-47bf-8a65-61cc53aafc40">
+                    <propertyInstance Id="744e116f-c3a8-489c-80ec-7fa1c27c084b" name="DataType" value="float()">
+                      <elementDefinition Id="645e0e98-e096-400e-90d3-a64c40bcb28b" />
+                    </propertyInstance>
+                    <elementDefinition Id="70991bdd-b271-4043-9e86-419b4d5089d2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="951bdac7-3ff4-42e0-83a9-8745589e41ef">
+                    <propertyInstance Id="611b1ee0-3065-436f-bffd-9a059d6f0348" name="Length" value="4,3">
+                      <elementDefinition Id="41199ba5-0028-4b95-94a2-a2aaee991869" />
+                    </propertyInstance>
+                    <elementDefinition Id="f4e7821a-7214-4fba-9a9c-b7e083d5dace" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7d82d8a2-4b3f-400d-85d1-17a52914361a">
+                    <propertyInstance Id="f9bdf367-32bb-4a78-bf6c-88c3d6794a99" name="AllowNulls" value="false">
+                      <elementDefinition Id="b7f6ba09-31bf-4112-b4b8-7dbb00bc7628" />
+                    </propertyInstance>
+                    <elementDefinition Id="e01f4855-7d3d-4a16-b2b7-6ff201d7cf46" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="b4eab378-60e3-44c3-89fa-2b9b1223c9ea" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" name="Resource" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0e817462-d33d-466a-a29c-e12ab42da534" />
+        <targetEnds>
+          <association Id="1e82efa3-7815-4785-9fcf-8eb1cc35bc9b" isDerived="false" sourceEndRoleName="Items" targetEndRoleName="Folder" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f44a9fd9-ee82-4e09-9d0e-d3d7fd77086d" LastKnownName="Folder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8f59fff-4871-43ad-8451-a36e22154ac3" name="Items" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="6eaa8575-2062-41fd-83db-dfaaee6420e8" name="Lower" value="*">
+                      <elementDefinition Id="71a58686-2978-487a-a162-67d7fa8bced2" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="764ca3f8-de16-4baa-8c5f-cf7b0a5491a2" name="Upper" value="*">
+                      <elementDefinition Id="23ee70d6-caa6-4452-9eca-d0035eaf3ca5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="5ef43efa-ac61-4a66-b25a-1d4bb1d9329e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8fefab6c-6101-4bcc-8cdb-5a704702e5b4" name="Folder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false">
+                  <elementDefinition Id="413198b9-b84a-4a65-8aa0-4c8cfd4a6bc5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c0deb85e-ed9b-4c9d-b5e7-93a273933e92" name="ForeignKey" profile="DBProfile">
+                <elementDefinition Id="190a6533-8205-4c6b-9a35-0eb0391e2d56" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1c3af2db-b949-443a-9eda-5f5632b17590">
+                    <propertyInstance Id="13840f54-0c65-419e-9f22-b9a7a78cab75" name="DeleteRule" value="Cascade">
+                      <elementDefinition Id="f6f3260f-066f-4fe5-a02e-8fe4048c2c8a" />
+                    </propertyInstance>
+                    <elementDefinition Id="0948311e-d8ee-46b9-9c30-f6d67c208918" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4d659a8c-d9c9-45bf-97db-62ce6ba2ffae">
+                    <propertyInstance Id="7061cd93-aa3f-4132-970a-13a2e749b644" name="UpdateRule" value="NoAction">
+                      <elementDefinition Id="6b60b16d-a1a9-4c60-966a-750e12e5f679" />
+                    </propertyInstance>
+                    <elementDefinition Id="47b4def1-238f-4a7d-b95b-fc1d83537b2a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="3b328782-ee9d-4492-bd5f-78350b723430" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="6af08499-72df-48b7-be78-ece12263bf63" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="a53c43f8-cab8-411e-aeee-508489edf8d4" name="Column" profile="DBProfile">
+                <elementDefinition Id="07a07d4c-a289-4cfc-9b66-1e760f106fe4" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3dbe2a3b-677c-49e0-8420-d4ef0e264a60">
+                    <propertyInstance Id="def037ce-3aa5-4ca5-83d7-f3afe400ca38" name="PrimaryKey" value="true">
+                      <elementDefinition Id="9be8e89a-ded5-4ea3-b741-3c114ac01485" />
+                    </propertyInstance>
+                    <elementDefinition Id="54e36ba3-cbd9-4d5e-b3b0-e414d463ded8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="58b1d07f-532d-4674-b653-be7f9b15c8d2">
+                    <propertyInstance Id="badd3137-0dad-4c8a-8956-e83bef565bda" name="DataType" value="bigint">
+                      <elementDefinition Id="19e640c6-98be-471b-978c-49b46a970237" />
+                    </propertyInstance>
+                    <elementDefinition Id="f6d9dfec-2a40-452f-87c3-6d324c91a8b8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="61873cf7-4835-4d9e-9906-2f445b24d877">
+                    <propertyInstance Id="8ff0820a-1b1a-4119-8dd5-37630e25dcbe" name="Length">
+                      <elementDefinition Id="94c91300-870c-4de9-bea1-2d75fead6d42" />
+                    </propertyInstance>
+                    <elementDefinition Id="c024c2ca-9257-4d7e-8a0a-e27cde6c35f4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="444a4970-9684-49cd-b7ee-78e2bc52ec08">
+                    <propertyInstance Id="e61bd1a8-7b84-4acf-97f0-32617b804f6c" name="AllowNulls" value="false">
+                      <elementDefinition Id="758d392d-1fb5-422b-a416-03dbfc1f4366" />
+                    </propertyInstance>
+                    <elementDefinition Id="586f8348-c285-4b3a-8f52-7739ca2c8a32" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="8275da61-6a80-4594-914d-c5819dcac54e" />
+          </property>
+          <property Id="4e070a33-3776-4728-ba16-9deaf8d857e4" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="2a85e8c1-b4d6-4565-abcb-10d185e6423d" name="Column" profile="DBProfile">
+                <elementDefinition Id="b1e5ec8c-ec61-4961-91cc-eeb0cf6cfdd4" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fab5e244-212b-49a1-a664-7c41483e8260">
+                    <propertyInstance Id="955788ca-dbe8-4f23-9753-4db0feb89a8a" name="PrimaryKey" value="false">
+                      <elementDefinition Id="f9bbd234-4b9f-47c0-b73e-1e3c42a5939c" />
+                    </propertyInstance>
+                    <elementDefinition Id="a48f3754-ccbe-4de6-b9b5-812cdc47e3f4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f1dbd838-4c0b-45d2-8a19-263de9ff307d">
+                    <propertyInstance Id="f3404abf-884f-484d-8f0a-b04c9bf2fcd1" name="DataType" value="varchar()">
+                      <elementDefinition Id="79885781-2b77-485e-a243-1395161bf793" />
+                    </propertyInstance>
+                    <elementDefinition Id="de1a619e-754f-4377-bfe8-d2e2f62f01d1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="28460112-6cd7-4f6c-966e-0236be222634">
+                    <propertyInstance Id="b256b1fb-5d4d-45d2-9c45-e8edb40a1cae" name="Length" value="256">
+                      <elementDefinition Id="065b8353-fa35-416e-b84e-d6bc4c2b4f4e" />
+                    </propertyInstance>
+                    <elementDefinition Id="90943e5f-136d-42ad-8053-5637e01b9245" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a828cb59-31ef-472d-a249-bd11da71c7ff">
+                    <propertyInstance Id="be7a141b-6f5d-4536-a940-9873753bfe7e" name="AllowNulls" value="true">
+                      <elementDefinition Id="43be474d-13cd-4ea0-a559-5fe074020d90" />
+                    </propertyInstance>
+                    <elementDefinition Id="bc4c41c8-6fba-48cf-8073-acf20d40c720" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="e334e9cc-1fc5-40cf-a369-4869884d122d" />
+          </property>
+          <property Id="169e16c6-8bb1-4d67-aca5-1eb32ab9795d" name="LoadDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="82204ffd-0ccf-4c92-b0ad-29a864bf3682" name="Column" profile="DBProfile">
+                <elementDefinition Id="9fa649f2-1293-4172-9d60-fc0e63406415" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cc8b6163-1dae-40dd-b782-411c9fd1bc54">
+                    <propertyInstance Id="1c047f2e-45ff-4481-a696-3bf6309372e1" name="PrimaryKey" value="false">
+                      <elementDefinition Id="ccec0fe5-8625-45d0-9101-b39a22d360ea" />
+                    </propertyInstance>
+                    <elementDefinition Id="86350dc0-c8c3-4112-840a-d77994515d12" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2fc03bab-7511-4331-92be-f12b07b71e16">
+                    <propertyInstance Id="090a1949-346d-47f8-bdf4-771fc12d1c0f" name="DataType" value="datetime">
+                      <elementDefinition Id="16950669-82dc-4e6a-8aa3-581d89b69de4" />
+                    </propertyInstance>
+                    <elementDefinition Id="a8292d6c-3003-4eec-8091-30f9442f1852" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f1b6b6bd-15b8-4776-9f3a-13b5dd533d1d">
+                    <propertyInstance Id="1b5c124b-d157-4524-9764-b27360185078" name="Length" value="24">
+                      <elementDefinition Id="249c16d5-bf3e-4033-8df4-436e95471184" />
+                    </propertyInstance>
+                    <elementDefinition Id="65683709-7422-4cb2-a09c-30ebd2b0c746" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="07a83cdc-3832-4dcd-aa72-43c1b55796a2">
+                    <propertyInstance Id="c86c14cb-490f-4e04-98df-8a6cd89d78e2" name="AllowNulls" value="false">
+                      <elementDefinition Id="bfb8775a-520a-4d86-b186-3a901fa29a40" />
+                    </propertyInstance>
+                    <elementDefinition Id="28402f97-774e-4c16-91f4-4a224a524ebc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7b236590-1f0b-4afc-92e9-1146fc89dd93" />
+          </property>
+          <property Id="09f551cd-8c18-42a5-90af-7bb88c8f1335" name="UriQuery" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f8b4f7a2-0a15-4454-b796-f55fcb4da5ec" name="Column" profile="DBProfile">
+                <elementDefinition Id="4fcca328-9f70-47ba-b3d9-364e59b52e2c" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6bd6bb89-aca7-4696-abc3-4de0a8cd576e">
+                    <propertyInstance Id="fa9ad2b3-1d86-46b2-ad6c-3b9778bbcd98" name="PrimaryKey" value="false">
+                      <elementDefinition Id="20adf3ed-9c63-4b4d-8f5d-90ed7ea647e8" />
+                    </propertyInstance>
+                    <elementDefinition Id="e26498aa-a272-4963-8f86-c7615fb6363a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d5eb41f2-50f1-4a27-b1fc-02febcef7040">
+                    <propertyInstance Id="bdaf3b6c-da44-4723-ab64-b541bc167ae5" name="DataType" value="varchar()">
+                      <elementDefinition Id="640097ef-e636-4f64-a13a-64410dc676c5" />
+                    </propertyInstance>
+                    <elementDefinition Id="00812dd0-3679-4820-9adf-bcd96be58a54" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1047b663-a359-48e6-88e6-fc257f6d5172">
+                    <propertyInstance Id="1acdce10-c7fc-456b-b11e-eb5e2da07bd2" name="Length" value="256">
+                      <elementDefinition Id="696d56ce-4ed4-4aa7-910f-6cacdbcc2835" />
+                    </propertyInstance>
+                    <elementDefinition Id="f6a0e914-38fe-46fe-a48f-3d3d96a54e14" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="84762f56-d527-458e-b062-f970b6a1a4e4">
+                    <propertyInstance Id="4aaf0f8a-60b4-4d4c-83c3-2f616af08ec6" name="AllowNulls" value="false">
+                      <elementDefinition Id="6ed0a6cb-2358-4f98-8a29-eb4161cc35b4" />
+                    </propertyInstance>
+                    <elementDefinition Id="fddc0a87-cd12-4dff-a96f-5c1d6d735caf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="183d57d0-a449-4e5e-bed7-866c221c4afd" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ebb5821d-343d-4d91-84c7-b88f15e2d70c" name="FolderTemplate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="9f4a306d-87cc-4821-8bc3-40275c41f4b2" name="Table" profile="DBProfile">
+            <elementDefinition Id="d120bcea-1387-4564-82ee-53fe5c1b80ab" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="a1414e2a-1d96-4c7a-aafd-8b0ce8c13370" />
+        <ownedAttributesInternal>
+          <property Id="a08d5a7f-e65b-4fa4-823d-33c92160d2ab" name="FolderTemplateId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="19832d66-1864-42c7-b52f-44250d2cd7f7" name="Column" profile="DBProfile">
+                <elementDefinition Id="753c327b-ef7e-47eb-ac14-61225707203e" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e448d82b-b37d-400d-9cd5-173a98cf5391">
+                    <propertyInstance Id="5ac416ef-d9a4-4335-ac3c-f44d2d3ceccc" name="PrimaryKey" value="true">
+                      <elementDefinition Id="998b2d83-181d-4038-8a2c-908478c70ac5" />
+                    </propertyInstance>
+                    <elementDefinition Id="26513e35-5990-49a4-b0cf-486f05b65897" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="01bd3ea7-cfb6-4015-9ffd-2e669311c6e3">
+                    <propertyInstance Id="c85944d1-2bb1-47a4-9c0f-81f9e42c7f74" name="DataType" value="bigint">
+                      <elementDefinition Id="25b23326-d5a0-44fc-b10a-a265ef4bed11" />
+                    </propertyInstance>
+                    <elementDefinition Id="04d0d93a-2214-40be-9fa8-12266e96c642" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="de2099b6-2965-449f-a8e3-f319306344a5">
+                    <propertyInstance Id="902f63be-9683-4d48-ba1f-87b794e2d0d8" name="Length" value="24">
+                      <elementDefinition Id="8762bb0f-cd9c-4c5b-8f2d-2da8c6975c46" />
+                    </propertyInstance>
+                    <elementDefinition Id="660d0bc0-90a5-4dd8-8868-13a530d33f12" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a24241a1-ae21-43ab-b96f-bbae36b4f16a">
+                    <propertyInstance Id="694ed304-80e8-4cb0-b6fe-c6d35abb4f8e" name="AllowNulls" value="false">
+                      <elementDefinition Id="f2c5ac1e-2251-4c69-96f9-62c6251c78b0" />
+                    </propertyInstance>
+                    <elementDefinition Id="56037c29-927d-49f6-9607-f566b318c87e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="06abe864-8f74-439b-9c14-0361c5e6d445" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="901145e5-ba70-4a60-b69a-b0aaab6be7e6" name="FolderHierarchy" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="c86742d2-d2c4-4d7b-9866-2a6aa08ab690" name="HierarchyTable" profile="DBProfile">
+            <elementDefinition Id="cf14222a-6a6d-474d-85ae-88f7523323eb" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="8d991aed-f97f-4f98-b21d-dbeae8c2c486" />
+        <targetEnds>
+          <association Id="c8a2844e-15bd-484d-b7c5-2f53c184ac46" isDerived="false" sourceEndRoleName="ParentOfFolderHierarchy" targetEndRoleName="ParentFolder" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f44a9fd9-ee82-4e09-9d0e-d3d7fd77086d" LastKnownName="Folder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="20d72bbf-b9f2-4012-8858-1da3f8ca281e" name="ParentOfFolderHierarchy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="9ae0a7d8-fcf2-489b-9124-61870ef5a47a" name="Lower" value="*">
+                      <elementDefinition Id="dc31cc87-af49-4238-b0a4-1a07b29150c4" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a568db19-af93-4a66-b5af-93fbfac1cb6b" name="Upper" value="*">
+                      <elementDefinition Id="94d563a0-eb19-403d-ab4f-345ec878f478" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="01836f79-3034-4df8-ae97-7e475b3f367d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="475af931-7a06-4279-b5f6-c7681dbbe038" name="ParentFolder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f269658d-3360-4cb6-baef-4853a88168b8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="56c1e486-2d4f-40cf-a801-d26b276f15a0" name="Parent" profile="DBProfile">
+                <elementDefinition Id="33b015e3-c996-43f7-a94d-73131f53e62a" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="24587d73-f368-4fff-aee3-64fb6ea16d16" />
+          </association>
+          <association Id="fc1ab926-7138-4b9d-9517-c5ab65f8eb59" isDerived="false" sourceEndRoleName="ChildOfFolderHierarchy" targetEndRoleName="ChildFolder" isLeaf="false" isAbstract="false">
+            <classMoniker Id="f44a9fd9-ee82-4e09-9d0e-d3d7fd77086d" LastKnownName="Folder" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9423eb77-4667-4f1b-8f96-03bb4ad92a9f" name="ChildOfFolderHierarchy" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="c5415ec0-4a44-454c-b95c-568fe685d065" name="Lower" value="*">
+                      <elementDefinition Id="c972b048-6756-480c-8567-dff4f9f84575" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="d6359344-5cee-4746-921b-b87ed7fedb18" name="Upper" value="*">
+                      <elementDefinition Id="e5b752fe-589b-47e9-b28f-21889676966b" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0f73f094-d691-4869-b5be-bf8ade0f5fc1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7cc9faea-a296-4692-a155-48af7d993b85" name="ChildFolder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="395a4175-27d6-4e1c-bade-dd61870c5dc1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="bb088f8b-6701-4dd5-9b80-31c321e73005" name="Child" profile="DBProfile">
+                <elementDefinition Id="3ed56e52-6bba-4f57-8c55-a6c9ad357a34" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c3e6af7c-39d0-4cfa-a662-2470d1cf1239" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="97555e56-58b4-45cd-94eb-65198c3646e8" name="ProjectHierachyId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="4b722712-9880-4b0f-9782-a25cddd4e89a" name="Column" profile="DBProfile">
+                <elementDefinition Id="a38215b5-2816-4479-9f34-9090e556df26" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5261aa01-c9c0-4c95-b737-9af0c42cc2b0">
+                    <propertyInstance Id="0d17744f-2aa1-43de-a6fc-22991831a294" name="PrimaryKey" value="true">
+                      <elementDefinition Id="2f7ad732-4c26-4587-991d-d52792d21d01" />
+                    </propertyInstance>
+                    <elementDefinition Id="a0f5e879-808a-4f0d-9aa8-df2786f58b0e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bd41a211-6068-4977-bf7f-7ad0244ec800">
+                    <propertyInstance Id="8e6bad6f-a2ed-4e1d-ada6-d996423af3c4" name="DataType" value="bigint">
+                      <elementDefinition Id="99d4649c-e0f3-43de-b018-323f603ebeff" />
+                    </propertyInstance>
+                    <elementDefinition Id="bf2f5ed7-6df9-4e3c-ab65-fb87e4359983" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f3cee965-1c92-4033-a5ca-6121f1b88a5d">
+                    <propertyInstance Id="ee066d10-87d9-424d-897f-de0c1ccaa93d" name="Length" value="24">
+                      <elementDefinition Id="71f4023f-86dd-4c69-84b2-1b888175ef6c" />
+                    </propertyInstance>
+                    <elementDefinition Id="1e14ba9d-6cc5-45e7-bd48-1a0293f8035d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d4c69f08-c1c4-47ae-8ad7-933b87e66460">
+                    <propertyInstance Id="2c4a36b5-2c97-40d3-a927-396d42833ad9" name="AllowNulls" value="false">
+                      <elementDefinition Id="1f92885b-796c-4d1e-81ac-dc2553fd1d69" />
+                    </propertyInstance>
+                    <elementDefinition Id="4f79f865-9375-420b-8509-da9e4a3cec7a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="5cbc5c36-5020-47b0-89e1-825dfcd203aa" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5aa73909-e0f4-4275-9ce5-10a19ef2c059" name="FileItem" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0c2d5e64-fffd-4fa3-b994-97bb80223cb1" />
+        <generalsInternal>
+          <generalization Id="32402e81-fd23-4842-ae7d-e2a26bc547cb" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="2243d09f-eef4-4d24-bad2-00b34176f7cd" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="cd818338-c481-4182-b993-6d3b627ba185" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="e64def61-ba01-4af5-aceb-366dde661f36" name="Column" profile="DBProfile">
+                <elementDefinition Id="13253f46-f5ae-4748-8bdd-5f8ac62dc150" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8c328b65-c4b9-42f6-bce9-3ae488ad9beb">
+                    <propertyInstance Id="ed646549-8434-4283-b509-1d2f08d110ff" name="PrimaryKey" value="false">
+                      <elementDefinition Id="41f92815-eaeb-42bd-ab49-64e019c9bd5e" />
+                    </propertyInstance>
+                    <elementDefinition Id="7cc18584-e568-4916-87e1-70ae00fd2aeb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="223f8b7a-3252-451f-9d5f-d7981158678f">
+                    <propertyInstance Id="4ade5156-0a4a-4c9c-8e22-91c00c375f2e" name="DataType" value="varchar()">
+                      <elementDefinition Id="6cc7f9a8-54ed-4b86-8c42-6eb89bf9f00f" />
+                    </propertyInstance>
+                    <elementDefinition Id="82602e21-c218-485a-8d06-3f5922703ce8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6ace6aa2-bba3-41ad-a064-5821592f898f">
+                    <propertyInstance Id="72b036fc-d49f-46c7-b189-86a39f5e4e69" name="Length" value="128">
+                      <elementDefinition Id="7fbda7e6-309c-4640-a095-bdf9af1b7062" />
+                    </propertyInstance>
+                    <elementDefinition Id="6ef69ed5-0767-4ad0-9893-a02bbea56d47" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a48ee497-b560-4b01-bb14-eaf718a1c39f">
+                    <propertyInstance Id="54299535-eca0-499e-9fb7-4f5140f11c04" name="AllowNulls" value="false">
+                      <elementDefinition Id="8141e96f-f061-4cb0-b237-c76858dfdba6" />
+                    </propertyInstance>
+                    <elementDefinition Id="d87f4d98-721c-4da5-a7d1-562474036a19" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="8fb41d3f-1f49-4ba1-8487-a6536e34b588" />
+          </property>
+          <property Id="6afdc1df-99d5-425d-9d25-3d9c002efaa0" name="FileStorage" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="34aeca7a-5911-4629-892a-581250e7ef81" name="Column" profile="DBProfile">
+                <elementDefinition Id="718d6c09-17f3-47ce-9b88-b8e6a0ae1f08" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8d192153-6e8d-4246-96cb-e82c5fb75745">
+                    <propertyInstance Id="618be4a6-9b72-4c37-9081-bc30bc7ff066" name="PrimaryKey" value="false">
+                      <elementDefinition Id="03521931-677a-49d6-a20a-c38ca27d148a" />
+                    </propertyInstance>
+                    <elementDefinition Id="8ba6d33f-2230-4cdd-bd28-dc19e3df96ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="50d4846f-e82b-4859-b42c-96ed881ed444">
+                    <propertyInstance Id="91a0554a-6a00-45a5-9822-7482e9aae5d5" name="DataType" value="blob">
+                      <elementDefinition Id="e3d4885d-bf6f-4419-a853-e37768ecefae" />
+                    </propertyInstance>
+                    <elementDefinition Id="efa4a453-0319-4b3b-a90f-98c7993e5780" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="571e9ccb-e0cd-48a5-b5c6-cd7c33ce256a">
+                    <propertyInstance Id="220d09f4-1f9a-4183-93a3-c3b5ea450173" name="Length">
+                      <elementDefinition Id="f2ab59b9-e9c5-45a4-ab73-929dc15046b1" />
+                    </propertyInstance>
+                    <elementDefinition Id="906a9053-b6ee-4247-988a-f3063f245a1f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b296a6f4-144c-4725-a9bb-35f93d6eedb9">
+                    <propertyInstance Id="93835570-b964-4fe9-9810-7d3c3186952b" name="AllowNulls" value="true">
+                      <elementDefinition Id="e5e69c1f-2968-475b-b170-8447746e592e" />
+                    </propertyInstance>
+                    <elementDefinition Id="d7bab063-9ec6-41b2-9e18-95f5459328c3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="588a921c-9897-4a92-bb84-14348237a964" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ac999f94-0928-482d-b4b0-43ae7ff24eab" name="Residue" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="4b676be9-e98c-497d-8ca0-da7a433859a1" name="Table" profile="DBProfile">
+            <elementDefinition Id="8250ab6d-376d-49fb-9f90-dd0bea14c1a8" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="a3eb3a83-8c73-4a33-9c5e-947d5bf7825c" />
+        <generalsInternal>
+          <generalization Id="a2621ee9-fffd-4b96-8b30-e28166835acf" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="80988b45-6696-48c5-bd98-443d9710c01e" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="7779348c-b6ab-4e90-be20-7110ef529087" name="ResidueName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="60c8eaef-bf67-40a8-878d-8cd49bd75475" name="Column" profile="DBProfile">
+                <elementDefinition Id="8acb7743-323b-4b53-81de-d79cc95bf3e1" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="475811ec-324a-4677-ab16-27741d1549dd">
+                    <propertyInstance Id="faeab2b8-f394-44ef-a26d-11cc6a32583c" name="PrimaryKey" value="false">
+                      <elementDefinition Id="288a70fd-2653-4956-9fb4-a1b73ea48de7" />
+                    </propertyInstance>
+                    <elementDefinition Id="257eae2f-0bce-417f-bfb8-db4c08b080e9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3556fb63-4ea2-4e43-852a-f9c1a4c0324b">
+                    <propertyInstance Id="750803b0-e4bc-4037-ae79-defa312c2ff2" name="DataType" value="varchar()">
+                      <elementDefinition Id="f50474c2-2737-434c-9261-aa5bb3986f93" />
+                    </propertyInstance>
+                    <elementDefinition Id="535b693b-a20f-4d86-8307-5beba3eea9eb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="58326184-e62d-4d0a-96c2-e7aefdaa43b7">
+                    <propertyInstance Id="0c06af44-59e6-4475-8538-5cd9b07fc0ac" name="Length" value="24">
+                      <elementDefinition Id="8f693a11-6c23-48b7-8e47-5a21ef2961f0" />
+                    </propertyInstance>
+                    <elementDefinition Id="d8fa113e-a092-475d-9202-639dab5bed4f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f69661e9-7c8a-4b65-8194-15a80db57faf">
+                    <propertyInstance Id="06feb440-7c21-462c-98c9-16d79b23217e" name="AllowNulls" value="true">
+                      <elementDefinition Id="cfbeb5d4-8b70-4100-b367-7853588507d9" />
+                    </propertyInstance>
+                    <elementDefinition Id="10c969cd-4e4d-4397-a078-2c368e49a8f5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="680b0d32-885d-4f17-9a6c-5395d3349a14" />
+          </property>
+          <property Id="b8491b8c-8da0-4653-a3fc-5912d3569876" name="ResidueNumber" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="50b1488e-a404-4325-b291-ade1e8b41350" name="Column" profile="DBProfile">
+                <elementDefinition Id="4b2eccb9-0eaa-4d45-91cd-9b1b460e8ec2" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="65b6e5af-e6ba-4624-b9ce-58d573e709ba">
+                    <propertyInstance Id="84731a8b-cf19-4d9c-be61-ea7f5f237051" name="PrimaryKey" value="false">
+                      <elementDefinition Id="587d9361-9766-491f-aba8-a5c66d30b837" />
+                    </propertyInstance>
+                    <elementDefinition Id="4eeec458-03f1-4352-adb1-e42e481bf4ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="163148f2-013f-4791-b646-cd70c34666a2">
+                    <propertyInstance Id="07f1aadd-7ff9-43c7-9065-ab9633d3e363" name="DataType" value="int">
+                      <elementDefinition Id="a3d77540-08c0-49c8-b475-6b2ef6d904f0" />
+                    </propertyInstance>
+                    <elementDefinition Id="3775593f-57c8-4f2e-8209-cb732089d4fc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="116f80d1-3550-4cc2-86ca-ee85a09d1307">
+                    <propertyInstance Id="710cad7f-ba8f-4c32-8d9c-59c0d253ac1f" name="Length" value="24">
+                      <elementDefinition Id="1eaf62d3-5796-4b59-bc6c-f1bfda493691" />
+                    </propertyInstance>
+                    <elementDefinition Id="b57576d8-8d28-4820-88af-0b024cbf4e69" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bb5c0d7c-0f50-4b9d-a2eb-cc61144f93f3">
+                    <propertyInstance Id="955e0f77-4978-4c62-b939-acfe49330cef" name="AllowNulls" value="false">
+                      <elementDefinition Id="0fb66997-47d1-4f9f-8ee3-acc3b23531ed" />
+                    </propertyInstance>
+                    <elementDefinition Id="c474753a-878b-4738-82be-baa3ea50f96c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f10d4768-64cc-454c-8a84-2d96f02a1dce" />
+          </property>
+          <property Id="03e37f01-b54e-4ca2-91c7-c16c7c5e8289" name="OneLetterCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6d524b35-207c-48ca-a458-6ecfe696d949" name="Column" profile="DBProfile">
+                <elementDefinition Id="acaa8c14-0c4c-47af-9e73-4fbb3d4eb971" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7faec27c-4b90-4e50-b4fa-abc5c586cecf">
+                    <propertyInstance Id="f740332e-89ba-432f-8f75-9eaf655340d5" name="PrimaryKey" value="false">
+                      <elementDefinition Id="93cceb18-a590-4ccb-8b54-b89213eed3ce" />
+                    </propertyInstance>
+                    <elementDefinition Id="83e479a1-2343-4336-9ff8-588fff07a707" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7100b0c4-42b6-482c-89b8-bebcc59df88d">
+                    <propertyInstance Id="5b1cf433-05a5-4f73-b1f6-b93bdd8f3a21" name="DataType" value="char()">
+                      <elementDefinition Id="6e38eb71-9f94-41a9-a008-65291e3b35dd" />
+                    </propertyInstance>
+                    <elementDefinition Id="40e8ab3a-5f91-4fcc-8802-0538c8fa705c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="84431fff-2a78-4511-84e2-d182c2202bee">
+                    <propertyInstance Id="3e56a61c-7d7a-4224-8217-13fbc18aa9f4" name="Length" value="1">
+                      <elementDefinition Id="d8a9dd53-83eb-4c2c-ae55-5537172114bf" />
+                    </propertyInstance>
+                    <elementDefinition Id="4ec1f9e7-4c03-4bee-82e0-10194f28e66f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ce682eb4-9202-436f-89d9-46eb056e6c36">
+                    <propertyInstance Id="fe47df49-117a-4438-8867-02bf2ecf8ed1" name="AllowNulls" value="true">
+                      <elementDefinition Id="6ccefec0-a838-4b95-9815-3bf530534ec3" />
+                    </propertyInstance>
+                    <elementDefinition Id="942ab41c-250a-43c9-a2ad-1d2127735647" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f6109d4f-ed8d-4a15-9082-029a76e7635c" />
+          </property>
+          <property Id="1b012d68-0492-480c-98c8-39392d3b465a" name="InsCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="e015e536-903b-4a82-8315-2bdfbf1728ea" name="Column" profile="DBProfile">
+                <elementDefinition Id="4f60cedb-714b-47f3-98a3-36a64444a848" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b2d606ed-00fa-4f6f-8cc4-6041d29382f6">
+                    <propertyInstance Id="6e583ed3-b1df-4024-af19-bec5c872ed31" name="PrimaryKey" value="false">
+                      <elementDefinition Id="61cc0ece-296c-406d-952c-19e22ac1729f" />
+                    </propertyInstance>
+                    <elementDefinition Id="b069741f-3b06-409e-a61a-2cd0801e4048" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3b41cb6a-2f5a-4c02-84c6-085fdaa27078">
+                    <propertyInstance Id="20a870e1-5d38-4432-867a-68911f32410c" name="DataType" value="varchar()">
+                      <elementDefinition Id="0b819233-4983-4648-ae80-a6e632538efd" />
+                    </propertyInstance>
+                    <elementDefinition Id="6faddfb1-bf05-41be-b2ab-5963364b425a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="93733ba7-8e36-4e58-8e78-7bf22cded82a">
+                    <propertyInstance Id="85129513-14b4-4342-9b87-1a60ff71dc7b" name="Length" value="24">
+                      <elementDefinition Id="982c684a-bd9f-4d1a-a3f1-bc9c117b1fe7" />
+                    </propertyInstance>
+                    <elementDefinition Id="e24dafc6-cdc5-4f24-80bc-d918de4f1069" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="079b8309-6544-4e5b-b362-e096cee3ef41">
+                    <propertyInstance Id="80dfde2a-b77a-462a-b87c-9f1253fc5a18" name="AllowNulls" value="true">
+                      <elementDefinition Id="066a4bf6-31ac-41ab-9668-1fee4205a195" />
+                    </propertyInstance>
+                    <elementDefinition Id="bfc5c2eb-7783-4d2f-8bd8-04935fa40780" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="48d4a5d0-ade2-482e-beb4-1c835f585129" />
+          </property>
+          <property Id="388a2693-d3c7-4eff-bcfb-f1f599f0c3d6" name="ThreeLetterCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="00afda4c-b80c-4bd2-bf5b-6815bb55ee7f" name="Column" profile="DBProfile">
+                <elementDefinition Id="ea603cac-6497-4869-a98b-edb16cd20ecb" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9cd7cb87-4ec0-4b36-96c7-02e9da51e8a6">
+                    <propertyInstance Id="7117415b-ea1e-48cb-b5a1-11795e7a4de1" name="PrimaryKey" value="false">
+                      <elementDefinition Id="ec2d2905-ac5f-4621-ad2f-64aee4976163" />
+                    </propertyInstance>
+                    <elementDefinition Id="45b3ee61-df70-4a65-b16d-2d9f44d75c8c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2dba5fa6-a075-45b8-8862-8fcb425e49d3">
+                    <propertyInstance Id="0c428cf3-46d9-48e3-92f6-328ca08ce92a" name="DataType" value="char()">
+                      <elementDefinition Id="01283121-97d0-4557-afd4-b34ce8f81698" />
+                    </propertyInstance>
+                    <elementDefinition Id="ae7ff0d2-ac84-41b0-8c1e-0fa94db561dc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6596198c-28a8-4c90-aabe-e7da15281cd6">
+                    <propertyInstance Id="df314182-f568-466f-8f85-c3314a248d8e" name="Length" value="3">
+                      <elementDefinition Id="61b636e4-df8a-4366-ad5d-318f20b26046" />
+                    </propertyInstance>
+                    <elementDefinition Id="52f55551-157b-4c72-9345-a647339cfde4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dcbac3ba-c630-4ada-9226-8761f57fb51a">
+                    <propertyInstance Id="8d71dd3b-b5de-4c54-889f-dc4631c6400b" name="AllowNulls" value="true">
+                      <elementDefinition Id="a0c66fa4-de9f-4d1f-b8d5-48c1426bad91" />
+                    </propertyInstance>
+                    <elementDefinition Id="b1d760db-f4d1-4aa6-8a21-9e4bb885d628" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c4c6446c-3742-4c10-b178-6de3e6c8aaf8" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="37142eea-46cf-4b82-beb6-24a33947fa27" name="Chain" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="c2e25ded-16e1-4e23-b3b3-7bd3a8c5b962" name="Table" profile="DBProfile">
+            <elementDefinition Id="5b1d9de1-2639-41fc-8a96-76cfdb3e1861" />
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="c9e8d52c-a678-47ab-95af-d66ca64ac69b" />
+        <generalsInternal>
+          <generalization Id="25551547-a640-4db6-9c29-378838f3ab2f" isSubstitutable="false">
+            <classMoniker Id="91f43f62-ee15-4f32-9980-5350aedb6dc4" LastKnownName="Resource" />
+            <elementDefinition Id="fa0245f8-0f25-411d-8864-6b9500ebdbb6" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="0aa27788-fe5a-4e82-bd33-f70929198eda" isDerived="false" sourceEndRoleName="Chain" targetEndRoleName="Residues" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ac999f94-0928-482d-b4b0-43ae7ff24eab" LastKnownName="Residue" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0a963930-efba-4c14-acb4-83568c68f17f" name="Chain" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false">
+                  <elementDefinition Id="d42aa8b5-4149-4442-a07c-7d9b405c50ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2871925d-125c-427a-9265-b2b0dc5f563f" name="Residues" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="fddf0aef-ef83-4de0-928f-3ce1a0a81798" name="Lower" value="*">
+                      <elementDefinition Id="d1e5db0c-5e41-47dc-b212-aafc0cd5965e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="5af8df3e-6ac0-4c53-8000-40b8368e8ee4" name="Upper" value="*">
+                      <elementDefinition Id="2c25ed36-ca26-4ed0-8993-42ee2bea9330" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="7cfdd276-1aaf-46f4-b012-81ede81e3b50" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="66b87c21-579f-440a-bcf4-e2857803e69e" name="ForeignKey" profile="DBProfile">
+                <elementDefinition Id="abc01053-f93b-40be-8981-a8ad5cc2836b" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1440cf61-7a09-4df9-a6b6-5cc4fb1e0b38">
+                    <propertyInstance Id="98d6e2fa-e45c-4d14-8ef6-2c841a547de5" name="DeleteRule" value="Cascade">
+                      <elementDefinition Id="21bf1ac2-8ab5-4ef0-a3c0-eb661bbe800a" />
+                    </propertyInstance>
+                    <elementDefinition Id="468d4a81-bce4-4faf-8187-d677300a34eb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2135adb7-8bfe-462f-9419-2051adc79de2">
+                    <propertyInstance Id="fe0a4ca1-1e52-4b1a-8425-68036054203d" name="UpdateRule" value="NoAction">
+                      <elementDefinition Id="d4fde2f6-b04f-4f29-8571-96f3fc30d1ae" />
+                    </propertyInstance>
+                    <elementDefinition Id="58d62024-0a89-4c1f-ab5f-4677f4935ed3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="84f806f7-60a8-423f-932e-32f248000810" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="196d48a5-7fc6-4a30-abf3-714a8a32823e" name="Sequence" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1fecbe6c-f409-41eb-bb0b-08657d412cca" name="Column" profile="DBProfile">
+                <elementDefinition Id="e5b0dc7a-0248-49e6-bb9e-b2224c6fcb26" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="50fb36cf-da94-4273-9eaf-c9d69cc1a4df">
+                    <propertyInstance Id="382f351b-6399-430b-88e1-3c95ad0dc9a0" name="PrimaryKey" value="false">
+                      <elementDefinition Id="24b5efda-9c8f-4730-91c2-29dffe8b1f55" />
+                    </propertyInstance>
+                    <elementDefinition Id="4c39ad62-879c-41ac-88d4-df3b317123a4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b67061fb-5e83-42d1-b8a4-e122ea37dffc">
+                    <propertyInstance Id="4541fcd6-7676-406a-b49c-82551973e73a" name="DataType" value="varchar()">
+                      <elementDefinition Id="dec651ba-9e31-4718-843b-89a0cb42ac5f" />
+                    </propertyInstance>
+                    <elementDefinition Id="016c6a9f-628d-42b4-bcca-9f29ac4dda68" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="af11ad51-fc21-4482-9a8a-ae689b07dc82">
+                    <propertyInstance Id="e921ace5-e2f5-4bb5-afc9-3585d9cefdc5" name="Length" value="512">
+                      <elementDefinition Id="a7611edb-b07c-4cf6-9899-af0ed8e74a50" />
+                    </propertyInstance>
+                    <elementDefinition Id="60ec53f0-18c7-45e0-a687-3af113eefd9b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6ef4d199-2fa3-40d5-aab6-2e2b9989a2f1">
+                    <propertyInstance Id="03aeeeb9-732e-4db3-b379-3e95f21f0f71" name="AllowNulls" value="false">
+                      <elementDefinition Id="a1ce943a-ac76-4eb2-bf35-0b04780dc577" />
+                    </propertyInstance>
+                    <elementDefinition Id="7c2db5a6-d0a3-400c-9167-2bcdd1499cc2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="8f35a2b5-82cb-4777-adab-987d11d88194" />
+          </property>
+          <property Id="b4e27b74-2863-494a-9e86-2af7b4a0983b" name="PdbChainId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="83328031-2f00-4765-8cb9-9ba255fe0930" name="Column" profile="DBProfile">
+                <elementDefinition Id="1319488a-b256-4672-a8eb-43b736c0a28a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="af05bccd-2052-4408-896a-c3ad2a82a088">
+                    <propertyInstance Id="344a4ddd-bfdf-4926-a6d8-943f8f3c0da1" name="PrimaryKey" value="false">
+                      <elementDefinition Id="dd0ab26c-5774-4d4d-a673-55f953807ed1" />
+                    </propertyInstance>
+                    <elementDefinition Id="a5cf70d1-e347-4a2e-918a-a3c4647cd937" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="95089a1f-f873-4984-af42-ffaf557158d1">
+                    <propertyInstance Id="c2687abe-4a7c-4331-b6de-70c8cc189079" name="DataType" value="char()">
+                      <elementDefinition Id="7b879c42-9067-4893-96b8-ba1f1594a8d2" />
+                    </propertyInstance>
+                    <elementDefinition Id="aaf83654-6b5c-43ca-9f08-f9c1b925273d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8d399fcd-33fa-483d-b4d7-71ca62c84925">
+                    <propertyInstance Id="590fb3f7-6c2a-4426-9ebb-f3429bce0f00" name="Length" value="1">
+                      <elementDefinition Id="427d81c1-7866-4856-8fe8-9dd196923cb0" />
+                    </propertyInstance>
+                    <elementDefinition Id="bdc87f3f-0510-49d9-9d21-b91f3f46283e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bbaae490-8815-4e26-9b6f-25a818caa396">
+                    <propertyInstance Id="fae3fbce-c124-41f2-835d-b96c801c96e2" name="AllowNulls" value="false">
+                      <elementDefinition Id="1095726f-438a-44bd-b850-ca012a90053a" />
+                    </propertyInstance>
+                    <elementDefinition Id="fe6edb04-e211-441d-b066-f2d0a9e1ee1e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="fc78eb56-5761-4ba4-aaf6-30d43a91b2ba" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="7f6ab8b8-1091-4e98-8fbb-d0d0f93fdd85" name="ProteinLigandDB">
+    <elementDefinition Id="733f38a9-eabe-4892-9928-8cdb0280f171" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c889d6d8-5b06-4ad8-b0c8-b0ccdbca2ecb">
+        <profileInstance Id="d528d5e8-f577-428e-acb1-8dbaf5b98d50" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d2818822-be4e-4b38-be75-10baa94e11e3">
+        <profileInstance Id="927c82e4-ce73-4e5c-ab2a-2070a36a80fa" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="4c06025f-8706-474e-9bc7-24b6fafaa298">
+        <profileInstance Id="d698b2a3-f25d-44aa-8805-eb37dc01c583" name="DBProfile">
+          <elementDefinition Id="2914e42c-411e-4ae8-a254-8dc0ddacde30" />
+        </profileInstance>
+        <elementDefinition Id="c75d42a1-a537-4429-bcc2-30d5eeb832fd" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

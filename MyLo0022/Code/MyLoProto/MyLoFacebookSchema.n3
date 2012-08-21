@@ -1,0 +1,18 @@
+@base <http://facebook.mylo.com/>.
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix api: <tag:graph.facebook.com,2011:/>.
+@prefix og: <http://ogp.me/ns#>.
+@prefix fb: <http://ogp.me/ns/fb#>.
+@prefix : <http://graph.facebook.com/schema/~/>.
+@prefix photo: <http://graph.facebook.com/schema/photo#>.
+@prefix checkin: <http://graph.facebook.com/schema/checkin#>.
+@prefix user: <http://graph.facebook.com/schema/user#>.
+@prefix page: <http://graph.facebook.com/schema/page#>.
+@prefix application: <http://graph.facebook.com/schema/application#>.
+@prefix mylo: <http://facebook.mylo.com/>.
+
+user:type a rdfs:Class .
