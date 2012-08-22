@@ -9,6 +9,20 @@ WHERE {
 	?person mylo:FacebookId ?fbid .
 }
 
+PREFIX mylo: <http://mylo.com/schema/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y ?x ?tag ?d ?per ?n
+WHERE {
+	?y checkin:application ?x . 
+	?y checkin:tags ?tag . 
+	?tag :data ?d .
+	?d api:has ?per .
+	?per a mylo:FacebookPerson .
+	?per user:name ?n
+}
+
+
 
 PREFIX mylo: <http://mylo.com/schema/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

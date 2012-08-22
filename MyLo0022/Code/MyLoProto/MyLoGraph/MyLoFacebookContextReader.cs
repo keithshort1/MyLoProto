@@ -675,7 +675,7 @@ namespace MyLoFacebookContextReaderNS
             string sparqlQ = "PREFIX mylo: <http://mylo.com/schema/> " +
                              "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
                              "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
-                             "SELECT  DISTINCT ?activity ?time ?placename ?sourceId ?lat ?long ?state ?street ?city ?zip ?country " +
+                             "SELECT  DISTINCT ?activity ?time ?placename ?sourceId ?lat ?long ?state ?street ?city ?zip ?country ?name " +
                              "WHERE {" +
                              "      ?activity rdf:type mylo:Activity ." +
                              "      ?activity rdf:type mylo:FacebookCheckin ." +
@@ -693,6 +693,7 @@ namespace MyLoFacebookContextReaderNS
                              "      OPTIONAL { ?adr mylo:HasZip ?zip }" +
                              "      OPTIONAL { ?adr mylo:HasCountry ?country }" +
                              "      OPTIONAL { ?adr mylo:HasStreet ?street }" +
+                             "      OPTIONAL { ?activity mylo:HasPersonCheckinTag ?name }" +
                              "}";
             try
             {
@@ -818,41 +819,19 @@ namespace MyLoFacebookContextReaderNS
                                 }
                             }
 
-
-
-
-                            //if (vals["lat"] != null && vals["long"] != null)
-                            //{
-                            //    Location locGps = ReverseLookupGPScoordinates(act.Latitude, act.Longitude);
-                            //}
-                            //else
-                            //{
-                            //    if (vals["street"] != null)
-                            //    {
-                            //        loc.Street = vals["street"].ToString();
-                            //    }
-                            //    if (vals["city"] != null)
-                            //    {
-                            //        loc.City = vals["city"].ToString();
-                            //    }
-                            //    if (vals["state"] != null)
-                            //    {
-                            //        loc.State = vals["state"].ToString();
-                            //    }
-                            //    if (vals["zip"] != null)
-                            //    {
-                            //        loc.Zip = vals["zip"].ToString();
-                            //    }
-                            //    if (vals["country"] != null)
-                            //    {
-                            //        loc.Country = vals["country"].ToString();
-                            //    }
-                            //}
-
                             act.Source = "Facebook";
                             act.ActivityKind = "FacebookCheckin";
                             Debug.WriteLine("Loc is: {0}, {1}, {2}, {3}, {4}", loc.Street, loc.City, loc.State, loc.Zip, loc.Country);
-                            long result = _myloStore.AddActivity(_userId, act, startDate, endDate, loc);
+                            act.ActivityId = _myloStore.AddActivity(_userId, act, startDate, endDate, loc);
+                            
+                            if (vals["name"] != null)
+                            {
+                                Party party = new Party();
+                                party.Name = vals["name"].ToString();
+                                party.PartyKind = "Person";
+                                party.PartyId = _myloStore.AddParty(_userId, party);
+                                long result2 = _myloStore.AddPartyToActivityByIds(_userId, party, act);
+                            }
                         }
                         catch (MyLoDataStoreException dsEx)
                         {

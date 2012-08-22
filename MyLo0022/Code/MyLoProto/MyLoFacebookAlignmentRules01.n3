@@ -66,10 +66,11 @@
 	_:p mylo:HasGpsLongitude :glong  } .
 
 
-@forall :x, :y, :z, :t, :p, :n, :id, :l, :glat, :glong .
+@forall :x, :y, :z, :t, :p, :n, :name, :tag, :per, :d, :id, :l, :glat, :glong .
 {	 
 	:y checkin:application :x . 
 	:y checkin:from :z . 
+	:y checkin:tags :tag .
 	:z a mylo:FacebookPerson . 
 	:y checkin:created_time :t .
 	:y checkin:place :p .
@@ -77,7 +78,11 @@
 	:p page:name :n .
 	:p page:location :l .
 	:l :latitude :glat .
-	:l :longitude :glong } 
+	:l :longitude :glong .
+	:tag :data :d .
+	:d api:has :per .
+	:per a mylo:FacebookPerson .
+	:per user:name :name } 
 => 
 {	:z mylo:IsOwner "True" .
 	:y a mylo:FacebookCheckin . 
@@ -94,13 +99,27 @@
 	_:p mylo:HasAddress _:a .
 	_:p mylo:HasLocationName :n .
 	_:p mylo:HasGpsLatitude :glat .
-	_:p mylo:HasGpsLongitude :glong  } .
+	_:p mylo:HasGpsLongitude :glong .
+	:y mylo:HasPersonCheckinTag :name } .
 
-@forall :x, :y, :z, :t, :d, :p .
+@forall :x, :y, :z, :tag, :d, :per, :name .
 {	 
 	:y a photo:type . 
-	:y photo:tags :t . 
-	:t :data :d .
-	:d api:has :p }
+	:y photo:tags :tag . 
+	:tag :data :d .
+	:d api:has :per .
+	:per a mylo:FacebookPerson .
+	:per user:name :name }
 =>
-{   :y mylo:HasPersonTag :p } .
+{   :y mylo:HasPersonPhotoTag :name } .
+
+@forall :x, :y, :z, :tag, :d, :per, :name .
+{	 
+	:y checkin:application :x . 
+	:y checkin:tags :tag . 
+	:tag :data :d .
+	:d api:has :per .
+	:per a mylo:FacebookPerson .
+	:per user:name :name }
+=>
+{   :y mylo:HasPersonCheckinTag :name } .

@@ -24,6 +24,7 @@ CREATE FUNCTION AddActivityHierarchical(accountId bigint, activityKindIn text, s
 		_noAddress	boolean;
 		_duration	int;
 	BEGIN
+		_id := 0;
 		IF accountId IS NULL THEN RAISE EXCEPTION 'AddActivity - accountId Error';
 		ELSEIF activityKindIn IS NULL THEN RAISE EXCEPTION 'AddActivity - activityKind  Error';
 		ELSEIF startdatetimeIn IS NULL THEN RAISE EXCEPTION 'AddActivity - date Error';
@@ -32,7 +33,7 @@ CREATE FUNCTION AddActivityHierarchical(accountId bigint, activityKindIn text, s
 					(cityIn IS NULL ) AND 
 					(stateIn IS NULL ) AND 
 					(countryIn IS NULL );
-			SELECT MyLoAccountId FROM Activity INTO _aId AS A 
+			SELECT A.ActivityId FROM Activity INTO _id AS A 
 				WHERE A.Source = sourceIn AND A.SourceId = sourceIdIn AND A.MyLoAccountId = accountId;
 			IF NOT FOUND THEN
 				_endId := NULL;
@@ -47,10 +48,9 @@ CREATE FUNCTION AddActivityHierarchical(accountId bigint, activityKindIn text, s
 				END IF;
 				_duration := (SELECT CalculateDuration(startdatetimeIn, enddatetimeIn));
 				_id := (SELECT InsertActivityHierarchical3(accountId, activityKindIn, sourceIn, sourceIdIn, 
-							locationNameIn, startdatetimeIn, enddatetimeIn, _duration, _startId, _endId, _locId, gpsLatIn, gpsLongIn, parentActivity));
-				RETURN _id;	
+							locationNameIn, startdatetimeIn, enddatetimeIn, _duration, _startId, _endId, _locId, gpsLatIn, gpsLongIn, parentActivity));	
 			END IF;	
 		END IF;
-		RETURN 1;
+		RETURN _id;
 	END;
 $$ LANGUAGE plpgsql;
