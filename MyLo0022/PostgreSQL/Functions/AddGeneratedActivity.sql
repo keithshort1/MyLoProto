@@ -4,14 +4,14 @@ DROP FUNCTION IF EXISTS AddActivity(accountId bigint, activityKindIn text, sourc
 	startdatetimeIn timestamp with time zone, enddatetimeIn timestamp with time zone,
 	yearIn smallint, monthIn smallint, dayIn text, dayNumberIn smallint, hourIn smallint, 
 	yearIn2 smallint, monthIn2 smallint, dayIn2 text, dayNumberIn2 smallint, hourIn2 smallint,
-	locationNameIn text, gpsLatIn double precision, gpsLongIn double precision,
+	activityNameIn text, gpsLatIn double precision, gpsLongIn double precision,
 	streetIn text, cityIn text, stateIn text, zipIn text, countryIn text, parentActivity bigint);
 
 CREATE FUNCTION AddActivity(accountId bigint, activityKindIn text, sourceIn text, sourceIdIn text, 
 	startdatetimeIn timestamp with time zone, enddatetimeIn timestamp with time zone,
 	yearIn smallint, monthIn smallint, dayIn text, dayNumberIn smallint, hourIn smallint,
 	yearIn2 smallint, monthIn2 smallint, dayIn2 text, dayNumberIn2 smallint, hourIn2 smallint,
-	locationNameIn text, gpsLatIn double precision, gpsLongIn double precision,
+	activityNameIn text, gpsLatIn double precision, gpsLongIn double precision,
 	streetIn text, cityIn text, stateIn text, zipIn text, countryIn text, parentActivity bigint)
 	RETURNS bigint 
 	AS $$
@@ -42,12 +42,12 @@ CREATE FUNCTION AddActivity(accountId bigint, activityKindIn text, sourceIn text
 				IF _noAddress THEN
 					_locId := NULL;
 				ELSE
-					_locId := (SELECT GetOrInsertLocation(accountId, streetIn, cityIn, stateIn, zipIn, countryIn));
+					_locId := (SELECT GetOrInsertAddress(accountId, streetIn, cityIn, stateIn, zipIn, countryIn));
 				END IF;
 				INSERT INTO Activity (MyLoAccountId, ActivityKind, Source, SourceId, 
-							LocationName, StartDateTime, EndDateTime, StartTimePeriodId, EndTimePeriodId, LocationId, Latitude, Longitude)
+							ActivityName, StartDateTime, EndDateTime, StartTimePeriodId, EndTimePeriodId, LocationId, Latitude, Longitude)
 						VALUES (accountId, activityKindIn, sourceIn, sourceIdIn, 
-							locationNameIn, startdatetimeIn, enddatetimeIn, _startId, _endId, _locId, gpsLatIn, gpsLongIn);
+							activityNameIn, startdatetimeIn, enddatetimeIn, _startId, _endId, _locId, gpsLatIn, gpsLongIn);
 				_id = (select currval('ActivitySequence'));
 
 				RETURN _id;	

@@ -225,7 +225,7 @@ namespace MyLoDBNS
         /// <param name="startDate">A TimePeriod instance representing the start of the Activity</param>
         /// <param name="endDate">A TimePeriod instance representing the end of the Activity</param>
         /// <param name="loc">A Location instance represents where the Activity takes place</param>
-        public long AddActivity(long userId, Activity act, TimePeriod startDate, TimePeriod endDate, Location loc)
+        public long AddActivity(long userId, Activity act, TimePeriod startDate, TimePeriod endDate, Address loc)
         {
             try
             {
@@ -274,7 +274,7 @@ namespace MyLoDBNS
                 command.Parameters[15].Value = endDate.Hour;
 
                 command.Parameters[16].DbType = DbType.String;
-                command.Parameters[16].Value = act.LocationName;
+                command.Parameters[16].Value = act.ActivityName;
                 command.Parameters[17].DbType = DbType.Double;
                 command.Parameters[17].Value = act.Latitude;
                 command.Parameters[18].DbType = DbType.Double;
@@ -357,46 +357,46 @@ namespace MyLoDBNS
         /// </summary>
         /// <param name="timePeriodId">An identifier for a Time Period</param>
         /// <param name="partyId">An identifier for a Party</param>
-        /// <param name="locationId">An identifier for a Location</param>
-        public DataSet GetPhotosByDimensionIds(long timePeriodId, long partyId, long locationId)
+        /// <param name="addressId">An identifier for a Location</param>
+        public DataSet GetPhotosByDimensionIds(long timePeriodId, long partyId, long addressId)
         {
             // TODO Unsed - but should finish using style for query by Fileds
             DataSet ds = new DataSet();
             NpgsqlDataAdapter da = new NpgsqlDataAdapter();
             NpgsqlCommand command = new NpgsqlCommand();
-            if (timePeriodId != 0 && locationId != 0)
+            if (timePeriodId != 0 && addressId != 0)
             {
                 command.CommandText = "SELECT P.uri, P.datetaken, P.camera, P.gpslat, P.gpslong, P.thumbnail FROM photo AS P " +
                                                                 "LEFT JOIN Activity AS A ON P.activityId = A.activityId " +
                                                                 "JOIN TimePeriod AS TP ON A.starttimeperiodid = TP.timeperiodid " +
-                                                                "LEFT JOIN Location AS L ON A.locationid = L.locationid " +
-                                                                "WHERE TP.timeperiodid = @tpid AND L.locationid = @locid ";
+                                                                "LEFT JOIN Address AS L ON A.addressid = L.addressid " +
+                                                                "WHERE TP.timeperiodid = @tpid AND L.addressid = @addrid ";
                 command.Parameters.Add(new NpgsqlParameter("tpid", DbType.Int64));
                 command.Parameters[0].Value = timePeriodId;
-                command.Parameters.Add(new NpgsqlParameter("locid", DbType.Int64));
-                command.Parameters[1].Value = locationId;
+                command.Parameters.Add(new NpgsqlParameter("addrid", DbType.Int64));
+                command.Parameters[1].Value = addressId;
                 command.Connection = _conn;
             }
-            else if (timePeriodId != 0 && locationId == 0)
+            else if (timePeriodId != 0 && addressId == 0)
             {
                 command.CommandText = "SELECT P.uri, P.datetaken, P.camera, P.gpslat, P.gpslong, P.thumbnail FROM photo AS P " +
                                                                 "LEFT JOIN Activity AS A ON P.activityId = A.activityId " +
                                                                 "JOIN TimePeriod AS TP ON A.starttimeperiodid = TP.timeperiodid " +
-                                                                "LEFT JOIN Location AS L ON A.locationid = L.locationid " +
+                                                                "LEFT JOIN Address AS L ON A.addressid = L.addressid " +
                                                                 "WHERE TP.timeperiodid = @tpid ";
                 command.Parameters.Add(new NpgsqlParameter("tpid", DbType.Int64));
                 command.Parameters[0].Value = timePeriodId;
                 command.Connection = _conn;
             }
-            else if (timePeriodId == 0 && locationId != 0)
+            else if (timePeriodId == 0 && addressId != 0)
             {
                 command.CommandText = "SELECT P.uri, P.datetaken, P.camera, P.gpslat, P.gpslong, P.thumbnail FROM photo AS P " +
                                                                 "LEFT JOIN Activity AS A ON P.activityId = A.activityId " +
                                                                 "JOIN TimePeriod AS TP ON A.starttimeperiodid = TP.timeperiodid " +
-                                                                "LEFT JOIN Location AS L ON A.locationid = L.locationid " +
-                                                                "WHERE L.locationid = @locid ";
-                command.Parameters.Add(new NpgsqlParameter("locid", DbType.Int64));
-                command.Parameters[0].Value = locationId;
+                                                                "LEFT JOIN Address AS L ON A.addressid = L.addressid " +
+                                                                "WHERE L.addressid = @addrid ";
+                command.Parameters.Add(new NpgsqlParameter("addrid", DbType.Int64));
+                command.Parameters[0].Value = addressId;
                 command.Connection = _conn;
 
             }
@@ -465,10 +465,10 @@ namespace MyLoDBNS
         /// Using Dimension Ids
         /// </summary>
         /// <param name="userId">An identifier for a MyLo Account</param>
-        /// <param name="timePeriodId">An identifier for a Time Period</param>
-        /// <param name="partyId">An identifier for a Party</param>
-        /// <param name="locationId">An identifier for a Location</param>
-        public DataSet GetPhotosByDimensionFields(long userId, Location loc, TimePeriod timePeriod, Party person)
+        /// <param name="timePeriod">An identifier for a Time Period</param>
+        /// <param name="person">An identifier for a Party</param>
+        /// <param name="address">An identifier for a Location</param>
+        public DataSet GetPhotosByDimensionFields(long userId, Address addr, TimePeriod timePeriod, Party person)
         {
             DataSet ds = new DataSet();
             NpgsqlDataAdapter da = new NpgsqlDataAdapter();
@@ -480,7 +480,7 @@ namespace MyLoDBNS
             string selectClause = "SELECT P.uri, P.datetaken, P.camera, P.gpslat, P.gpslong, P.thumbnail FROM photo AS P " +
                                                                 "LEFT JOIN Activity AS A ON P.activityId = A.activityId " +
                                                                 "JOIN TimePeriod AS TP ON A.starttimeperiodid = TP.timeperiodid " +
-                                                                "LEFT JOIN Location AS L ON A.locationid = L.locationid ";
+                                                                "LEFT JOIN Address AS L ON A.addressid = L.addressid ";
             string joinWithClause = "JOIN parties AS PTY ON PTY.activityid = A.activityid ";
 
             int i = 0;
@@ -501,17 +501,17 @@ namespace MyLoDBNS
             command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
             command.Parameters[i].Value = userId; i++;
 
-            if (loc.City != String.Empty)
+            if (addr.City != String.Empty)
             {
                 whereClause += "AND L.city = @city ";
                 command.Parameters.Add(new NpgsqlParameter("city", DbType.String));
-                command.Parameters[i].Value = loc.City; i++;
+                command.Parameters[i].Value = addr.City; i++;
             }
-            if (loc.Country != String.Empty)
+            if (addr.Country != String.Empty)
             {
                 whereClause += "AND L.country = @country ";
                 command.Parameters.Add(new NpgsqlParameter("country", DbType.String));
-                command.Parameters[i].Value = loc.Country; i++;
+                command.Parameters[i].Value = addr.Country; i++;
             }
             if (timePeriod.Year != 0)
             {
@@ -614,7 +614,7 @@ namespace MyLoDBNS
         {
             DataSet ds = new DataSet();
 
-            NpgsqlCommand command = new NpgsqlCommand("SELECT DISTINCT L.locationid, L.country, L.state, L.city FROM location AS L " +
+            NpgsqlCommand command = new NpgsqlCommand("SELECT DISTINCT L.addressid, L.country, L.state, L.city FROM Address AS L " +
                 "WHERE L.MyLoAccountId = @userid ORDER BY L.country, L.state, L.city ", _conn);
             command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
             command.Parameters[0].Value = userId;
@@ -640,9 +640,9 @@ namespace MyLoDBNS
         {
             DataSet ds = new DataSet();
 
-            NpgsqlCommand command = new NpgsqlCommand("SELECT A.activityid, A.locationname, A.startdatetime, A.enddatetime FROM activity AS A " +
+            NpgsqlCommand command = new NpgsqlCommand("SELECT A.activityid, A.activityname, A.startdatetime, A.enddatetime FROM activity AS A " +
                                                         "WHERE A.MyLoAccountId = @userid " +
-                                                        "ORDER BY A.startdatetime, A.locationname ", _conn);
+                                                        "ORDER BY A.startdatetime, A.activityname ", _conn);
             command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
             command.Parameters[0].Value = userId;
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(command);
@@ -666,7 +666,7 @@ namespace MyLoDBNS
         {
             DataSet ds = new DataSet();
 
-            NpgsqlCommand command = new NpgsqlCommand("SELECT A.activityid, A.locationname, A.startdatetime, A.enddatetime FROM activity AS A " +
+            NpgsqlCommand command = new NpgsqlCommand("SELECT A.activityid, A.activityname, A.startdatetime, A.enddatetime FROM activity AS A " +
                                                         "WHERE A.MyLoAccountId = @userid " +
                                                         "ORDER BY A.startdatetime, A.locationname ", _conn);
             command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));

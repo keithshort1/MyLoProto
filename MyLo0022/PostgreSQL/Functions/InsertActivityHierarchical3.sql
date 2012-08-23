@@ -1,14 +1,14 @@
 ﻿-- MyLo Inc. Confidential - All Rights Reserved
 
 DROP FUNCTION IF EXISTS InsertActivityHierarchical3(accountId bigint, activityKindIn text, sourceIn text, sourceIdIn text, 
-							locationNameIn text, startdatetimeIn timestamp with time zone, 
+							activityNameIn text, startdatetimeIn timestamp with time zone, 
 							enddatetimeIn timestamp with time zone, durationIn int, 
 							startId bigint, endId bigint, locId bigint, 
 							gpsLatIn double precision, gpsLongIn double precision, 
 							parentActivity bigint);
 
 CREATE FUNCTION InsertActivityHierarchical3(accountId bigint, activityKindIn text, sourceIn text, sourceIdIn text, 
-							locationNameIn text, startdatetimeIn timestamp with time zone, 
+							activityNameIn text, startdatetimeIn timestamp with time zone, 
 							enddatetimeIn timestamp with time zone, durationIn int, 
 							startId bigint, endId bigint, locId bigint, 
 							gpsLatIn double precision, gpsLongIn double precision, 
@@ -20,13 +20,12 @@ CREATE FUNCTION InsertActivityHierarchical3(accountId bigint, activityKindIn tex
 		_childId	bigint;
 		_id		bigint;
 		_ahId 		bigint;
-		_ahRow		activityhierarchy%rowtype;
 	BEGIN
 		-- Insert the activity ...
 		INSERT INTO Activity (MyLoAccountId, ActivityKind, Source, SourceId, 
-					LocationName, StartDateTime, EndDateTime, Duration, StartTimePeriodId, EndTimePeriodId, LocationId, Latitude, Longitude)
+					ActivityName, StartDateTime, EndDateTime, Duration, StartTimePeriodId, EndTimePeriodId, AddressId, Latitude, Longitude)
 				VALUES (accountId, activityKindIn, sourceIn, sourceIdIn, 
-					locationNameIn, startdatetimeIn, enddatetimeIn, durationIn, startId, endId, locId, gpsLatIn, gpsLongIn);
+					activityNameIn, startdatetimeIn, enddatetimeIn, durationIn, startId, endId, locId, gpsLatIn, gpsLongIn);
 
 		_id = (select currval('ActivitySequence'));
 		

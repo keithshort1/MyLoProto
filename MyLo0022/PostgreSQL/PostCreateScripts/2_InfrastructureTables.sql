@@ -219,6 +219,8 @@ ALTER TABLE UserProfile_Base ADD CONSTRAINT UserProfileUserId_MyLoAccountId FORE
 ALTER TABLE UserProfile_Base ADD CONSTRAINT UserProfileMyLoAccountId FOREIGN KEY (MyLoAccountId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
 ALTER TABLE Preferences_Base ADD CONSTRAINT PreferencesUserId_MyLoAccountId FOREIGN KEY (UserId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
 ALTER TABLE Preferences_Base ADD CONSTRAINT PreferencesMyLoAccountId FOREIGN KEY (MyLoAccountId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
+ALTER TABLE ActivityHierarchy_base ALTER COLUMN ParentActivityId DROP NOT NULL;
+ALTER TABLE GeoLocationHierarchy_base ALTER COLUMN ParentGeoLocationId DROP NOT NULL;
 -- Additional Indexes required on Tables
 CREATE INDEX idx_Activities_Source ON Activity_Base (Source, SourceId);
 CREATE INDEX idx_TimePeriod_AltKey ON TimePeriod_Base (TimePeriodAltKey);

@@ -9,14 +9,14 @@ CREATE FUNCTION SetupIndexCursorsIntervalAndTimePoints(accountId bigint, dateTak
 		_activities 	refcursor;
 	BEGIN
 		OPEN _activities FOR EXECUTE
-		'(SELECT A.ActivityId, A.ActivityKind, A.LocationName, A.Latitude, A.Longitude, A.startdatetime, A.enddatetime, A.Duration ' ||
+		'(SELECT A.ActivityId, A.ActivityKind, A.ActivityName, A.Latitude, A.Longitude, A.startdatetime, A.enddatetime, A.Duration ' ||
 		'FROM Activity AS A ' ||
 		'WHERE A.myloaccountId = $1 ' ||
 		'AND A.Duration <> 0 ' ||
 		'AND  (A.startdatetime, A.enddatetime) OVERLAPS ($2::timestamp, $2::timestamp) ' ||
 		'ORDER BY A.Duration) ' ||
 		'UNION '
-		'SELECT A.ActivityId, A.ActivityKind, A.LocationName, A.Latitude, A.Longitude, A.startdatetime, A.enddatetime, A.Duration ' ||
+		'SELECT A.ActivityId, A.ActivityKind, A.ActivityName, A.Latitude, A.Longitude, A.startdatetime, A.enddatetime, A.Duration ' ||
 		'FROM Activity AS A ' ||
 		'WHERE A.myloaccountId = $1 ' ||
 		'AND A.Duration = 0 ' ||

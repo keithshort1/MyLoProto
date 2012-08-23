@@ -515,7 +515,7 @@ namespace MyLoFacebookContextReaderNS
                         try
                         {
                             Activity act = new Activity();
-                            Location loc = new Location();
+                            Address loc = new Address();
                             TimePeriod startDate = new TimePeriod();
                             TimePeriod endDate = new TimePeriod();
                             if (vals["sourceId"] != null)
@@ -536,7 +536,7 @@ namespace MyLoFacebookContextReaderNS
                             }
                             if (vals["placename"] != null)
                             {
-                                act.LocationName = vals["placename"].ToString();
+                                act.ActivityName = vals["placename"].ToString();
                             }
                             if (vals["lat"] != null)
                             {
@@ -549,7 +549,7 @@ namespace MyLoFacebookContextReaderNS
                                 act.Longitude = Convert.ToDouble(parts[0]);
                             }
 
-                            Location locGps = new Location(); ;
+                            Address locGps = new Address(); ;
                             if (vals["lat"] != null && vals["long"] != null)
                             {
                                 locGps = ReverseLookupGPScoordinates(act.Latitude, act.Longitude);
@@ -721,7 +721,7 @@ namespace MyLoFacebookContextReaderNS
                         try
                         {
                             Activity act = new Activity();
-                            Location loc = new Location();
+                            Address loc = new Address();
                             TimePeriod startDate = new TimePeriod();
                             TimePeriod endDate = new TimePeriod();
                             if (vals["sourceId"] != null)
@@ -744,7 +744,7 @@ namespace MyLoFacebookContextReaderNS
                             }
                             if (vals["placename"] != null)
                             {
-                                act.LocationName = vals["placename"].ToString();
+                                act.ActivityName = vals["placename"].ToString();
                             }
                             if (vals["lat"] != null)
                             {
@@ -757,7 +757,7 @@ namespace MyLoFacebookContextReaderNS
                                 act.Longitude = Convert.ToDouble(parts[0]);
                             }
 
-                            Location locGps = new Location();
+                            Address locGps = new Address();
                             if (vals["lat"] != null && vals["long"] != null)
                             {
                                 locGps = ReverseLookupGPScoordinates(act.Latitude, act.Longitude);
@@ -856,10 +856,10 @@ namespace MyLoFacebookContextReaderNS
         }
 
 
-        private Location ReverseLookupGPScoordinates(double latitude, double longitude)
+        private Address ReverseLookupGPScoordinates(double latitude, double longitude)
         {
             string city = String.Empty, street = String.Empty, zip = String.Empty, country = String.Empty, state = String.Empty;
-            Location loc = new Location();
+            Address loc = new Address();
             gpsLookup.LatLongToAddressLookup(latitude, longitude, out street, out city, out state, out zip, out country);
             loc.Street = street;
             loc.City = city;

@@ -4,14 +4,14 @@ DROP FUNCTION IF EXISTS AddActivityHierarchical(accountId bigint, activityKindIn
 	startdatetimeIn timestamp with time zone, enddatetimeIn timestamp with time zone,
 	yearIn smallint, monthIn smallint, dayIn text, dayNumberIn smallint, hourIn smallint, 
 	yearIn2 smallint, monthIn2 smallint, dayIn2 text, dayNumberIn2 smallint, hourIn2 smallint,
-	locationNameIn text, gpsLatIn double precision, gpsLongIn double precision,
+	activityNameIn text, gpsLatIn double precision, gpsLongIn double precision,
 	streetIn text, cityIn text, stateIn text, zipIn text, countryIn text, parentActivity bigint);
 
 CREATE FUNCTION AddActivityHierarchical(accountId bigint, activityKindIn text, sourceIn text, sourceIdIn text, 
 	startdatetimeIn timestamp with time zone, enddatetimeIn timestamp with time zone,
 	yearIn smallint, monthIn smallint, dayIn text, dayNumberIn smallint, hourIn smallint,
 	yearIn2 smallint, monthIn2 smallint, dayIn2 text, dayNumberIn2 smallint, hourIn2 smallint,
-	locationNameIn text, gpsLatIn double precision, gpsLongIn double precision,
+	activityNameIn text, gpsLatIn double precision, gpsLongIn double precision,
 	streetIn text, cityIn text, stateIn text, zipIn text, countryIn text, parentActivity bigint)
 	RETURNS bigint 
 	AS $$
@@ -44,11 +44,11 @@ CREATE FUNCTION AddActivityHierarchical(accountId bigint, activityKindIn text, s
 				IF _noAddress THEN
 					_locId := NULL;
 				ELSE
-					_locId := (SELECT GetOrInsertLocation(accountId, streetIn, cityIn, stateIn, zipIn, countryIn));
+					_locId := (SELECT GetOrInsertAddress(accountId, streetIn, cityIn, stateIn, zipIn, countryIn));
 				END IF;
 				_duration := (SELECT CalculateDuration(startdatetimeIn, enddatetimeIn));
 				_id := (SELECT InsertActivityHierarchical3(accountId, activityKindIn, sourceIn, sourceIdIn, 
-							locationNameIn, startdatetimeIn, enddatetimeIn, _duration, _startId, _endId, _locId, gpsLatIn, gpsLongIn, parentActivity));	
+							activityNameIn, startdatetimeIn, enddatetimeIn, _duration, _startId, _endId, _locId, gpsLatIn, gpsLongIn, parentActivity));	
 			END IF;	
 		END IF;
 		RETURN _id;

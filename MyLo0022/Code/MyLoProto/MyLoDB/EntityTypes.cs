@@ -21,7 +21,7 @@ namespace MyLoDBNS
         public string ActivityKind { get; set; }
         public string Source { get; set; }
         public string SourceId { get; set; }
-        public string LocationName { get; set; }
+        public string ActivityName { get; set; }
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public DateTime StartDate { get; set; }
@@ -32,7 +32,7 @@ namespace MyLoDBNS
             this.ActivityKind = String.Empty;
             this.Source = String.Empty;
             this.SourceId = String.Empty;
-            this.LocationName = String.Empty;
+            this.ActivityName = String.Empty;
             this.Latitude = 0;
             this.Longitude = 0;
             this.StartDate = DateTime.MinValue;
@@ -41,7 +41,7 @@ namespace MyLoDBNS
     }
 
 
-    public class Location
+    public class Address
     {
         public long LocationId { get; set; }
         public string Street { get; set; }
@@ -52,7 +52,7 @@ namespace MyLoDBNS
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
-        public Location()
+        public Address()
         {
             this.City = String.Empty;
             this.Street = String.Empty;

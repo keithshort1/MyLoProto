@@ -175,7 +175,7 @@ namespace MyLoPhotoViewerNS
                 _eventStrings.Add(eventStr);
                 foreach (DataRow dr in events.Rows)
                 {
-                    eventStr = String.Format("{0} {1}                                     {2}", dr["startdatetime"], dr["locationname"], dr["activityid"]);
+                    eventStr = String.Format("{0} {1}                                     {2}", dr["startdatetime"], dr["activityname"], dr["activityid"]);
                     _events.Add(eventStr, (long)dr["activityid"]);
                     _eventStrings.Add(eventStr);
                 }

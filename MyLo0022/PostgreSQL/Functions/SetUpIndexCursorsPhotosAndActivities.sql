@@ -15,10 +15,10 @@ CREATE FUNCTION SetupIndexCursorsPhotosAndActivities(accountId bigint)
 		RETURN next _photos;
 
 		OPEN _activities FOR EXECUTE
-		'SELECT A.ActivityId, A.ActivityKind, A.LocationName, A.Latitude, A.Longitude, A.startdatetime, A.enddatetime, L.Street, L.City, L.State, L.Zip, L.Country ' ||
+		'SELECT A.ActivityId, A.ActivityKind, A.ActivityName, A.Latitude, A.Longitude, A.startdatetime, A.enddatetime, L.Street, L.City, L.State, L.Zip, L.Country ' ||
 		'FROM Activity AS A ' ||
 		'JOIN TimePeriod AS T ON A.starttimeperiodId = T.timeperiodid ' ||
-		'LEFT JOIN Location AS L ON A.locationId = L.locationId ' ||
+		'LEFT JOIN Address AS L ON A.addressId = L.addressId ' ||
 		'WHERE A.myloaccountId = $1'
 		USING accountId;
 		RETURN next _activities;

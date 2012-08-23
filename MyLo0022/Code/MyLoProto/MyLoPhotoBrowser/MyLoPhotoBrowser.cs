@@ -147,7 +147,7 @@ namespace MyLoPhotoBrowserNS
                 }
                 else
                 {
-                    Location loc = new Location();
+                    Address loc = new Address();
                     loc.Country = country; loc.City = city; 
                     TimePeriod tp = new TimePeriod();
                     if (year != String.Empty)

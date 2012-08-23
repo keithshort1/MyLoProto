@@ -45,6 +45,13 @@
       <SubType>Content</SubType>
       <DependentUpon>MyLoFileItems.classdiagram</DependentUpon>
     </Content>
+    <Content Include="MyLoAddressableResource.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MyLoAddressableResource.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MyLoAddressableResource.classdiagram</DependentUpon>
+    </Content>
     <Content Include="MyLoLocateableResource.classdiagram">
       <SubType>Content</SubType>
     </Content>

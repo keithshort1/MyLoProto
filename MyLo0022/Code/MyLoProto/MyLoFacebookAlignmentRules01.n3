@@ -102,6 +102,37 @@
 	_:p mylo:HasGpsLongitude :glong .
 	:y mylo:HasPersonCheckinTag :name } .
 
+
+@forall :x, :y, :z, :t, :p, :n, :id, :l, :glat, :glong .
+{	 
+	:y checkin:application :x . 
+	:y checkin:from :z . 
+	:z a mylo:FacebookPerson . 
+	:y checkin:created_time :t .
+	:y checkin:place :p .
+	:y checkin:id :id .
+	:p page:name :n .
+	:p page:location :l .
+	:l :latitude :glat .
+	:l :longitude :glong } 
+=> 
+{	:z mylo:IsOwner "True" .
+	:y a mylo:FacebookCheckin . 
+	:z mylo:HasActivity :y .
+	_:t a mylo:TimePeriod .
+	_:t a mylo:Instant .
+	_:t mylo:HasTimeValue :t .
+	:y mylo:HasTimePeriod _:t .
+	:y mylo:HasSourceId :id .
+	_:p a mylo:GeographicalPoint .
+	_:a a mylo:Address .
+	_:a mylo:HasAddressProps :l .
+	:y mylo:HasLocation _:p .
+	_:p mylo:HasAddress _:a .
+	_:p mylo:HasLocationName :n .
+	_:p mylo:HasGpsLatitude :glat .
+	_:p mylo:HasGpsLongitude :glong } .
+
 @forall :x, :y, :z, :tag, :d, :per, :name .
 {	 
 	:y a photo:type . 

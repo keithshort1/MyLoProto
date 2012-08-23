@@ -319,7 +319,7 @@ namespace MyLoDBNS
             act.EndDate = (DateTime)p2["dateTaken"];
             act.Source = "LinearClusterIndexer";
             act.SourceId = eventCount.ToString();
-            act.LocationName = "IndexTest01" + eventCount.ToString();
+            act.ActivityName = "IndexTest01" + eventCount.ToString();
             act.Latitude = 0;
             act.Longitude = 0;
 
@@ -343,7 +343,7 @@ namespace MyLoDBNS
 
             act.StartDate = tpEnd.AltKey;
 
-            Location loc = new Location();
+            Address loc = new Address();
             return AddActivity(_userId, act,tpStart, tpEnd, loc);
         }
             
@@ -356,7 +356,7 @@ namespace MyLoDBNS
         /// <param name="startDate">A TimePeriod instance representing the start of the Activity</param>
         /// <param name="endDate">A TimePeriod instance representing the end of the Activity</param>
         /// <param name="loc">A Location instance represents where the Activity takes place</param>
-        public long AddActivity(long userId, Activity act, TimePeriod startDate, TimePeriod endDate, Location loc)
+        public long AddActivity(long userId, Activity act, TimePeriod startDate, TimePeriod endDate, Address loc)
         {
             try
             {
@@ -405,7 +405,7 @@ namespace MyLoDBNS
                 command.Parameters[15].Value = endDate.Hour;
 
                 command.Parameters[16].DbType = DbType.String;
-                command.Parameters[16].Value = act.LocationName;
+                command.Parameters[16].Value = act.ActivityName;
                 command.Parameters[17].DbType = DbType.Double;
                 command.Parameters[17].Value = act.Latitude;
                 command.Parameters[18].DbType = DbType.Double;

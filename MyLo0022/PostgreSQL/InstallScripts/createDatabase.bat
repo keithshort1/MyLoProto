@@ -39,7 +39,7 @@ cd Functions
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f SetUpIndexCursorsIntervalAndTimePoints.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f UpdatePhotoActivityId.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetActivityAndSubActivities.sql -U postgres -d %1
-"c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertLocation.sql -U postgres -d %1
+"c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertAddress.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertTimePeriod.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertTimePeriodMonthly.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f AddParty.sql -U postgres -d %1

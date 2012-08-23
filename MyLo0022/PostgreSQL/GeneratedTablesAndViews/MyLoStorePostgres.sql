@@ -1,6 +1,6 @@
 -- Postgres 9.0.4 Database for MyLo Store
 -- MyLo Inc. Confidential - All Rights Reserved
--- Schema Generated on 6/11/2012 3:09:43 PM
+-- Schema Generated on 8/23/2012 1:43:00 PM
 
 BEGIN; 
 
@@ -558,13 +558,13 @@ CREATE OR REPLACE RULE InternetChannelInsteadOfInsert AS ON INSERT TO InternetCh
 
 
 --
--- Table Structure for Location
+-- Table Structure for Address
 --
   
-DROP TABLE IF EXISTS Location_Base CASCADE;
+DROP TABLE IF EXISTS Address_Base CASCADE;
   
-CREATE TABLE Location_Base(
-    LocationId bigint not null ,
+CREATE TABLE Address_Base(
+    AddressId bigint not null ,
     City text  ,
     Country text  ,
     State text  ,
@@ -572,45 +572,45 @@ CREATE TABLE Location_Base(
     UTCOffset smallint  ,
     Street text  ,
     MyLoAccountId bigInt not null,
-    Primary Key (LocationId)
+    Primary Key (AddressId)
 );
 
 
 --
--- Modifiable View Structure for Location
+-- Modifiable View Structure for Address
 --
   
-DROP SEQUENCE IF EXISTS LocationSequence;
+DROP SEQUENCE IF EXISTS AddressSequence;
   
-CREATE SEQUENCE LocationSequence;
+CREATE SEQUENCE AddressSequence;
   
-DROP VIEW IF EXISTS Location CASCADE;
+DROP VIEW IF EXISTS Address CASCADE;
   
-CREATE VIEW Location AS
-        SELECT  v.MyLoAccountId, v.LocationId, v.City, v.Country, v.State, v.Zip, v.UTCOffset, v.Street
-                FROM Location_Base AS v;
+CREATE VIEW Address AS
+        SELECT  v.MyLoAccountId, v.AddressId, v.City, v.Country, v.State, v.Zip, v.UTCOffset, v.Street
+                FROM Address_Base AS v;
 
-CREATE OR REPLACE FUNCTION LocationInsteadOfInsertProc(NEW Location) RETURNS bigint AS $$
+CREATE OR REPLACE FUNCTION AddressInsteadOfInsertProc(NEW Address) RETURNS bigint AS $$
       DECLARE
               _error        boolean;
-              _LocationId          bigint;
+              _AddressId          bigint;
               _mId          bigint;
       BEGIN
-              _LocationId := nextval('LocationSequence');
+              _AddressId := nextval('AddressSequence');
               _mId := (SELECT M.MyLoAccountId FROM MyLoUser_Base AS M WHERE M.MyLoAccountId = NEW.MyLoAccountId);
               IF _mId IS NULL THEN
                       RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
               ELSE
-                      INSERT INTO Location_Base (MyLoAccountId, LocationId, City, Country, State, Zip, UTCOffset, Street)
-                              VALUES (NEW.MyLoAccountId, _LocationId, NEW.City, NEW.Country, NEW.State, NEW.Zip, NEW.UTCOffset, NEW.Street);
+                      INSERT INTO Address_Base (MyLoAccountId, AddressId, City, Country, State, Zip, UTCOffset, Street)
+                              VALUES (NEW.MyLoAccountId, _AddressId, NEW.City, NEW.Country, NEW.State, NEW.Zip, NEW.UTCOffset, NEW.Street);
               END IF;
-              RETURN _LocationId;
+              RETURN _AddressId;
       END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE RULE LocationInsteadOfInsert AS ON INSERT TO Location
+CREATE OR REPLACE RULE AddressInsteadOfInsert AS ON INSERT TO Address
       DO INSTEAD
-      SELECT LocationInsteadOfInsertProc(NEW);
+      SELECT AddressInsteadOfInsertProc(NEW);
 
 
 --
@@ -629,9 +629,10 @@ CREATE TABLE Activity_Base(
     Duration decimal(6)  ,
     Latitude double precision  ,
     Longitude double precision  ,
-    LocationName text  ,
-    LocationId bigInt,
+    ActivityName text  ,
+    AddressId bigInt,
     EndTimePeriodId bigInt,
+    GeoLocationId bigInt,
     StartTimePeriodId bigInt not null,
     MyLoAccountId bigInt not null,
     Primary Key (ActivityId)
@@ -649,7 +650,7 @@ CREATE SEQUENCE ActivitySequence;
 DROP VIEW IF EXISTS Activity CASCADE;
   
 CREATE VIEW Activity AS
-        SELECT  v.MyLoAccountId, v.ActivityId, v.ActivityKind, v.Source, v.SourceId, v.StartDateTime, v.EndDateTime, v.Duration, v.Latitude, v.Longitude, v.LocationName, v.StartTimePeriodId, v.LocationId, v.EndTimePeriodId
+        SELECT  v.MyLoAccountId, v.ActivityId, v.ActivityKind, v.Source, v.SourceId, v.StartDateTime, v.EndDateTime, v.Duration, v.Latitude, v.Longitude, v.ActivityName, v.StartTimePeriodId, v.AddressId, v.EndTimePeriodId, v.GeoLocationId
                 FROM Activity_Base AS v;
 
 CREATE OR REPLACE FUNCTION ActivityInsteadOfInsertProc(NEW Activity) RETURNS bigint AS $$
@@ -663,8 +664,8 @@ CREATE OR REPLACE FUNCTION ActivityInsteadOfInsertProc(NEW Activity) RETURNS big
               IF _mId IS NULL THEN
                       RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
               ELSE
-                      INSERT INTO Activity_Base (MyLoAccountId, ActivityId, ActivityKind, Source, SourceId, StartDateTime, EndDateTime, Duration, Latitude, Longitude, LocationName, StartTimePeriodId, LocationId, EndTimePeriodId)
-                              VALUES (NEW.MyLoAccountId, _ActivityId, NEW.ActivityKind, NEW.Source, NEW.SourceId, NEW.StartDateTime, NEW.EndDateTime, NEW.Duration, NEW.Latitude, NEW.Longitude, NEW.LocationName, NEW.StartTimePeriodId, NEW.LocationId, NEW.EndTimePeriodId);
+                      INSERT INTO Activity_Base (MyLoAccountId, ActivityId, ActivityKind, Source, SourceId, StartDateTime, EndDateTime, Duration, Latitude, Longitude, ActivityName, StartTimePeriodId, AddressId, EndTimePeriodId, GeoLocationId)
+                              VALUES (NEW.MyLoAccountId, _ActivityId, NEW.ActivityKind, NEW.Source, NEW.SourceId, NEW.StartDateTime, NEW.EndDateTime, NEW.Duration, NEW.Latitude, NEW.Longitude, NEW.ActivityName, NEW.StartTimePeriodId, NEW.AddressId, NEW.EndTimePeriodId, NEW.GeoLocationId);
               END IF;
               RETURN _ActivityId;
       END;
@@ -744,6 +745,7 @@ CREATE TABLE Video_Base(
     Hashcode bigint not null ,
     ActivityId bigInt,
     FolderId bigInt,
+    TimePeriodId bigInt,
     MyLoAccountId bigInt not null,
     Primary Key (UniqueId)
 );
@@ -760,7 +762,7 @@ CREATE SEQUENCE VideoSequence;
 DROP VIEW IF EXISTS Video CASCADE;
   
 CREATE VIEW Video AS
-        SELECT  v.MyLoAccountId, v.UniqueId, v.Uri, v.Hashcode, v.ActivityId, v.FolderId
+        SELECT  v.MyLoAccountId, v.UniqueId, v.Uri, v.Hashcode, v.ActivityId, v.FolderId, v.TimePeriodId
                 FROM Video_Base AS v;
 
 CREATE OR REPLACE FUNCTION VideoInsteadOfInsertProc(NEW Video) RETURNS bigint AS $$
@@ -774,8 +776,8 @@ CREATE OR REPLACE FUNCTION VideoInsteadOfInsertProc(NEW Video) RETURNS bigint AS
               IF _mId IS NULL THEN
                       RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
               ELSE
-                      INSERT INTO Video_Base (MyLoAccountId, UniqueId, Uri, Hashcode, ActivityId, FolderId)
-                              VALUES (NEW.MyLoAccountId, _UniqueId, NEW.Uri, NEW.Hashcode, NEW.ActivityId, NEW.FolderId);
+                      INSERT INTO Video_Base (MyLoAccountId, UniqueId, Uri, Hashcode, ActivityId, FolderId, TimePeriodId)
+                              VALUES (NEW.MyLoAccountId, _UniqueId, NEW.Uri, NEW.Hashcode, NEW.ActivityId, NEW.FolderId, NEW.TimePeriodId);
               END IF;
               RETURN _UniqueId;
       END;
@@ -901,59 +903,171 @@ CREATE OR REPLACE RULE PartyActivityParticipationInsteadOfInsert AS ON INSERT TO
 
 
 --
--- Table Structure for LocationHierarchy
+-- Table Structure for AddressHierarchy
 --
   
-DROP TABLE IF EXISTS LocationHierarchy_Base CASCADE;
+DROP TABLE IF EXISTS AddressHierarchy_Base CASCADE;
   
-CREATE TABLE LocationHierarchy_Base(
-    LocHierarchyId bigint not null ,
+CREATE TABLE AddressHierarchy_Base(
+    AddressHierarchyId bigint not null ,
     ChildLocId bigInt not null,
     ParentLocId bigInt not null,
     MyLoAccountId bigInt not null,
-    Primary Key (LocHierarchyId)
+    Primary Key (AddressHierarchyId)
 );
 
-DROP INDEX IF EXISTS LocationHierarchyIndex;
+DROP INDEX IF EXISTS AddressHierarchyIndex;
 
-CREATE INDEX LocationHierarchyIndex on LocationHierarchy_Base (ParentLocId, ChildLocId);
+CREATE INDEX AddressHierarchyIndex on AddressHierarchy_Base (ParentLocId, ChildLocId);
 
 
 --
--- Modifiable View Structure for LocationHierarchy
+-- Modifiable View Structure for AddressHierarchy
 --
   
-DROP SEQUENCE IF EXISTS LocationHierarchySequence;
+DROP SEQUENCE IF EXISTS AddressHierarchySequence;
   
-CREATE SEQUENCE LocationHierarchySequence;
+CREATE SEQUENCE AddressHierarchySequence;
   
-DROP VIEW IF EXISTS LocationHierarchy CASCADE;
+DROP VIEW IF EXISTS AddressHierarchy CASCADE;
   
-CREATE VIEW LocationHierarchy AS
-        SELECT  v.MyLoAccountId, v.LocHierarchyId, v.ChildLocId, v.ParentLocId
-                FROM LocationHierarchy_Base AS v;
+CREATE VIEW AddressHierarchy AS
+        SELECT  v.MyLoAccountId, v.AddressHierarchyId, v.ChildLocId, v.ParentLocId
+                FROM AddressHierarchy_Base AS v;
 
-CREATE OR REPLACE FUNCTION LocationHierarchyInsteadOfInsertProc(NEW LocationHierarchy) RETURNS bigint AS $$
+CREATE OR REPLACE FUNCTION AddressHierarchyInsteadOfInsertProc(NEW AddressHierarchy) RETURNS bigint AS $$
       DECLARE
               _error        boolean;
-              _LocHierarchyId          bigint;
+              _AddressHierarchyId          bigint;
               _mId          bigint;
       BEGIN
-              _LocHierarchyId := nextval('LocationHierarchySequence');
+              _AddressHierarchyId := nextval('AddressHierarchySequence');
               _mId := (SELECT M.MyLoAccountId FROM MyLoUser_Base AS M WHERE M.MyLoAccountId = NEW.MyLoAccountId);
               IF _mId IS NULL THEN
                       RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
               ELSE
-                      INSERT INTO LocationHierarchy_Base (MyLoAccountId, LocHierarchyId, ChildLocId, ParentLocId)
-                              VALUES (NEW.MyLoAccountId, _LocHierarchyId, NEW.ChildLocId, NEW.ParentLocId);
+                      INSERT INTO AddressHierarchy_Base (MyLoAccountId, AddressHierarchyId, ChildLocId, ParentLocId)
+                              VALUES (NEW.MyLoAccountId, _AddressHierarchyId, NEW.ChildLocId, NEW.ParentLocId);
               END IF;
-              RETURN _LocHierarchyId;
+              RETURN _AddressHierarchyId;
       END;
 $$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE RULE LocationHierarchyInsteadOfInsert AS ON INSERT TO LocationHierarchy
+CREATE OR REPLACE RULE AddressHierarchyInsteadOfInsert AS ON INSERT TO AddressHierarchy
       DO INSTEAD
-      SELECT LocationHierarchyInsteadOfInsertProc(NEW);
+      SELECT AddressHierarchyInsteadOfInsertProc(NEW);
+
+
+--
+-- Table Structure for GeoLocation
+--
+  
+DROP TABLE IF EXISTS GeoLocation_Base CASCADE;
+  
+CREATE TABLE GeoLocation_Base(
+    LocationId bigint not null ,
+    LocationName text  ,
+    LocationKind text not null ,
+    Latitude real  ,
+    Longitude real  ,
+    Radius real  ,
+    DefinesRegionId bigInt,
+    MyLoAccountId bigInt not null,
+    Primary Key (LocationId)
+);
+
+
+--
+-- Modifiable View Structure for GeoLocation
+--
+  
+DROP SEQUENCE IF EXISTS GeoLocationSequence;
+  
+CREATE SEQUENCE GeoLocationSequence;
+  
+DROP VIEW IF EXISTS GeoLocation CASCADE;
+  
+CREATE VIEW GeoLocation AS
+        SELECT  v.MyLoAccountId, v.LocationId, v.LocationName, v.LocationKind, v.Latitude, v.Longitude, v.Radius, v.DefinesRegionId
+                FROM GeoLocation_Base AS v;
+
+CREATE OR REPLACE FUNCTION GeoLocationInsteadOfInsertProc(NEW GeoLocation) RETURNS bigint AS $$
+      DECLARE
+              _error        boolean;
+              _LocationId          bigint;
+              _mId          bigint;
+      BEGIN
+              _LocationId := nextval('GeoLocationSequence');
+              _mId := (SELECT M.MyLoAccountId FROM MyLoUser_Base AS M WHERE M.MyLoAccountId = NEW.MyLoAccountId);
+              IF _mId IS NULL THEN
+                      RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
+              ELSE
+                      INSERT INTO GeoLocation_Base (MyLoAccountId, LocationId, LocationName, LocationKind, Latitude, Longitude, Radius, DefinesRegionId)
+                              VALUES (NEW.MyLoAccountId, _LocationId, NEW.LocationName, NEW.LocationKind, NEW.Latitude, NEW.Longitude, NEW.Radius, NEW.DefinesRegionId);
+              END IF;
+              RETURN _LocationId;
+      END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE RULE GeoLocationInsteadOfInsert AS ON INSERT TO GeoLocation
+      DO INSTEAD
+      SELECT GeoLocationInsteadOfInsertProc(NEW);
+
+
+--
+-- Table Structure for GeoLocationHierarchy
+--
+  
+DROP TABLE IF EXISTS GeoLocationHierarchy_Base CASCADE;
+  
+CREATE TABLE GeoLocationHierarchy_Base(
+    GeoLocationHierarchyId bigint not null ,
+    ParentGeoLocationId bigInt not null,
+    ChildGeoLocationId bigInt not null,
+    MyLoAccountId bigInt not null,
+    Primary Key (GeoLocationHierarchyId)
+);
+
+DROP INDEX IF EXISTS GeoLocationHierarchyIndex;
+
+CREATE INDEX GeoLocationHierarchyIndex on GeoLocationHierarchy_Base (ParentGeoLocationId, ChildGeoLocationId);
+
+
+--
+-- Modifiable View Structure for GeoLocationHierarchy
+--
+  
+DROP SEQUENCE IF EXISTS GeoLocationHierarchySequence;
+  
+CREATE SEQUENCE GeoLocationHierarchySequence;
+  
+DROP VIEW IF EXISTS GeoLocationHierarchy CASCADE;
+  
+CREATE VIEW GeoLocationHierarchy AS
+        SELECT  v.MyLoAccountId, v.GeoLocationHierarchyId, v.ParentGeoLocationId, v.ChildGeoLocationId
+                FROM GeoLocationHierarchy_Base AS v;
+
+CREATE OR REPLACE FUNCTION GeoLocationHierarchyInsteadOfInsertProc(NEW GeoLocationHierarchy) RETURNS bigint AS $$
+      DECLARE
+              _error        boolean;
+              _GeoLocationHierarchyId          bigint;
+              _mId          bigint;
+      BEGIN
+              _GeoLocationHierarchyId := nextval('GeoLocationHierarchySequence');
+              _mId := (SELECT M.MyLoAccountId FROM MyLoUser_Base AS M WHERE M.MyLoAccountId = NEW.MyLoAccountId);
+              IF _mId IS NULL THEN
+                      RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
+              ELSE
+                      INSERT INTO GeoLocationHierarchy_Base (MyLoAccountId, GeoLocationHierarchyId, ParentGeoLocationId, ChildGeoLocationId)
+                              VALUES (NEW.MyLoAccountId, _GeoLocationHierarchyId, NEW.ParentGeoLocationId, NEW.ChildGeoLocationId);
+              END IF;
+              RETURN _GeoLocationHierarchyId;
+      END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE RULE GeoLocationHierarchyInsteadOfInsert AS ON INSERT TO GeoLocationHierarchy
+      DO INSTEAD
+      SELECT GeoLocationHierarchyInsteadOfInsertProc(NEW);
 
 
 ALTER TABLE GroupMembership_Base ADD CONSTRAINT GroupMembershipPersonId_PartyId FOREIGN KEY (PersonId) REFERENCES Person_Base (PartyId) On Delete Cascade;
@@ -969,6 +1083,8 @@ ALTER TABLE Activity_Base ADD CONSTRAINT ActivityStartTimePeriodId_TimePeriodId 
 ALTER TABLE ActivityHierarchy_Base ADD CONSTRAINT ActivityHierarchyChildActivityId_ActivityId FOREIGN KEY (ChildActivityId) REFERENCES Activity_Base (ActivityId) On Delete Cascade;
 ALTER TABLE ActivityHierarchy_Base ADD CONSTRAINT ActivityHierarchyParentActivityId_ActivityId FOREIGN KEY (ParentActivityId) REFERENCES Activity_Base (ActivityId) On Delete Cascade;
 ALTER TABLE PartyActivityParticipation_Base ADD CONSTRAINT PartyActivityParticipationActivityId_ActivityId FOREIGN KEY (ActivityId) REFERENCES Activity_Base (ActivityId) On Delete Cascade;
-ALTER TABLE LocationHierarchy_Base ADD CONSTRAINT LocationHierarchyChildLocId_LocationId FOREIGN KEY (ChildLocId) REFERENCES Location_Base (LocationId) On Delete Cascade;
-ALTER TABLE LocationHierarchy_Base ADD CONSTRAINT LocationHierarchyParentLocId_LocationId FOREIGN KEY (ParentLocId) REFERENCES Location_Base (LocationId) On Delete Cascade;
+ALTER TABLE AddressHierarchy_Base ADD CONSTRAINT AddressHierarchyChildLocId_AddressId FOREIGN KEY (ChildLocId) REFERENCES Address_Base (AddressId) On Delete Cascade;
+ALTER TABLE AddressHierarchy_Base ADD CONSTRAINT AddressHierarchyParentLocId_AddressId FOREIGN KEY (ParentLocId) REFERENCES Address_Base (AddressId) On Delete Cascade;
+ALTER TABLE GeoLocationHierarchy_Base ADD CONSTRAINT GeoLocationHierarchyParentGeoLocationId_LocationId FOREIGN KEY (ParentGeoLocationId) REFERENCES GeoLocation_Base (LocationId) On Delete Cascade;
+ALTER TABLE GeoLocationHierarchy_Base ADD CONSTRAINT GeoLocationHierarchyChildGeoLocationId_LocationId FOREIGN KEY (ChildGeoLocationId) REFERENCES GeoLocation_Base (LocationId) On Delete Cascade;
 COMMIT; 

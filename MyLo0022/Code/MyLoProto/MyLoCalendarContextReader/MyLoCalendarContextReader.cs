@@ -70,7 +70,7 @@ namespace MyLoCalendarContextReaderNS
 
         private void AddEvents()
         {
-            Location loc = new Location();
+            Address loc = new Address();
             TimePeriod start = new TimePeriod();
             TimePeriod end = new TimePeriod();
             Party person = new Party();
@@ -105,7 +105,7 @@ namespace MyLoCalendarContextReaderNS
             activity.SourceId = "0001";
             activity.StartDate = new DateTime(2012, 6, 2, 10, 0, 0, DateTimeKind.Local);
             activity.EndDate = new DateTime(2012, 6, 2, 16, 0, 0, DateTimeKind.Local);
-            activity.LocationName = "Jeff and Tami's Wedding";
+            activity.ActivityName = "Jeff and Tami's Wedding";
             activity.Latitude = 47.7337578;
             activity.Longitude = -122.1469737;
 
@@ -143,7 +143,7 @@ namespace MyLoCalendarContextReaderNS
             activity.SourceId = "0002";
             activity.StartDate = new DateTime(2012, 2, 20, 10, 0, 0, DateTimeKind.Local);
             activity.EndDate = new DateTime(2012, 2, 26, 18, 0, 0, DateTimeKind.Local);
-            activity.LocationName = "Cabo San Lucas Vacation";
+            activity.ActivityName = "Cabo San Lucas Vacation";
             activity.Latitude = 22.890980;
             activity.Longitude = -109.916676;
 
@@ -182,7 +182,7 @@ namespace MyLoCalendarContextReaderNS
             activity.SourceId = "0003";
             activity.StartDate = new DateTime(2012, 6, 8, 19, 0, 0, DateTimeKind.Local);
             activity.EndDate = new DateTime(2012, 6, 8, 23, 0, 0, DateTimeKind.Local);
-            activity.LocationName = "Wine Club and Steven's 50th";
+            activity.ActivityName = "Wine Club and Steven's 50th";
             activity.Latitude = 47.6885173;
             activity.Longitude = -122.1321265;
 
@@ -221,7 +221,7 @@ namespace MyLoCalendarContextReaderNS
             activity.SourceId = "0004";
             activity.StartDate = new DateTime(2011, 12, 5, 11, 0, 0, DateTimeKind.Local);
             activity.EndDate = new DateTime(2011, 12, 10, 22, 0, 0, DateTimeKind.Local);
-            activity.LocationName = "Vacation in Maui";
+            activity.ActivityName = "Vacation in Maui";
             activity.Latitude = 20.7180257;
             activity.Longitude = -156.4472008;
 
@@ -260,7 +260,7 @@ namespace MyLoCalendarContextReaderNS
             activity.SourceId = "0005";
             activity.StartDate = new DateTime(2011, 12, 7, 5, 0, 0, DateTimeKind.Local);
             activity.EndDate = new DateTime(2011, 12, 7, 14, 0, 0, DateTimeKind.Local);
-            activity.LocationName = "Mount Haleakala";
+            activity.ActivityName = "Mount Haleakala";
             activity.Latitude = 20.709722;
             activity.Longitude = -156.253333;
 
@@ -299,7 +299,7 @@ namespace MyLoCalendarContextReaderNS
             activity.SourceId = "0006";
             activity.StartDate = new DateTime(2012, 4, 21, 12, 0, 0, DateTimeKind.Local);
             activity.EndDate = new DateTime(2012, 4, 25, 14, 0, 0, DateTimeKind.Local);
-            activity.LocationName = "Florence Vacation";
+            activity.ActivityName = "Florence Vacation";
             activity.Latitude = 43.777417;
             activity.Longitude = 11.251117;
 
@@ -312,10 +312,6 @@ namespace MyLoCalendarContextReaderNS
 
             // Setup the event called "Italy Vacation"
             //gpsl.LatLongToAddressLookup(43.777417, 11.251117, out street, out city, out state, out zip, out country);
-            //loc.Street = street;
-            //loc.City = city;
-            //loc.State = state;
-            //loc.Zip = zip;
             loc.Country = "Italy";
 
             start.Year = 2012;
@@ -337,7 +333,7 @@ namespace MyLoCalendarContextReaderNS
             activity.SourceId = "0007";
             activity.StartDate = new DateTime(2012, 4, 21, 12, 0, 0, DateTimeKind.Local);
             activity.EndDate = new DateTime(2012, 4, 28, 18, 0, 0, DateTimeKind.Local);
-            activity.LocationName = "Italy Vacation";
+            activity.ActivityName = "Italy Vacation";
             activity.Latitude = 0;
             activity.Longitude = 0;
 
