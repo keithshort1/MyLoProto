@@ -6623,7 +6623,20 @@ These tables are not generated, but are shown for completeness only.</body>
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="82275e0f-5aaa-44d1-8051-e89c3ec4a78e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="13c07fd6-74fd-4207-bfac-50e9d9852bd9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -6960,7 +6973,7 @@ These tables are not generated, but are shown for completeness only.</body>
       <class
         Id="f101806c-e41a-45c5-8796-97cce2450a42"
         name="Circle"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -6979,7 +6992,7 @@ These tables are not generated, but are shown for completeness only.</body>
       <class
         Id="81b5169f-955a-4759-90f6-06927c6b24b9"
         name="Point"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>
@@ -6998,7 +7011,7 @@ These tables are not generated, but are shown for completeness only.</body>
       <class
         Id="39624c6c-09c4-48c4-a063-5e19c70b5d24"
         name="Region"
-        isAbstract="false"
+        isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
         <generalsInternal>

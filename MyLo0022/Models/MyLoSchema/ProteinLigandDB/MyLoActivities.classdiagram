@@ -1737,6 +1737,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="a126a90b-d261-4c0c-b63d-1015a523c12c" name="GeoLocation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="2e287928-437b-4c47-ad56-0ac2321c7f78" name="Lower" value="*">
+                      <elementDefinition Id="82275e0f-5aaa-44d1-8051-e89c3ec4a78e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="024cf85f-66a5-4fc7-b8b4-bfdddcd8da71" name="Upper" value="*">
+                      <elementDefinition Id="13c07fd6-74fd-4207-bfac-50e9d9852bd9" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="33c19811-1fc3-41b7-9815-46db91990538" />
                 </memberEnd>
               </associationHasOwnedEnds>

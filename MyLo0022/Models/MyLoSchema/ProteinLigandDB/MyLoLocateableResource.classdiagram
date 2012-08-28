@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1b820eb8-ff89-4fe9-a660-4fa9b187b3c3" name="MyLoLocateableResource" linkedPackageId="21d2d94d-fa78-4faa-9bb6-cf8ee74e6d21" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="34e732f2-b46d-47c1-938e-d68922fcfbc6">
-      <profileInstance Id="eccbd5ba-6cbd-4074-b1e7-87a39b113c3b" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="7be7cfcc-f834-48e2-88ac-bd6c7b32ce7a">
-      <profileInstance Id="53df674d-42fe-4d72-877b-ca08dcf04dfa" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="04cfb7c1-fc7d-4620-9b96-681c986a2c34">
-      <profileInstance Id="9f83f252-7e24-4e90-93d4-2b57ba031e8c" name="DBProfile">
-        <elementDefinition Id="2914e42c-411e-4ae8-a254-8dc0ddacde30" />
-      </profileInstance>
-      <elementDefinition Id="c75d42a1-a537-4429-bcc2-30d5eeb832fd" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="b032c2f1-41cf-472b-b8b1-bbf74239a38d" name="GeoLocation" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -35,6 +15,16 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="dbfbc051-443d-4ce9-8d47-39191e743709" name="GeoLocation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="5d8334fc-2185-4957-aa60-fe6934de4915" name="Lower" value="*">
+                      <elementDefinition Id="82275e0f-5aaa-44d1-8051-e89c3ec4a78e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="bb199dea-e5c0-4bb9-bec2-509d49fe52f3" name="Upper" value="*">
+                      <elementDefinition Id="13c07fd6-74fd-4207-bfac-50e9d9852bd9" />
+                    </literalString>
+                  </upperValueInternal>
                   <elementDefinition Id="33c19811-1fc3-41b7-9815-46db91990538" />
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -271,7 +261,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="de400778-62af-4e32-a80f-0daa961d52d8" name="Circle" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="de400778-62af-4e32-a80f-0daa961d52d8" name="Circle" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="f101806c-e41a-45c5-8796-97cce2450a42" />
         <generalsInternal>
           <generalization Id="a3ec00bf-4aa0-48ec-8c3f-aecc1cb9a3bb" isSubstitutable="false">
@@ -282,7 +272,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="b8cdc5b9-5a65-49a4-ad81-e06290d14463" name="Point" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="b8cdc5b9-5a65-49a4-ad81-e06290d14463" name="Point" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="81b5169f-955a-4759-90f6-06927c6b24b9" />
         <generalsInternal>
           <generalization Id="0343c8e1-6b40-4f07-85d8-99364debc930" isSubstitutable="false">
@@ -293,7 +283,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="3515c216-bcff-4429-a382-38699a8ce2ec" name="Region" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="3515c216-bcff-4429-a382-38699a8ce2ec" name="Region" isAbstract="true" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="39624c6c-09c4-48c4-a063-5e19c70b5d24" />
         <generalsInternal>
           <generalization Id="874d421d-132e-4480-9dd1-8e3bf2221428" isSubstitutable="false">
@@ -426,5 +416,25 @@
   </packagedElements>
   <package Id="21d2d94d-fa78-4faa-9bb6-cf8ee74e6d21" name="MyLoDataStore">
     <elementDefinition Id="733f38a9-eabe-4892-9928-8cdb0280f171" />
+    <profileInstances>
+      <packageHasProfileInstances Id="34e732f2-b46d-47c1-938e-d68922fcfbc6">
+        <profileInstance Id="eccbd5ba-6cbd-4074-b1e7-87a39b113c3b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7be7cfcc-f834-48e2-88ac-bd6c7b32ce7a">
+        <profileInstance Id="53df674d-42fe-4d72-877b-ca08dcf04dfa" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="04cfb7c1-fc7d-4620-9b96-681c986a2c34">
+        <profileInstance Id="9f83f252-7e24-4e90-93d4-2b57ba031e8c" name="DBProfile">
+          <elementDefinition Id="2914e42c-411e-4ae8-a254-8dc0ddacde30" />
+        </profileInstance>
+        <elementDefinition Id="c75d42a1-a537-4429-bcc2-30d5eeb832fd" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
