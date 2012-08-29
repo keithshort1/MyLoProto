@@ -343,6 +343,41 @@ namespace MyLoCalendarContextReaderNS
             person.PartyKind = "Person";
             person.PartyId = _myloStore.AddParty(_userId, person);
             long paId7 = _myloStore.AddPartyToActivityByIds(_userId, person, activity);
+
+
+            // Setup the event called "Walla Walla Wine Tasting"
+            //gpsl.LatLongToAddressLookup(43.777417, 11.251117, out street, out city, out state, out zip, out country);
+            loc.Country = "United States";
+
+            start.Year = 2012;
+            start.Month = 08;
+            start.DayNumber = 24;
+            start.Day = "Friday";
+            start.Hour = 10;
+            start.AltKey = new DateTime(2012, 8, 24, 10, 0, 0, DateTimeKind.Local);
+
+            end.Year = 2012;
+            end.Month = 8;
+            end.DayNumber = 26;
+            end.Day = "Sunday";
+            end.Hour = 18;
+            end.AltKey = new DateTime(2012, 8, 26, 18, 0, 0, DateTimeKind.Local);
+
+            activity.ActivityKind = "Calendar";
+            activity.Source = "Outlook";
+            activity.SourceId = "0008";
+            activity.StartDate = new DateTime(2012, 8, 24, 10, 0, 0, DateTimeKind.Local);
+            activity.EndDate = new DateTime(2012, 8, 26, 18, 0, 0, DateTimeKind.Local);
+            activity.ActivityName = "Walla Wall Wine Tasting Weekend";
+            activity.Latitude = 0;
+            activity.Longitude = 0;
+
+            activity.ActivityId = _myloStore.AddActivity(_userId, activity, start, end, loc);
+
+            person.Name = "Rebecca Short";
+            person.PartyKind = "Person";
+            person.PartyId = _myloStore.AddParty(_userId, person);
+            long paId8 = _myloStore.AddPartyToActivityByIds(_userId, person, activity);
         }
     }
 }

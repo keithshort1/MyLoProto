@@ -1496,6 +1496,47 @@
             </appliedStereotypesInternal>
             <elementDefinition Id="9eaf2f83-94d8-48a0-a482-f76162710451" />
           </association>
+          <association Id="b0d76da9-9817-4bcf-a9ee-86a009311462" isDerived="false" sourceEndRoleName="FileItem" targetEndRoleName="GeoLocation" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0ef20462-7032-48c5-8894-39e98ae01067" LastKnownName="GeoLocation" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="61ce20d8-e4ec-4e18-8e57-bbafb5f16ac8" name="FileItem" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="c05a7e20-0a7f-4277-8206-df238ffff046" name="Lower" value="*">
+                      <elementDefinition Id="23135596-a437-40e6-8b14-608e94ec4048" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="0d32ea26-d337-4f0a-818c-0061bcd297d1" name="Upper" value="*">
+                      <elementDefinition Id="7bd608a2-4ec5-42d6-b287-404dcfdc830f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="32c8f72e-4c97-4da9-9d36-7df844131d72" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ee5f4f6f-3716-48f0-acfb-0246aa6a1806" name="GeoLocation" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="91fc9623-517e-420b-8d7a-3a0a9a13ab84" name="Lower" value="0">
+                      <elementDefinition Id="995697e6-1a0c-495a-b894-642c11085c18" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="878872ff-8bab-4dcf-badb-e635502ccb2b" name="Upper" value="1">
+                      <elementDefinition Id="14128ccb-574e-4f57-9bd5-db0007b1e7fc" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="280b17e2-bb13-4daa-b24c-c1beabd8d860" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="94d73a3c-10e4-487a-80ee-497a908e69f5" name="Reference" profile="DBProfile">
+                <elementDefinition Id="1960663e-5948-4dec-9ca7-f8c43d11a21e" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="ff075f89-fa8f-4822-aeb8-626ab57c9564" />
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property Id="24374c7a-4f97-4d60-bbed-d88ace0ba400" name="UniqueId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1889,7 +1930,7 @@
                     <elementDefinition Id="f4d4e17b-c723-4ad7-9d21-723c8f02fac5" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances Id="d423b0f0-90f4-4c7a-a022-3abc6184251e">
-                    <propertyInstance Id="2a41ed1d-8263-4f7d-b55b-55ebcd2d288f" name="DataType" value="float()">
+                    <propertyInstance Id="2a41ed1d-8263-4f7d-b55b-55ebcd2d288f" name="DataType" value="double">
                       <elementDefinition Id="f860ac90-17fa-4a84-9d8c-f1dc80e780d5" />
                     </propertyInstance>
                     <elementDefinition Id="1e880543-5335-4a7d-9749-df82b43bf668" />
@@ -1923,7 +1964,7 @@
                     <elementDefinition Id="5d6fe0c1-3ac9-4096-b4c7-c23768c606ba" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances Id="22fbaacc-dee9-470b-a61d-cab6abbb6db5">
-                    <propertyInstance Id="3b89296e-e6fe-432a-a306-0c33641af60a" name="DataType" value="float()">
+                    <propertyInstance Id="3b89296e-e6fe-432a-a306-0c33641af60a" name="DataType" value="double">
                       <elementDefinition Id="f38fc573-35d9-47cd-840a-f1ce327bc9cf" />
                     </propertyInstance>
                     <elementDefinition Id="b56e422a-5032-472d-8ed0-2720cf9fe1bd" />

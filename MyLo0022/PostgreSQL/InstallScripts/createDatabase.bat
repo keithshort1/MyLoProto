@@ -42,10 +42,11 @@ cd Functions
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertAddress.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertTimePeriod.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertTimePeriodMonthly.sql -U postgres -d %1
+"c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertGeoLocation.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f AddParty.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f AddPartyToActivityByIds.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f CalculateDuration.sql -U postgres -d %1
-
+"c:\Program Files\PostgreSQL\9.0\bin\psql" -f InsideCircle.sql -U postgres -d %1
 
 
 echo "Initializing PLDB database called %1" 

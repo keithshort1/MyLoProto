@@ -34,9 +34,14 @@ CREATE FUNCTION AddPhoto(accountId bigint, uriIn text, uniqueIdIn uuid, crcIn bi
 			ELSE 
 				_tId = NULL;
 			END IF;
+			IF gpsLatIn <> 0.0 THEN
+				_lId = (GetOrInsertGeoLocation(accountId, gpsLatIn, gpsLongIn));
+			ELSE
+				_lId = NULL;
+			END IF;
 			_aid = NULL;
-			INSERT INTO Photo (MyLoAccountId, UniqueId, Uri, HashCode, ActivityId, TimePeriodId, Camera, DateTaken, GpsLat, GpsLong, Thumbnail) 
-					VALUES (accountId, uniqueIdIn, uriIn, crcIn, _aId, _tId, cameraIn, dateTakenIn, gpsLatIn, gpsLongIn, thumbnailIn);
+			INSERT INTO Photo (MyLoAccountId, UniqueId, Uri, HashCode, ActivityId, TimePeriodId, GeoLocationId, Camera, DateTaken, GpsLat, GpsLong, Thumbnail) 
+					VALUES (accountId, uniqueIdIn, uriIn, crcIn, _aId, _tId, _lId, cameraIn, dateTakenIn, gpsLatIn, gpsLongIn, thumbnailIn);
 			END IF;		
 		RETURN 1;
 	END;

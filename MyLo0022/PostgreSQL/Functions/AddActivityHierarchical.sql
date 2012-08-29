@@ -18,7 +18,7 @@ CREATE FUNCTION AddActivityHierarchical(accountId bigint, activityKindIn text, s
 	DECLARE
 		_id 		bigint;
 		_startId	bigint;
-		_aId		bigint;
+		_addrId		bigint;
 		_endId		bigint;
 		_locId		bigint;
 		_noAddress	boolean;
@@ -42,13 +42,18 @@ CREATE FUNCTION AddActivityHierarchical(accountId bigint, activityKindIn text, s
 					_endId := (SELECT GetOrInsertTimePeriod(accountId, enddatetimeIn, yearIn2, monthIn2, dayIn2, dayNumberIn2, hourIn2));
 				END IF;
 				IF _noAddress THEN
-					_locId := NULL;
+					_addrId := NULL;
 				ELSE
-					_locId := (SELECT GetOrInsertAddress(accountId, streetIn, cityIn, stateIn, zipIn, countryIn));
+					_addrId := (SELECT GetOrInsertAddress(accountId, streetIn, cityIn, stateIn, zipIn, countryIn));
+				END IF;
+				IF gpsLatIn <> 0.0 THEN
+					_locId = (GetOrInsertGeoLocation(accountId, gpsLatIn, gpsLongIn));
+				ELSE
+					_locId = NULL;
 				END IF;
 				_duration := (SELECT CalculateDuration(startdatetimeIn, enddatetimeIn));
 				_id := (SELECT InsertActivityHierarchical3(accountId, activityKindIn, sourceIn, sourceIdIn, 
-							activityNameIn, startdatetimeIn, enddatetimeIn, _duration, _startId, _endId, _locId, gpsLatIn, gpsLongIn, parentActivity));	
+							activityNameIn, startdatetimeIn, enddatetimeIn, _duration, _startId, _endId, _addrId, _locId, gpsLatIn, gpsLongIn, parentActivity));	
 			END IF;	
 		END IF;
 		RETURN _id;

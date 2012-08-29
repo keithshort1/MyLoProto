@@ -1,6 +1,6 @@
 -- Postgres 9.0.4 Database for MyLo Store
 -- MyLo Inc. Confidential - All Rights Reserved
--- Schema Generated on 8/23/2012 1:43:00 PM
+-- Schema Generated on 8/28/2012 3:54:58 PM
 
 BEGIN; 
 
@@ -746,6 +746,7 @@ CREATE TABLE Video_Base(
     ActivityId bigInt,
     FolderId bigInt,
     TimePeriodId bigInt,
+    GeoLocationId bigInt,
     MyLoAccountId bigInt not null,
     Primary Key (UniqueId)
 );
@@ -762,7 +763,7 @@ CREATE SEQUENCE VideoSequence;
 DROP VIEW IF EXISTS Video CASCADE;
   
 CREATE VIEW Video AS
-        SELECT  v.MyLoAccountId, v.UniqueId, v.Uri, v.Hashcode, v.ActivityId, v.FolderId, v.TimePeriodId
+        SELECT  v.MyLoAccountId, v.UniqueId, v.Uri, v.Hashcode, v.ActivityId, v.FolderId, v.TimePeriodId, v.GeoLocationId
                 FROM Video_Base AS v;
 
 CREATE OR REPLACE FUNCTION VideoInsteadOfInsertProc(NEW Video) RETURNS bigint AS $$
@@ -776,8 +777,8 @@ CREATE OR REPLACE FUNCTION VideoInsteadOfInsertProc(NEW Video) RETURNS bigint AS
               IF _mId IS NULL THEN
                       RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
               ELSE
-                      INSERT INTO Video_Base (MyLoAccountId, UniqueId, Uri, Hashcode, ActivityId, FolderId, TimePeriodId)
-                              VALUES (NEW.MyLoAccountId, _UniqueId, NEW.Uri, NEW.Hashcode, NEW.ActivityId, NEW.FolderId, NEW.TimePeriodId);
+                      INSERT INTO Video_Base (MyLoAccountId, UniqueId, Uri, Hashcode, ActivityId, FolderId, TimePeriodId, GeoLocationId)
+                              VALUES (NEW.MyLoAccountId, _UniqueId, NEW.Uri, NEW.Hashcode, NEW.ActivityId, NEW.FolderId, NEW.TimePeriodId, NEW.GeoLocationId);
               END IF;
               RETURN _UniqueId;
       END;
@@ -968,8 +969,8 @@ CREATE TABLE GeoLocation_Base(
     LocationId bigint not null ,
     LocationName text  ,
     LocationKind text not null ,
-    Latitude real  ,
-    Longitude real  ,
+    Latitude double precision  ,
+    Longitude double precision  ,
     Radius real  ,
     DefinesRegionId bigInt,
     MyLoAccountId bigInt not null,

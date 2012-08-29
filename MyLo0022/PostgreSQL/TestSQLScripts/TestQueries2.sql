@@ -1,5 +1,7 @@
 ﻿select * from activity
 
+select * from address
+
 select count(*) from photo where activityid is null
 
 select uniqueid, datetaken, activityid , uri from photo order by datetaken
@@ -105,12 +107,65 @@ SELECT A.ActivityId FROM Activity  AS A
 SELECT AH2.ActivityHierachyId FROM ActivityHierarchy AS AH2
 		WHERE AH2.MyLoAccountId = 1 AND AH2.ParentActivityId = 503;
 
+select * from geolocation
+
+select uri, datetaken, activityid, geolocationid, gpslat, gpslong  from photo
+
+With photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  from photo as P
+	join Activity as A on A.activityid = P.activityid
+	where A.geolocationid != 0 
+	order by A.geolocationid)
+union
+(select uri, datetaken,  gpslat, gpslong, P.geolocationid  from photo as P
+	where P.geolocationid != 0
+	order by P.geolocationid)) 
+select DISTINCT * from photies order by geolocationid, uri
+
+With photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  from photo as P
+	join Activity as A on A.activityid = P.activityid
+	where A.geolocationid != 0 
+	order by A.geolocationid)
+union
+(select uri, datetaken,  gpslat, gpslong, P.geolocationid  from photo as P
+	where P.geolocationid != 0
+	order by P.geolocationid)) 
+select DISTINCT PH.geolocationid, count(*) from photies AS PH 
+group by geolocationid 
+
+With locations AS (With photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  from photo as P
+	join Activity as A on A.activityid = P.activityid
+	where A.geolocationid != 0 
+	order by A.geolocationid)
+union
+(select uri, datetaken,  gpslat, gpslong, P.geolocationid  from photo as P
+	where P.geolocationid != 0
+	order by P.geolocationid)) 
+select DISTINCT PH.geolocationid, count(*) from photies AS PH 
+group by geolocationid)
+select L.latitude, L.longitude, locations.count from locations 
+join geolocation as L on L.locationid = locations.geolocationid
+order by locations.geolocationid
+
+-- remove the order by clauses
+With locations AS (With photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  from photo as P
+	join Activity as A on A.activityid = P.activityid
+	where A.geolocationid != 0)
+union
+(select uri, datetaken,  gpslat, gpslong, P.geolocationid  from photo as P
+	where P.geolocationid != 0)) 
+select DISTINCT PH.geolocationid, count(*) from photies AS PH 
+group by geolocationid)
+select L.latitude, L.longitude, locations.count, locationid from locations 
+join geolocation as L on L.locationid = locations.geolocationid
+order by locations.geolocationid
 
 
 
+select * from partyactivityparticipation
 
 delete from activity_base where activitykind = 'Calendar'
 delete from activityhierarchy_base
 update photo_base SET activityid = NULL
 delete from activity_base
+delete from photo_base
 ALTER TABLE activityHierarchy_base ALTER COLUMN parentactivityId DROP NOT NULL;

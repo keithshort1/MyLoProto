@@ -165,10 +165,11 @@ namespace MyLoDBNS
         }
 
         /// <summary>
-        /// Decides if two geographical points on two DataRows are within one mile based on their lat/long position
+        /// Decides if two geographical points on two DataRows are within a certain distance based on their lat/long position
         /// </summary>
         /// <param name="photo">A DataRow containing information read from the Photos table</param>
         /// <param name="activity">A DataRow containing information read from the Activities, Locations and Instant table</param>
+        /// <param name="miles">A Double expressing the number of miles to use as a radius</param>
         private bool IsSameLocation(DataRow photo, DataRow activity, double miles)
         {
             // prototype hack from http://www.ehow.com/facts_6907238_calculate-distance-between-two-lat_longs.html
@@ -178,7 +179,7 @@ namespace MyLoDBNS
             double activityLatRad = (Double)activity["Latitude"] * pi / 180.0 ;
             double activityLongRad = (Double)activity["Longitude"] * pi / 180.0;
 
-            // caluclate latitude and longitude difference
+            // calculate latitude and longitude difference
             double dlat = photoLatRad - activityLatRad;
             double dlong = photoLongRad - activityLongRad;
 

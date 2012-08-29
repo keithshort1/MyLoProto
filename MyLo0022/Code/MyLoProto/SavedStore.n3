@@ -14,10 +14,6 @@
 @prefix page: <http://graph.facebook.com/schema/page#>.
 @prefix application: <http://graph.facebook.com/schema/application#>.
 
-_:autos1 api:has <http://facebook.mylo.com/10150761216189645#>.
-_:autos1 api:has <http://facebook.mylo.com/10150763349429645#>.
-_:autos1 api:has <http://facebook.mylo.com/10150766435094645#>.
-_:autos1 api:has <http://facebook.mylo.com/10150769382244645#>.
 _:autos1 api:has <http://facebook.mylo.com/10150790427979645#>.
 _:autos1 api:has <http://facebook.mylo.com/10150792301729645#>.
 _:autos1 api:has <http://facebook.mylo.com/10150802545594645#>.
@@ -38,1046 +34,1131 @@ _:autos1 api:has <http://facebook.mylo.com/10151053573269645#>.
 _:autos1 api:has <http://facebook.mylo.com/10151068741729645#>.
 _:autos1 api:has <http://facebook.mylo.com/10151081798109645#>.
 _:autos1 api:has <http://facebook.mylo.com/10151094993839645#>.
+_:autos1 api:has <http://facebook.mylo.com/10151116670249645#>.
+_:autos1 api:has <http://facebook.mylo.com/10151117795204645#>.
+_:autos1 api:has <http://facebook.mylo.com/10151118129779645#>.
+_:autos1 api:has <http://facebook.mylo.com/10151118520179645#>.
 _:autos1 api:has <http://facebook.mylo.com/3834152486014#>.
-_:autos10 <http://mylo.com/schema/HasAddressProps> _:autos110.
-_:autos10 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos10 <http://mylo.com/schema/HasAddressProps> _:autos107.
+_:autos10 <http://mylo.com/schema/HasCity> "Walla Walla".
 _:autos10 <http://mylo.com/schema/HasCountry> "United States".
 _:autos10 <http://mylo.com/schema/HasState> "WA".
-_:autos10 <http://mylo.com/schema/HasStreet> "2208 Queen Anne Ave North".
 _:autos10 a <http://mylo.com/schema/Address>.
 _:autos10 a <http://mylo.com/schema/Location>.
-_:autos10 api:has <http://facebook.mylo.com/10721411#>.
-_:autos10 api:has <http://facebook.mylo.com/1075027532#>.
-_:autos10 api:has <http://facebook.mylo.com/27500387#>.
-_:autos10 api:has <http://facebook.mylo.com/502760444#>.
-_:autos10 api:has <http://facebook.mylo.com/509411970#>.
-_:autos10 api:has <http://facebook.mylo.com/887740493#>.
-_:autos100 :city "Seattle".
-_:autos100 :country "United States".
-_:autos100 :latitude 47.69080660668.
-_:autos100 :longitude -122.40337348427.
-_:autos100 :state "WA".
-_:autos100 :street "8498 Seaview Pl. NW".
-_:autos100 <http://mylo.com/schema/HasAddressProps> _:autos101.
-_:autos100 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos10 api:has <http://facebook.mylo.com/100001762424943#>.
+_:autos10 api:has <http://facebook.mylo.com/1186368430#>.
+_:autos100 <http://mylo.com/schema/HasAddressProps> _:autos120.
+_:autos100 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos100 <http://mylo.com/schema/HasCountry> "United States".
 _:autos100 <http://mylo.com/schema/HasState> "WA".
+_:autos100 <http://mylo.com/schema/HasStreet> "2208 Queen Anne Ave North".
 _:autos100 a <http://mylo.com/schema/Address>.
 _:autos100 a <http://mylo.com/schema/Location>.
-_:autos101 :city "Anacortes".
-_:autos101 :country "United States".
-_:autos101 :latitude 48.512530981733.
-_:autos101 :longitude -122.6095157382.
-_:autos101 :state "WA".
-_:autos101 :zip 98221 .
-_:autos101 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
+_:autos100 api:has api:id_10150802545594645_22237903.
+_:autos101 :next <https://graph.facebook.com/10150802545594645/comments?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=10150802545594645_22237903>.
+_:autos101 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:49:25+00:00"^^xsd:dateTime.
 _:autos101 a <http://mylo.com/schema/Instant>.
 _:autos101 a <http://mylo.com/schema/TimePeriod>.
-_:autos102 :city "Friday Harbor".
-_:autos102 :country "United States".
-_:autos102 :latitude 48.53532438626.
-_:autos102 :longitude -123.01548379047.
-_:autos102 :state "WA".
-_:autos102 :street "1 Front St Ste 1".
-_:autos102 :zip 98250 .
+_:autos102 :data _:autos103.
+_:autos102 :paging _:autos104.
 _:autos102 <http://mylo.com/schema/HasAddress> _:autos103.
-_:autos102 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
-_:autos102 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
-_:autos102 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
+_:autos102 <http://mylo.com/schema/HasGpsLatitude> 47.638688623047.
+_:autos102 <http://mylo.com/schema/HasGpsLongitude> -122.35717756682.
+_:autos102 <http://mylo.com/schema/HasLocationName> "How to Cook a Wolf".
 _:autos102 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos102 a <http://mylo.com/schema/Location>.
-_:autos103 :city "Anacortes".
-_:autos103 :country "United States".
-_:autos103 :latitude 48.492728038807.
-_:autos103 :longitude -122.68249613088.
-_:autos103 :state "WA".
-_:autos103 <http://mylo.com/schema/HasAddressProps> _:autos102.
-_:autos103 <http://mylo.com/schema/HasCity> "Friday Harbor".
+_:autos103 <http://mylo.com/schema/HasAddressProps> _:autos120.
+_:autos103 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos103 <http://mylo.com/schema/HasCountry> "United States".
 _:autos103 <http://mylo.com/schema/HasState> "WA".
-_:autos103 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
+_:autos103 <http://mylo.com/schema/HasStreet> "2208 Queen Anne Ave North".
 _:autos103 a <http://mylo.com/schema/Address>.
 _:autos103 a <http://mylo.com/schema/Location>.
-_:autos104 :city "Roche Harbor".
-_:autos104 :country "United States".
-_:autos104 :latitude 48.60287835093.
-_:autos104 :longitude -123.17302850967.
-_:autos104 :state "WA".
-_:autos104 <http://mylo.com/schema/HasTimeValue> "2012-05-28T00:38:53+00:00"^^xsd:dateTime.
+_:autos103 api:has <http://facebook.mylo.com/1186368430#>.
+_:autos104 :next <https://graph.facebook.com/10150790427979645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1186368430>.
+_:autos104 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:23:21+00:00"^^xsd:dateTime.
 _:autos104 a <http://mylo.com/schema/Instant>.
 _:autos104 a <http://mylo.com/schema/TimePeriod>.
-_:autos105 :latitude 49.62993684.
-_:autos105 :longitude -124.017304535.
-_:autos105 :zip "V0N 1S0".
+_:autos105 :city "Walla Walla".
+_:autos105 :country "United States".
+_:autos105 :latitude 46.064875084318.
+_:autos105 :longitude -118.34082803322.
+_:autos105 :state "WA".
+_:autos105 :street "125 W Alder St".
+_:autos105 :zip "99362-2808".
 _:autos105 <http://mylo.com/schema/HasAddress> _:autos106.
-_:autos105 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
-_:autos105 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
-_:autos105 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
+_:autos105 <http://mylo.com/schema/HasGpsLatitude> 47.638066980721.
+_:autos105 <http://mylo.com/schema/HasGpsLongitude> -122.35712232333.
+_:autos105 <http://mylo.com/schema/HasLocationName> "Hilltop Ale House".
 _:autos105 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos105 a <http://mylo.com/schema/Location>.
-_:autos106 :latitude 50.060611008177.
-_:autos106 :longitude -124.9311661241.
-_:autos106 <http://mylo.com/schema/HasAddressProps> _:autos102.
-_:autos106 <http://mylo.com/schema/HasCity> "Friday Harbor".
+_:autos106 :city "College Place".
+_:autos106 :country "United States".
+_:autos106 :latitude 46.035586297222.
+_:autos106 :longitude -118.37360423826.
+_:autos106 :state "WA".
+_:autos106 <http://mylo.com/schema/HasAddressProps> _:autos121.
+_:autos106 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos106 <http://mylo.com/schema/HasCountry> "United States".
 _:autos106 <http://mylo.com/schema/HasState> "WA".
-_:autos106 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
+_:autos106 <http://mylo.com/schema/HasStreet> "2129 Queen Anne Ave N".
 _:autos106 a <http://mylo.com/schema/Address>.
 _:autos106 a <http://mylo.com/schema/Location>.
-_:autos107 :latitude 50.10189098.
-_:autos107 :longitude -125.20203995.
-_:autos107 <http://mylo.com/schema/HasTimeValue> "2012-07-27T16:59:12+00:00"^^xsd:dateTime.
+_:autos107 :city "Walla Walla".
+_:autos107 :country "United States".
+_:autos107 :latitude 46.085584666667.
+_:autos107 :longitude -118.25003546667.
+_:autos107 :state "WA".
+_:autos107 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:23:21+00:00"^^xsd:dateTime.
 _:autos107 a <http://mylo.com/schema/Instant>.
 _:autos107 a <http://mylo.com/schema/TimePeriod>.
-_:autos108 :latitude 51.654031743792.
-_:autos108 :longitude -128.12678020961.
+_:autos108 :city "Walla Walla".
+_:autos108 :country "United States".
+_:autos108 :latitude 46.088075329157.
+_:autos108 :longitude -118.22445777055.
+_:autos108 :state "WA".
+_:autos108 :street "2014 Mill Creek Road".
+_:autos108 :zip 99362 .
 _:autos108 <http://mylo.com/schema/HasAddress> _:autos109.
-_:autos108 <http://mylo.com/schema/HasGpsLatitude> 48.492728038807.
-_:autos108 <http://mylo.com/schema/HasGpsLongitude> -122.68249613088.
-_:autos108 <http://mylo.com/schema/HasLocationName> "Skyline Marina, Anacortes".
+_:autos108 <http://mylo.com/schema/HasGpsLatitude> 47.638066980721.
+_:autos108 <http://mylo.com/schema/HasGpsLongitude> -122.35712232333.
+_:autos108 <http://mylo.com/schema/HasLocationName> "Hilltop Ale House".
 _:autos108 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos108 a <http://mylo.com/schema/Location>.
-_:autos109 :latitude 50.568262888002.
-_:autos109 :longitude -126.26609478945.
-_:autos109 <http://mylo.com/schema/HasAddressProps> _:autos103.
-_:autos109 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos109 :city "Seattle".
+_:autos109 :country "United States".
+_:autos109 :latitude 47.591426559761.
+_:autos109 :longitude -122.33252559661.
+_:autos109 :state "WA".
+_:autos109 <http://mylo.com/schema/HasAddressProps> _:autos121.
+_:autos109 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos109 <http://mylo.com/schema/HasCountry> "United States".
 _:autos109 <http://mylo.com/schema/HasState> "WA".
+_:autos109 <http://mylo.com/schema/HasStreet> "2129 Queen Anne Ave N".
 _:autos109 a <http://mylo.com/schema/Address>.
 _:autos109 a <http://mylo.com/schema/Location>.
-_:autos11 :next <https://graph.facebook.com/10151081798109645/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=509411970>.
-_:autos11 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:49:25+00:00"^^xsd:dateTime.
+_:autos11 :next <https://graph.facebook.com/10151094993839645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1186368430>.
+_:autos11 <http://mylo.com/schema/HasTimeValue> "2012-08-25T05:29:58+00:00"^^xsd:dateTime.
 _:autos11 a <http://mylo.com/schema/Instant>.
 _:autos11 a <http://mylo.com/schema/TimePeriod>.
 _:autos110 :city "Seattle".
 _:autos110 :country "United States".
-_:autos110 :latitude 47.638688623047.
-_:autos110 :longitude -122.35717756682.
+_:autos110 :latitude 47.69080660668.
+_:autos110 :longitude -122.40337348427.
 _:autos110 :state "WA".
-_:autos110 :street "2208 Queen Anne Ave North".
-_:autos110 :zip 98109 .
-_:autos110 <http://mylo.com/schema/HasTimeValue> "2012-07-19T19:59:01+00:00"^^xsd:dateTime.
+_:autos110 :street "8498 Seaview Pl. NW".
+_:autos110 <http://mylo.com/schema/HasTimeValue> "2012-05-03T21:07:12+00:00"^^xsd:dateTime.
 _:autos110 a <http://mylo.com/schema/Instant>.
 _:autos110 a <http://mylo.com/schema/TimePeriod>.
-_:autos111 :city "Seattle".
+_:autos111 :city "Anacortes".
 _:autos111 :country "United States".
-_:autos111 :latitude 47.638066980721.
-_:autos111 :longitude -122.35712232333.
+_:autos111 :latitude 48.512530981733.
+_:autos111 :longitude -122.6095157382.
 _:autos111 :state "WA".
-_:autos111 :street "2129 Queen Anne Ave N".
-_:autos111 :zip "98109-2310".
+_:autos111 :zip 98221 .
 _:autos111 <http://mylo.com/schema/HasAddress> _:autos112.
-_:autos111 <http://mylo.com/schema/HasGpsLatitude> 48.60287835093.
-_:autos111 <http://mylo.com/schema/HasGpsLongitude> -123.17302850967.
-_:autos111 <http://mylo.com/schema/HasLocationName> "Henry Island SYC Out Station".
+_:autos111 <http://mylo.com/schema/HasGpsLatitude> 40.676618172137.
+_:autos111 <http://mylo.com/schema/HasGpsLongitude> -73.980106303924.
+_:autos111 <http://mylo.com/schema/HasLocationName> "Bierkraft".
 _:autos111 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos111 a <http://mylo.com/schema/Location>.
-_:autos112 :latitude 48.533068253054.
-_:autos112 :longitude -123.00475938651.
-_:autos112 <http://mylo.com/schema/HasAddressProps> _:autos104.
-_:autos112 <http://mylo.com/schema/HasCity> "Roche Harbor".
+_:autos112 :city "Friday Harbor".
+_:autos112 :country "United States".
+_:autos112 :latitude 48.53532438626.
+_:autos112 :longitude -123.01548379047.
+_:autos112 :state "WA".
+_:autos112 :street "1 Front St Ste 1".
+_:autos112 :zip 98250 .
+_:autos112 <http://mylo.com/schema/HasAddressProps> _:autos124.
+_:autos112 <http://mylo.com/schema/HasCity> "Brooklyn".
 _:autos112 <http://mylo.com/schema/HasCountry> "United States".
-_:autos112 <http://mylo.com/schema/HasState> "WA".
+_:autos112 <http://mylo.com/schema/HasState> "NY".
+_:autos112 <http://mylo.com/schema/HasStreet> "191 5th Ave".
 _:autos112 a <http://mylo.com/schema/Address>.
 _:autos112 a <http://mylo.com/schema/Location>.
 _:autos113 :city "Anacortes".
 _:autos113 :country "United States".
-_:autos113 :latitude 48.50989.
-_:autos113 :longitude -122.61492.
+_:autos113 :latitude 48.492728038807.
+_:autos113 :longitude -122.68249613088.
 _:autos113 :state "WA".
-_:autos113 <http://mylo.com/schema/HasTimeValue> "2012-07-16T19:18:52+00:00"^^xsd:dateTime.
+_:autos113 <http://mylo.com/schema/HasTimeValue> "2012-05-03T21:07:12+00:00"^^xsd:dateTime.
 _:autos113 a <http://mylo.com/schema/Instant>.
 _:autos113 a <http://mylo.com/schema/TimePeriod>.
-_:autos114 :city "Brooklyn".
+_:autos114 :city "Roche Harbor".
 _:autos114 :country "United States".
-_:autos114 :latitude 40.676618172137.
-_:autos114 :longitude -73.980106303924.
-_:autos114 :state "NY".
-_:autos114 :street "191 5th Ave".
-_:autos114 :zip 11217 .
+_:autos114 :latitude 48.60287835093.
+_:autos114 :longitude -123.17302850967.
+_:autos114 :state "WA".
 _:autos114 <http://mylo.com/schema/HasAddress> _:autos115.
-_:autos114 <http://mylo.com/schema/HasGpsLatitude> 49.62993684.
-_:autos114 <http://mylo.com/schema/HasGpsLongitude> -124.017304535.
-_:autos114 <http://mylo.com/schema/HasLocationName> "Garden Bay BC".
+_:autos114 <http://mylo.com/schema/HasGpsLatitude> 40.676618172137.
+_:autos114 <http://mylo.com/schema/HasGpsLongitude> -73.980106303924.
+_:autos114 <http://mylo.com/schema/HasLocationName> "Bierkraft".
 _:autos114 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos114 a <http://mylo.com/schema/Location>.
-_:autos115 :city "New York".
-_:autos115 :country "United States".
-_:autos115 :latitude 40.761268026311.
-_:autos115 :longitude -73.965743458651.
-_:autos115 :state "NY".
-_:autos115 <http://mylo.com/schema/HasAddressProps> _:autos105.
+_:autos115 :latitude 49.62993684.
+_:autos115 :longitude -124.017304535.
+_:autos115 :zip "V0N 1S0".
+_:autos115 <http://mylo.com/schema/HasAddressProps> _:autos124.
+_:autos115 <http://mylo.com/schema/HasCity> "Brooklyn".
+_:autos115 <http://mylo.com/schema/HasCountry> "United States".
+_:autos115 <http://mylo.com/schema/HasState> "NY".
+_:autos115 <http://mylo.com/schema/HasStreet> "191 5th Ave".
 _:autos115 a <http://mylo.com/schema/Address>.
 _:autos115 a <http://mylo.com/schema/Location>.
-_:autos116 :city "New York".
-_:autos116 :country "United States".
-_:autos116 :latitude 40.723594991161.
-_:autos116 :longitude -73.999877733181.
-_:autos116 :state "NY".
-_:autos116 <http://mylo.com/schema/HasTimeValue> "2012-07-14T19:46:54+00:00"^^xsd:dateTime.
+_:autos116 :latitude 50.060611008177.
+_:autos116 :longitude -124.9311661241.
+_:autos116 <http://mylo.com/schema/HasTimeValue> "2012-08-03T23:36:11+00:00"^^xsd:dateTime.
 _:autos116 a <http://mylo.com/schema/Instant>.
 _:autos116 a <http://mylo.com/schema/TimePeriod>.
-_:autos117 :city "Montepulciano".
-_:autos117 :country "Italy".
-_:autos117 :latitude 43.091558116667.
-_:autos117 :longitude 11.7798758.
-_:autos117 :zip "Italy".
+_:autos117 :latitude 50.10189098.
+_:autos117 :longitude -125.20203995.
 _:autos117 <http://mylo.com/schema/HasAddress> _:autos118.
-_:autos117 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
-_:autos117 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
-_:autos117 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
+_:autos117 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
+_:autos117 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
+_:autos117 <http://mylo.com/schema/HasLocationName> "Anthony's".
 _:autos117 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos117 a <http://mylo.com/schema/Location>.
-_:autos118 :city "Montepulciano".
-_:autos118 :country "Italy".
-_:autos118 :latitude 43.091453401156.
-_:autos118 :longitude 11.781250600132.
-_:autos118 :street "Via del Teatro 22".
-_:autos118 :zip 53045 .
-_:autos118 <http://mylo.com/schema/HasAddressProps> _:autos106.
+_:autos118 :latitude 51.654031743792.
+_:autos118 :longitude -128.12678020961.
+_:autos118 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos118 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos118 <http://mylo.com/schema/HasCountry> "United States".
+_:autos118 <http://mylo.com/schema/HasState> "WA".
 _:autos118 a <http://mylo.com/schema/Address>.
 _:autos118 a <http://mylo.com/schema/Location>.
-_:autos119 :city "Montepulciano".
-_:autos119 :country "Italy".
-_:autos119 :latitude 43.093173496031.
-_:autos119 :longitude 11.78200022449.
-_:autos119 :street "Via Ricci 25".
-_:autos119 :zip 53045 .
-_:autos119 <http://mylo.com/schema/HasTimeValue> "2012-06-20T03:35:30+00:00"^^xsd:dateTime.
+_:autos119 :latitude 50.568262888002.
+_:autos119 :longitude -126.26609478945.
+_:autos119 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
 _:autos119 a <http://mylo.com/schema/Instant>.
 _:autos119 a <http://mylo.com/schema/TimePeriod>.
 _:autos12 :data _:autos13.
 _:autos12 :paging _:autos14.
 _:autos12 <http://mylo.com/schema/HasAddress> _:autos13.
-_:autos12 <http://mylo.com/schema/HasGpsLatitude> 47.638688623047.
-_:autos12 <http://mylo.com/schema/HasGpsLongitude> -122.35717756682.
-_:autos12 <http://mylo.com/schema/HasLocationName> "How to Cook a Wolf".
+_:autos12 <http://mylo.com/schema/HasGpsLatitude> 46.088075329157.
+_:autos12 <http://mylo.com/schema/HasGpsLongitude> -118.22445777055.
+_:autos12 <http://mylo.com/schema/HasLocationName> "Abeja".
 _:autos12 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos12 a <http://mylo.com/schema/Location>.
-_:autos120 :city "Firenze".
-_:autos120 :country "Italy".
-_:autos120 :latitude 43.776863114985.
-_:autos120 :longitude 11.2517241482.
+_:autos120 :city "Seattle".
+_:autos120 :country "United States".
+_:autos120 :latitude 47.638688623047.
+_:autos120 :longitude -122.35717756682.
+_:autos120 :state "WA".
+_:autos120 :street "2208 Queen Anne Ave North".
+_:autos120 :zip 98109 .
 _:autos120 <http://mylo.com/schema/HasAddress> _:autos121.
-_:autos120 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
-_:autos120 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
-_:autos120 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
+_:autos120 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
+_:autos120 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
+_:autos120 <http://mylo.com/schema/HasLocationName> "Anthony's".
 _:autos120 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos120 a <http://mylo.com/schema/Location>.
-_:autos121 <http://mylo.com/schema/HasAddressProps> _:autos106.
+_:autos121 :city "Seattle".
+_:autos121 :country "United States".
+_:autos121 :latitude 47.638066980721.
+_:autos121 :longitude -122.35712232333.
+_:autos121 :state "WA".
+_:autos121 :street "2129 Queen Anne Ave N".
+_:autos121 :zip "98109-2310".
+_:autos121 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos121 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos121 <http://mylo.com/schema/HasCountry> "United States".
+_:autos121 <http://mylo.com/schema/HasState> "WA".
 _:autos121 a <http://mylo.com/schema/Address>.
 _:autos121 a <http://mylo.com/schema/Location>.
-_:autos122 <http://mylo.com/schema/HasTimeValue> "2012-07-13T22:15:16+00:00"^^xsd:dateTime.
+_:autos122 :latitude 48.533068253054.
+_:autos122 :longitude -123.00475938651.
+_:autos122 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
 _:autos122 a <http://mylo.com/schema/Instant>.
 _:autos122 a <http://mylo.com/schema/TimePeriod>.
+_:autos123 :city "Anacortes".
+_:autos123 :country "United States".
+_:autos123 :latitude 48.50989.
+_:autos123 :longitude -122.61492.
+_:autos123 :state "WA".
 _:autos123 <http://mylo.com/schema/HasAddress> _:autos124.
-_:autos123 <http://mylo.com/schema/HasGpsLatitude> 50.10189098.
-_:autos123 <http://mylo.com/schema/HasGpsLongitude> -125.20203995.
-_:autos123 <http://mylo.com/schema/HasLocationName> "Taku Resort and Marina".
+_:autos123 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
+_:autos123 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
+_:autos123 <http://mylo.com/schema/HasLocationName> "Anthony's".
 _:autos123 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos123 a <http://mylo.com/schema/Location>.
-_:autos124 <http://mylo.com/schema/HasAddressProps> _:autos107.
+_:autos124 :city "Brooklyn".
+_:autos124 :country "United States".
+_:autos124 :latitude 40.676618172137.
+_:autos124 :longitude -73.980106303924.
+_:autos124 :state "NY".
+_:autos124 :street "191 5th Ave".
+_:autos124 :zip 11217 .
+_:autos124 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos124 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos124 <http://mylo.com/schema/HasCountry> "United States".
+_:autos124 <http://mylo.com/schema/HasState> "WA".
 _:autos124 a <http://mylo.com/schema/Address>.
 _:autos124 a <http://mylo.com/schema/Location>.
-_:autos125 <http://mylo.com/schema/HasTimeValue> "2012-06-26T20:03:33+00:00"^^xsd:dateTime.
+_:autos125 :city "New York".
+_:autos125 :country "United States".
+_:autos125 :latitude 40.761268026311.
+_:autos125 :longitude -73.965743458651.
+_:autos125 :state "NY".
+_:autos125 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
 _:autos125 a <http://mylo.com/schema/Instant>.
 _:autos125 a <http://mylo.com/schema/TimePeriod>.
+_:autos126 :city "New York".
+_:autos126 :country "United States".
+_:autos126 :latitude 40.723594991161.
+_:autos126 :longitude -73.999877733181.
+_:autos126 :state "NY".
 _:autos126 <http://mylo.com/schema/HasAddress> _:autos127.
-_:autos126 <http://mylo.com/schema/HasGpsLatitude> 51.654031743792.
-_:autos126 <http://mylo.com/schema/HasGpsLongitude> -128.12678020961.
-_:autos126 <http://mylo.com/schema/HasLocationName> "Pruth Bay, B.C.".
+_:autos126 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
+_:autos126 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
+_:autos126 <http://mylo.com/schema/HasLocationName> "Anthony's".
 _:autos126 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos126 a <http://mylo.com/schema/Location>.
-_:autos127 <http://mylo.com/schema/HasAddressProps> _:autos108.
+_:autos127 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos127 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos127 <http://mylo.com/schema/HasCountry> "United States".
+_:autos127 <http://mylo.com/schema/HasState> "WA".
 _:autos127 a <http://mylo.com/schema/Address>.
 _:autos127 a <http://mylo.com/schema/Location>.
-_:autos128 <http://mylo.com/schema/HasTimeValue> "2012-06-23T18:11:21+00:00"^^xsd:dateTime.
+_:autos128 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
 _:autos128 a <http://mylo.com/schema/Instant>.
 _:autos128 a <http://mylo.com/schema/TimePeriod>.
 _:autos129 <http://mylo.com/schema/HasAddress> _:autos130.
-_:autos129 <http://mylo.com/schema/HasGpsLatitude> 50.568262888002.
-_:autos129 <http://mylo.com/schema/HasGpsLongitude> -126.26609478945.
-_:autos129 <http://mylo.com/schema/HasLocationName> "Port Harvey Marine Resort, BC".
+_:autos129 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
+_:autos129 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
+_:autos129 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
 _:autos129 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos129 a <http://mylo.com/schema/Location>.
-_:autos13 <http://mylo.com/schema/HasAddressProps> _:autos110.
-_:autos13 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos13 <http://mylo.com/schema/HasAddressProps> _:autos108.
+_:autos13 <http://mylo.com/schema/HasCity> "Walla Walla".
 _:autos13 <http://mylo.com/schema/HasCountry> "United States".
 _:autos13 <http://mylo.com/schema/HasState> "WA".
-_:autos13 <http://mylo.com/schema/HasStreet> "2208 Queen Anne Ave North".
+_:autos13 <http://mylo.com/schema/HasStreet> "2014 Mill Creek Road".
 _:autos13 a <http://mylo.com/schema/Address>.
 _:autos13 a <http://mylo.com/schema/Location>.
-_:autos13 api:has api:id_10151081798109645_23530239.
-_:autos13 api:has api:id_10151081798109645_23530880.
-_:autos13 api:has api:id_10151081798109645_23531069.
-_:autos13 api:has api:id_10151081798109645_23531466.
-_:autos13 api:has api:id_10151081798109645_23532104.
-_:autos13 api:has api:id_10151081798109645_23532109.
-_:autos13 api:has api:id_10151081798109645_23534244.
-_:autos130 <http://mylo.com/schema/HasAddressProps> _:autos109.
+_:autos13 api:has api:id_10151094993839645_23601659.
+_:autos130 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos130 <http://mylo.com/schema/HasCity> "Friday Harbor".
+_:autos130 <http://mylo.com/schema/HasCountry> "United States".
+_:autos130 <http://mylo.com/schema/HasState> "WA".
+_:autos130 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
 _:autos130 a <http://mylo.com/schema/Address>.
 _:autos130 a <http://mylo.com/schema/Location>.
-_:autos131 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:49:25+00:00"^^xsd:dateTime.
+_:autos131 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
 _:autos131 a <http://mylo.com/schema/Instant>.
 _:autos131 a <http://mylo.com/schema/TimePeriod>.
 _:autos132 <http://mylo.com/schema/HasAddress> _:autos133.
-_:autos132 <http://mylo.com/schema/HasGpsLatitude> 47.638688623047.
-_:autos132 <http://mylo.com/schema/HasGpsLongitude> -122.35717756682.
-_:autos132 <http://mylo.com/schema/HasLocationName> "How to Cook a Wolf".
+_:autos132 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
+_:autos132 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
+_:autos132 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
 _:autos132 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos132 a <http://mylo.com/schema/Location>.
-_:autos133 <http://mylo.com/schema/HasAddressProps> _:autos110.
-_:autos133 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos133 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos133 <http://mylo.com/schema/HasCity> "Friday Harbor".
 _:autos133 <http://mylo.com/schema/HasCountry> "United States".
 _:autos133 <http://mylo.com/schema/HasState> "WA".
-_:autos133 <http://mylo.com/schema/HasStreet> "2208 Queen Anne Ave North".
+_:autos133 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
 _:autos133 a <http://mylo.com/schema/Address>.
 _:autos133 a <http://mylo.com/schema/Location>.
-_:autos134 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:23:21+00:00"^^xsd:dateTime.
+_:autos134 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
 _:autos134 a <http://mylo.com/schema/Instant>.
 _:autos134 a <http://mylo.com/schema/TimePeriod>.
 _:autos135 <http://mylo.com/schema/HasAddress> _:autos136.
-_:autos135 <http://mylo.com/schema/HasGpsLatitude> 47.638066980721.
-_:autos135 <http://mylo.com/schema/HasGpsLongitude> -122.35712232333.
-_:autos135 <http://mylo.com/schema/HasLocationName> "Hilltop Ale House".
+_:autos135 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
+_:autos135 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
+_:autos135 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
 _:autos135 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos135 a <http://mylo.com/schema/Location>.
-_:autos136 <http://mylo.com/schema/HasAddressProps> _:autos111.
-_:autos136 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos136 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos136 <http://mylo.com/schema/HasCity> "Friday Harbor".
 _:autos136 <http://mylo.com/schema/HasCountry> "United States".
 _:autos136 <http://mylo.com/schema/HasState> "WA".
-_:autos136 <http://mylo.com/schema/HasStreet> "2129 Queen Anne Ave N".
+_:autos136 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
 _:autos136 a <http://mylo.com/schema/Address>.
 _:autos136 a <http://mylo.com/schema/Location>.
-_:autos137 <http://mylo.com/schema/HasTimeValue> "2012-05-26T20:14:40+00:00"^^xsd:dateTime.
+_:autos137 <http://mylo.com/schema/HasTimeValue> "2012-05-28T00:38:53+00:00"^^xsd:dateTime.
 _:autos137 a <http://mylo.com/schema/Instant>.
 _:autos137 a <http://mylo.com/schema/TimePeriod>.
 _:autos138 <http://mylo.com/schema/HasAddress> _:autos139.
-_:autos138 <http://mylo.com/schema/HasGpsLatitude> 48.533068253054.
-_:autos138 <http://mylo.com/schema/HasGpsLongitude> -123.00475938651.
-_:autos138 <http://mylo.com/schema/HasLocationName> "Seattle Yacht Club Friday Harbor Outstation".
+_:autos138 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
+_:autos138 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
+_:autos138 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
 _:autos138 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos138 a <http://mylo.com/schema/Location>.
 _:autos139 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos139 <http://mylo.com/schema/HasCity> "Friday Harbor".
+_:autos139 <http://mylo.com/schema/HasCountry> "United States".
+_:autos139 <http://mylo.com/schema/HasState> "WA".
+_:autos139 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
 _:autos139 a <http://mylo.com/schema/Address>.
 _:autos139 a <http://mylo.com/schema/Location>.
-_:autos14 :next <https://graph.facebook.com/10151081798109645/comments?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=10151081798109645_23534244>.
-_:autos14 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:23:21+00:00"^^xsd:dateTime.
+_:autos14 :next <https://graph.facebook.com/10151094993839645/comments?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=10151094993839645_23601659>.
+_:autos14 <http://mylo.com/schema/HasTimeValue> "2012-08-15T19:25:20+00:00"^^xsd:dateTime.
 _:autos14 a <http://mylo.com/schema/Instant>.
 _:autos14 a <http://mylo.com/schema/TimePeriod>.
-_:autos140 <http://mylo.com/schema/HasTimeValue> "2012-05-20T06:04:01+00:00"^^xsd:dateTime.
+_:autos140 <http://mylo.com/schema/HasTimeValue> "2012-05-28T00:38:53+00:00"^^xsd:dateTime.
 _:autos140 a <http://mylo.com/schema/Instant>.
 _:autos140 a <http://mylo.com/schema/TimePeriod>.
 _:autos141 <http://mylo.com/schema/HasAddress> _:autos142.
-_:autos141 <http://mylo.com/schema/HasGpsLatitude> 48.50989.
-_:autos141 <http://mylo.com/schema/HasGpsLongitude> -122.61492.
-_:autos141 <http://mylo.com/schema/HasLocationName> "Rock Fish Grill and Brew".
+_:autos141 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
+_:autos141 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
+_:autos141 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
 _:autos141 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos141 a <http://mylo.com/schema/Location>.
-_:autos142 <http://mylo.com/schema/HasAddressProps> _:autos113.
-_:autos142 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos142 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos142 <http://mylo.com/schema/HasCity> "Friday Harbor".
 _:autos142 <http://mylo.com/schema/HasCountry> "United States".
 _:autos142 <http://mylo.com/schema/HasState> "WA".
+_:autos142 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
 _:autos142 a <http://mylo.com/schema/Address>.
 _:autos142 a <http://mylo.com/schema/Location>.
-_:autos143 <http://mylo.com/schema/HasTimeValue> "2012-05-03T21:07:12+00:00"^^xsd:dateTime.
+_:autos143 <http://mylo.com/schema/HasTimeValue> "2012-07-27T16:59:12+00:00"^^xsd:dateTime.
 _:autos143 a <http://mylo.com/schema/Instant>.
 _:autos143 a <http://mylo.com/schema/TimePeriod>.
 _:autos144 <http://mylo.com/schema/HasAddress> _:autos145.
-_:autos144 <http://mylo.com/schema/HasGpsLatitude> 40.676618172137.
-_:autos144 <http://mylo.com/schema/HasGpsLongitude> -73.980106303924.
-_:autos144 <http://mylo.com/schema/HasLocationName> "Bierkraft".
+_:autos144 <http://mylo.com/schema/HasGpsLatitude> 48.492728038807.
+_:autos144 <http://mylo.com/schema/HasGpsLongitude> -122.68249613088.
+_:autos144 <http://mylo.com/schema/HasLocationName> "Skyline Marina, Anacortes".
 _:autos144 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos144 a <http://mylo.com/schema/Location>.
-_:autos145 <http://mylo.com/schema/HasAddressProps> _:autos114.
-_:autos145 <http://mylo.com/schema/HasCity> "Brooklyn".
+_:autos145 <http://mylo.com/schema/HasAddressProps> _:autos113.
+_:autos145 <http://mylo.com/schema/HasCity> "Anacortes".
 _:autos145 <http://mylo.com/schema/HasCountry> "United States".
-_:autos145 <http://mylo.com/schema/HasState> "NY".
-_:autos145 <http://mylo.com/schema/HasStreet> "191 5th Ave".
+_:autos145 <http://mylo.com/schema/HasState> "WA".
 _:autos145 a <http://mylo.com/schema/Address>.
 _:autos145 a <http://mylo.com/schema/Location>.
-_:autos146 <http://mylo.com/schema/HasTimeValue> "2012-05-03T01:10:24+00:00"^^xsd:dateTime.
+_:autos146 <http://mylo.com/schema/HasTimeValue> "2012-07-19T19:59:01+00:00"^^xsd:dateTime.
 _:autos146 a <http://mylo.com/schema/Instant>.
 _:autos146 a <http://mylo.com/schema/TimePeriod>.
 _:autos147 <http://mylo.com/schema/HasAddress> _:autos148.
-_:autos147 <http://mylo.com/schema/HasGpsLatitude> 40.761268026311.
-_:autos147 <http://mylo.com/schema/HasGpsLongitude> -73.965743458651.
-_:autos147 <http://mylo.com/schema/HasLocationName> "Carriage House Pub On 59th".
+_:autos147 <http://mylo.com/schema/HasGpsLatitude> 48.60287835093.
+_:autos147 <http://mylo.com/schema/HasGpsLongitude> -123.17302850967.
+_:autos147 <http://mylo.com/schema/HasLocationName> "Henry Island SYC Out Station".
 _:autos147 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos147 a <http://mylo.com/schema/Location>.
-_:autos148 <http://mylo.com/schema/HasAddressProps> _:autos115.
-_:autos148 <http://mylo.com/schema/HasCity> "New York".
+_:autos148 <http://mylo.com/schema/HasAddressProps> _:autos114.
+_:autos148 <http://mylo.com/schema/HasCity> "Roche Harbor".
 _:autos148 <http://mylo.com/schema/HasCountry> "United States".
-_:autos148 <http://mylo.com/schema/HasState> "NY".
+_:autos148 <http://mylo.com/schema/HasState> "WA".
 _:autos148 a <http://mylo.com/schema/Address>.
 _:autos148 a <http://mylo.com/schema/Location>.
-_:autos149 <http://mylo.com/schema/HasTimeValue> "2012-05-02T23:32:38+00:00"^^xsd:dateTime.
+_:autos149 <http://mylo.com/schema/HasTimeValue> "2012-07-16T19:18:52+00:00"^^xsd:dateTime.
 _:autos149 a <http://mylo.com/schema/Instant>.
 _:autos149 a <http://mylo.com/schema/TimePeriod>.
 _:autos15 :data _:autos16.
 _:autos15 :paging _:autos17.
 _:autos15 <http://mylo.com/schema/HasAddress> _:autos16.
-_:autos15 <http://mylo.com/schema/HasGpsLatitude> 47.638066980721.
-_:autos15 <http://mylo.com/schema/HasGpsLongitude> -122.35712232333.
-_:autos15 <http://mylo.com/schema/HasLocationName> "Hilltop Ale House".
+_:autos15 <http://mylo.com/schema/HasGpsLatitude> 47.591426559761.
+_:autos15 <http://mylo.com/schema/HasGpsLongitude> -122.33252559661.
+_:autos15 <http://mylo.com/schema/HasLocationName> "Safeco Field".
 _:autos15 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos15 a <http://mylo.com/schema/Location>.
 _:autos150 <http://mylo.com/schema/HasAddress> _:autos151.
-_:autos150 <http://mylo.com/schema/HasGpsLatitude> 40.723594991161.
-_:autos150 <http://mylo.com/schema/HasGpsLongitude> -73.999877733181.
-_:autos150 <http://mylo.com/schema/HasLocationName> "Balthazar Soho".
+_:autos150 <http://mylo.com/schema/HasGpsLatitude> 49.62993684.
+_:autos150 <http://mylo.com/schema/HasGpsLongitude> -124.017304535.
+_:autos150 <http://mylo.com/schema/HasLocationName> "Garden Bay BC".
 _:autos150 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos150 a <http://mylo.com/schema/Location>.
-_:autos151 <http://mylo.com/schema/HasAddressProps> _:autos116.
-_:autos151 <http://mylo.com/schema/HasCity> "New York".
-_:autos151 <http://mylo.com/schema/HasCountry> "United States".
-_:autos151 <http://mylo.com/schema/HasState> "NY".
+_:autos151 <http://mylo.com/schema/HasAddressProps> _:autos115.
 _:autos151 a <http://mylo.com/schema/Address>.
 _:autos151 a <http://mylo.com/schema/Location>.
-_:autos152 <http://mylo.com/schema/HasTimeValue> "2012-04-27T20:08:14+00:00"^^xsd:dateTime.
+_:autos152 <http://mylo.com/schema/HasTimeValue> "2012-07-14T19:46:54+00:00"^^xsd:dateTime.
 _:autos152 a <http://mylo.com/schema/Instant>.
 _:autos152 a <http://mylo.com/schema/TimePeriod>.
 _:autos153 <http://mylo.com/schema/HasAddress> _:autos154.
-_:autos153 <http://mylo.com/schema/HasGpsLatitude> 43.091558116667.
-_:autos153 <http://mylo.com/schema/HasGpsLongitude> 11.7798758.
-_:autos153 <http://mylo.com/schema/HasLocationName> "Osteria del Conte".
+_:autos153 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
+_:autos153 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
+_:autos153 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
 _:autos153 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos153 a <http://mylo.com/schema/Location>.
-_:autos154 <http://mylo.com/schema/HasAddressProps> _:autos117.
-_:autos154 <http://mylo.com/schema/HasCity> "Montepulciano".
-_:autos154 <http://mylo.com/schema/HasCountry> "Italy".
+_:autos154 <http://mylo.com/schema/HasAddressProps> _:autos116.
 _:autos154 a <http://mylo.com/schema/Address>.
 _:autos154 a <http://mylo.com/schema/Location>.
-_:autos155 <http://mylo.com/schema/HasTimeValue> "2012-04-26T19:26:40+00:00"^^xsd:dateTime.
+_:autos155 <http://mylo.com/schema/HasTimeValue> "2012-06-20T03:35:30+00:00"^^xsd:dateTime.
 _:autos155 a <http://mylo.com/schema/Instant>.
 _:autos155 a <http://mylo.com/schema/TimePeriod>.
 _:autos156 <http://mylo.com/schema/HasAddress> _:autos157.
-_:autos156 <http://mylo.com/schema/HasGpsLatitude> 43.091453401156.
-_:autos156 <http://mylo.com/schema/HasGpsLongitude> 11.781250600132.
-_:autos156 <http://mylo.com/schema/HasLocationName> "Osteria Acquacheta".
+_:autos156 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
+_:autos156 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
+_:autos156 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
 _:autos156 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos156 a <http://mylo.com/schema/Location>.
-_:autos157 <http://mylo.com/schema/HasAddressProps> _:autos118.
-_:autos157 <http://mylo.com/schema/HasCity> "Montepulciano".
-_:autos157 <http://mylo.com/schema/HasCountry> "Italy".
-_:autos157 <http://mylo.com/schema/HasStreet> "Via del Teatro 22".
+_:autos157 <http://mylo.com/schema/HasAddressProps> _:autos116.
 _:autos157 a <http://mylo.com/schema/Address>.
 _:autos157 a <http://mylo.com/schema/Location>.
-_:autos158 <http://mylo.com/schema/HasTimeValue> "2012-04-25T16:42:48+00:00"^^xsd:dateTime.
+_:autos158 <http://mylo.com/schema/HasTimeValue> "2012-07-13T22:15:16+00:00"^^xsd:dateTime.
 _:autos158 a <http://mylo.com/schema/Instant>.
 _:autos158 a <http://mylo.com/schema/TimePeriod>.
 _:autos159 <http://mylo.com/schema/HasAddress> _:autos160.
-_:autos159 <http://mylo.com/schema/HasGpsLatitude> 43.093173496031.
-_:autos159 <http://mylo.com/schema/HasGpsLongitude> 11.78200022449.
-_:autos159 <http://mylo.com/schema/HasLocationName> "Montepulciano".
+_:autos159 <http://mylo.com/schema/HasGpsLatitude> 50.10189098.
+_:autos159 <http://mylo.com/schema/HasGpsLongitude> -125.20203995.
+_:autos159 <http://mylo.com/schema/HasLocationName> "Taku Resort and Marina".
 _:autos159 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos159 a <http://mylo.com/schema/Location>.
-_:autos16 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos16 <http://mylo.com/schema/HasAddressProps> _:autos109.
 _:autos16 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos16 <http://mylo.com/schema/HasCountry> "United States".
 _:autos16 <http://mylo.com/schema/HasState> "WA".
-_:autos16 <http://mylo.com/schema/HasStreet> "2129 Queen Anne Ave N".
 _:autos16 a <http://mylo.com/schema/Address>.
 _:autos16 a <http://mylo.com/schema/Location>.
-_:autos16 api:has <http://facebook.mylo.com/100000824046745#>.
-_:autos16 api:has <http://facebook.mylo.com/1016887463#>.
-_:autos16 api:has <http://facebook.mylo.com/580023526#>.
-_:autos160 <http://mylo.com/schema/HasAddressProps> _:autos119.
-_:autos160 <http://mylo.com/schema/HasCity> "Montepulciano".
-_:autos160 <http://mylo.com/schema/HasCountry> "Italy".
-_:autos160 <http://mylo.com/schema/HasStreet> "Via Ricci 25".
+_:autos16 api:has <http://facebook.mylo.com/10721411#>.
+_:autos16 api:has <http://facebook.mylo.com/1075027532#>.
+_:autos16 api:has <http://facebook.mylo.com/27500387#>.
+_:autos16 api:has <http://facebook.mylo.com/502760444#>.
+_:autos16 api:has <http://facebook.mylo.com/509411970#>.
+_:autos16 api:has <http://facebook.mylo.com/887740493#>.
+_:autos160 <http://mylo.com/schema/HasAddressProps> _:autos117.
 _:autos160 a <http://mylo.com/schema/Address>.
 _:autos160 a <http://mylo.com/schema/Location>.
-_:autos161 <http://mylo.com/schema/HasTimeValue> "2012-04-24T20:53:37+00:00"^^xsd:dateTime.
+_:autos161 <http://mylo.com/schema/HasTimeValue> "2012-06-26T20:03:33+00:00"^^xsd:dateTime.
 _:autos161 a <http://mylo.com/schema/Instant>.
 _:autos161 a <http://mylo.com/schema/TimePeriod>.
 _:autos162 <http://mylo.com/schema/HasAddress> _:autos163.
-_:autos162 <http://mylo.com/schema/HasGpsLatitude> 43.776863114985.
-_:autos162 <http://mylo.com/schema/HasGpsLongitude> 11.2517241482.
-_:autos162 <http://mylo.com/schema/HasLocationName> "Nerone trattoria via Faenza, 95/97 - Firenze".
+_:autos162 <http://mylo.com/schema/HasGpsLatitude> 51.654031743792.
+_:autos162 <http://mylo.com/schema/HasGpsLongitude> -128.12678020961.
+_:autos162 <http://mylo.com/schema/HasLocationName> "Pruth Bay, B.C.".
 _:autos162 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos162 a <http://mylo.com/schema/Location>.
-_:autos163 <http://mylo.com/schema/HasAddressProps> _:autos120.
-_:autos163 <http://mylo.com/schema/HasCity> "Firenze".
-_:autos163 <http://mylo.com/schema/HasCountry> "Italy".
+_:autos163 <http://mylo.com/schema/HasAddressProps> _:autos118.
 _:autos163 a <http://mylo.com/schema/Address>.
 _:autos163 a <http://mylo.com/schema/Location>.
-_:autos17 :next <https://graph.facebook.com/3834152486014/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1016887463>.
-_:autos17 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:23:21+00:00"^^xsd:dateTime.
+_:autos164 <http://mylo.com/schema/HasTimeValue> "2012-06-23T18:11:21+00:00"^^xsd:dateTime.
+_:autos164 a <http://mylo.com/schema/Instant>.
+_:autos164 a <http://mylo.com/schema/TimePeriod>.
+_:autos165 <http://mylo.com/schema/HasAddress> _:autos166.
+_:autos165 <http://mylo.com/schema/HasGpsLatitude> 50.568262888002.
+_:autos165 <http://mylo.com/schema/HasGpsLongitude> -126.26609478945.
+_:autos165 <http://mylo.com/schema/HasLocationName> "Port Harvey Marine Resort, BC".
+_:autos165 a <http://mylo.com/schema/GeographicalPoint>.
+_:autos165 a <http://mylo.com/schema/Location>.
+_:autos166 <http://mylo.com/schema/HasAddressProps> _:autos119.
+_:autos166 a <http://mylo.com/schema/Address>.
+_:autos166 a <http://mylo.com/schema/Location>.
+_:autos167 <http://mylo.com/schema/HasTimeValue> "2012-05-26T20:14:40+00:00"^^xsd:dateTime.
+_:autos167 a <http://mylo.com/schema/Instant>.
+_:autos167 a <http://mylo.com/schema/TimePeriod>.
+_:autos168 <http://mylo.com/schema/HasAddress> _:autos169.
+_:autos168 <http://mylo.com/schema/HasGpsLatitude> 48.533068253054.
+_:autos168 <http://mylo.com/schema/HasGpsLongitude> -123.00475938651.
+_:autos168 <http://mylo.com/schema/HasLocationName> "Seattle Yacht Club Friday Harbor Outstation".
+_:autos168 a <http://mylo.com/schema/GeographicalPoint>.
+_:autos168 a <http://mylo.com/schema/Location>.
+_:autos169 <http://mylo.com/schema/HasAddressProps> _:autos122.
+_:autos169 a <http://mylo.com/schema/Address>.
+_:autos169 a <http://mylo.com/schema/Location>.
+_:autos17 :next <https://graph.facebook.com/10151081798109645/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=509411970>.
+_:autos17 <http://mylo.com/schema/HasTimeValue> "2012-08-09T22:00:57+00:00"^^xsd:dateTime.
 _:autos17 a <http://mylo.com/schema/Instant>.
 _:autos17 a <http://mylo.com/schema/TimePeriod>.
+_:autos170 <http://mylo.com/schema/HasTimeValue> "2012-05-26T20:14:40+00:00"^^xsd:dateTime.
+_:autos170 a <http://mylo.com/schema/Instant>.
+_:autos170 a <http://mylo.com/schema/TimePeriod>.
+_:autos171 <http://mylo.com/schema/HasAddress> _:autos172.
+_:autos171 <http://mylo.com/schema/HasGpsLatitude> 48.533068253054.
+_:autos171 <http://mylo.com/schema/HasGpsLongitude> -123.00475938651.
+_:autos171 <http://mylo.com/schema/HasLocationName> "Seattle Yacht Club Friday Harbor Outstation".
+_:autos171 a <http://mylo.com/schema/GeographicalPoint>.
+_:autos171 a <http://mylo.com/schema/Location>.
+_:autos172 <http://mylo.com/schema/HasAddressProps> _:autos122.
+_:autos172 a <http://mylo.com/schema/Address>.
+_:autos172 a <http://mylo.com/schema/Location>.
+_:autos173 <http://mylo.com/schema/HasTimeValue> "2012-05-20T06:04:01+00:00"^^xsd:dateTime.
+_:autos173 a <http://mylo.com/schema/Instant>.
+_:autos173 a <http://mylo.com/schema/TimePeriod>.
+_:autos174 <http://mylo.com/schema/HasAddress> _:autos175.
+_:autos174 <http://mylo.com/schema/HasGpsLatitude> 48.50989.
+_:autos174 <http://mylo.com/schema/HasGpsLongitude> -122.61492.
+_:autos174 <http://mylo.com/schema/HasLocationName> "Rock Fish Grill and Brew".
+_:autos174 a <http://mylo.com/schema/GeographicalPoint>.
+_:autos174 a <http://mylo.com/schema/Location>.
+_:autos175 <http://mylo.com/schema/HasAddressProps> _:autos123.
+_:autos175 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos175 <http://mylo.com/schema/HasCountry> "United States".
+_:autos175 <http://mylo.com/schema/HasState> "WA".
+_:autos175 a <http://mylo.com/schema/Address>.
+_:autos175 a <http://mylo.com/schema/Location>.
 _:autos18 :data _:autos19.
 _:autos18 :paging _:autos20.
 _:autos18 <http://mylo.com/schema/HasAddress> _:autos19.
-_:autos18 <http://mylo.com/schema/HasGpsLatitude> 47.638066980721.
-_:autos18 <http://mylo.com/schema/HasGpsLongitude> -122.35712232333.
-_:autos18 <http://mylo.com/schema/HasLocationName> "Hilltop Ale House".
+_:autos18 <http://mylo.com/schema/HasGpsLatitude> 47.69080660668.
+_:autos18 <http://mylo.com/schema/HasGpsLongitude> -122.40337348427.
+_:autos18 <http://mylo.com/schema/HasLocationName> "Golden Gardens Park".
 _:autos18 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos18 a <http://mylo.com/schema/Location>.
-_:autos19 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos19 <http://mylo.com/schema/HasAddressProps> _:autos110.
 _:autos19 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos19 <http://mylo.com/schema/HasCountry> "United States".
 _:autos19 <http://mylo.com/schema/HasState> "WA".
-_:autos19 <http://mylo.com/schema/HasStreet> "2129 Queen Anne Ave N".
+_:autos19 <http://mylo.com/schema/HasStreet> "8498 Seaview Pl. NW".
 _:autos19 a <http://mylo.com/schema/Address>.
 _:autos19 a <http://mylo.com/schema/Location>.
-_:autos19 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos19 api:has <http://facebook.mylo.com/729061612#>.
-_:autos19 api:has <http://facebook.mylo.com/817464644#>.
-_:autos2 :next <https://graph.facebook.com/817464644/checkins?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&until=1335300817&__paging_token=10150761216189645>.
-_:autos2 :previous <https://graph.facebook.com/817464644/checkins?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&since=1345058720&__paging_token=10151094993839645&__previous=1>.
-_:autos2 <http://mylo.com/schema/HasTimeValue> "2012-08-15T19:25:20+00:00"^^xsd:dateTime.
+_:autos19 api:has api:id_10151081798109645_23530239.
+_:autos19 api:has api:id_10151081798109645_23530880.
+_:autos19 api:has api:id_10151081798109645_23531069.
+_:autos19 api:has api:id_10151081798109645_23531466.
+_:autos19 api:has api:id_10151081798109645_23532104.
+_:autos19 api:has api:id_10151081798109645_23532109.
+_:autos19 api:has api:id_10151081798109645_23534244.
+_:autos2 :next <https://graph.facebook.com/817464644/checkins?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&until=1336001558&__paging_token=10150790427979645>.
+_:autos2 :previous <https://graph.facebook.com/817464644/checkins?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&since=1345940221&__paging_token=10151118520179645&__previous=1>.
+_:autos2 <http://mylo.com/schema/HasTimeValue> "2012-08-26T00:17:01+00:00"^^xsd:dateTime.
 _:autos2 a <http://mylo.com/schema/Instant>.
 _:autos2 a <http://mylo.com/schema/TimePeriod>.
-_:autos20 :next <https://graph.facebook.com/3834152486014/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=729061612>.
-_:autos20 <http://mylo.com/schema/HasTimeValue> "2012-05-03T21:07:12+00:00"^^xsd:dateTime.
+_:autos20 :next <https://graph.facebook.com/10151081798109645/comments?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=10151081798109645_23534244>.
+_:autos20 <http://mylo.com/schema/HasTimeValue> "2012-08-03T23:36:11+00:00"^^xsd:dateTime.
 _:autos20 a <http://mylo.com/schema/Instant>.
 _:autos20 a <http://mylo.com/schema/TimePeriod>.
 _:autos21 :data _:autos22.
 _:autos21 :paging _:autos23.
 _:autos21 <http://mylo.com/schema/HasAddress> _:autos22.
-_:autos21 <http://mylo.com/schema/HasGpsLatitude> 40.676618172137.
-_:autos21 <http://mylo.com/schema/HasGpsLongitude> -73.980106303924.
-_:autos21 <http://mylo.com/schema/HasLocationName> "Bierkraft".
+_:autos21 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
+_:autos21 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
+_:autos21 <http://mylo.com/schema/HasLocationName> "Anthony's".
 _:autos21 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos21 a <http://mylo.com/schema/Location>.
-_:autos22 <http://mylo.com/schema/HasAddressProps> _:autos114.
-_:autos22 <http://mylo.com/schema/HasCity> "Brooklyn".
+_:autos22 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos22 <http://mylo.com/schema/HasCity> "Anacortes".
 _:autos22 <http://mylo.com/schema/HasCountry> "United States".
-_:autos22 <http://mylo.com/schema/HasState> "NY".
-_:autos22 <http://mylo.com/schema/HasStreet> "191 5th Ave".
+_:autos22 <http://mylo.com/schema/HasState> "WA".
 _:autos22 a <http://mylo.com/schema/Address>.
 _:autos22 a <http://mylo.com/schema/Location>.
-_:autos22 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos23 :next <https://graph.facebook.com/10151068741729645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos23 <http://mylo.com/schema/HasTimeValue> "2012-05-03T21:07:12+00:00"^^xsd:dateTime.
+_:autos22 api:has <http://facebook.mylo.com/100000824046745#>.
+_:autos22 api:has <http://facebook.mylo.com/1016887463#>.
+_:autos22 api:has <http://facebook.mylo.com/580023526#>.
+_:autos23 :next <https://graph.facebook.com/3834152486014/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1016887463>.
+_:autos23 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
 _:autos23 a <http://mylo.com/schema/Instant>.
 _:autos23 a <http://mylo.com/schema/TimePeriod>.
 _:autos24 :data _:autos25.
 _:autos24 :paging _:autos26.
 _:autos24 <http://mylo.com/schema/HasAddress> _:autos25.
-_:autos24 <http://mylo.com/schema/HasGpsLatitude> 40.676618172137.
-_:autos24 <http://mylo.com/schema/HasGpsLongitude> -73.980106303924.
-_:autos24 <http://mylo.com/schema/HasLocationName> "Bierkraft".
+_:autos24 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
+_:autos24 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
+_:autos24 <http://mylo.com/schema/HasLocationName> "Anthony's".
 _:autos24 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos24 a <http://mylo.com/schema/Location>.
-_:autos25 <http://mylo.com/schema/HasAddressProps> _:autos114.
-_:autos25 <http://mylo.com/schema/HasCity> "Brooklyn".
+_:autos25 <http://mylo.com/schema/HasAddressProps> _:autos111.
+_:autos25 <http://mylo.com/schema/HasCity> "Anacortes".
 _:autos25 <http://mylo.com/schema/HasCountry> "United States".
-_:autos25 <http://mylo.com/schema/HasState> "NY".
-_:autos25 <http://mylo.com/schema/HasStreet> "191 5th Ave".
+_:autos25 <http://mylo.com/schema/HasState> "WA".
 _:autos25 a <http://mylo.com/schema/Address>.
 _:autos25 a <http://mylo.com/schema/Location>.
 _:autos25 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos25 api:has <http://facebook.mylo.com/27501545#>.
-_:autos25 api:has <http://facebook.mylo.com/9700039#>.
-_:autos26 :next <https://graph.facebook.com/10151053573269645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=9700039>.
-_:autos26 <http://mylo.com/schema/HasTimeValue> "2012-08-03T23:36:11+00:00"^^xsd:dateTime.
+_:autos25 api:has <http://facebook.mylo.com/729061612#>.
+_:autos25 api:has <http://facebook.mylo.com/817464644#>.
+_:autos26 :next <https://graph.facebook.com/3834152486014/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=729061612>.
+_:autos26 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
 _:autos26 a <http://mylo.com/schema/Instant>.
 _:autos26 a <http://mylo.com/schema/TimePeriod>.
 _:autos27 :data _:autos28.
 _:autos27 :paging _:autos29.
 _:autos27 <http://mylo.com/schema/HasAddress> _:autos28.
-_:autos27 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
-_:autos27 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
-_:autos27 <http://mylo.com/schema/HasLocationName> "Anthony's".
+_:autos27 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
+_:autos27 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
+_:autos27 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
 _:autos27 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos27 a <http://mylo.com/schema/Location>.
-_:autos28 <http://mylo.com/schema/HasAddressProps> _:autos101.
-_:autos28 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos28 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos28 <http://mylo.com/schema/HasCity> "Friday Harbor".
 _:autos28 <http://mylo.com/schema/HasCountry> "United States".
 _:autos28 <http://mylo.com/schema/HasState> "WA".
+_:autos28 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
 _:autos28 a <http://mylo.com/schema/Address>.
 _:autos28 a <http://mylo.com/schema/Location>.
-_:autos28 api:has <http://facebook.mylo.com/27501545#>.
-_:autos29 :next <https://graph.facebook.com/10151052619294645/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=27501545>.
-_:autos29 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
+_:autos28 api:has <http://facebook.mylo.com/1027747641#>.
+_:autos29 :next <https://graph.facebook.com/10151068741729645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos29 <http://mylo.com/schema/HasTimeValue> "2012-05-28T00:38:53+00:00"^^xsd:dateTime.
 _:autos29 a <http://mylo.com/schema/Instant>.
 _:autos29 a <http://mylo.com/schema/TimePeriod>.
 _:autos3 :data _:autos4.
 _:autos3 :paging _:autos5.
 _:autos3 <http://mylo.com/schema/HasAddress> _:autos4.
-_:autos3 <http://mylo.com/schema/HasGpsLatitude> 47.591426559761.
-_:autos3 <http://mylo.com/schema/HasGpsLongitude> -122.33252559661.
-_:autos3 <http://mylo.com/schema/HasLocationName> "Safeco Field".
+_:autos3 <http://mylo.com/schema/HasGpsLatitude> 46.064875084318.
+_:autos3 <http://mylo.com/schema/HasGpsLongitude> -118.34082803322.
+_:autos3 <http://mylo.com/schema/HasLocationName> "Saffron Mediterranean Kitchen".
 _:autos3 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos3 a <http://mylo.com/schema/Location>.
 _:autos30 :data _:autos31.
 _:autos30 :paging _:autos32.
 _:autos30 <http://mylo.com/schema/HasAddress> _:autos31.
-_:autos30 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
-_:autos30 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
-_:autos30 <http://mylo.com/schema/HasLocationName> "Anthony's".
+_:autos30 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
+_:autos30 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
+_:autos30 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
 _:autos30 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos30 a <http://mylo.com/schema/Location>.
-_:autos31 <http://mylo.com/schema/HasAddressProps> _:autos101.
-_:autos31 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos31 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos31 <http://mylo.com/schema/HasCity> "Friday Harbor".
 _:autos31 <http://mylo.com/schema/HasCountry> "United States".
 _:autos31 <http://mylo.com/schema/HasState> "WA".
+_:autos31 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
 _:autos31 a <http://mylo.com/schema/Address>.
 _:autos31 a <http://mylo.com/schema/Location>.
 _:autos31 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos32 :next <https://graph.facebook.com/10151052619294645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos32 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
+_:autos31 api:has <http://facebook.mylo.com/27501545#>.
+_:autos31 api:has <http://facebook.mylo.com/9700039#>.
+_:autos32 :next <https://graph.facebook.com/10151053573269645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=9700039>.
+_:autos32 <http://mylo.com/schema/HasTimeValue> "2012-07-27T16:59:12+00:00"^^xsd:dateTime.
 _:autos32 a <http://mylo.com/schema/Instant>.
 _:autos32 a <http://mylo.com/schema/TimePeriod>.
 _:autos33 :data _:autos34.
 _:autos33 :paging _:autos35.
 _:autos33 <http://mylo.com/schema/HasAddress> _:autos34.
-_:autos33 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
-_:autos33 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
-_:autos33 <http://mylo.com/schema/HasLocationName> "Anthony's".
+_:autos33 <http://mylo.com/schema/HasGpsLatitude> 48.492728038807.
+_:autos33 <http://mylo.com/schema/HasGpsLongitude> -122.68249613088.
+_:autos33 <http://mylo.com/schema/HasLocationName> "Skyline Marina, Anacortes".
 _:autos33 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos33 a <http://mylo.com/schema/Location>.
-_:autos34 <http://mylo.com/schema/HasAddressProps> _:autos101.
+_:autos34 <http://mylo.com/schema/HasAddressProps> _:autos113.
 _:autos34 <http://mylo.com/schema/HasCity> "Anacortes".
 _:autos34 <http://mylo.com/schema/HasCountry> "United States".
 _:autos34 <http://mylo.com/schema/HasState> "WA".
 _:autos34 a <http://mylo.com/schema/Address>.
 _:autos34 a <http://mylo.com/schema/Location>.
-_:autos34 api:has <http://facebook.mylo.com/100000215194505#>.
-_:autos34 api:has <http://facebook.mylo.com/10721411#>.
-_:autos35 :next <https://graph.facebook.com/10151035258439645/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=10721411>.
-_:autos35 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
+_:autos34 api:has <http://facebook.mylo.com/27501545#>.
+_:autos35 :next <https://graph.facebook.com/10151052619294645/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=27501545>.
+_:autos35 <http://mylo.com/schema/HasTimeValue> "2012-07-19T19:59:01+00:00"^^xsd:dateTime.
 _:autos35 a <http://mylo.com/schema/Instant>.
 _:autos35 a <http://mylo.com/schema/TimePeriod>.
 _:autos36 :data _:autos37.
 _:autos36 :paging _:autos38.
 _:autos36 <http://mylo.com/schema/HasAddress> _:autos37.
-_:autos36 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
-_:autos36 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
-_:autos36 <http://mylo.com/schema/HasLocationName> "Anthony's".
+_:autos36 <http://mylo.com/schema/HasGpsLatitude> 48.60287835093.
+_:autos36 <http://mylo.com/schema/HasGpsLongitude> -123.17302850967.
+_:autos36 <http://mylo.com/schema/HasLocationName> "Henry Island SYC Out Station".
 _:autos36 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos36 a <http://mylo.com/schema/Location>.
-_:autos37 <http://mylo.com/schema/HasAddressProps> _:autos101.
-_:autos37 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos37 <http://mylo.com/schema/HasAddressProps> _:autos114.
+_:autos37 <http://mylo.com/schema/HasCity> "Roche Harbor".
 _:autos37 <http://mylo.com/schema/HasCountry> "United States".
 _:autos37 <http://mylo.com/schema/HasState> "WA".
 _:autos37 a <http://mylo.com/schema/Address>.
 _:autos37 a <http://mylo.com/schema/Location>.
 _:autos37 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos38 :next <https://graph.facebook.com/10151035258439645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos38 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
+_:autos38 :next <https://graph.facebook.com/10151052619294645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos38 <http://mylo.com/schema/HasTimeValue> "2012-07-16T19:18:52+00:00"^^xsd:dateTime.
 _:autos38 a <http://mylo.com/schema/Instant>.
 _:autos38 a <http://mylo.com/schema/TimePeriod>.
 _:autos39 :data _:autos40.
 _:autos39 :paging _:autos41.
 _:autos39 <http://mylo.com/schema/HasAddress> _:autos40.
-_:autos39 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
-_:autos39 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
-_:autos39 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
+_:autos39 <http://mylo.com/schema/HasGpsLatitude> 49.62993684.
+_:autos39 <http://mylo.com/schema/HasGpsLongitude> -124.017304535.
+_:autos39 <http://mylo.com/schema/HasLocationName> "Garden Bay BC".
 _:autos39 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos39 a <http://mylo.com/schema/Location>.
-_:autos4 <http://mylo.com/schema/HasAddressProps> _:autos99.
-_:autos4 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos4 <http://mylo.com/schema/HasAddressProps> _:autos105.
+_:autos4 <http://mylo.com/schema/HasCity> "Walla Walla".
 _:autos4 <http://mylo.com/schema/HasCountry> "United States".
 _:autos4 <http://mylo.com/schema/HasState> "WA".
+_:autos4 <http://mylo.com/schema/HasStreet> "125 W Alder St".
 _:autos4 a <http://mylo.com/schema/Address>.
 _:autos4 a <http://mylo.com/schema/Location>.
-_:autos4 api:has <http://facebook.mylo.com/100001762424943#>.
+_:autos4 api:has <http://facebook.mylo.com/1027747641#>.
 _:autos4 api:has <http://facebook.mylo.com/1186368430#>.
-_:autos40 <http://mylo.com/schema/HasAddressProps> _:autos102.
-_:autos40 <http://mylo.com/schema/HasCity> "Friday Harbor".
-_:autos40 <http://mylo.com/schema/HasCountry> "United States".
-_:autos40 <http://mylo.com/schema/HasState> "WA".
-_:autos40 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
+_:autos40 <http://mylo.com/schema/HasAddressProps> _:autos115.
 _:autos40 a <http://mylo.com/schema/Address>.
 _:autos40 a <http://mylo.com/schema/Location>.
-_:autos40 api:has api:id_10151035258439645_23273341.
-_:autos40 api:has api:id_10151035258439645_23273404.
-_:autos41 :next <https://graph.facebook.com/10151035258439645/comments?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=10151035258439645_23273404>.
-_:autos41 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
+_:autos40 api:has <http://facebook.mylo.com/100000215194505#>.
+_:autos40 api:has <http://facebook.mylo.com/10721411#>.
+_:autos41 :next <https://graph.facebook.com/10151035258439645/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=10721411>.
+_:autos41 <http://mylo.com/schema/HasTimeValue> "2012-07-14T19:46:54+00:00"^^xsd:dateTime.
 _:autos41 a <http://mylo.com/schema/Instant>.
 _:autos41 a <http://mylo.com/schema/TimePeriod>.
 _:autos42 :data _:autos43.
 _:autos42 :paging _:autos44.
 _:autos42 <http://mylo.com/schema/HasAddress> _:autos43.
-_:autos42 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
-_:autos42 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
-_:autos42 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
+_:autos42 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
+_:autos42 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
+_:autos42 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
 _:autos42 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos42 a <http://mylo.com/schema/Location>.
-_:autos43 <http://mylo.com/schema/HasAddressProps> _:autos102.
-_:autos43 <http://mylo.com/schema/HasCity> "Friday Harbor".
-_:autos43 <http://mylo.com/schema/HasCountry> "United States".
-_:autos43 <http://mylo.com/schema/HasState> "WA".
-_:autos43 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
+_:autos43 <http://mylo.com/schema/HasAddressProps> _:autos116.
 _:autos43 a <http://mylo.com/schema/Address>.
 _:autos43 a <http://mylo.com/schema/Location>.
 _:autos43 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos44 :next <https://graph.facebook.com/10151028709299645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos44 <http://mylo.com/schema/HasTimeValue> "2012-07-28T03:12:03+00:00"^^xsd:dateTime.
+_:autos44 :next <https://graph.facebook.com/10151035258439645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos44 <http://mylo.com/schema/HasTimeValue> "2012-06-20T03:35:30+00:00"^^xsd:dateTime.
 _:autos44 a <http://mylo.com/schema/Instant>.
 _:autos44 a <http://mylo.com/schema/TimePeriod>.
 _:autos45 :data _:autos46.
 _:autos45 :paging _:autos47.
 _:autos45 <http://mylo.com/schema/HasAddress> _:autos46.
-_:autos45 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
-_:autos45 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
-_:autos45 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
+_:autos45 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
+_:autos45 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
+_:autos45 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
 _:autos45 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos45 a <http://mylo.com/schema/Location>.
-_:autos46 <http://mylo.com/schema/HasAddressProps> _:autos102.
-_:autos46 <http://mylo.com/schema/HasCity> "Friday Harbor".
-_:autos46 <http://mylo.com/schema/HasCountry> "United States".
-_:autos46 <http://mylo.com/schema/HasState> "WA".
-_:autos46 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
+_:autos46 <http://mylo.com/schema/HasAddressProps> _:autos116.
 _:autos46 a <http://mylo.com/schema/Address>.
 _:autos46 a <http://mylo.com/schema/Location>.
-_:autos46 api:has <http://facebook.mylo.com/10721411#>.
-_:autos47 :next <https://graph.facebook.com/10151024434614645/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=10721411>.
-_:autos47 <http://mylo.com/schema/HasTimeValue> "2012-05-28T00:38:53+00:00"^^xsd:dateTime.
+_:autos46 api:has api:id_10151035258439645_23273341.
+_:autos46 api:has api:id_10151035258439645_23273404.
+_:autos47 :next <https://graph.facebook.com/10151035258439645/comments?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=10151035258439645_23273404>.
+_:autos47 <http://mylo.com/schema/HasTimeValue> "2012-07-13T22:15:16+00:00"^^xsd:dateTime.
 _:autos47 a <http://mylo.com/schema/Instant>.
 _:autos47 a <http://mylo.com/schema/TimePeriod>.
 _:autos48 :data _:autos49.
 _:autos48 :paging _:autos50.
 _:autos48 <http://mylo.com/schema/HasAddress> _:autos49.
-_:autos48 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
-_:autos48 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
-_:autos48 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
+_:autos48 <http://mylo.com/schema/HasGpsLatitude> 50.10189098.
+_:autos48 <http://mylo.com/schema/HasGpsLongitude> -125.20203995.
+_:autos48 <http://mylo.com/schema/HasLocationName> "Taku Resort and Marina".
 _:autos48 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos48 a <http://mylo.com/schema/Location>.
-_:autos49 <http://mylo.com/schema/HasAddressProps> _:autos102.
-_:autos49 <http://mylo.com/schema/HasCity> "Friday Harbor".
-_:autos49 <http://mylo.com/schema/HasCountry> "United States".
-_:autos49 <http://mylo.com/schema/HasState> "WA".
-_:autos49 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
+_:autos49 <http://mylo.com/schema/HasAddressProps> _:autos117.
 _:autos49 a <http://mylo.com/schema/Address>.
 _:autos49 a <http://mylo.com/schema/Location>.
 _:autos49 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos5 :next <https://graph.facebook.com/10151094993839645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1186368430>.
-_:autos5 <http://mylo.com/schema/HasTimeValue> "2012-08-15T19:25:20+00:00"^^xsd:dateTime.
+_:autos5 :next <https://graph.facebook.com/10151118520179645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos5 <http://mylo.com/schema/HasTimeValue> "2012-08-25T20:31:56+00:00"^^xsd:dateTime.
 _:autos5 a <http://mylo.com/schema/Instant>.
 _:autos5 a <http://mylo.com/schema/TimePeriod>.
-_:autos50 :next <https://graph.facebook.com/10151024434614645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos50 <http://mylo.com/schema/HasTimeValue> "2012-05-28T00:38:53+00:00"^^xsd:dateTime.
+_:autos50 :next <https://graph.facebook.com/10151028709299645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos50 <http://mylo.com/schema/HasTimeValue> "2012-06-26T20:03:33+00:00"^^xsd:dateTime.
 _:autos50 a <http://mylo.com/schema/Instant>.
 _:autos50 a <http://mylo.com/schema/TimePeriod>.
 _:autos51 :data _:autos52.
 _:autos51 :paging _:autos53.
 _:autos51 <http://mylo.com/schema/HasAddress> _:autos52.
-_:autos51 <http://mylo.com/schema/HasGpsLatitude> 48.53532438626.
-_:autos51 <http://mylo.com/schema/HasGpsLongitude> -123.01548379047.
-_:autos51 <http://mylo.com/schema/HasLocationName> "Cask And Schooner".
+_:autos51 <http://mylo.com/schema/HasGpsLatitude> 51.654031743792.
+_:autos51 <http://mylo.com/schema/HasGpsLongitude> -128.12678020961.
+_:autos51 <http://mylo.com/schema/HasLocationName> "Pruth Bay, B.C.".
 _:autos51 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos51 a <http://mylo.com/schema/Location>.
-_:autos52 <http://mylo.com/schema/HasAddressProps> _:autos102.
-_:autos52 <http://mylo.com/schema/HasCity> "Friday Harbor".
-_:autos52 <http://mylo.com/schema/HasCountry> "United States".
-_:autos52 <http://mylo.com/schema/HasState> "WA".
-_:autos52 <http://mylo.com/schema/HasStreet> "1 Front St Ste 1".
+_:autos52 <http://mylo.com/schema/HasAddressProps> _:autos118.
 _:autos52 a <http://mylo.com/schema/Address>.
 _:autos52 a <http://mylo.com/schema/Location>.
-_:autos52 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos53 :next <https://graph.facebook.com/10151022654989645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos53 <http://mylo.com/schema/HasTimeValue> "2012-07-27T16:59:12+00:00"^^xsd:dateTime.
+_:autos52 api:has <http://facebook.mylo.com/10721411#>.
+_:autos53 :next <https://graph.facebook.com/10151024434614645/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=10721411>.
+_:autos53 <http://mylo.com/schema/HasTimeValue> "2012-06-23T18:11:21+00:00"^^xsd:dateTime.
 _:autos53 a <http://mylo.com/schema/Instant>.
 _:autos53 a <http://mylo.com/schema/TimePeriod>.
 _:autos54 :data _:autos55.
 _:autos54 :paging _:autos56.
 _:autos54 <http://mylo.com/schema/HasAddress> _:autos55.
-_:autos54 <http://mylo.com/schema/HasGpsLatitude> 48.492728038807.
-_:autos54 <http://mylo.com/schema/HasGpsLongitude> -122.68249613088.
-_:autos54 <http://mylo.com/schema/HasLocationName> "Skyline Marina, Anacortes".
+_:autos54 <http://mylo.com/schema/HasGpsLatitude> 50.568262888002.
+_:autos54 <http://mylo.com/schema/HasGpsLongitude> -126.26609478945.
+_:autos54 <http://mylo.com/schema/HasLocationName> "Port Harvey Marine Resort, BC".
 _:autos54 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos54 a <http://mylo.com/schema/Location>.
-_:autos55 <http://mylo.com/schema/HasAddressProps> _:autos103.
-_:autos55 <http://mylo.com/schema/HasCity> "Anacortes".
-_:autos55 <http://mylo.com/schema/HasCountry> "United States".
-_:autos55 <http://mylo.com/schema/HasState> "WA".
+_:autos55 <http://mylo.com/schema/HasAddressProps> _:autos119.
 _:autos55 a <http://mylo.com/schema/Address>.
 _:autos55 a <http://mylo.com/schema/Location>.
 _:autos55 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos56 :next <https://graph.facebook.com/10150982384239645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos56 <http://mylo.com/schema/HasTimeValue> "2012-07-19T19:59:01+00:00"^^xsd:dateTime.
+_:autos56 :next <https://graph.facebook.com/10151024434614645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos56 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:49:25+00:00"^^xsd:dateTime.
 _:autos56 a <http://mylo.com/schema/Instant>.
 _:autos56 a <http://mylo.com/schema/TimePeriod>.
 _:autos57 :data _:autos58.
 _:autos57 :paging _:autos59.
 _:autos57 <http://mylo.com/schema/HasAddress> _:autos58.
-_:autos57 <http://mylo.com/schema/HasGpsLatitude> 48.60287835093.
-_:autos57 <http://mylo.com/schema/HasGpsLongitude> -123.17302850967.
-_:autos57 <http://mylo.com/schema/HasLocationName> "Henry Island SYC Out Station".
+_:autos57 <http://mylo.com/schema/HasGpsLatitude> 47.638688623047.
+_:autos57 <http://mylo.com/schema/HasGpsLongitude> -122.35717756682.
+_:autos57 <http://mylo.com/schema/HasLocationName> "How to Cook a Wolf".
 _:autos57 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos57 a <http://mylo.com/schema/Location>.
-_:autos58 <http://mylo.com/schema/HasAddressProps> _:autos104.
-_:autos58 <http://mylo.com/schema/HasCity> "Roche Harbor".
+_:autos58 <http://mylo.com/schema/HasAddressProps> _:autos120.
+_:autos58 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos58 <http://mylo.com/schema/HasCountry> "United States".
 _:autos58 <http://mylo.com/schema/HasState> "WA".
+_:autos58 <http://mylo.com/schema/HasStreet> "2208 Queen Anne Ave North".
 _:autos58 a <http://mylo.com/schema/Address>.
 _:autos58 a <http://mylo.com/schema/Location>.
-_:autos58 api:has api:id_10150982384239645_22981587.
-_:autos59 :next <https://graph.facebook.com/10150982384239645/comments?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=10150982384239645_22981587>.
-_:autos59 <http://mylo.com/schema/HasTimeValue> "2012-07-16T19:18:52+00:00"^^xsd:dateTime.
+_:autos58 api:has <http://facebook.mylo.com/1027747641#>.
+_:autos59 :next <https://graph.facebook.com/10151022654989645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos59 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:23:21+00:00"^^xsd:dateTime.
 _:autos59 a <http://mylo.com/schema/Instant>.
 _:autos59 a <http://mylo.com/schema/TimePeriod>.
 _:autos6 :data _:autos7.
 _:autos6 :paging _:autos8.
 _:autos6 <http://mylo.com/schema/HasAddress> _:autos7.
-_:autos6 <http://mylo.com/schema/HasGpsLatitude> 47.591426559761.
-_:autos6 <http://mylo.com/schema/HasGpsLongitude> -122.33252559661.
-_:autos6 <http://mylo.com/schema/HasLocationName> "Safeco Field".
+_:autos6 <http://mylo.com/schema/HasGpsLatitude> 46.035586297222.
+_:autos6 <http://mylo.com/schema/HasGpsLongitude> -118.37360423826.
+_:autos6 <http://mylo.com/schema/HasLocationName> "Northstar Winery".
 _:autos6 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos6 a <http://mylo.com/schema/Location>.
 _:autos60 :data _:autos61.
 _:autos60 :paging _:autos62.
 _:autos60 <http://mylo.com/schema/HasAddress> _:autos61.
-_:autos60 <http://mylo.com/schema/HasGpsLatitude> 49.62993684.
-_:autos60 <http://mylo.com/schema/HasGpsLongitude> -124.017304535.
-_:autos60 <http://mylo.com/schema/HasLocationName> "Garden Bay BC".
+_:autos60 <http://mylo.com/schema/HasGpsLatitude> 47.638066980721.
+_:autos60 <http://mylo.com/schema/HasGpsLongitude> -122.35712232333.
+_:autos60 <http://mylo.com/schema/HasLocationName> "Hilltop Ale House".
 _:autos60 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos60 a <http://mylo.com/schema/Location>.
-_:autos61 <http://mylo.com/schema/HasAddressProps> _:autos105.
+_:autos61 <http://mylo.com/schema/HasAddressProps> _:autos121.
+_:autos61 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos61 <http://mylo.com/schema/HasCountry> "United States".
+_:autos61 <http://mylo.com/schema/HasState> "WA".
+_:autos61 <http://mylo.com/schema/HasStreet> "2129 Queen Anne Ave N".
 _:autos61 a <http://mylo.com/schema/Address>.
 _:autos61 a <http://mylo.com/schema/Location>.
 _:autos61 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos62 :next <https://graph.facebook.com/10150975427369645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos62 <http://mylo.com/schema/HasTimeValue> "2012-07-14T19:46:54+00:00"^^xsd:dateTime.
+_:autos62 :next <https://graph.facebook.com/10150982384239645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos62 <http://mylo.com/schema/HasTimeValue> "2012-05-26T20:14:40+00:00"^^xsd:dateTime.
 _:autos62 a <http://mylo.com/schema/Instant>.
 _:autos62 a <http://mylo.com/schema/TimePeriod>.
 _:autos63 :data _:autos64.
 _:autos63 :paging _:autos65.
 _:autos63 <http://mylo.com/schema/HasAddress> _:autos64.
-_:autos63 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
-_:autos63 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
-_:autos63 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
+_:autos63 <http://mylo.com/schema/HasGpsLatitude> 48.533068253054.
+_:autos63 <http://mylo.com/schema/HasGpsLongitude> -123.00475938651.
+_:autos63 <http://mylo.com/schema/HasLocationName> "Seattle Yacht Club Friday Harbor Outstation".
 _:autos63 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos63 a <http://mylo.com/schema/Location>.
-_:autos64 <http://mylo.com/schema/HasAddressProps> _:autos106.
+_:autos64 <http://mylo.com/schema/HasAddressProps> _:autos122.
 _:autos64 a <http://mylo.com/schema/Address>.
 _:autos64 a <http://mylo.com/schema/Location>.
-_:autos64 api:has <http://facebook.mylo.com/1155075413#>.
-_:autos64 api:has <http://facebook.mylo.com/502760444#>.
-_:autos64 api:has <http://facebook.mylo.com/574734108#>.
-_:autos65 :next <https://graph.facebook.com/10150967551814645/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=502760444>.
-_:autos65 <http://mylo.com/schema/HasTimeValue> "2012-06-20T03:35:30+00:00"^^xsd:dateTime.
+_:autos64 api:has api:id_10150982384239645_22981587.
+_:autos65 :next <https://graph.facebook.com/10150982384239645/comments?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=10150982384239645_22981587>.
+_:autos65 <http://mylo.com/schema/HasTimeValue> "2012-05-20T06:04:01+00:00"^^xsd:dateTime.
 _:autos65 a <http://mylo.com/schema/Instant>.
 _:autos65 a <http://mylo.com/schema/TimePeriod>.
 _:autos66 :data _:autos67.
 _:autos66 :paging _:autos68.
 _:autos66 <http://mylo.com/schema/HasAddress> _:autos67.
-_:autos66 <http://mylo.com/schema/HasGpsLatitude> 50.060611008177.
-_:autos66 <http://mylo.com/schema/HasGpsLongitude> -124.9311661241.
-_:autos66 <http://mylo.com/schema/HasLocationName> "Cortes Island Seattle Yacht Club Out Station".
+_:autos66 <http://mylo.com/schema/HasGpsLatitude> 48.50989.
+_:autos66 <http://mylo.com/schema/HasGpsLongitude> -122.61492.
+_:autos66 <http://mylo.com/schema/HasLocationName> "Rock Fish Grill and Brew".
 _:autos66 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos66 a <http://mylo.com/schema/Location>.
-_:autos67 <http://mylo.com/schema/HasAddressProps> _:autos106.
+_:autos67 <http://mylo.com/schema/HasAddressProps> _:autos123.
+_:autos67 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos67 <http://mylo.com/schema/HasCountry> "United States".
+_:autos67 <http://mylo.com/schema/HasState> "WA".
 _:autos67 a <http://mylo.com/schema/Address>.
 _:autos67 a <http://mylo.com/schema/Location>.
 _:autos67 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos68 :next <https://graph.facebook.com/10150967551814645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos68 <http://mylo.com/schema/HasTimeValue> "2012-07-13T22:15:16+00:00"^^xsd:dateTime.
+_:autos68 :next <https://graph.facebook.com/10150975427369645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos68 <http://mylo.com/schema/HasTimeValue> "2012-05-03T21:07:12+00:00"^^xsd:dateTime.
 _:autos68 a <http://mylo.com/schema/Instant>.
 _:autos68 a <http://mylo.com/schema/TimePeriod>.
 _:autos69 :data _:autos70.
 _:autos69 :paging _:autos71.
 _:autos69 <http://mylo.com/schema/HasAddress> _:autos70.
-_:autos69 <http://mylo.com/schema/HasGpsLatitude> 50.10189098.
-_:autos69 <http://mylo.com/schema/HasGpsLongitude> -125.20203995.
-_:autos69 <http://mylo.com/schema/HasLocationName> "Taku Resort and Marina".
+_:autos69 <http://mylo.com/schema/HasGpsLatitude> 40.676618172137.
+_:autos69 <http://mylo.com/schema/HasGpsLongitude> -73.980106303924.
+_:autos69 <http://mylo.com/schema/HasLocationName> "Bierkraft".
 _:autos69 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos69 a <http://mylo.com/schema/Location>.
-_:autos7 <http://mylo.com/schema/HasAddressProps> _:autos99.
-_:autos7 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos7 <http://mylo.com/schema/HasAddressProps> _:autos106.
+_:autos7 <http://mylo.com/schema/HasCity> "College Place".
 _:autos7 <http://mylo.com/schema/HasCountry> "United States".
 _:autos7 <http://mylo.com/schema/HasState> "WA".
 _:autos7 a <http://mylo.com/schema/Address>.
 _:autos7 a <http://mylo.com/schema/Location>.
-_:autos7 api:has api:id_10151094993839645_23601659.
-_:autos70 <http://mylo.com/schema/HasAddressProps> _:autos107.
+_:autos7 api:has <http://facebook.mylo.com/1027747641#>.
+_:autos7 api:has <http://facebook.mylo.com/1186368430#>.
+_:autos70 <http://mylo.com/schema/HasAddressProps> _:autos124.
+_:autos70 <http://mylo.com/schema/HasCity> "Brooklyn".
+_:autos70 <http://mylo.com/schema/HasCountry> "United States".
+_:autos70 <http://mylo.com/schema/HasState> "NY".
+_:autos70 <http://mylo.com/schema/HasStreet> "191 5th Ave".
 _:autos70 a <http://mylo.com/schema/Address>.
 _:autos70 a <http://mylo.com/schema/Location>.
-_:autos70 api:has <http://facebook.mylo.com/500011583#>.
-_:autos71 :next <https://graph.facebook.com/10150954227569645/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=500011583>.
-_:autos71 <http://mylo.com/schema/HasTimeValue> "2012-06-26T20:03:33+00:00"^^xsd:dateTime.
+_:autos70 api:has <http://facebook.mylo.com/1155075413#>.
+_:autos70 api:has <http://facebook.mylo.com/502760444#>.
+_:autos70 api:has <http://facebook.mylo.com/574734108#>.
+_:autos71 :next <https://graph.facebook.com/10150967551814645/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=502760444>.
+_:autos71 <http://mylo.com/schema/HasTimeValue> "2012-05-03T01:10:24+00:00"^^xsd:dateTime.
 _:autos71 a <http://mylo.com/schema/Instant>.
 _:autos71 a <http://mylo.com/schema/TimePeriod>.
 _:autos72 :data _:autos73.
 _:autos72 :paging _:autos74.
 _:autos72 <http://mylo.com/schema/HasAddress> _:autos73.
-_:autos72 <http://mylo.com/schema/HasGpsLatitude> 51.654031743792.
-_:autos72 <http://mylo.com/schema/HasGpsLongitude> -128.12678020961.
-_:autos72 <http://mylo.com/schema/HasLocationName> "Pruth Bay, B.C.".
+_:autos72 <http://mylo.com/schema/HasGpsLatitude> 40.761268026311.
+_:autos72 <http://mylo.com/schema/HasGpsLongitude> -73.965743458651.
+_:autos72 <http://mylo.com/schema/HasLocationName> "Carriage House Pub On 59th".
 _:autos72 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos72 a <http://mylo.com/schema/Location>.
-_:autos73 <http://mylo.com/schema/HasAddressProps> _:autos108.
+_:autos73 <http://mylo.com/schema/HasAddressProps> _:autos125.
+_:autos73 <http://mylo.com/schema/HasCity> "New York".
+_:autos73 <http://mylo.com/schema/HasCountry> "United States".
+_:autos73 <http://mylo.com/schema/HasState> "NY".
 _:autos73 a <http://mylo.com/schema/Address>.
 _:autos73 a <http://mylo.com/schema/Location>.
-_:autos73 api:has <http://facebook.mylo.com/100001762424943#>.
-_:autos73 api:has <http://facebook.mylo.com/1186368430#>.
-_:autos74 :next <https://graph.facebook.com/10150954227569645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1186368430>.
-_:autos74 <http://mylo.com/schema/HasTimeValue> "2012-06-23T18:11:21+00:00"^^xsd:dateTime.
+_:autos73 api:has <http://facebook.mylo.com/1027747641#>.
+_:autos74 :next <https://graph.facebook.com/10150967551814645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos74 <http://mylo.com/schema/HasTimeValue> "2012-05-02T23:32:38+00:00"^^xsd:dateTime.
 _:autos74 a <http://mylo.com/schema/Instant>.
 _:autos74 a <http://mylo.com/schema/TimePeriod>.
 _:autos75 :data _:autos76.
 _:autos75 :paging _:autos77.
 _:autos75 <http://mylo.com/schema/HasAddress> _:autos76.
-_:autos75 <http://mylo.com/schema/HasGpsLatitude> 50.568262888002.
-_:autos75 <http://mylo.com/schema/HasGpsLongitude> -126.26609478945.
-_:autos75 <http://mylo.com/schema/HasLocationName> "Port Harvey Marine Resort, BC".
+_:autos75 <http://mylo.com/schema/HasGpsLatitude> 40.723594991161.
+_:autos75 <http://mylo.com/schema/HasGpsLongitude> -73.999877733181.
+_:autos75 <http://mylo.com/schema/HasLocationName> "Balthazar Soho".
 _:autos75 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos75 a <http://mylo.com/schema/Location>.
-_:autos76 <http://mylo.com/schema/HasAddressProps> _:autos109.
+_:autos76 <http://mylo.com/schema/HasAddressProps> _:autos126.
+_:autos76 <http://mylo.com/schema/HasCity> "New York".
+_:autos76 <http://mylo.com/schema/HasCountry> "United States".
+_:autos76 <http://mylo.com/schema/HasState> "NY".
 _:autos76 a <http://mylo.com/schema/Address>.
 _:autos76 a <http://mylo.com/schema/Location>.
-_:autos76 api:has <http://facebook.mylo.com/100001762424943#>.
-_:autos76 api:has <http://facebook.mylo.com/1186368430#>.
-_:autos77 :next <https://graph.facebook.com/10150954195749645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1186368430>.
-_:autos77 <http://mylo.com/schema/HasTimeValue> "2012-05-26T20:14:40+00:00"^^xsd:dateTime.
+_:autos76 api:has <http://facebook.mylo.com/500011583#>.
+_:autos77 :next <https://graph.facebook.com/10150954227569645/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=500011583>.
+_:autos77 <http://mylo.com/schema/HasTimeValue> "2012-08-26T00:17:01+00:00"^^xsd:dateTime.
 _:autos77 a <http://mylo.com/schema/Instant>.
 _:autos77 a <http://mylo.com/schema/TimePeriod>.
 _:autos78 :data _:autos79.
 _:autos78 :paging _:autos80.
 _:autos78 <http://mylo.com/schema/HasAddress> _:autos79.
-_:autos78 <http://mylo.com/schema/HasGpsLatitude> 48.533068253054.
-_:autos78 <http://mylo.com/schema/HasGpsLongitude> -123.00475938651.
-_:autos78 <http://mylo.com/schema/HasLocationName> "Seattle Yacht Club Friday Harbor Outstation".
+_:autos78 <http://mylo.com/schema/HasGpsLatitude> 46.064875084318.
+_:autos78 <http://mylo.com/schema/HasGpsLongitude> -118.34082803322.
+_:autos78 <http://mylo.com/schema/HasLocationName> "Saffron Mediterranean Kitchen".
 _:autos78 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos78 a <http://mylo.com/schema/Location>.
-_:autos79 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos79 <http://mylo.com/schema/HasAddressProps> _:autos105.
+_:autos79 <http://mylo.com/schema/HasCity> "Walla Walla".
+_:autos79 <http://mylo.com/schema/HasCountry> "United States".
+_:autos79 <http://mylo.com/schema/HasState> "WA".
+_:autos79 <http://mylo.com/schema/HasStreet> "125 W Alder St".
 _:autos79 a <http://mylo.com/schema/Address>.
 _:autos79 a <http://mylo.com/schema/Location>.
-_:autos79 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos79 api:has <http://facebook.mylo.com/27501545#>.
-_:autos8 :next <https://graph.facebook.com/10151094993839645/comments?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=10151094993839645_23601659>.
-_:autos8 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:49:25+00:00"^^xsd:dateTime.
+_:autos79 api:has <http://facebook.mylo.com/100001762424943#>.
+_:autos79 api:has <http://facebook.mylo.com/1186368430#>.
+_:autos8 :next <https://graph.facebook.com/10151116670249645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos8 <http://mylo.com/schema/HasTimeValue> "2012-08-25T17:32:21+00:00"^^xsd:dateTime.
 _:autos8 a <http://mylo.com/schema/Instant>.
 _:autos8 a <http://mylo.com/schema/TimePeriod>.
-_:autos80 :next <https://graph.facebook.com/10150915408164645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=27501545>.
-_:autos80 <http://mylo.com/schema/HasTimeValue> "2012-05-26T20:14:40+00:00"^^xsd:dateTime.
+_:autos80 :next <https://graph.facebook.com/10150954227569645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1186368430>.
+_:autos80 <http://mylo.com/schema/HasTimeValue> "2012-08-26T00:17:01+00:00"^^xsd:dateTime.
 _:autos80 a <http://mylo.com/schema/Instant>.
 _:autos80 a <http://mylo.com/schema/TimePeriod>.
 _:autos81 :data _:autos82.
 _:autos81 :paging _:autos83.
 _:autos81 <http://mylo.com/schema/HasAddress> _:autos82.
-_:autos81 <http://mylo.com/schema/HasGpsLatitude> 48.533068253054.
-_:autos81 <http://mylo.com/schema/HasGpsLongitude> -123.00475938651.
-_:autos81 <http://mylo.com/schema/HasLocationName> "Seattle Yacht Club Friday Harbor Outstation".
+_:autos81 <http://mylo.com/schema/HasGpsLatitude> 46.064875084318.
+_:autos81 <http://mylo.com/schema/HasGpsLongitude> -118.34082803322.
+_:autos81 <http://mylo.com/schema/HasLocationName> "Saffron Mediterranean Kitchen".
 _:autos81 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos81 a <http://mylo.com/schema/Location>.
-_:autos82 <http://mylo.com/schema/HasAddressProps> _:autos112.
+_:autos82 <http://mylo.com/schema/HasAddressProps> _:autos105.
+_:autos82 <http://mylo.com/schema/HasCity> "Walla Walla".
+_:autos82 <http://mylo.com/schema/HasCountry> "United States".
+_:autos82 <http://mylo.com/schema/HasState> "WA".
+_:autos82 <http://mylo.com/schema/HasStreet> "125 W Alder St".
 _:autos82 a <http://mylo.com/schema/Address>.
 _:autos82 a <http://mylo.com/schema/Location>.
-_:autos82 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos82 api:has <http://facebook.mylo.com/27501545#>.
-_:autos83 :next <https://graph.facebook.com/10150912526214645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=27501545>.
-_:autos83 <http://mylo.com/schema/HasTimeValue> "2012-05-20T06:04:01+00:00"^^xsd:dateTime.
+_:autos82 api:has <http://facebook.mylo.com/100001762424943#>.
+_:autos82 api:has <http://facebook.mylo.com/1186368430#>.
+_:autos83 :next <https://graph.facebook.com/10150954195749645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1186368430>.
+_:autos83 <http://mylo.com/schema/HasTimeValue> "2012-08-25T05:29:58+00:00"^^xsd:dateTime.
 _:autos83 a <http://mylo.com/schema/Instant>.
 _:autos83 a <http://mylo.com/schema/TimePeriod>.
 _:autos84 :data _:autos85.
 _:autos84 :paging _:autos86.
 _:autos84 <http://mylo.com/schema/HasAddress> _:autos85.
-_:autos84 <http://mylo.com/schema/HasGpsLatitude> 48.50989.
-_:autos84 <http://mylo.com/schema/HasGpsLongitude> -122.61492.
-_:autos84 <http://mylo.com/schema/HasLocationName> "Rock Fish Grill and Brew".
+_:autos84 <http://mylo.com/schema/HasGpsLatitude> 46.088075329157.
+_:autos84 <http://mylo.com/schema/HasGpsLongitude> -118.22445777055.
+_:autos84 <http://mylo.com/schema/HasLocationName> "Abeja".
 _:autos84 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos84 a <http://mylo.com/schema/Location>.
-_:autos85 <http://mylo.com/schema/HasAddressProps> _:autos113.
-_:autos85 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos85 <http://mylo.com/schema/HasAddressProps> _:autos108.
+_:autos85 <http://mylo.com/schema/HasCity> "Walla Walla".
 _:autos85 <http://mylo.com/schema/HasCountry> "United States".
 _:autos85 <http://mylo.com/schema/HasState> "WA".
+_:autos85 <http://mylo.com/schema/HasStreet> "2014 Mill Creek Road".
 _:autos85 a <http://mylo.com/schema/Address>.
 _:autos85 a <http://mylo.com/schema/Location>.
-_:autos85 api:has <http://facebook.mylo.com/509411970#>.
-_:autos86 :next <https://graph.facebook.com/10150895690524645/likes?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=509411970>.
-_:autos86 <http://mylo.com/schema/HasTimeValue> "2012-05-02T23:32:38+00:00"^^xsd:dateTime.
+_:autos85 api:has <http://facebook.mylo.com/1027747641#>.
+_:autos85 api:has <http://facebook.mylo.com/27501545#>.
+_:autos86 :next <https://graph.facebook.com/10150915408164645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=27501545>.
+_:autos86 <http://mylo.com/schema/HasTimeValue> "2012-08-25T05:29:58+00:00"^^xsd:dateTime.
 _:autos86 a <http://mylo.com/schema/Instant>.
 _:autos86 a <http://mylo.com/schema/TimePeriod>.
 _:autos87 :data _:autos88.
 _:autos87 :paging _:autos89.
 _:autos87 <http://mylo.com/schema/HasAddress> _:autos88.
-_:autos87 <http://mylo.com/schema/HasGpsLatitude> 40.723594991161.
-_:autos87 <http://mylo.com/schema/HasGpsLongitude> -73.999877733181.
-_:autos87 <http://mylo.com/schema/HasLocationName> "Balthazar Soho".
+_:autos87 <http://mylo.com/schema/HasGpsLatitude> 46.088075329157.
+_:autos87 <http://mylo.com/schema/HasGpsLongitude> -118.22445777055.
+_:autos87 <http://mylo.com/schema/HasLocationName> "Abeja".
 _:autos87 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos87 a <http://mylo.com/schema/Location>.
-_:autos88 <http://mylo.com/schema/HasAddressProps> _:autos116.
-_:autos88 <http://mylo.com/schema/HasCity> "New York".
+_:autos88 <http://mylo.com/schema/HasAddressProps> _:autos108.
+_:autos88 <http://mylo.com/schema/HasCity> "Walla Walla".
 _:autos88 <http://mylo.com/schema/HasCountry> "United States".
-_:autos88 <http://mylo.com/schema/HasState> "NY".
+_:autos88 <http://mylo.com/schema/HasState> "WA".
+_:autos88 <http://mylo.com/schema/HasStreet> "2014 Mill Creek Road".
 _:autos88 a <http://mylo.com/schema/Address>.
 _:autos88 a <http://mylo.com/schema/Location>.
 _:autos88 api:has <http://facebook.mylo.com/1027747641#>.
-_:autos89 :next <https://graph.facebook.com/10150895690524645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1027747641>.
-_:autos89 <http://mylo.com/schema/HasTimeValue> "2012-08-15T19:25:20+00:00"^^xsd:dateTime.
+_:autos88 api:has <http://facebook.mylo.com/27501545#>.
+_:autos89 :next <https://graph.facebook.com/10150912526214645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=27501545>.
+_:autos89 <http://mylo.com/schema/HasTimeValue> "2012-05-02T23:32:38+00:00"^^xsd:dateTime.
 _:autos89 a <http://mylo.com/schema/Instant>.
 _:autos89 a <http://mylo.com/schema/TimePeriod>.
 _:autos9 :data _:autos10.
 _:autos9 :paging _:autos11.
 _:autos9 <http://mylo.com/schema/HasAddress> _:autos10.
-_:autos9 <http://mylo.com/schema/HasGpsLatitude> 47.638688623047.
-_:autos9 <http://mylo.com/schema/HasGpsLongitude> -122.35717756682.
-_:autos9 <http://mylo.com/schema/HasLocationName> "How to Cook a Wolf".
+_:autos9 <http://mylo.com/schema/HasGpsLatitude> 46.085584666667.
+_:autos9 <http://mylo.com/schema/HasGpsLongitude> -118.25003546667.
+_:autos9 <http://mylo.com/schema/HasLocationName> "K Vinters".
 _:autos9 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos9 a <http://mylo.com/schema/Location>.
 _:autos90 :data _:autos91.
 _:autos90 :paging _:autos92.
 _:autos90 <http://mylo.com/schema/HasAddress> _:autos91.
-_:autos90 <http://mylo.com/schema/HasGpsLatitude> 47.591426559761.
-_:autos90 <http://mylo.com/schema/HasGpsLongitude> -122.33252559661.
-_:autos90 <http://mylo.com/schema/HasLocationName> "Safeco Field".
+_:autos90 <http://mylo.com/schema/HasGpsLatitude> 40.723594991161.
+_:autos90 <http://mylo.com/schema/HasGpsLongitude> -73.999877733181.
+_:autos90 <http://mylo.com/schema/HasLocationName> "Balthazar Soho".
 _:autos90 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos90 a <http://mylo.com/schema/Location>.
-_:autos91 <http://mylo.com/schema/HasAddressProps> _:autos99.
-_:autos91 <http://mylo.com/schema/HasCity> "Seattle".
+_:autos91 <http://mylo.com/schema/HasAddressProps> _:autos126.
+_:autos91 <http://mylo.com/schema/HasCity> "New York".
 _:autos91 <http://mylo.com/schema/HasCountry> "United States".
-_:autos91 <http://mylo.com/schema/HasState> "WA".
+_:autos91 <http://mylo.com/schema/HasState> "NY".
 _:autos91 a <http://mylo.com/schema/Address>.
 _:autos91 a <http://mylo.com/schema/Location>.
-_:autos91 api:has <http://facebook.mylo.com/100001762424943#>.
-_:autos91 api:has <http://facebook.mylo.com/1186368430#>.
-_:autos92 :next <https://graph.facebook.com/10150802545594645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1186368430>.
-_:autos92 <http://mylo.com/schema/HasTimeValue> "2012-08-09T22:00:57+00:00"^^xsd:dateTime.
+_:autos91 api:has <http://facebook.mylo.com/509411970#>.
+_:autos92 :next <https://graph.facebook.com/10150895690524645/likes?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=509411970>.
+_:autos92 <http://mylo.com/schema/HasTimeValue> "2012-08-15T19:25:20+00:00"^^xsd:dateTime.
 _:autos92 a <http://mylo.com/schema/Instant>.
 _:autos92 a <http://mylo.com/schema/TimePeriod>.
 _:autos93 :data _:autos94.
 _:autos93 :paging _:autos95.
 _:autos93 <http://mylo.com/schema/HasAddress> _:autos94.
-_:autos93 <http://mylo.com/schema/HasGpsLatitude> 47.69080660668.
-_:autos93 <http://mylo.com/schema/HasGpsLongitude> -122.40337348427.
-_:autos93 <http://mylo.com/schema/HasLocationName> "Golden Gardens Park".
+_:autos93 <http://mylo.com/schema/HasGpsLatitude> 47.591426559761.
+_:autos93 <http://mylo.com/schema/HasGpsLongitude> -122.33252559661.
+_:autos93 <http://mylo.com/schema/HasLocationName> "Safeco Field".
 _:autos93 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos93 a <http://mylo.com/schema/Location>.
-_:autos94 <http://mylo.com/schema/HasAddressProps> _:autos100.
+_:autos94 <http://mylo.com/schema/HasAddressProps> _:autos109.
 _:autos94 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos94 <http://mylo.com/schema/HasCountry> "United States".
 _:autos94 <http://mylo.com/schema/HasState> "WA".
-_:autos94 <http://mylo.com/schema/HasStreet> "8498 Seaview Pl. NW".
 _:autos94 a <http://mylo.com/schema/Address>.
 _:autos94 a <http://mylo.com/schema/Location>.
-_:autos94 api:has api:id_10150802545594645_22237903.
-_:autos95 :next <https://graph.facebook.com/10150802545594645/comments?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=10150802545594645_22237903>.
-_:autos95 <http://mylo.com/schema/HasTimeValue> "2012-08-03T23:36:11+00:00"^^xsd:dateTime.
+_:autos94 api:has <http://facebook.mylo.com/1027747641#>.
+_:autos95 :next <https://graph.facebook.com/10150895690524645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1027747641>.
+_:autos95 <http://mylo.com/schema/HasTimeValue> "2012-08-15T19:25:20+00:00"^^xsd:dateTime.
 _:autos95 a <http://mylo.com/schema/Instant>.
 _:autos95 a <http://mylo.com/schema/TimePeriod>.
 _:autos96 :data _:autos97.
 _:autos96 :paging _:autos98.
 _:autos96 <http://mylo.com/schema/HasAddress> _:autos97.
-_:autos96 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
-_:autos96 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
-_:autos96 <http://mylo.com/schema/HasLocationName> "Anthony's".
+_:autos96 <http://mylo.com/schema/HasGpsLatitude> 47.591426559761.
+_:autos96 <http://mylo.com/schema/HasGpsLongitude> -122.33252559661.
+_:autos96 <http://mylo.com/schema/HasLocationName> "Safeco Field".
 _:autos96 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos96 a <http://mylo.com/schema/Location>.
-_:autos97 <http://mylo.com/schema/HasAddressProps> _:autos101.
-_:autos97 <http://mylo.com/schema/HasCity> "Anacortes".
+_:autos97 <http://mylo.com/schema/HasAddressProps> _:autos109.
+_:autos97 <http://mylo.com/schema/HasCity> "Seattle".
 _:autos97 <http://mylo.com/schema/HasCountry> "United States".
 _:autos97 <http://mylo.com/schema/HasState> "WA".
 _:autos97 a <http://mylo.com/schema/Address>.
 _:autos97 a <http://mylo.com/schema/Location>.
+_:autos97 api:has <http://facebook.mylo.com/100001762424943#>.
 _:autos97 api:has <http://facebook.mylo.com/1186368430#>.
-_:autos98 :next <https://graph.facebook.com/10150790427979645/tags?access_token=AAAFpEKIeHg0BAMZAn9VJlh3hZCbUa2V7gKHVbJ4Ka9sOFV1ZAnDFzPMKIDfW2v4H0X0adQM6ZBdYwu3HamP678gVDFLGhoXEf2U8RYiqOQZDZD&limit=25&offset=25&__after_id=1186368430>.
-_:autos98 <http://mylo.com/schema/HasTimeValue> "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
+_:autos98 :next <https://graph.facebook.com/10150802545594645/tags?access_token=AAAFpEKIeHg0BALxxy6pPWH03awQUX9BdZB8ONxwUQ4ZCXUFfVB03O0CNGBoWc3ycQMDkxcUJFU8wc6daNE5x6dFnf9VbNtnw67kINXvwZDZD&limit=25&offset=25&__after_id=1186368430>.
+_:autos98 <http://mylo.com/schema/HasTimeValue> "2012-06-14T00:49:25+00:00"^^xsd:dateTime.
 _:autos98 a <http://mylo.com/schema/Instant>.
 _:autos98 a <http://mylo.com/schema/TimePeriod>.
-_:autos99 :city "Seattle".
-_:autos99 :country "United States".
-_:autos99 :latitude 47.591426559761.
-_:autos99 :longitude -122.33252559661.
-_:autos99 :state "WA".
+_:autos99 :data _:autos100.
+_:autos99 :paging _:autos101.
 _:autos99 <http://mylo.com/schema/HasAddress> _:autos100.
-_:autos99 <http://mylo.com/schema/HasGpsLatitude> 48.512530981733.
-_:autos99 <http://mylo.com/schema/HasGpsLongitude> -122.6095157382.
-_:autos99 <http://mylo.com/schema/HasLocationName> "Anthony's".
+_:autos99 <http://mylo.com/schema/HasGpsLatitude> 47.638688623047.
+_:autos99 <http://mylo.com/schema/HasGpsLongitude> -122.35717756682.
+_:autos99 <http://mylo.com/schema/HasLocationName> "How to Cook a Wolf".
 _:autos99 a <http://mylo.com/schema/GeographicalPoint>.
 _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/#> :data _:autos1.
@@ -1103,58 +1184,18 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/100001762424943#> a user:type.
 <http://facebook.mylo.com/100001762424943#> a <http://mylo.com/schema/FacebookPerson>.
 <http://facebook.mylo.com/100001762424943#> a <http://mylo.com/schema/Person>.
-<http://facebook.mylo.com/10150761216189645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
-<http://facebook.mylo.com/10150761216189645#> checkin:created_time "2012-04-24T20:53:37+00:00"^^xsd:dateTime.
-<http://facebook.mylo.com/10150761216189645#> checkin:from <http://facebook.mylo.com/817464644#>.
-<http://facebook.mylo.com/10150761216189645#> checkin:id "10150761216189645".
-<http://facebook.mylo.com/10150761216189645#> checkin:place <http://facebook.mylo.com/144301718966402#>.
-<http://facebook.mylo.com/10150761216189645#> <http://mylo.com/schema/HasLocation> _:autos162.
-<http://facebook.mylo.com/10150761216189645#> <http://mylo.com/schema/HasSourceId> "10150761216189645".
-<http://facebook.mylo.com/10150761216189645#> <http://mylo.com/schema/HasTimePeriod> _:autos161.
-<http://facebook.mylo.com/10150761216189645#> a <http://mylo.com/schema/Activity>.
-<http://facebook.mylo.com/10150761216189645#> a <http://mylo.com/schema/FacebookCheckin>.
-<http://facebook.mylo.com/10150763349429645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
-<http://facebook.mylo.com/10150763349429645#> checkin:created_time "2012-04-25T16:42:48+00:00"^^xsd:dateTime.
-<http://facebook.mylo.com/10150763349429645#> checkin:from <http://facebook.mylo.com/817464644#>.
-<http://facebook.mylo.com/10150763349429645#> checkin:id "10150763349429645".
-<http://facebook.mylo.com/10150763349429645#> checkin:place <http://facebook.mylo.com/161034467256219#>.
-<http://facebook.mylo.com/10150763349429645#> <http://mylo.com/schema/HasLocation> _:autos159.
-<http://facebook.mylo.com/10150763349429645#> <http://mylo.com/schema/HasSourceId> "10150763349429645".
-<http://facebook.mylo.com/10150763349429645#> <http://mylo.com/schema/HasTimePeriod> _:autos158.
-<http://facebook.mylo.com/10150763349429645#> a <http://mylo.com/schema/Activity>.
-<http://facebook.mylo.com/10150763349429645#> a <http://mylo.com/schema/FacebookCheckin>.
-<http://facebook.mylo.com/10150766435094645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
-<http://facebook.mylo.com/10150766435094645#> checkin:created_time "2012-04-26T19:26:40+00:00"^^xsd:dateTime.
-<http://facebook.mylo.com/10150766435094645#> checkin:from <http://facebook.mylo.com/817464644#>.
-<http://facebook.mylo.com/10150766435094645#> checkin:id "10150766435094645".
-<http://facebook.mylo.com/10150766435094645#> checkin:place <http://facebook.mylo.com/221375044542616#>.
-<http://facebook.mylo.com/10150766435094645#> <http://mylo.com/schema/HasLocation> _:autos156.
-<http://facebook.mylo.com/10150766435094645#> <http://mylo.com/schema/HasSourceId> "10150766435094645".
-<http://facebook.mylo.com/10150766435094645#> <http://mylo.com/schema/HasTimePeriod> _:autos155.
-<http://facebook.mylo.com/10150766435094645#> a <http://mylo.com/schema/Activity>.
-<http://facebook.mylo.com/10150766435094645#> a <http://mylo.com/schema/FacebookCheckin>.
-<http://facebook.mylo.com/10150769382244645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
-<http://facebook.mylo.com/10150769382244645#> checkin:created_time "2012-04-27T20:08:14+00:00"^^xsd:dateTime.
-<http://facebook.mylo.com/10150769382244645#> checkin:from <http://facebook.mylo.com/817464644#>.
-<http://facebook.mylo.com/10150769382244645#> checkin:id "10150769382244645".
-<http://facebook.mylo.com/10150769382244645#> checkin:place <http://facebook.mylo.com/197458083612822#>.
-<http://facebook.mylo.com/10150769382244645#> <http://mylo.com/schema/HasLocation> _:autos153.
-<http://facebook.mylo.com/10150769382244645#> <http://mylo.com/schema/HasSourceId> "10150769382244645".
-<http://facebook.mylo.com/10150769382244645#> <http://mylo.com/schema/HasTimePeriod> _:autos152.
-<http://facebook.mylo.com/10150769382244645#> a <http://mylo.com/schema/Activity>.
-<http://facebook.mylo.com/10150769382244645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150790427979645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
 <http://facebook.mylo.com/10150790427979645#> checkin:created_time "2012-05-02T23:32:38+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10150790427979645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150790427979645#> checkin:id "10150790427979645".
 <http://facebook.mylo.com/10150790427979645#> checkin:place <http://facebook.mylo.com/383402571681831#>.
-<http://facebook.mylo.com/10150790427979645#> checkin:tags _:autos96.
-<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasLocation> _:autos150.
-<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasLocation> _:autos87.
+<http://facebook.mylo.com/10150790427979645#> checkin:tags _:autos102.
+<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasLocation> _:autos75.
+<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasLocation> _:autos90.
 <http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasPersonCheckinTag> "Facebook User".
 <http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasSourceId> "10150790427979645".
-<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasTimePeriod> _:autos149.
-<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasTimePeriod> _:autos86.
+<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasTimePeriod> _:autos74.
+<http://facebook.mylo.com/10150790427979645#> <http://mylo.com/schema/HasTimePeriod> _:autos89.
 <http://facebook.mylo.com/10150790427979645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150790427979645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150792301729645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
@@ -1162,42 +1203,42 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10150792301729645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150792301729645#> checkin:id "10150792301729645".
 <http://facebook.mylo.com/10150792301729645#> checkin:place <http://facebook.mylo.com/226922557416444#>.
-<http://facebook.mylo.com/10150792301729645#> <http://mylo.com/schema/HasLocation> _:autos147.
+<http://facebook.mylo.com/10150792301729645#> <http://mylo.com/schema/HasLocation> _:autos72.
 <http://facebook.mylo.com/10150792301729645#> <http://mylo.com/schema/HasSourceId> "10150792301729645".
-<http://facebook.mylo.com/10150792301729645#> <http://mylo.com/schema/HasTimePeriod> _:autos146.
+<http://facebook.mylo.com/10150792301729645#> <http://mylo.com/schema/HasTimePeriod> _:autos71.
 <http://facebook.mylo.com/10150792301729645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150792301729645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150802545594645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
-<http://facebook.mylo.com/10150802545594645#> checkin:comments _:autos93.
+<http://facebook.mylo.com/10150802545594645#> checkin:comments _:autos99.
 <http://facebook.mylo.com/10150802545594645#> checkin:created_time "2012-05-03T21:07:12+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10150802545594645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150802545594645#> checkin:id "10150802545594645".
 <http://facebook.mylo.com/10150802545594645#> checkin:place <http://facebook.mylo.com/122324244475694#>.
-<http://facebook.mylo.com/10150802545594645#> checkin:tags _:autos90.
-<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasLocation> _:autos144.
-<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasLocation> _:autos21.
-<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasLocation> _:autos24.
+<http://facebook.mylo.com/10150802545594645#> checkin:tags _:autos96.
+<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasLocation> _:autos111.
+<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasLocation> _:autos114.
+<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasLocation> _:autos69.
 <http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasPersonCheckinTag> "Aaron Holm".
 <http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasSourceId> "10150802545594645".
-<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasTimePeriod> _:autos143.
-<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasTimePeriod> _:autos20.
-<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasTimePeriod> _:autos23.
+<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasTimePeriod> _:autos110.
+<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasTimePeriod> _:autos113.
+<http://facebook.mylo.com/10150802545594645#> <http://mylo.com/schema/HasTimePeriod> _:autos68.
 <http://facebook.mylo.com/10150802545594645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150802545594645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150895690524645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
 <http://facebook.mylo.com/10150895690524645#> checkin:created_time "2012-05-20T06:04:01+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10150895690524645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150895690524645#> checkin:id "10150895690524645".
-<http://facebook.mylo.com/10150895690524645#> checkin:likes _:autos84.
+<http://facebook.mylo.com/10150895690524645#> checkin:likes _:autos90.
 <http://facebook.mylo.com/10150895690524645#> checkin:message "Listening to the excellent CD Woodbury band".
 <http://facebook.mylo.com/10150895690524645#> checkin:place <http://facebook.mylo.com/174046145986212#>.
-<http://facebook.mylo.com/10150895690524645#> checkin:tags _:autos87.
-<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasLocation> _:autos141.
-<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasLocation> _:autos84.
+<http://facebook.mylo.com/10150895690524645#> checkin:tags _:autos93.
+<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasLocation> _:autos174.
+<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasLocation> _:autos66.
 <http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasSourceId> "10150895690524645".
-<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasTimePeriod> _:autos140.
-<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasTimePeriod> _:autos83.
+<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasTimePeriod> _:autos173.
+<http://facebook.mylo.com/10150895690524645#> <http://mylo.com/schema/HasTimePeriod> _:autos65.
 <http://facebook.mylo.com/10150895690524645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150895690524645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150912526214645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
@@ -1205,15 +1246,15 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10150912526214645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150912526214645#> checkin:id "10150912526214645".
 <http://facebook.mylo.com/10150912526214645#> checkin:place <http://facebook.mylo.com/247266025305464#>.
-<http://facebook.mylo.com/10150912526214645#> checkin:tags _:autos81.
-<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasLocation> _:autos138.
-<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasLocation> _:autos78.
-<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasLocation> _:autos81.
+<http://facebook.mylo.com/10150912526214645#> checkin:tags _:autos87.
+<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasLocation> _:autos168.
+<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasLocation> _:autos171.
+<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasLocation> _:autos63.
 <http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasSourceId> "10150912526214645".
-<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasTimePeriod> _:autos137.
-<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasTimePeriod> _:autos77.
-<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasTimePeriod> _:autos80.
+<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasTimePeriod> _:autos167.
+<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasTimePeriod> _:autos170.
+<http://facebook.mylo.com/10150912526214645#> <http://mylo.com/schema/HasTimePeriod> _:autos62.
 <http://facebook.mylo.com/10150912526214645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150912526214645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150915408164645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
@@ -1221,15 +1262,15 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10150915408164645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150915408164645#> checkin:id "10150915408164645".
 <http://facebook.mylo.com/10150915408164645#> checkin:place <http://facebook.mylo.com/135371579873516#>.
-<http://facebook.mylo.com/10150915408164645#> checkin:tags _:autos78.
-<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasLocation> _:autos105.
-<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasLocation> _:autos48.
-<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasLocation> _:autos51.
+<http://facebook.mylo.com/10150915408164645#> checkin:tags _:autos84.
+<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasLocation> _:autos138.
+<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasLocation> _:autos141.
+<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasLocation> _:autos30.
 <http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasSourceId> "10150915408164645".
-<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasTimePeriod> _:autos104.
-<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasTimePeriod> _:autos47.
-<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasTimePeriod> _:autos50.
+<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasTimePeriod> _:autos137.
+<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasTimePeriod> _:autos140.
+<http://facebook.mylo.com/10150915408164645#> <http://mylo.com/schema/HasTimePeriod> _:autos29.
 <http://facebook.mylo.com/10150915408164645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150915408164645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150954195749645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
@@ -1237,47 +1278,47 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10150954195749645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150954195749645#> checkin:id "10150954195749645".
 <http://facebook.mylo.com/10150954195749645#> checkin:place <http://facebook.mylo.com/113807861982871#>.
-<http://facebook.mylo.com/10150954195749645#> checkin:tags _:autos75.
-<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasLocation> _:autos135.
-<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasLocation> _:autos15.
-<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasLocation> _:autos18.
+<http://facebook.mylo.com/10150954195749645#> checkin:tags _:autos81.
+<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasLocation> _:autos105.
+<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasLocation> _:autos108.
+<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasLocation> _:autos60.
 <http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasPersonCheckinTag> "Aaron Holm".
 <http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasSourceId> "10150954195749645".
-<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasTimePeriod> _:autos134.
-<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasTimePeriod> _:autos14.
-<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasTimePeriod> _:autos17.
+<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasTimePeriod> _:autos104.
+<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasTimePeriod> _:autos107.
+<http://facebook.mylo.com/10150954195749645#> <http://mylo.com/schema/HasTimePeriod> _:autos59.
 <http://facebook.mylo.com/10150954195749645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150954195749645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150954227569645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
 <http://facebook.mylo.com/10150954227569645#> checkin:created_time "2012-06-14T00:49:25+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10150954227569645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150954227569645#> checkin:id "10150954227569645".
-<http://facebook.mylo.com/10150954227569645#> checkin:likes _:autos69.
+<http://facebook.mylo.com/10150954227569645#> checkin:likes _:autos75.
 <http://facebook.mylo.com/10150954227569645#> checkin:place <http://facebook.mylo.com/124817720286#>.
-<http://facebook.mylo.com/10150954227569645#> checkin:tags _:autos72.
-<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasLocation> _:autos12.
-<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasLocation> _:autos132.
-<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasLocation> _:autos9.
+<http://facebook.mylo.com/10150954227569645#> checkin:tags _:autos78.
+<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasLocation> _:autos102.
+<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasLocation> _:autos57.
+<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasLocation> _:autos99.
 <http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasPersonCheckinTag> "Aaron Holm".
 <http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasSourceId> "10150954227569645".
-<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasTimePeriod> _:autos11.
-<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasTimePeriod> _:autos131.
-<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasTimePeriod> _:autos8.
+<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasTimePeriod> _:autos101.
+<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasTimePeriod> _:autos56.
+<http://facebook.mylo.com/10150954227569645#> <http://mylo.com/schema/HasTimePeriod> _:autos98.
 <http://facebook.mylo.com/10150954227569645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150954227569645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150967551814645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
 <http://facebook.mylo.com/10150967551814645#> checkin:created_time "2012-06-20T03:35:30+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10150967551814645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150967551814645#> checkin:id "10150967551814645".
-<http://facebook.mylo.com/10150967551814645#> checkin:likes _:autos63.
+<http://facebook.mylo.com/10150967551814645#> checkin:likes _:autos69.
 <http://facebook.mylo.com/10150967551814645#> checkin:place <http://facebook.mylo.com/263545903768639#>.
-<http://facebook.mylo.com/10150967551814645#> checkin:tags _:autos66.
-<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasLocation> _:autos120.
-<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasLocation> _:autos66.
+<http://facebook.mylo.com/10150967551814645#> checkin:tags _:autos72.
+<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasLocation> _:autos156.
+<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasLocation> _:autos45.
 <http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasSourceId> "10150967551814645".
-<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasTimePeriod> _:autos119.
-<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasTimePeriod> _:autos65.
+<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasTimePeriod> _:autos155.
+<http://facebook.mylo.com/10150967551814645#> <http://mylo.com/schema/HasTimePeriod> _:autos44.
 <http://facebook.mylo.com/10150967551814645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150967551814645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150975427369645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
@@ -1285,28 +1326,28 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10150975427369645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150975427369645#> checkin:id "10150975427369645".
 <http://facebook.mylo.com/10150975427369645#> checkin:place <http://facebook.mylo.com/363340950385817#>.
-<http://facebook.mylo.com/10150975427369645#> checkin:tags _:autos60.
-<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasLocation> _:autos129.
-<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasLocation> _:autos75.
+<http://facebook.mylo.com/10150975427369645#> checkin:tags _:autos66.
+<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasLocation> _:autos165.
+<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasLocation> _:autos54.
 <http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasSourceId> "10150975427369645".
-<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasTimePeriod> _:autos128.
-<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasTimePeriod> _:autos74.
+<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasTimePeriod> _:autos164.
+<http://facebook.mylo.com/10150975427369645#> <http://mylo.com/schema/HasTimePeriod> _:autos53.
 <http://facebook.mylo.com/10150975427369645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150975427369645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10150982384239645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
-<http://facebook.mylo.com/10150982384239645#> checkin:comments _:autos57.
+<http://facebook.mylo.com/10150982384239645#> checkin:comments _:autos63.
 <http://facebook.mylo.com/10150982384239645#> checkin:created_time "2012-06-26T20:03:33+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10150982384239645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10150982384239645#> checkin:id "10150982384239645".
 <http://facebook.mylo.com/10150982384239645#> checkin:place <http://facebook.mylo.com/469504696412962#>.
-<http://facebook.mylo.com/10150982384239645#> checkin:tags _:autos54.
-<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasLocation> _:autos126.
-<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasLocation> _:autos72.
+<http://facebook.mylo.com/10150982384239645#> checkin:tags _:autos60.
+<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasLocation> _:autos162.
+<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasLocation> _:autos51.
 <http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasSourceId> "10150982384239645".
-<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasTimePeriod> _:autos125.
-<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasTimePeriod> _:autos71.
+<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasTimePeriod> _:autos161.
+<http://facebook.mylo.com/10150982384239645#> <http://mylo.com/schema/HasTimePeriod> _:autos50.
 <http://facebook.mylo.com/10150982384239645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10150982384239645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151022654989645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
@@ -1315,28 +1356,28 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10151022654989645#> checkin:id "10151022654989645".
 <http://facebook.mylo.com/10151022654989645#> checkin:message "Fishing Hoskyn Channel".
 <http://facebook.mylo.com/10151022654989645#> checkin:place <http://facebook.mylo.com/163527793722850#>.
-<http://facebook.mylo.com/10151022654989645#> checkin:tags _:autos51.
-<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasLocation> _:autos123.
-<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasLocation> _:autos69.
+<http://facebook.mylo.com/10151022654989645#> checkin:tags _:autos57.
+<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasLocation> _:autos159.
+<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasLocation> _:autos48.
 <http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasSourceId> "10151022654989645".
-<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasTimePeriod> _:autos122.
-<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasTimePeriod> _:autos68.
+<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasTimePeriod> _:autos158.
+<http://facebook.mylo.com/10151022654989645#> <http://mylo.com/schema/HasTimePeriod> _:autos47.
 <http://facebook.mylo.com/10151022654989645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151022654989645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151024434614645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
 <http://facebook.mylo.com/10151024434614645#> checkin:created_time "2012-07-14T19:46:54+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10151024434614645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151024434614645#> checkin:id "10151024434614645".
-<http://facebook.mylo.com/10151024434614645#> checkin:likes _:autos45.
+<http://facebook.mylo.com/10151024434614645#> checkin:likes _:autos51.
 <http://facebook.mylo.com/10151024434614645#> checkin:place <http://facebook.mylo.com/263545903768639#>.
-<http://facebook.mylo.com/10151024434614645#> checkin:tags _:autos48.
-<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasLocation> _:autos117.
-<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasLocation> _:autos63.
+<http://facebook.mylo.com/10151024434614645#> checkin:tags _:autos54.
+<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasLocation> _:autos153.
+<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasLocation> _:autos42.
 <http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasSourceId> "10151024434614645".
-<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasTimePeriod> _:autos116.
-<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasTimePeriod> _:autos62.
+<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasTimePeriod> _:autos152.
+<http://facebook.mylo.com/10151024434614645#> <http://mylo.com/schema/HasTimePeriod> _:autos41.
 <http://facebook.mylo.com/10151024434614645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151024434614645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151028709299645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
@@ -1344,45 +1385,45 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10151028709299645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151028709299645#> checkin:id "10151028709299645".
 <http://facebook.mylo.com/10151028709299645#> checkin:place <http://facebook.mylo.com/125752900828507#>.
-<http://facebook.mylo.com/10151028709299645#> checkin:tags _:autos42.
-<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasLocation> _:autos114.
-<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasLocation> _:autos60.
+<http://facebook.mylo.com/10151028709299645#> checkin:tags _:autos48.
+<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasLocation> _:autos150.
+<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasLocation> _:autos39.
 <http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasSourceId> "10151028709299645".
-<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasTimePeriod> _:autos113.
-<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasTimePeriod> _:autos59.
+<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasTimePeriod> _:autos149.
+<http://facebook.mylo.com/10151028709299645#> <http://mylo.com/schema/HasTimePeriod> _:autos38.
 <http://facebook.mylo.com/10151028709299645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151028709299645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151035258439645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
-<http://facebook.mylo.com/10151035258439645#> checkin:comments _:autos39.
+<http://facebook.mylo.com/10151035258439645#> checkin:comments _:autos45.
 <http://facebook.mylo.com/10151035258439645#> checkin:created_time "2012-07-19T19:59:01+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10151035258439645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151035258439645#> checkin:id "10151035258439645".
-<http://facebook.mylo.com/10151035258439645#> checkin:likes _:autos33.
+<http://facebook.mylo.com/10151035258439645#> checkin:likes _:autos39.
 <http://facebook.mylo.com/10151035258439645#> checkin:place <http://facebook.mylo.com/215399528476163#>.
-<http://facebook.mylo.com/10151035258439645#> checkin:tags _:autos36.
-<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasLocation> _:autos111.
-<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasLocation> _:autos57.
+<http://facebook.mylo.com/10151035258439645#> checkin:tags _:autos42.
+<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasLocation> _:autos147.
+<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasLocation> _:autos36.
 <http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasSourceId> "10151035258439645".
-<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasTimePeriod> _:autos110.
-<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasTimePeriod> _:autos56.
+<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasTimePeriod> _:autos146.
+<http://facebook.mylo.com/10151035258439645#> <http://mylo.com/schema/HasTimePeriod> _:autos35.
 <http://facebook.mylo.com/10151035258439645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151035258439645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151052619294645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
 <http://facebook.mylo.com/10151052619294645#> checkin:created_time "2012-07-27T16:59:12+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10151052619294645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151052619294645#> checkin:id "10151052619294645".
-<http://facebook.mylo.com/10151052619294645#> checkin:likes _:autos27.
+<http://facebook.mylo.com/10151052619294645#> checkin:likes _:autos33.
 <http://facebook.mylo.com/10151052619294645#> checkin:message "Hoping it warms up a bit".
 <http://facebook.mylo.com/10151052619294645#> checkin:place <http://facebook.mylo.com/201320756545202#>.
-<http://facebook.mylo.com/10151052619294645#> checkin:tags _:autos30.
-<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasLocation> _:autos108.
-<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasLocation> _:autos54.
+<http://facebook.mylo.com/10151052619294645#> checkin:tags _:autos36.
+<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasLocation> _:autos144.
+<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasLocation> _:autos33.
 <http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasSourceId> "10151052619294645".
-<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasTimePeriod> _:autos107.
-<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasTimePeriod> _:autos53.
+<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasTimePeriod> _:autos143.
+<http://facebook.mylo.com/10151052619294645#> <http://mylo.com/schema/HasTimePeriod> _:autos32.
 <http://facebook.mylo.com/10151052619294645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151052619294645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151053573269645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
@@ -1390,19 +1431,19 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10151053573269645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151053573269645#> checkin:id "10151053573269645".
 <http://facebook.mylo.com/10151053573269645#> checkin:place <http://facebook.mylo.com/135371579873516#>.
-<http://facebook.mylo.com/10151053573269645#> checkin:tags _:autos24.
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos102.
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos39.
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos42.
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos45.
+<http://facebook.mylo.com/10151053573269645#> checkin:tags _:autos30.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos129.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos132.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos135.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasLocation> _:autos27.
 <http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasPersonCheckinTag> "David de Regt".
 <http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasPersonCheckinTag> "Hannah Short".
 <http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasSourceId> "10151053573269645".
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos101.
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos38.
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos41.
-<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos44.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos128.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos131.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos134.
+<http://facebook.mylo.com/10151053573269645#> <http://mylo.com/schema/HasTimePeriod> _:autos26.
 <http://facebook.mylo.com/10151053573269645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151053573269645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151068741729645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
@@ -1410,47 +1451,99 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/10151068741729645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151068741729645#> checkin:id "10151068741729645".
 <http://facebook.mylo.com/10151068741729645#> checkin:place <http://facebook.mylo.com/193906100621293#>.
-<http://facebook.mylo.com/10151068741729645#> checkin:tags _:autos21.
-<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasLocation> _:autos27.
-<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasLocation> _:autos96.
+<http://facebook.mylo.com/10151068741729645#> checkin:tags _:autos27.
+<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasLocation> _:autos117.
+<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasLocation> _:autos21.
 <http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasSourceId> "10151068741729645".
-<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasTimePeriod> _:autos26.
-<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasTimePeriod> _:autos95.
+<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasTimePeriod> _:autos116.
+<http://facebook.mylo.com/10151068741729645#> <http://mylo.com/schema/HasTimePeriod> _:autos20.
 <http://facebook.mylo.com/10151068741729645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151068741729645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151081798109645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
-<http://facebook.mylo.com/10151081798109645#> checkin:comments _:autos12.
+<http://facebook.mylo.com/10151081798109645#> checkin:comments _:autos18.
 <http://facebook.mylo.com/10151081798109645#> checkin:created_time "2012-08-09T22:00:57+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10151081798109645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151081798109645#> checkin:id "10151081798109645".
-<http://facebook.mylo.com/10151081798109645#> checkin:likes _:autos9.
+<http://facebook.mylo.com/10151081798109645#> checkin:likes _:autos15.
 <http://facebook.mylo.com/10151081798109645#> checkin:message "Accomplished a minor life goal - cycling the whole Sammamish River Trail and the Burke Gilman trail from Redmond to Shilshole Bay. Nice ride along the Sammamish River, Lake Washington, through UW, Lake Union, Freemont, the Canal, and finally the Sound. 32 miles on the clock.".
 <http://facebook.mylo.com/10151081798109645#> checkin:place <http://facebook.mylo.com/104508606246040#>.
-<http://facebook.mylo.com/10151081798109645#> <http://mylo.com/schema/HasLocation> _:autos93.
+<http://facebook.mylo.com/10151081798109645#> <http://mylo.com/schema/HasLocation> _:autos18.
 <http://facebook.mylo.com/10151081798109645#> <http://mylo.com/schema/HasSourceId> "10151081798109645".
-<http://facebook.mylo.com/10151081798109645#> <http://mylo.com/schema/HasTimePeriod> _:autos92.
+<http://facebook.mylo.com/10151081798109645#> <http://mylo.com/schema/HasTimePeriod> _:autos17.
 <http://facebook.mylo.com/10151081798109645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151081798109645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/10151094993839645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
-<http://facebook.mylo.com/10151094993839645#> checkin:comments _:autos6.
+<http://facebook.mylo.com/10151094993839645#> checkin:comments _:autos12.
 <http://facebook.mylo.com/10151094993839645#> checkin:created_time "2012-08-15T19:25:20+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/10151094993839645#> checkin:from <http://facebook.mylo.com/817464644#>.
 <http://facebook.mylo.com/10151094993839645#> checkin:id "10151094993839645".
 <http://facebook.mylo.com/10151094993839645#> checkin:message "Watching a ball game !".
 <http://facebook.mylo.com/10151094993839645#> checkin:place <http://facebook.mylo.com/145312482155480#>.
-<http://facebook.mylo.com/10151094993839645#> checkin:tags _:autos3.
-<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasLocation> _:autos3.
-<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasLocation> _:autos6.
-<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasLocation> _:autos90.
+<http://facebook.mylo.com/10151094993839645#> checkin:tags _:autos9.
+<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasLocation> _:autos15.
+<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasLocation> _:autos93.
+<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasLocation> _:autos96.
 <http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasPersonCheckinTag> "Aaron Holm".
-<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasPersonCheckinTag> "Facebook User".
 <http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasSourceId> "10151094993839645".
-<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasTimePeriod> _:autos2.
-<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasTimePeriod> _:autos5.
-<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasTimePeriod> _:autos89.
+<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasTimePeriod> _:autos14.
+<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasTimePeriod> _:autos92.
+<http://facebook.mylo.com/10151094993839645#> <http://mylo.com/schema/HasTimePeriod> _:autos95.
 <http://facebook.mylo.com/10151094993839645#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/10151094993839645#> a <http://mylo.com/schema/FacebookCheckin>.
+<http://facebook.mylo.com/10151116670249645#> checkin:application <http://facebook.mylo.com/173847642670370#>.
+<http://facebook.mylo.com/10151116670249645#> checkin:created_time "2012-08-25T05:29:58+00:00"^^xsd:dateTime.
+<http://facebook.mylo.com/10151116670249645#> checkin:from <http://facebook.mylo.com/817464644#>.
+<http://facebook.mylo.com/10151116670249645#> checkin:id "10151116670249645".
+<http://facebook.mylo.com/10151116670249645#> checkin:place <http://facebook.mylo.com/140516416017525#>.
+<http://facebook.mylo.com/10151116670249645#> checkin:tags _:autos6.
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasLocation> _:autos12.
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasLocation> _:autos84.
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasLocation> _:autos87.
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasPersonCheckinTag> "Facebook User".
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasSourceId> "10151116670249645".
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasTimePeriod> _:autos11.
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasTimePeriod> _:autos83.
+<http://facebook.mylo.com/10151116670249645#> <http://mylo.com/schema/HasTimePeriod> _:autos86.
+<http://facebook.mylo.com/10151116670249645#> a <http://mylo.com/schema/Activity>.
+<http://facebook.mylo.com/10151116670249645#> a <http://mylo.com/schema/FacebookCheckin>.
+<http://facebook.mylo.com/10151117795204645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
+<http://facebook.mylo.com/10151117795204645#> checkin:created_time "2012-08-25T17:32:21+00:00"^^xsd:dateTime.
+<http://facebook.mylo.com/10151117795204645#> checkin:from <http://facebook.mylo.com/817464644#>.
+<http://facebook.mylo.com/10151117795204645#> checkin:id "10151117795204645".
+<http://facebook.mylo.com/10151117795204645#> checkin:place <http://facebook.mylo.com/177445905641745#>.
+<http://facebook.mylo.com/10151117795204645#> <http://mylo.com/schema/HasLocation> _:autos9.
+<http://facebook.mylo.com/10151117795204645#> <http://mylo.com/schema/HasSourceId> "10151117795204645".
+<http://facebook.mylo.com/10151117795204645#> <http://mylo.com/schema/HasTimePeriod> _:autos8.
+<http://facebook.mylo.com/10151117795204645#> a <http://mylo.com/schema/Activity>.
+<http://facebook.mylo.com/10151117795204645#> a <http://mylo.com/schema/FacebookCheckin>.
+<http://facebook.mylo.com/10151118129779645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
+<http://facebook.mylo.com/10151118129779645#> checkin:created_time "2012-08-25T20:31:56+00:00"^^xsd:dateTime.
+<http://facebook.mylo.com/10151118129779645#> checkin:from <http://facebook.mylo.com/817464644#>.
+<http://facebook.mylo.com/10151118129779645#> checkin:id "10151118129779645".
+<http://facebook.mylo.com/10151118129779645#> checkin:place <http://facebook.mylo.com/135134576566392#>.
+<http://facebook.mylo.com/10151118129779645#> <http://mylo.com/schema/HasLocation> _:autos6.
+<http://facebook.mylo.com/10151118129779645#> <http://mylo.com/schema/HasSourceId> "10151118129779645".
+<http://facebook.mylo.com/10151118129779645#> <http://mylo.com/schema/HasTimePeriod> _:autos5.
+<http://facebook.mylo.com/10151118129779645#> a <http://mylo.com/schema/Activity>.
+<http://facebook.mylo.com/10151118129779645#> a <http://mylo.com/schema/FacebookCheckin>.
+<http://facebook.mylo.com/10151118520179645#> checkin:application <http://facebook.mylo.com/135892916448833#>.
+<http://facebook.mylo.com/10151118520179645#> checkin:created_time "2012-08-26T00:17:01+00:00"^^xsd:dateTime.
+<http://facebook.mylo.com/10151118520179645#> checkin:from <http://facebook.mylo.com/817464644#>.
+<http://facebook.mylo.com/10151118520179645#> checkin:id "10151118520179645".
+<http://facebook.mylo.com/10151118520179645#> checkin:place <http://facebook.mylo.com/117448014940462#>.
+<http://facebook.mylo.com/10151118520179645#> checkin:tags _:autos3.
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasLocation> _:autos3.
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasLocation> _:autos78.
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasLocation> _:autos81.
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasPersonCheckinTag> "Facebook User".
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasSourceId> "10151118520179645".
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasTimePeriod> _:autos2.
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasTimePeriod> _:autos77.
+<http://facebook.mylo.com/10151118520179645#> <http://mylo.com/schema/HasTimePeriod> _:autos80.
+<http://facebook.mylo.com/10151118520179645#> a <http://mylo.com/schema/Activity>.
+<http://facebook.mylo.com/10151118520179645#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/1016887463#> user:id "1016887463".
 <http://facebook.mylo.com/1016887463#> user:name "Ghislaine Bernard-Hasan".
 <http://facebook.mylo.com/1016887463#> <http://mylo.com/schema/FacebookId> "1016887463".
@@ -1475,7 +1568,7 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/1043972128#> a <http://mylo.com/schema/FacebookPerson>.
 <http://facebook.mylo.com/1043972128#> a <http://mylo.com/schema/Person>.
 <http://facebook.mylo.com/104508606246040#> page:id "104508606246040".
-<http://facebook.mylo.com/104508606246040#> page:location _:autos100.
+<http://facebook.mylo.com/104508606246040#> page:location _:autos110.
 <http://facebook.mylo.com/104508606246040#> page:name "Golden Gardens Park".
 <http://facebook.mylo.com/10721411#> user:id "10721411".
 <http://facebook.mylo.com/10721411#> user:name "Matthew Short".
@@ -1492,7 +1585,7 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/1075027532#> a <http://mylo.com/schema/FacebookPerson>.
 <http://facebook.mylo.com/1075027532#> a <http://mylo.com/schema/Person>.
 <http://facebook.mylo.com/113807861982871#> page:id "113807861982871".
-<http://facebook.mylo.com/113807861982871#> page:location _:autos111.
+<http://facebook.mylo.com/113807861982871#> page:location _:autos121.
 <http://facebook.mylo.com/113807861982871#> page:name "Hilltop Ale House".
 <http://facebook.mylo.com/1155075413#> user:id "1155075413".
 <http://facebook.mylo.com/1155075413#> user:name "Bill Smith".
@@ -1501,6 +1594,9 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/1155075413#> a user:type.
 <http://facebook.mylo.com/1155075413#> a <http://mylo.com/schema/FacebookPerson>.
 <http://facebook.mylo.com/1155075413#> a <http://mylo.com/schema/Person>.
+<http://facebook.mylo.com/117448014940462#> page:id "117448014940462".
+<http://facebook.mylo.com/117448014940462#> page:location _:autos105.
+<http://facebook.mylo.com/117448014940462#> page:name "Saffron Mediterranean Kitchen".
 <http://facebook.mylo.com/1186368430#> user:id "1186368430".
 <http://facebook.mylo.com/1186368430#> user:name "Facebook User".
 <http://facebook.mylo.com/1186368430#> <http://mylo.com/schema/FacebookId> "1186368430".
@@ -1509,60 +1605,57 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/1186368430#> a <http://mylo.com/schema/FacebookPerson>.
 <http://facebook.mylo.com/1186368430#> a <http://mylo.com/schema/Person>.
 <http://facebook.mylo.com/122324244475694#> page:id "122324244475694".
-<http://facebook.mylo.com/122324244475694#> page:location _:autos114.
+<http://facebook.mylo.com/122324244475694#> page:location _:autos124.
 <http://facebook.mylo.com/122324244475694#> page:name "Bierkraft".
 <http://facebook.mylo.com/124817720286#> page:id "124817720286".
-<http://facebook.mylo.com/124817720286#> page:location _:autos110.
+<http://facebook.mylo.com/124817720286#> page:location _:autos120.
 <http://facebook.mylo.com/124817720286#> page:name "How to Cook a Wolf".
 <http://facebook.mylo.com/125752900828507#> page:id "125752900828507".
-<http://facebook.mylo.com/125752900828507#> page:location _:autos105.
+<http://facebook.mylo.com/125752900828507#> page:location _:autos115.
 <http://facebook.mylo.com/125752900828507#> page:name "Garden Bay BC".
+<http://facebook.mylo.com/135134576566392#> page:id "135134576566392".
+<http://facebook.mylo.com/135134576566392#> page:location _:autos106.
+<http://facebook.mylo.com/135134576566392#> page:name "Northstar Winery".
 <http://facebook.mylo.com/135371579873516#> page:id "135371579873516".
-<http://facebook.mylo.com/135371579873516#> page:location _:autos102.
+<http://facebook.mylo.com/135371579873516#> page:location _:autos112.
 <http://facebook.mylo.com/135371579873516#> page:name "Cask And Schooner".
 <http://facebook.mylo.com/135892916448833#> application:id "135892916448833".
 <http://facebook.mylo.com/135892916448833#> application:name "Facebook for Windows Phone".
-<http://facebook.mylo.com/144301718966402#> page:id "144301718966402".
-<http://facebook.mylo.com/144301718966402#> page:location _:autos120.
-<http://facebook.mylo.com/144301718966402#> page:name "Nerone trattoria via Faenza, 95/97 - Firenze".
+<http://facebook.mylo.com/140516416017525#> page:id "140516416017525".
+<http://facebook.mylo.com/140516416017525#> page:location _:autos108.
+<http://facebook.mylo.com/140516416017525#> page:name "Abeja".
 <http://facebook.mylo.com/145312482155480#> page:id "145312482155480".
-<http://facebook.mylo.com/145312482155480#> page:location _:autos99.
+<http://facebook.mylo.com/145312482155480#> page:location _:autos109.
 <http://facebook.mylo.com/145312482155480#> page:name "Safeco Field".
-<http://facebook.mylo.com/161034467256219#> page:id "161034467256219".
-<http://facebook.mylo.com/161034467256219#> page:location _:autos119.
-<http://facebook.mylo.com/161034467256219#> page:name "Montepulciano".
 <http://facebook.mylo.com/163527793722850#> page:id "163527793722850".
-<http://facebook.mylo.com/163527793722850#> page:location _:autos107.
+<http://facebook.mylo.com/163527793722850#> page:location _:autos117.
 <http://facebook.mylo.com/163527793722850#> page:name "Taku Resort and Marina".
 <http://facebook.mylo.com/173847642670370#> application:id "173847642670370".
 <http://facebook.mylo.com/173847642670370#> application:name "Facebook for iPad".
-<http://facebook.mylo.com/173847642670370#> application:namespace "fbipad".
+<http://facebook.mylo.com/173847642670370#> application:namespace "fbipad_".
 <http://facebook.mylo.com/174046145986212#> page:id "174046145986212".
-<http://facebook.mylo.com/174046145986212#> page:location _:autos113.
+<http://facebook.mylo.com/174046145986212#> page:location _:autos123.
 <http://facebook.mylo.com/174046145986212#> page:name "Rock Fish Grill and Brew".
+<http://facebook.mylo.com/177445905641745#> page:id "177445905641745".
+<http://facebook.mylo.com/177445905641745#> page:location _:autos107.
+<http://facebook.mylo.com/177445905641745#> page:name "K Vinters".
 <http://facebook.mylo.com/193906100621293#> page:id "193906100621293".
-<http://facebook.mylo.com/193906100621293#> page:location _:autos101.
+<http://facebook.mylo.com/193906100621293#> page:location _:autos111.
 <http://facebook.mylo.com/193906100621293#> page:name "Anthony's".
-<http://facebook.mylo.com/197458083612822#> page:id "197458083612822".
-<http://facebook.mylo.com/197458083612822#> page:location _:autos117.
-<http://facebook.mylo.com/197458083612822#> page:name "Osteria del Conte".
 <http://facebook.mylo.com/201320756545202#> page:id "201320756545202".
-<http://facebook.mylo.com/201320756545202#> page:location _:autos103.
+<http://facebook.mylo.com/201320756545202#> page:location _:autos113.
 <http://facebook.mylo.com/201320756545202#> page:name "Skyline Marina, Anacortes".
 <http://facebook.mylo.com/215399528476163#> page:id "215399528476163".
-<http://facebook.mylo.com/215399528476163#> page:location _:autos104.
+<http://facebook.mylo.com/215399528476163#> page:location _:autos114.
 <http://facebook.mylo.com/215399528476163#> page:name "Henry Island SYC Out Station".
-<http://facebook.mylo.com/221375044542616#> page:id "221375044542616".
-<http://facebook.mylo.com/221375044542616#> page:location _:autos118.
-<http://facebook.mylo.com/221375044542616#> page:name "Osteria Acquacheta".
 <http://facebook.mylo.com/226922557416444#> page:id "226922557416444".
-<http://facebook.mylo.com/226922557416444#> page:location _:autos115.
+<http://facebook.mylo.com/226922557416444#> page:location _:autos125.
 <http://facebook.mylo.com/226922557416444#> page:name "Carriage House Pub On 59th".
 <http://facebook.mylo.com/247266025305464#> page:id "247266025305464".
-<http://facebook.mylo.com/247266025305464#> page:location _:autos112.
+<http://facebook.mylo.com/247266025305464#> page:location _:autos122.
 <http://facebook.mylo.com/247266025305464#> page:name "Seattle Yacht Club Friday Harbor Outstation".
 <http://facebook.mylo.com/263545903768639#> page:id "263545903768639".
-<http://facebook.mylo.com/263545903768639#> page:location _:autos106.
+<http://facebook.mylo.com/263545903768639#> page:location _:autos116.
 <http://facebook.mylo.com/263545903768639#> page:name "Cortes Island Seattle Yacht Club Out Station".
 <http://facebook.mylo.com/27500387#> user:id "27500387".
 <http://facebook.mylo.com/27500387#> user:name "Tami Lane".
@@ -1579,34 +1672,34 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/27501545#> a <http://mylo.com/schema/FacebookPerson>.
 <http://facebook.mylo.com/27501545#> a <http://mylo.com/schema/Person>.
 <http://facebook.mylo.com/363340950385817#> page:id "363340950385817".
-<http://facebook.mylo.com/363340950385817#> page:location _:autos109.
+<http://facebook.mylo.com/363340950385817#> page:location _:autos119.
 <http://facebook.mylo.com/363340950385817#> page:name "Port Harvey Marine Resort, BC".
 <http://facebook.mylo.com/383402571681831#> page:id "383402571681831".
-<http://facebook.mylo.com/383402571681831#> page:location _:autos116.
+<http://facebook.mylo.com/383402571681831#> page:location _:autos126.
 <http://facebook.mylo.com/383402571681831#> page:name "Balthazar Soho".
 <http://facebook.mylo.com/3834152486014#> checkin:application <http://facebook.mylo.com/135892916448833#>.
 <http://facebook.mylo.com/3834152486014#> checkin:created_time "2012-08-04T00:57:26+00:00"^^xsd:dateTime.
 <http://facebook.mylo.com/3834152486014#> checkin:from <http://facebook.mylo.com/1043972128#>.
 <http://facebook.mylo.com/3834152486014#> checkin:id "3834152486014".
-<http://facebook.mylo.com/3834152486014#> checkin:likes _:autos15.
+<http://facebook.mylo.com/3834152486014#> checkin:likes _:autos21.
 <http://facebook.mylo.com/3834152486014#> checkin:place <http://facebook.mylo.com/193906100621293#>.
-<http://facebook.mylo.com/3834152486014#> checkin:tags _:autos18.
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos30.
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos33.
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos36.
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos99.
+<http://facebook.mylo.com/3834152486014#> checkin:tags _:autos24.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos120.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos123.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos126.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasLocation> _:autos24.
 <http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasPersonCheckinTag> "Keith Short".
 <http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasPersonCheckinTag> "Mark A Croft".
 <http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasPersonCheckinTag> "Rebecca Short".
 <http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasSourceId> "3834152486014".
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos29.
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos32.
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos35.
-<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos98.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos119.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos122.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos125.
+<http://facebook.mylo.com/3834152486014#> <http://mylo.com/schema/HasTimePeriod> _:autos23.
 <http://facebook.mylo.com/3834152486014#> a <http://mylo.com/schema/Activity>.
 <http://facebook.mylo.com/3834152486014#> a <http://mylo.com/schema/FacebookCheckin>.
 <http://facebook.mylo.com/469504696412962#> page:id "469504696412962".
-<http://facebook.mylo.com/469504696412962#> page:location _:autos108.
+<http://facebook.mylo.com/469504696412962#> page:location _:autos118.
 <http://facebook.mylo.com/469504696412962#> page:name "Pruth Bay, B.C.".
 <http://facebook.mylo.com/500011583#> user:id "500011583".
 <http://facebook.mylo.com/500011583#> user:name "Gareth Jones".
@@ -1661,10 +1754,6 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/817464644#> user:name "Keith Short".
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/FacebookId> "817464644".
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/FacebookName> "Keith Short".
-<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150761216189645#>.
-<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150763349429645#>.
-<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150766435094645#>.
-<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150769382244645#>.
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150790427979645#>.
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150792301729645#>.
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10150802545594645#>.
@@ -1685,6 +1774,10 @@ _:autos99 a <http://mylo.com/schema/Location>.
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10151068741729645#>.
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10151081798109645#>.
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10151094993839645#>.
+<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10151116670249645#>.
+<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10151117795204645#>.
+<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10151118129779645#>.
+<http://facebook.mylo.com/817464644#> <http://mylo.com/schema/HasActivity> <http://facebook.mylo.com/10151118520179645#>.
 <http://facebook.mylo.com/817464644#> <http://mylo.com/schema/IsOwner> "True".
 <http://facebook.mylo.com/817464644#> a user:type.
 <http://facebook.mylo.com/817464644#> a <http://mylo.com/schema/FacebookPerson>.

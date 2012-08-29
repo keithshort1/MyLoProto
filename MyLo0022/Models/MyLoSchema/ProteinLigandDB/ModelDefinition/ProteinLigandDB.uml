@@ -984,6 +984,77 @@ These tables are not generated, but are shown for completeness only.</body>
                 profile="DBProfile" />
             </appliedStereotypesInternal>
           </association>
+          <association
+            Id="ff075f89-fa8f-4822-aeb8-626ab57c9564"
+            isDerived="false"
+            sourceEndRoleName="FileItem"
+            targetEndRoleName="GeoLocation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e4c9ab5c-e28d-4563-a7f1-3cff6a95a8da"
+              LastKnownName="GeoLocation"
+              LastKnownLocation="ProteinLigandDB.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="32c8f72e-4c97-4da9-9d36-7df844131d72"
+                  name="FileItem"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="23135596-a437-40e6-8b14-608e94ec4048"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7bd608a2-4ec5-42d6-b287-404dcfdc830f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="280b17e2-bb13-4daa-b24c-c1beabd8d860"
+                  name="GeoLocation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="995697e6-1a0c-495a-b894-642c11085c18"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="14128ccb-574e-4f57-9bd5-db0007b1e7fc"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1960663e-5948-4dec-9ca7-f8c43d11a21e"
+                name="Reference"
+                profile="DBProfile" />
+            </appliedStereotypesInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -6848,7 +6919,7 @@ These tables are not generated, but are shown for completeness only.</body>
                     <propertyInstance
                       Id="f860ac90-17fa-4a84-9d8c-f1dc80e780d5"
                       name="DataType"
-                      value="float()" />
+                      value="double" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
                     Id="c54585fc-7d1b-4fc7-a3cf-7cddcfe5604f">
@@ -6897,7 +6968,7 @@ These tables are not generated, but are shown for completeness only.</body>
                     <propertyInstance
                       Id="f38fc573-35d9-47cd-840a-f1ce327bc9cf"
                       name="DataType"
-                      value="float()" />
+                      value="double" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
                     Id="7cdb70dd-3b63-44b1-9045-d2b60d2788ad">

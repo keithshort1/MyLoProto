@@ -167,7 +167,7 @@
                     <elementDefinition Id="f4d4e17b-c723-4ad7-9d21-723c8f02fac5" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances Id="1c129955-ab87-4a24-aac4-0918c5221a91">
-                    <propertyInstance Id="43c9dce9-6d08-4f3a-a91d-702ec8c45f6f" name="DataType" value="float()">
+                    <propertyInstance Id="43c9dce9-6d08-4f3a-a91d-702ec8c45f6f" name="DataType" value="double">
                       <elementDefinition Id="f860ac90-17fa-4a84-9d8c-f1dc80e780d5" />
                     </propertyInstance>
                     <elementDefinition Id="1e880543-5335-4a7d-9749-df82b43bf668" />
@@ -201,7 +201,7 @@
                     <elementDefinition Id="5d6fe0c1-3ac9-4096-b4c7-c23768c606ba" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances Id="cd5885ca-df53-4c66-a526-0a9bc461f4f0">
-                    <propertyInstance Id="4ab9792b-0435-497d-825f-6a8586465ebd" name="DataType" value="float()">
+                    <propertyInstance Id="4ab9792b-0435-497d-825f-6a8586465ebd" name="DataType" value="double">
                       <elementDefinition Id="f38fc573-35d9-47cd-840a-f1ce327bc9cf" />
                     </propertyInstance>
                     <elementDefinition Id="b56e422a-5032-472d-8ed0-2720cf9fe1bd" />

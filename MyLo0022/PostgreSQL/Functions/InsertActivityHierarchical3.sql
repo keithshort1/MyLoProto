@@ -3,14 +3,14 @@
 DROP FUNCTION IF EXISTS InsertActivityHierarchical3(accountId bigint, activityKindIn text, sourceIn text, sourceIdIn text, 
 							activityNameIn text, startdatetimeIn timestamp with time zone, 
 							enddatetimeIn timestamp with time zone, durationIn int, 
-							startId bigint, endId bigint, locId bigint, 
+							startId bigint, endId bigint, addrId bigint, locId bigint, 
 							gpsLatIn double precision, gpsLongIn double precision, 
 							parentActivity bigint);
 
 CREATE FUNCTION InsertActivityHierarchical3(accountId bigint, activityKindIn text, sourceIn text, sourceIdIn text, 
 							activityNameIn text, startdatetimeIn timestamp with time zone, 
 							enddatetimeIn timestamp with time zone, durationIn int, 
-							startId bigint, endId bigint, locId bigint, 
+							startId bigint, endId bigint, addrId bigint, locId bigint, 
 							gpsLatIn double precision, gpsLongIn double precision, 
 							parentActivity bigint)
 	RETURNS bigint
@@ -23,9 +23,9 @@ CREATE FUNCTION InsertActivityHierarchical3(accountId bigint, activityKindIn tex
 	BEGIN
 		-- Insert the activity ...
 		INSERT INTO Activity (MyLoAccountId, ActivityKind, Source, SourceId, 
-					ActivityName, StartDateTime, EndDateTime, Duration, StartTimePeriodId, EndTimePeriodId, AddressId, Latitude, Longitude)
+					ActivityName, StartDateTime, EndDateTime, Duration, StartTimePeriodId, EndTimePeriodId, AddressId, GeoLocationId, Latitude, Longitude)
 				VALUES (accountId, activityKindIn, sourceIn, sourceIdIn, 
-					activityNameIn, startdatetimeIn, enddatetimeIn, durationIn, startId, endId, locId, gpsLatIn, gpsLongIn);
+					activityNameIn, startdatetimeIn, enddatetimeIn, durationIn, startId, endId, addrId, locId, gpsLatIn, gpsLongIn);
 
 		_id = (select currval('ActivitySequence'));
 		

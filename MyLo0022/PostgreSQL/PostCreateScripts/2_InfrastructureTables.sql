@@ -171,6 +171,7 @@ CREATE TABLE Photo_Base(
     Hashcode bigint not null ,
     FolderId bigInt ,
     ActivityId bigInt ,
+    GeoLocationId bigInt ,
     MyLoAccountId bigInt not null,
     TimePeriodId bigint ,
     Primary Key (UniqueId)
@@ -188,7 +189,7 @@ CREATE SEQUENCE PhotoSequence;
 DROP VIEW IF EXISTS Photo CASCADE;
   
 CREATE VIEW Photo AS
-        SELECT  v.MyLoAccountId, v.UniqueId, v.DateTaken, v.Camera, v.Thumbnail, v.GpsLat, v.GpsLong, v.Uri, v.Hashcode, v.FolderId, v.ActivityId, v.TimePeriodId
+        SELECT  v.MyLoAccountId, v.UniqueId, v.DateTaken, v.Camera, v.Thumbnail, v.GpsLat, v.GpsLong, v.Uri, v.Hashcode, v.FolderId, v.ActivityId, v.TimePeriodId, v.GeoLocationId
                 FROM Photo_Base AS v;
 
 CREATE OR REPLACE FUNCTION PhotoInsteadOfInsertProc(NEW Photo) RETURNS uuid AS $$
@@ -201,8 +202,8 @@ CREATE OR REPLACE FUNCTION PhotoInsteadOfInsertProc(NEW Photo) RETURNS uuid AS $
               IF _mId IS NULL THEN
                       RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
               ELSE
-                      INSERT INTO Photo_Base (MyLoAccountId, UniqueId, DateTaken, Camera, Thumbnail, GpsLat, GpsLong, Uri, Hashcode, FolderId, ActivityId, TimePeriodId)
-                              VALUES (NEW.MyLoAccountId, NEW.UniqueId, NEW.DateTaken, NEW.Camera, NEW.Thumbnail, NEW.GpsLat, NEW.GpsLong, NEW.Uri, NEW.Hashcode, NEW.FolderId, NEW.ActivityId, NEW.TimePeriodId);
+                      INSERT INTO Photo_Base (MyLoAccountId, UniqueId, DateTaken, Camera, Thumbnail, GpsLat, GpsLong, Uri, Hashcode, FolderId, ActivityId, TimePeriodId, GeoLocationId)
+                              VALUES (NEW.MyLoAccountId, NEW.UniqueId, NEW.DateTaken, NEW.Camera, NEW.Thumbnail, NEW.GpsLat, NEW.GpsLong, NEW.Uri, NEW.Hashcode, NEW.FolderId, NEW.ActivityId, NEW.TimePeriodId, NEW.GeoLocationId);
               END IF;
               RETURN NEW.UniqueId;
       END;
@@ -214,7 +215,8 @@ CREATE OR REPLACE RULE PhotoInsteadOfInsert AS ON INSERT TO Photo
 
 
 --ALTER TABLE Photo_Base ADD CONSTRAINT PhotoFolderId_FolderId FOREIGN KEY (FolderId) REFERENCES Folder_Base (FolderId) On Delete Cascade;
---ALTER TABLE Photo_Base ADD CONSTRAINT PhotoActivityId_ActivityId FOREIGN KEY (ActivityId) REFERENCES Activity_Base (ActivityId) On Delete Cascade;
+ALTER TABLE Photo_Base ADD CONSTRAINT PhotoGeoLocationId_GeoLocationId FOREIGN KEY (GeoLocationId) REFERENCES GeoLocation_Base (GeoLocationId) On Delete Cascade;
+ALTER TABLE Photo_Base ADD CONSTRAINT PhotoActivityId_ActivityId FOREIGN KEY (ActivityId) REFERENCES Activity_Base (ActivityId) On Delete Cascade;
 ALTER TABLE UserProfile_Base ADD CONSTRAINT UserProfileUserId_MyLoAccountId FOREIGN KEY (UserId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
 ALTER TABLE UserProfile_Base ADD CONSTRAINT UserProfileMyLoAccountId FOREIGN KEY (MyLoAccountId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
 ALTER TABLE Preferences_Base ADD CONSTRAINT PreferencesUserId_MyLoAccountId FOREIGN KEY (UserId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
