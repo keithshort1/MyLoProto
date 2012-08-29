@@ -461,6 +461,46 @@ namespace MyLoDBNS
 
 
         /// <summary>
+        /// Retrieves All Photos in a MyLo DataStore for current account holder
+        /// Grouped by Location ids with count for each Location
+        /// </summary>
+        public DataSet GetAllPhotosGroupedByLocation(long userid)
+        {
+            DataSet ds = new DataSet();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.CommandText = "WITH locations AS " +
+                                    "(WITH photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  FROM photo AS P " +
+                                    "       JOIN Activity AS A ON A.activityid = P.activityid " +
+                                    "       WHERE A.geolocationid != 0 AND P.MyLoAccountId = @userid) " +
+                                    "UNION " +
+                                    "(SELECT uri, datetaken,  gpslat, gpslong, P.geolocationid  FROM photo AS P " +
+                                    "       WHERE P.geolocationid != 0 AND P.MyLoAccountId = @userid))  " +
+                                    "SELECT DISTINCT PH.geolocationid, count(*) FROM photies AS PH " +
+                                    "GROUP BY geolocationid) " +
+                                    "SELECT L.latitude, L.longitude, locations.count, locationid FROM locations " +
+                                    "JOIN geolocation AS L ON L.locationid = locations.geolocationid " +
+                                    "WHERE L.MyLoAccountId = @userid " +
+                                    "ORDER BY locations.geolocationid ";
+            command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
+            command.Parameters[0].Value = userid;
+            command.Connection = _conn;
+            da.SelectCommand = command;
+
+            da.Fill(ds);
+            _conn.Close();
+            if (ds != null)
+            {
+                return ds;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        /// <summary>
         /// Retrieves Selected Photos in a MyLo DataStore for current account holder
         /// Using Dimension Ids
         /// </summary>

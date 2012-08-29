@@ -28,6 +28,7 @@ using MyLoCalendarContextReaderApp;
 using MyLoPhotoViewerNS.BingMapsGeocode;
 using GPSlookupNS;
 using MyLoDBNS;
+using MyLoMapWPF;
 
 
 
@@ -609,6 +610,42 @@ namespace MyLoPhotoViewerNS
                 catch (Exception ex)
                 {
                     textBox3.Text = String.Format(ex.Message);
+                }
+            }
+            else
+            {
+                textBox3.Text = String.Format("Please Enter a Valid MyLo Account Name");
+            }
+        }
+
+        private void displayMyLoMap_Click(object sender, EventArgs e)
+        {
+            if (_userId != 0)
+            {
+                DataSet results  = new DataSet();
+                 
+                results = _photoBrowser.GetPhotosGroupedByLocation();
+
+                if (results.Tables.Count != 0)
+                {
+                    DataTable locations = new DataTable();
+                    locations = results.Tables[0];
+                    MyLoMapWPF.MyLoMap myloMap = new MyLoMapWPF.MyLoMap();
+                    try
+                    {
+                        myloMap.InitializeComponent();
+                        myloMap.PassedTable = locations;
+                        myloMap.DisplayMap();
+                        myloMap.Show();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Text = ex.Message;
+                    }
+                }
+                else
+                {
+                    textBox3.Text = String.Format("No Photos to Display on Map");
                 }
             }
             else

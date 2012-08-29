@@ -50,7 +50,7 @@ namespace MyLoCalendarContextReaderApp
 
         private void getEventsButton_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "Loaded  7 events";
+            textBox1.Text = "Loaded  8 events";
         }
     }
 }

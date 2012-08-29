@@ -83,7 +83,7 @@ namespace MyLoFacebookContextReaderNS
         public void AddFacebookLocationsToContext(string accessToken)
         {
             String uriStrLocations = String.Format(@"https://graph.facebook.com/me/locations?access_token={0}", accessToken);
-            String uriStrCheckins = String.Format(@"https://graph.facebook.com/me/checkins?access_token={0}", accessToken);
+            String uriStrCheckins = String.Format(@"https://graph.facebook.com/me/checkins?access_token={0}&limit=50", accessToken);
             Uri uriLocations = new Uri(uriStrLocations);
             Uri uriCheckins = new Uri(uriStrCheckins);
             try

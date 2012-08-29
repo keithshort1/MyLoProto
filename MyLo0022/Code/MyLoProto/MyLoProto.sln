@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLoCalendarContextReader",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLoCalendarContextReaderApp", "MyLoCalendarContextReaderApp\MyLoCalendarContextReaderApp.csproj", "{1B60DB88-5C98-4161-8B1E-FF3DCD93F25F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLoMap", "MyLoMap\MyLoMap.csproj", "{D4137806-ECF1-4B95-B0C4-E53487CD353D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLoMapWPF", "MyLoMapWPF\MyLoMapWPF.csproj", "{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = MyLoProto.vsmdi
@@ -172,6 +176,26 @@ Global
 		{1B60DB88-5C98-4161-8B1E-FF3DCD93F25F}.Release|Mixed Platforms.Build.0 = Release|x86
 		{1B60DB88-5C98-4161-8B1E-FF3DCD93F25F}.Release|x86.ActiveCfg = Release|x86
 		{1B60DB88-5C98-4161-8B1E-FF3DCD93F25F}.Release|x86.Build.0 = Release|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Debug|x86.ActiveCfg = Debug|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Debug|x86.Build.0 = Debug|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Release|Any CPU.ActiveCfg = Release|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Release|x86.ActiveCfg = Release|x86
+		{D4137806-ECF1-4B95-B0C4-E53487CD353D}.Release|x86.Build.0 = Release|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Debug|x86.ActiveCfg = Debug|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Debug|x86.Build.0 = Debug|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|Any CPU.ActiveCfg = Release|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|Mixed Platforms.Build.0 = Release|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|x86.ActiveCfg = Release|x86
+		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

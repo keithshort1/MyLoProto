@@ -211,6 +211,21 @@ namespace MyLoPhotoBrowserNS
         }
 
 
+        // <summary>
+        /// Method for returning a all Photos in a grouped by location with counts
+        /// </summary>
+        public DataSet GetPhotosGroupedByLocation()
+        {
+            try
+            {
+                return _myLoStore.GetAllPhotosGroupedByLocation(_userId);
+            }
+            catch (MyLoException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
 
         /// <summary>
         /// Method for returning all Time Periods in a given context

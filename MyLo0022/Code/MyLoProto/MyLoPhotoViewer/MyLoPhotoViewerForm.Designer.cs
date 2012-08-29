@@ -37,6 +37,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buildUsingIntervalGPSfit = new System.Windows.Forms.Button();
             this.loadPhotosButton = new System.Windows.Forms.Button();
             this.getTripItContextButton = new System.Windows.Forms.Button();
             this.getCalendarContextButton = new System.Windows.Forms.Button();
@@ -57,7 +58,7 @@
             this.signOutButton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.buildUsingIntervalGPSfit = new System.Windows.Forms.Button();
+            this.displayMyLoMap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.queryResultsView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -150,6 +151,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 523);
             this.panel1.TabIndex = 15;
+            // 
+            // buildUsingIntervalGPSfit
+            // 
+            this.buildUsingIntervalGPSfit.Location = new System.Drawing.Point(8, 234);
+            this.buildUsingIntervalGPSfit.Name = "buildUsingIntervalGPSfit";
+            this.buildUsingIntervalGPSfit.Size = new System.Drawing.Size(161, 25);
+            this.buildUsingIntervalGPSfit.TabIndex = 16;
+            this.buildUsingIntervalGPSfit.Text = "Build Index Interval and GPS";
+            this.buildUsingIntervalGPSfit.UseVisualStyleBackColor = true;
+            this.buildUsingIntervalGPSfit.Click += new System.EventHandler(this.buildUsingIntervalGPSfit_Click);
             // 
             // loadPhotosButton
             // 
@@ -343,15 +354,15 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "My Life ... Organized";
             // 
-            // buildUsingIntervalGPSfit
+            // displayMyLoMap
             // 
-            this.buildUsingIntervalGPSfit.Location = new System.Drawing.Point(8, 234);
-            this.buildUsingIntervalGPSfit.Name = "buildUsingIntervalGPSfit";
-            this.buildUsingIntervalGPSfit.Size = new System.Drawing.Size(161, 25);
-            this.buildUsingIntervalGPSfit.TabIndex = 16;
-            this.buildUsingIntervalGPSfit.Text = "Build Index Interval and GPS";
-            this.buildUsingIntervalGPSfit.UseVisualStyleBackColor = true;
-            this.buildUsingIntervalGPSfit.Click += new System.EventHandler(this.buildUsingIntervalGPSfit_Click);
+            this.displayMyLoMap.Location = new System.Drawing.Point(403, 250);
+            this.displayMyLoMap.Name = "displayMyLoMap";
+            this.displayMyLoMap.Size = new System.Drawing.Size(82, 27);
+            this.displayMyLoMap.TabIndex = 28;
+            this.displayMyLoMap.Text = "Show Map";
+            this.displayMyLoMap.UseVisualStyleBackColor = true;
+            this.displayMyLoMap.Click += new System.EventHandler(this.displayMyLoMap_Click);
             // 
             // MyLoPhotoViewer
             // 
@@ -359,6 +370,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1030, 559);
+            this.Controls.Add(this.displayMyLoMap);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.signOutButton);
@@ -421,6 +433,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buildUsingIntervalGPSfit;
+        private System.Windows.Forms.Button displayMyLoMap;
     }
 }
 

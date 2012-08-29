@@ -35,10 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +50,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MyLoPhotoViewerForm.cs">
@@ -130,6 +134,14 @@
     <ProjectReference Include="..\MyLoIndexer\MyLoIndexer.csproj">
       <Project>{19C2F065-4C65-4EDC-84B8-4737D4A3447B}</Project>
       <Name>MyLoIndexer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLoMapWPF\MyLoMapWPF.csproj">
+      <Project>{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}</Project>
+      <Name>MyLoMapWPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyLoMap\MyLoMap.csproj">
+      <Project>{D4137806-ECF1-4B95-B0C4-E53487CD353D}</Project>
+      <Name>MyLoMap</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyLoPhotoBrowser\MyLoPhotoBrowser.csproj">
       <Project>{BEA5E538-E0DB-4DCB-A13D-386D1A5E5614}</Project>
