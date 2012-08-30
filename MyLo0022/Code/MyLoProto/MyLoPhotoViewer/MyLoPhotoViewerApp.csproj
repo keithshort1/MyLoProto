@@ -139,10 +139,6 @@
       <Project>{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}</Project>
       <Name>MyLoMapWPF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyLoMap\MyLoMap.csproj">
-      <Project>{D4137806-ECF1-4B95-B0C4-E53487CD353D}</Project>
-      <Name>MyLoMap</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyLoPhotoBrowser\MyLoPhotoBrowser.csproj">
       <Project>{BEA5E538-E0DB-4DCB-A13D-386D1A5E5614}</Project>
       <Name>MyLoPhotoBrowser</Name>

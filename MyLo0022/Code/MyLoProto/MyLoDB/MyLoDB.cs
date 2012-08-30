@@ -472,10 +472,10 @@ namespace MyLoDBNS
             command.CommandText = "WITH locations AS " +
                                     "(WITH photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  FROM photo AS P " +
                                     "       JOIN Activity AS A ON A.activityid = P.activityid " +
-                                    "       WHERE A.geolocationid != 0 AND P.MyLoAccountId = @userid) " +
+                                    "       WHERE A.geolocationid IS NOT NULL AND P.MyLoAccountId = @userid) " +
                                     "UNION " +
                                     "(SELECT uri, datetaken,  gpslat, gpslong, P.geolocationid  FROM photo AS P " +
-                                    "       WHERE P.geolocationid != 0 AND P.MyLoAccountId = @userid))  " +
+                                    "       WHERE P.geolocationid IS NOT NULL AND P.MyLoAccountId = @userid))  " +
                                     "SELECT DISTINCT PH.geolocationid, count(*) FROM photies AS PH " +
                                     "GROUP BY geolocationid) " +
                                     "SELECT L.latitude, L.longitude, locations.count, locationid FROM locations " +
@@ -591,7 +591,7 @@ namespace MyLoDBNS
 
 
         /// <summary>
-        /// Retrieves Photos assigned to a slected Activity in a MyLo DataStore for current account holder
+        /// Retrieves Photos assigned to a selected Activity in a MyLo DataStore for current account holder
         /// </summary>
         /// <param name="userId">An identifier for a MyLo Account</param>
         /// <param name="activityId">An identifier for an Activity</param>
@@ -698,8 +698,40 @@ namespace MyLoDBNS
             }
         }
 
+
         /// <summary>
-        /// Retrieves All Activities in a MyLo DataStore for current account holder which have no parent
+        /// Retrieves All Activities and the Activity Hierarchy in a MyLo DataStore for current account holder
+        /// </summary>
+        /// <param name="userId">An identifier for a MyLoAccount holder</param>
+        public DataSet GetAllActivityHierarchy(long userId)
+        {
+            _conn.Open();
+            DataSet ds = new DataSet();
+            NpgsqlTransaction t = _conn.BeginTransaction();
+            NpgsqlCommand command = new NpgsqlCommand("SetUpCursorsActivitiesAndHierarchy", _conn);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add(new NpgsqlParameter());
+            command.Parameters[0].DbType = DbType.Int64;
+            command.Parameters[0].Value = userId;
+
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter(command);
+
+            da.Fill(ds);
+            t.Commit();
+            _conn.Close();
+            if (ds != null)
+            {
+                return ds;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        /// <summary>
+        /// Retrieves All Root Activities in a MyLo DataStore for current account holder
         /// </summary>
         /// <param name="userId">An identifier for a MyLoAccount holder</param>
         public DataSet GetAllRootActivities(long userId)
@@ -707,8 +739,9 @@ namespace MyLoDBNS
             DataSet ds = new DataSet();
 
             NpgsqlCommand command = new NpgsqlCommand("SELECT A.activityid, A.activityname, A.startdatetime, A.enddatetime FROM activity AS A " +
-                                                        "WHERE A.MyLoAccountId = @userid " +
-                                                        "ORDER BY A.startdatetime, A.locationname ", _conn);
+                                                        "JOIN ActivityHierarchy AS AH ON AH.childactivityid = A.activityid " +
+                                                        "WHERE A.MyLoAccountId = @userid AND AH.parentactivityid IS NULL " +
+                                                        "ORDER BY A.startdatetime, A.activityname ", _conn);
             command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
             command.Parameters[0].Value = userId;
             NpgsqlDataAdapter da = new NpgsqlDataAdapter(command);
@@ -723,8 +756,6 @@ namespace MyLoDBNS
                 return null;
             }
         }
-
-
 
 
         /// <summary>
@@ -759,7 +790,7 @@ namespace MyLoDBNS
         public DataTable GetAllPhotosWithThumbs(long userId)
         {
             DataSet ds = new DataSet();
-
+            
             NpgsqlCommand command = new NpgsqlCommand("SELECT uri, datetaken, camera, gpslat, gpslong, thumbnail FROM photo WHERE MyLoAccountId = @userid", _conn);
             command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
             command.Parameters[0].Value = userId;

@@ -59,6 +59,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.displayMyLoMap = new System.Windows.Forms.Button();
+            this.eventTreeView = new System.Windows.Forms.TreeView();
             ((System.ComponentModel.ISupportInitialize)(this.queryResultsView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -364,12 +365,21 @@
             this.displayMyLoMap.UseVisualStyleBackColor = true;
             this.displayMyLoMap.Click += new System.EventHandler(this.displayMyLoMap_Click);
             // 
+            // eventTreeView
+            // 
+            this.eventTreeView.Location = new System.Drawing.Point(1022, 83);
+            this.eventTreeView.Name = "eventTreeView";
+            this.eventTreeView.Size = new System.Drawing.Size(293, 160);
+            this.eventTreeView.TabIndex = 29;
+            this.eventTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.eventTreeView_AfterSelect);
+            // 
             // MyLoPhotoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1030, 559);
+            this.ClientSize = new System.Drawing.Size(1366, 559);
+            this.Controls.Add(this.eventTreeView);
             this.Controls.Add(this.displayMyLoMap);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -434,6 +444,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buildUsingIntervalGPSfit;
         private System.Windows.Forms.Button displayMyLoMap;
+        private System.Windows.Forms.TreeView eventTreeView;
     }
 }
 

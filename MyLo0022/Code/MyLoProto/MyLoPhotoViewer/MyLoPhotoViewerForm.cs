@@ -44,10 +44,13 @@ namespace MyLoPhotoViewerNS
         List<string> _timePeriodStrings = new List<string>();
         List<string> _locationStrings = new List<string>();
         Dictionary<string, long> _events = new Dictionary<string, long>();
+        Dictionary<string, long> _eventsTree = new Dictionary<string, long>();
         List<string> _eventStrings = new List<string>();
+        List<string> _eventTreeStrings = new List<string>();
         List<string> _partyStrings = new List<string>();
         private string _selectedTimePeriod;
         private string _selectedEvent;
+        private string _selectedTreeEvent;
         private string _selectedLocation;
         private string _selectedParty;
         DataTable timePeriodsDT;
@@ -61,6 +64,7 @@ namespace MyLoPhotoViewerNS
             _photoUri = String.Empty;
             _selectedTimePeriod = String.Empty;
             _selectedEvent = String.Empty;
+            _selectedTreeEvent = String.Empty;
             _selectedLocation = String.Empty;
             _selectedParty = String.Empty;
             timePeriodsDT = new DataTable();
@@ -94,6 +98,7 @@ namespace MyLoPhotoViewerNS
                 PopulateTimePeriodList();
                 PopulateLocationList();
                 PopulateEventList();
+                PopulateEventTreeView();
                 PopulatePeopleList();
                 textBox1.Enabled = false;
                 button1.Enabled = false;
@@ -104,6 +109,67 @@ namespace MyLoPhotoViewerNS
                 MessageBox.Text = String.Format("{0} is not a valid MyLo account - please try again: {1}", this.textBox1.Text, ex.Message);
             }
         }
+
+        private void PopulateEventTreeView()
+        {
+            if (_userId != 0)
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                DataSet results = new DataSet();
+                _eventsTree = new Dictionary<string, long>();
+                _eventTreeStrings = new List<string>();
+                //results = _photoBrowser.GetAllRootEvents();
+                results = _photoBrowser.GetAllEventsHierarchical();
+                DataTable events = results.Tables[0];
+                DataTable hierarchy = results.Tables[1];
+                string eventStr = String.Empty;
+                _eventTreeStrings.Add(eventStr);
+                TreeViewFill(events, hierarchy);
+                Cursor.Current = Cursors.Default;
+            }
+            else
+            {
+                MessageBox.Text = String.Format("Please Enter a Valid MyLo Account Name");
+            }
+        }
+
+        private void TreeViewFill(DataTable events, DataTable hierarchy)
+        {
+            var roots = from e in events.AsEnumerable()
+                        join h in hierarchy.AsEnumerable() on e.Field<long>("activityid") equals h.Field<long>("childactivityid")
+                        where h.Field<long?>("parentactivityid") == null
+                        orderby e.Field<DateTime>("startdatetime"), e.Field<string>("activityname")
+                        select e;
+
+            ProcessEventHierarchy(roots, events, hierarchy, eventTreeView.Nodes);
+        }
+
+        private void ProcessEventHierarchy(IEnumerable<DataRow> parents, DataTable events, DataTable hierarchy, TreeNodeCollection tnc)
+        {
+            foreach (DataRow dr in parents)
+            {
+                string eventStr = String.Format("{0} {1}                                     {2}", dr["startdatetime"], dr["activityname"], dr["activityid"]);
+                long activityid = (long)dr["activityid"];
+                _eventsTree.Add(eventStr, activityid);
+                _eventTreeStrings.Add(eventStr);
+                TreeNode treeNode = new TreeNode(eventStr);
+                tnc.Add(treeNode);
+
+                var children = from e in events.AsEnumerable()
+                               join h in hierarchy.AsEnumerable() on e.Field<long>("activityid") equals h.Field<long>("childactivityid")
+                               where h.Field<long?>("parentactivityid") == activityid
+                               orderby e.Field<DateTime>("startdatetime"), e.Field<string>("activityname")
+                               select e; 
+
+                if (children != null)
+                {
+                    ProcessEventHierarchy(children, events, hierarchy, treeNode.Nodes);
+                }
+            }
+        }
+
+
+
 
         private void PopulateTimePeriodList()
         {
@@ -400,6 +466,13 @@ namespace MyLoPhotoViewerNS
                 _selectedParty = selectedParty;
         }
 
+
+        private void eventTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            _selectedEvent = e.Node.Text;
+        }
+
+
         private void queryBySelectedEvent_Click(object sender, EventArgs e)
         {
             if (_userId != 0)
@@ -567,6 +640,7 @@ namespace MyLoPhotoViewerNS
             peopleListBox.DataSource = null;
             locationListBox.DataSource = null;
             queryResultsView.DataSource = null;
+            eventTreeView.Nodes.Clear();
             timeListBox.BeginUpdate();
             PopulateTimePeriodList();
             timeListBox.EndUpdate();

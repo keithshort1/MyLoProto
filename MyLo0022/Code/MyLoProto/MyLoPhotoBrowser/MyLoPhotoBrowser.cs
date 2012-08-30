@@ -290,6 +290,38 @@ namespace MyLoPhotoBrowserNS
             }
         }
 
+
+        /// <summary>
+        /// Method for returning all Root Events in a given context ebent hierarchy
+        /// </summary>
+        public DataSet GetAllEventsHierarchical()
+        {
+            try
+            {
+                return _myLoStore.GetAllActivityHierarchy(_userId);
+            }
+            catch (MyLoException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+        /// <summary>
+        /// Method for returning all Root Events in a given context ebent hierarchy
+        /// </summary>
+        public DataSet GetAllRootEvents()
+        {
+            try
+            {
+                return _myLoStore.GetAllRootActivities(_userId);
+            }
+            catch (MyLoException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         /// <summary>
         /// Test Method for returning a thumbnail given a MyLo Guid
         /// </summary>
