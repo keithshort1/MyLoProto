@@ -147,19 +147,32 @@ join geolocation as L on L.locationid = locations.geolocationid
 order by locations.geolocationid
 
 -- remove the order by clauses
-With locations AS (With photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  from photo as P
+With locations AS 
+	(With photies AS ((select uri, datetaken, gpslat, gpslong, A.geolocationid  from photo as P
 	join Activity as A on A.activityid = P.activityid
-	where A.geolocationid != 0)
+	where A.geolocationid IS NOT NULL AND P.MyloAccountId = 1)
 union
 (select uri, datetaken,  gpslat, gpslong, P.geolocationid  from photo as P
-	where P.geolocationid != 0)) 
+	where P.geolocationid IS NOT NULL AND P.MyloAccountId = 1)) 
 select DISTINCT PH.geolocationid, count(*) from photies AS PH 
 group by geolocationid)
 select L.latitude, L.longitude, locations.count, locationid from locations 
 join geolocation as L on L.locationid = locations.geolocationid
+Where l.MyloAccountId = 1
 order by locations.geolocationid
 
 
+SELECT A.activityid, A.activityname, A.startdatetime, A.enddatetime FROM activity AS A
+JOIN ActivityHierarchy AS AH ON AH.childactivityid = A.activityid
+WHERE A.MyLoAccountId = 1 AND AH.parentactivityid is null
+ORDER BY A.startdatetime, A.activityname
+
+SELECT A.activityid, A.activityname, A.startdatetime, A.enddatetime FROM activity AS A
+JOIN ActivityHierarchy AS AH ON AH.childactivityid = A.activityid
+WHERE A.MyLoAccountId = 1 AND AH.parentactivityid = 29
+ORDER BY A.startdatetime, A.activityname
+
+select * from activityhierarchy where parentactivityid = 29
 
 select * from partyactivityparticipation
 

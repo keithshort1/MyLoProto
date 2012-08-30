@@ -37,6 +37,7 @@ cd Functions
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f SetUpIndexCursorsUnOrdered.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f SetUpIndexCursorsPhotosAndActivities.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f SetUpIndexCursorsIntervalAndTimePoints.sql -U postgres -d %1
+"c:\Program Files\PostgreSQL\9.0\bin\psql" -f SetUpCursorsActivitiesAndHierarchy.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f UpdatePhotoActivityId.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetActivityAndSubActivities.sql -U postgres -d %1
 "c:\Program Files\PostgreSQL\9.0\bin\psql" -f GetOrInsertAddress.sql -U postgres -d %1
