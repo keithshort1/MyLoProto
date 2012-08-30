@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.MessageBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,7 +48,6 @@
             this.queryButton = new System.Windows.Forms.Button();
             this.timeListBox = new System.Windows.Forms.ListBox();
             this.locationListBox = new System.Windows.Forms.ListBox();
-            this.eventListBox = new System.Windows.Forms.ListBox();
             this.peopleListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,9 +97,9 @@
             this.queryResultsView.AllowUserToAddRows = false;
             this.queryResultsView.AllowUserToDeleteRows = false;
             this.queryResultsView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.queryResultsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.queryResultsView.Location = new System.Drawing.Point(203, 283);
             this.queryResultsView.Name = "queryResultsView";
@@ -124,7 +123,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(560, 283);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(436, 253);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(467, 253);
             this.flowLayoutPanel1.TabIndex = 13;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -259,15 +258,6 @@
             this.locationListBox.TabIndex = 17;
             this.locationListBox.SelectedIndexChanged += new System.EventHandler(this.locationListBox_SelectedIndexChanged);
             // 
-            // eventListBox
-            // 
-            this.eventListBox.FormattingEnabled = true;
-            this.eventListBox.Location = new System.Drawing.Point(720, 83);
-            this.eventListBox.Name = "eventListBox";
-            this.eventListBox.Size = new System.Drawing.Size(276, 160);
-            this.eventListBox.TabIndex = 18;
-            this.eventListBox.SelectedIndexChanged += new System.EventHandler(this.eventListBox_SelectedIndexChanged);
-            // 
             // peopleListBox
             // 
             this.peopleListBox.FormattingEnabled = true;
@@ -367,7 +357,7 @@
             // 
             // eventTreeView
             // 
-            this.eventTreeView.Location = new System.Drawing.Point(1022, 83);
+            this.eventTreeView.Location = new System.Drawing.Point(734, 83);
             this.eventTreeView.Name = "eventTreeView";
             this.eventTreeView.Size = new System.Drawing.Size(293, 160);
             this.eventTreeView.TabIndex = 29;
@@ -378,7 +368,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1366, 559);
+            this.ClientSize = new System.Drawing.Size(1050, 559);
             this.Controls.Add(this.eventTreeView);
             this.Controls.Add(this.displayMyLoMap);
             this.Controls.Add(this.label7);
@@ -387,7 +377,6 @@
             this.Controls.Add(this.queryBySelectedEvent);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.queryButton);
-            this.Controls.Add(this.eventListBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -427,7 +416,6 @@
         private System.Windows.Forms.Button getFacebookContextButton;
         private System.Windows.Forms.ListBox timeListBox;
         private System.Windows.Forms.ListBox locationListBox;
-        private System.Windows.Forms.ListBox eventListBox;
         private System.Windows.Forms.ListBox peopleListBox;
         private System.Windows.Forms.Button queryButton;
         private System.Windows.Forms.Button getTripItContextButton;

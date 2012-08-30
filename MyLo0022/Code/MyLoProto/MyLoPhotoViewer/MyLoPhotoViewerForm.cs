@@ -97,7 +97,7 @@ namespace MyLoPhotoViewerNS
                 MessageBox.Text = String.Format("{0} Signed In to Mylo", this.textBox1.Text);
                 PopulateTimePeriodList();
                 PopulateLocationList();
-                PopulateEventList();
+                //PopulateEventList();
                 PopulateEventTreeView();
                 PopulatePeopleList();
                 textBox1.Enabled = false;
@@ -228,32 +228,32 @@ namespace MyLoPhotoViewerNS
         }
 
 
-        private void PopulateEventList()
-        {
-            if (_userId != 0)
-            {
-                Cursor.Current = Cursors.WaitCursor;
-                DataSet results = new DataSet();
-                _events = new Dictionary<string, long>();
-                _eventStrings = new List<string>();
-                results = _photoBrowser.GetAllEvents();
-                DataTable events = results.Tables[0];
-                string eventStr = String.Empty;
-                _eventStrings.Add(eventStr);
-                foreach (DataRow dr in events.Rows)
-                {
-                    eventStr = String.Format("{0} {1}                                     {2}", dr["startdatetime"], dr["activityname"], dr["activityid"]);
-                    _events.Add(eventStr, (long)dr["activityid"]);
-                    _eventStrings.Add(eventStr);
-                }
-                eventListBox.DataSource = _eventStrings;
-                Cursor.Current = Cursors.Default;
-            }
-            else
-            {
-                MessageBox.Text = String.Format("Please Enter a Valid MyLo Account Name");
-            }
-        }
+        //private void PopulateEventList()
+        //{
+        //    if (_userId != 0)
+        //    {
+        //        Cursor.Current = Cursors.WaitCursor;
+        //        DataSet results = new DataSet();
+        //        _events = new Dictionary<string, long>();
+        //        _eventStrings = new List<string>();
+        //        results = _photoBrowser.GetAllEvents();
+        //        DataTable events = results.Tables[0];
+        //        string eventStr = String.Empty;
+        //        _eventStrings.Add(eventStr);
+        //        foreach (DataRow dr in events.Rows)
+        //        {
+        //            eventStr = String.Format("{0} {1}                                     {2}", dr["startdatetime"], dr["activityname"], dr["activityid"]);
+        //            _events.Add(eventStr, (long)dr["activityid"]);
+        //            _eventStrings.Add(eventStr);
+        //        }
+        //        eventListBox.DataSource = _eventStrings;
+        //        Cursor.Current = Cursors.Default;
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Text = String.Format("Please Enter a Valid MyLo Account Name");
+        //    }
+        //}
 
 
         private void PopulatePeopleList()
@@ -452,12 +452,12 @@ namespace MyLoPhotoViewerNS
                 _selectedLocation = selectedLocation;
         }
 
-        private void eventListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedEvent = (string)eventListBox.SelectedItem;
-            //if (selectedEvent != String.Empty)
-                _selectedEvent = selectedEvent;
-        }
+        //private void eventListBox_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string selectedEvent = (string)eventListBox.SelectedItem;
+        //    //if (selectedEvent != String.Empty)
+        //        _selectedEvent = selectedEvent;
+        //}
 
         private void peopleListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -479,7 +479,7 @@ namespace MyLoPhotoViewerNS
             {
                 // Determine what has been selected in the Event List
                 long eventId = 0;
-                bool eventSelected = _events.TryGetValue(_selectedEvent, out eventId);
+                bool eventSelected = _eventsTree.TryGetValue(_selectedEvent, out eventId);
 
                 if (eventSelected)
                 {
@@ -635,7 +635,7 @@ namespace MyLoPhotoViewerNS
 
         private void RefreshAllBoxes()
         {
-            eventListBox.DataSource = null;
+            //eventListBox.DataSource = null;
             timeListBox.DataSource = null;
             peopleListBox.DataSource = null;
             locationListBox.DataSource = null;
@@ -647,9 +647,9 @@ namespace MyLoPhotoViewerNS
             locationListBox.BeginUpdate();
             PopulateLocationList();
             locationListBox.EndUpdate();
-            eventListBox.BeginUpdate();
-            PopulateEventList();
-            eventListBox.EndUpdate();
+            //eventListBox.BeginUpdate();
+            //PopulateEventList();
+            //eventListBox.EndUpdate();
             peopleListBox.BeginUpdate();
             PopulatePeopleList();
             peopleListBox.EndUpdate();
