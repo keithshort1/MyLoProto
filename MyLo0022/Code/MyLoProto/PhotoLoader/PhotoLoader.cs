@@ -168,7 +168,8 @@ namespace PhotoLoaderNS
                             //{
                             //    Console.WriteLine(tag.FullName);
                             //} 
-                            _myLoStore.AddPhoto(_userId, photo);
+                            long photoId = _myLoStore.AddPhoto(_userId, photo);
+
                             _count++;
 
                             // TODO add code to write back GUID and Hash into photo metadata

@@ -59,5 +59,33 @@ namespace MyLoPhotoViewerNS.Properties {
                 resourceCulture = value;
             }
         }
+        
+        internal static System.Drawing.Bitmap Mylo_on_Gray_With_Tag {
+            get {
+                object obj = ResourceManager.GetObject("Mylo on Gray With Tag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Mylo_on_White_With_Tag__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Mylo on White With Tag (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Mylo_on_White_With_Tag_32x20 {
+            get {
+                object obj = ResourceManager.GetObject("Mylo on White With Tag 32x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Mylo_on_White_With_Tag_96x60 {
+            get {
+                object obj = ResourceManager.GetObject("Mylo on White With Tag 96x60", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

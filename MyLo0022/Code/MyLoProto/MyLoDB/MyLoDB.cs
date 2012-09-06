@@ -84,7 +84,7 @@ namespace MyLoDBNS
         /// </summary>
         /// <param name="userId">An identifier for a MyLoAccount holder</param>
         /// <param name="...">photo meta data</param>
-        public void AddPhoto(long userId, Photo photo)
+        public long AddPhoto(long userId, Photo photo)
         {
             try
             {
@@ -119,6 +119,7 @@ namespace MyLoDBNS
                 command.Parameters[9].Value = photo.PhotoIndexKind;
 
                 Object result = command.ExecuteScalar();
+                return (long)result;
             }
             catch (NpgsqlException npex)
             {
@@ -619,6 +620,46 @@ namespace MyLoDBNS
                 return null;
             }
         }
+
+
+        /// <summary>
+        /// Retrieves Photos assigned to a selected Activity in a MyLo DataStore for current account holder
+        /// </summary>
+        /// <param name="userId">An identifier for a MyLo Account</param>
+        /// <param name="activityId">An identifier for an Activity</param>
+        public DataSet GetPhotosByTextQuery(long userId, string[] keywords)
+        {
+            DataSet ds = new DataSet();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.CommandText = "SELECT P.uri, P.datetaken, P.camera, P.gpslat, P.gpslong, P.thumbnail FROM photo AS P " +
+                                                                "JOIN Keywords AS K ON P.photoid = K.keywordsforitemid " +
+                                                                "WHERE P.myloaccountid = @userid  AND K.MyloAccountId = @userid ";
+            string whereClause = String.Empty;
+            command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
+            command.Parameters[0].Value = userId;
+
+            foreach (string s in keywords)
+            {
+                whereClause += " AND K.Keywords LIKE " + "'%" + s + "%'";
+            }
+
+            command.CommandText += whereClause;
+            command.Connection = _conn;
+            da.SelectCommand = command;
+
+            da.Fill(ds);
+            _conn.Close();
+            if (ds != null)
+            {
+                return ds;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
 
 
         /// <summary>

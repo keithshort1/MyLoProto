@@ -728,5 +728,60 @@ namespace MyLoPhotoViewerNS
             }
         }
 
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            if (_userId != 0)
+            {
+                // Determine what has been select in the Time, Location and People Lists
+                bool timeSelected = _selectedTimePeriod != String.Empty ? true : false;
+                bool locationSelected = _selectedLocation != String.Empty ? true : false;
+                bool partySelected = _selectedParty != String.Empty ? true : false;
+
+                if (queryText.Text == String.Empty)
+                {
+                    MessageBox.Text = String.Format("Enter a list of keywords to use this query.");
+                }
+                else
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    DataSet results = new DataSet();
+
+                    string[] keywords = queryText.Text.Split(',');
+
+                    results = _photoBrowser.GetPhotosByTextQuery(keywords);
+
+                    if (results.Tables.Count != 0)
+                    {
+                        while (flowLayoutPanel1.Controls.Count > 0) { flowLayoutPanel1.Controls.Clear(); }
+                        DataTable photos = new DataTable();
+                        photos = results.Tables[0];
+                        queryResultsView.DataSource = photos;
+                        foreach (DataRow dr in photos.Rows)
+                        {
+                            PictureBox imageControl = new PictureBox();
+                            imageControl.Height = 100;
+                            imageControl.Width = 100;
+
+                            byte[] byteBLOBData = new byte[1];
+                            byteBLOBData = (byte[])(dr["thumbnail"]);
+                            MemoryStream stmBLOBData = new MemoryStream(byteBLOBData);
+                            stmBLOBData.Position = 0;
+                            Image im = Image.FromStream(stmBLOBData);
+
+                            imageControl.Image = im;
+                            imageControl.Enabled = true;
+                            flowLayoutPanel1.Controls.Add(imageControl);
+                        }
+                        Cursor.Current = Cursors.Default;
+                        MessageBox.Text = String.Format("Found {0} photos.", photos.Rows.Count);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Text = String.Format("Please Enter a Valid MyLo Account Name");
+            }
+        }
+
     }
 }

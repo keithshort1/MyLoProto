@@ -161,6 +161,7 @@ CREATE OR REPLACE RULE PreferencesInsteadOfInsert AS ON INSERT TO Preferences
 DROP TABLE IF EXISTS Photo_Base CASCADE;
   
 CREATE TABLE Photo_Base(
+    PhotoId bigint NOT NULL ,
     DateTaken timestamp with time zone ,
     Camera varchar(128)  ,
     Thumbnail bytea  ,
@@ -174,7 +175,7 @@ CREATE TABLE Photo_Base(
     GeoLocationId bigInt ,
     MyLoAccountId bigInt not null,
     TimePeriodId bigint ,
-    Primary Key (UniqueId)
+    Primary Key (PhotoId)
 );
 
 
@@ -189,29 +190,96 @@ CREATE SEQUENCE PhotoSequence;
 DROP VIEW IF EXISTS Photo CASCADE;
   
 CREATE VIEW Photo AS
-        SELECT  v.MyLoAccountId, v.UniqueId, v.DateTaken, v.Camera, v.Thumbnail, v.GpsLat, v.GpsLong, v.Uri, v.Hashcode, v.FolderId, v.ActivityId, v.TimePeriodId, v.GeoLocationId
+        SELECT  v.MyLoAccountId, v.PhotoId, v.UniqueId, v.DateTaken, v.Camera, v.Thumbnail, v.GpsLat, v.GpsLong, v.Uri, v.Hashcode, v.FolderId, v.ActivityId, v.TimePeriodId, v.GeoLocationId
                 FROM Photo_Base AS v;
 
-CREATE OR REPLACE FUNCTION PhotoInsteadOfInsertProc(NEW Photo) RETURNS uuid AS $$
+CREATE OR REPLACE FUNCTION PhotoInsteadOfInsertProc(NEW Photo) RETURNS bigint AS $$
       DECLARE
               _error        boolean;
               _mId          bigint;
+              _pId	    bigint;
       BEGIN
-              
               _mId := (SELECT M.MyLoAccountId FROM MyLoUser_Base AS M WHERE M.MyLoAccountId = NEW.MyLoAccountId);
+              _pId := nextval('PhotoSequence');
               IF _mId IS NULL THEN
                       RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
               ELSE
-                      INSERT INTO Photo_Base (MyLoAccountId, UniqueId, DateTaken, Camera, Thumbnail, GpsLat, GpsLong, Uri, Hashcode, FolderId, ActivityId, TimePeriodId, GeoLocationId)
-                              VALUES (NEW.MyLoAccountId, NEW.UniqueId, NEW.DateTaken, NEW.Camera, NEW.Thumbnail, NEW.GpsLat, NEW.GpsLong, NEW.Uri, NEW.Hashcode, NEW.FolderId, NEW.ActivityId, NEW.TimePeriodId, NEW.GeoLocationId);
+                      INSERT INTO Photo_Base (MyLoAccountId, PhotoId, UniqueId, DateTaken, Camera, Thumbnail, GpsLat, GpsLong, Uri, Hashcode, FolderId, ActivityId, TimePeriodId, GeoLocationId)
+                              VALUES (NEW.MyLoAccountId, _pId, NEW.UniqueId, NEW.DateTaken, NEW.Camera, NEW.Thumbnail, NEW.GpsLat, NEW.GpsLong, NEW.Uri, NEW.Hashcode, NEW.FolderId, NEW.ActivityId, NEW.TimePeriodId, NEW.GeoLocationId);
               END IF;
-              RETURN NEW.UniqueId;
+              RETURN _pId;
       END;
 $$ LANGUAGE plpgsql;
 
 CREATE OR REPLACE RULE PhotoInsteadOfInsert AS ON INSERT TO Photo
       DO INSTEAD
       SELECT PhotoInsteadOfInsertProc(NEW);
+
+
+--
+-- Table Structure for Keywords
+--
+
+DROP SEQUENCE IF EXISTS KeywordsSequence;
+  
+CREATE SEQUENCE KeywordsSequence;
+
+DROP TABLE IF EXISTS Keywords;
+
+CREATE TABLE Keywords_base
+(
+  Keywords character varying(256) NOT NULL,
+  Id bigint NOT NULL,
+  Keywordsforitemid bigint NOT NULL,
+  Keywordsforitemtable character varying(56) NOT NULL,
+  MyLoAccountId bigInt not null,
+  CONSTRAINT keywords_pkey PRIMARY KEY (Id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE keywords OWNER TO postgres;
+
+
+DROP VIEW IF EXISTS Keywords CASCADE;
+  
+CREATE VIEW Keywords AS
+        SELECT  v.MyLoAccountId, v.Keywords, v.Keywordsforitemid, v.Keywordsforitemtable
+                FROM Keywords_Base AS v;
+                
+
+CREATE OR REPLACE FUNCTION KeywordsInsteadOfInsertProc(NEW Keywords) RETURNS bigint AS $$
+      DECLARE
+              _error        boolean;
+              _mId          bigint;
+              _kId	    bigint;
+      BEGIN
+              _mId := (SELECT M.MyLoAccountId FROM MyLoUser_Base AS M WHERE M.MyLoAccountId = NEW.MyLoAccountId);
+              _kId := nextval('KeywordsSequence');
+              IF _mId IS NULL THEN
+                      RAISE EXCEPTION 'MyLoAccountId is % unknown', NEW.MyLoAccountId;
+              ELSE
+                      INSERT INTO Keywords_Base (MyLoAccountId, Id, Keywords, Keywordsforitemid, Keywordsforitemtable)
+                              VALUES (NEW.MyLoAccountId, _kId, NEW.Keywords, NEW.Keywordsforitemid, NEW.Keywordsforitemtable);
+              END IF;
+              RETURN _kId;
+      END;
+$$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE RULE KeywordsInsteadOfInsert AS ON INSERT TO Keywords
+      DO INSTEAD
+      SELECT KeywordsInsteadOfInsertProc(NEW);
+
+-- Index: keywordsforitemabstractrefindex
+
+DROP INDEX IF EXISTS keywordsforitemabstractrefindex;
+
+CREATE INDEX keywordsforitemabstractrefindex
+  ON keywords
+  USING btree
+  (keywordsforitemid, keywordsforitemtable);
+
+
 
 
 --ALTER TABLE Photo_Base ADD CONSTRAINT PhotoFolderId_FolderId FOREIGN KEY (FolderId) REFERENCES Folder_Base (FolderId) On Delete Cascade;

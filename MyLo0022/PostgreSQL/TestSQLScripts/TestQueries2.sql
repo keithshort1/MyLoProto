@@ -176,6 +176,12 @@ select * from activityhierarchy where parentactivityid = 29
 
 select * from partyactivityparticipation
 
+select * from photo_base
+select * from keywords
+
+select * from keywords as K where K.keywords LIKE '%Wine Club%' AND K.Keywords LIKE '%2012%'
+
+
 delete from activity_base where activitykind = 'Calendar'
 delete from activityhierarchy_base
 update photo_base SET activityid = NULL

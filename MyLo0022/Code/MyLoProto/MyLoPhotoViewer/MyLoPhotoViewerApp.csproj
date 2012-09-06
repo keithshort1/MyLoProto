@@ -166,6 +166,18 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mylo on Gray With Tag.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mylo on White With Tag %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mylo on White With Tag 32x20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mylo on White With Tag 96x60.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

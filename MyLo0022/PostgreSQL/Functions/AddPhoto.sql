@@ -7,13 +7,14 @@ DROP FUNCTION IF EXISTS AddPhoto(accountId bigint, uriIn text, uniqueIdIn uuid, 
 CREATE FUNCTION AddPhoto(accountId bigint, uriIn text, uniqueIdIn uuid, crcIn bigint, dateTakenIn timestamp with time zone, 
 				cameraIn text, gpsLatIn double precision, gpsLongIn double precision, 
 				thumbnailIn bytea, timeIndexKind text)
-	RETURNS int 
+	RETURNS bigint 
 	AS $$
 	DECLARE
 		_id 		bigint;
 		_tId		bigint;
 		_lId		bigint;
 		_aId		bigint;
+		_pId		bigint;
 		_year 		double precision;
 		_month 		double precision;
 		_yearText	text;
@@ -42,6 +43,11 @@ CREATE FUNCTION AddPhoto(accountId bigint, uriIn text, uniqueIdIn uuid, crcIn bi
 			_aid = NULL;
 			INSERT INTO Photo (MyLoAccountId, UniqueId, Uri, HashCode, ActivityId, TimePeriodId, GeoLocationId, Camera, DateTaken, GpsLat, GpsLong, Thumbnail) 
 					VALUES (accountId, uniqueIdIn, uriIn, crcIn, _aId, _tId, _lId, cameraIn, dateTakenIn, gpsLatIn, gpsLongIn, thumbnailIn);
+			_pId = (SELECT currval('PhotoSequence'));
+			INSERT INTO Keywords(MyLoAccountId, Keywords, Keywordsforitemid, Keywordsforitemtable) 
+				VALUES(accountId, uriIn, _pId, 'Photo');
+			INSERT INTO Keywords(MyLoAccountId, Keywords, Keywordsforitemid, Keywordsforitemtable) 
+				VALUES(accountId, cameraIn, _pId, 'Photo');		
 			END IF;		
 		RETURN 1;
 	END;

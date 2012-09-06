@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.MessageBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,6 +59,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.displayMyLoMap = new System.Windows.Forms.Button();
             this.eventTreeView = new System.Windows.Forms.TreeView();
+            this.queryText = new System.Windows.Forms.TextBox();
+            this.searchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.queryResultsView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,9 +99,9 @@
             this.queryResultsView.AllowUserToAddRows = false;
             this.queryResultsView.AllowUserToDeleteRows = false;
             this.queryResultsView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.queryResultsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.queryResultsView.Location = new System.Drawing.Point(203, 283);
             this.queryResultsView.Name = "queryResultsView";
@@ -357,11 +359,29 @@
             // 
             // eventTreeView
             // 
-            this.eventTreeView.Location = new System.Drawing.Point(734, 83);
+            this.eventTreeView.Location = new System.Drawing.Point(720, 83);
             this.eventTreeView.Name = "eventTreeView";
-            this.eventTreeView.Size = new System.Drawing.Size(293, 160);
+            this.eventTreeView.Size = new System.Drawing.Size(307, 160);
             this.eventTreeView.TabIndex = 29;
             this.eventTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.eventTreeView_AfterSelect);
+            // 
+            // queryText
+            // 
+            this.queryText.Location = new System.Drawing.Point(492, 248);
+            this.queryText.Multiline = true;
+            this.queryText.Name = "queryText";
+            this.queryText.Size = new System.Drawing.Size(171, 29);
+            this.queryText.TabIndex = 30;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Location = new System.Drawing.Point(663, 249);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(29, 27);
+            this.searchButton.TabIndex = 31;
+            this.searchButton.Text = "Q";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // MyLoPhotoViewer
             // 
@@ -369,6 +389,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1050, 559);
+            this.Controls.Add(this.searchButton);
+            this.Controls.Add(this.queryText);
             this.Controls.Add(this.eventTreeView);
             this.Controls.Add(this.displayMyLoMap);
             this.Controls.Add(this.label7);
@@ -433,6 +455,8 @@
         private System.Windows.Forms.Button buildUsingIntervalGPSfit;
         private System.Windows.Forms.Button displayMyLoMap;
         private System.Windows.Forms.TreeView eventTreeView;
+        private System.Windows.Forms.TextBox queryText;
+        private System.Windows.Forms.Button searchButton;
     }
 }
 

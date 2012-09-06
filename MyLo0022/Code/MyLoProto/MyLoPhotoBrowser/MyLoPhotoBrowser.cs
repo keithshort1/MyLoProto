@@ -195,6 +195,24 @@ namespace MyLoPhotoBrowserNS
         }
 
 
+
+
+        /// <summary>
+        /// Method for returning a all Photos by keyword search
+        /// </summary>
+        public DataSet GetPhotosByTextQuery(string[] keywords)
+        {
+            try
+            {
+                return _myLoStore.GetPhotosByTextQuery(_userId, keywords);
+            }
+            catch (MyLoException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
         // <summary>
         /// Method for returning a all Photos in a given context
         /// </summary>
