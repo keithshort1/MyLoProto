@@ -501,6 +501,46 @@ namespace MyLoDBNS
         }
 
 
+
+        /// <summary>
+        /// Retrieves All Photos in a MyLo DataStore for current account holder
+        /// Grouped by Location ids with count for each Location
+        /// </summary>
+        public DataSet GetPhotosByLocation(long userid, GeoLocation loc)
+        {
+            DataSet ds = new DataSet();
+            NpgsqlDataAdapter da = new NpgsqlDataAdapter();
+            NpgsqlCommand command = new NpgsqlCommand();
+            command.CommandText =   "WITH photies AS " +
+                                    "(SELECT P.uri, P.datetaken, P.gpslat, P.gpslong, P.thumbnail, L.locationid  FROM photo AS P " +
+                                    "       JOIN geolocation AS L ON L.locationId = P.geolocationid " +
+                                    "       WHERE P.MyLoAccountId = @userid AND L.locationid = @locid " +
+                                    "UNION " +
+                                    "SELECT P.uri, P.datetaken,  P.gpslat, P.gpslong, P.thumbnail, L.locationid  FROM photo AS P " +
+                                    "       JOIN Activity AS A ON P.activityid = A.activityid " +
+                                    "       JOIN geolocation AS L ON A.geolocationid = L.locationid " +
+                                    "       WHERE P.MyLoAccountId = @userid AND L.locationid = @locid)  " +
+                                    "SELECT DISTINCT uri, datetaken,  gpslat, gpslong, locationid, thumbnail FROM photies AS PH " +
+                                    "ORDER BY PH.datetaken ";
+            command.Parameters.Add(new NpgsqlParameter("userid", DbType.Int64));
+            command.Parameters[0].Value = userid;
+            command.Parameters.Add(new NpgsqlParameter("locid", DbType.Int64));
+            command.Parameters[1].Value = loc.LocationId;
+            command.Connection = _conn;
+            da.SelectCommand = command;
+
+            da.Fill(ds);
+            _conn.Close();
+            if (ds != null)
+            {
+                return ds;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         /// <summary>
         /// Retrieves Selected Photos in a MyLo DataStore for current account holder
         /// Using Dimension Ids

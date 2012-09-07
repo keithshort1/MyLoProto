@@ -198,6 +198,25 @@ namespace MyLoPhotoBrowserNS
 
 
         /// <summary>
+        /// Method for returning a all Photos for a given event in a given context
+        /// </summary>
+        public DataSet GetPhotosByLocation(long locationId)
+        {
+            try
+            {
+                GeoLocation g = new GeoLocation();
+                g.LocationId = locationId;
+                return _myLoStore.GetPhotosByLocation(_userId, g);
+            }
+            catch (MyLoException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+
+
+        /// <summary>
         /// Method for returning a all Photos by keyword search
         /// </summary>
         public DataSet GetPhotosByTextQuery(string[] keywords)

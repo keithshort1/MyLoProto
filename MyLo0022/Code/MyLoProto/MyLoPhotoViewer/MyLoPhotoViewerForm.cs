@@ -647,9 +647,9 @@ namespace MyLoPhotoViewerNS
             locationListBox.BeginUpdate();
             PopulateLocationList();
             locationListBox.EndUpdate();
-            //eventListBox.BeginUpdate();
-            //PopulateEventList();
-            //eventListBox.EndUpdate();
+            eventTreeView.BeginUpdate();
+            PopulateEventTreeView();
+            eventTreeView.EndUpdate();
             peopleListBox.BeginUpdate();
             PopulatePeopleList();
             peopleListBox.EndUpdate();
@@ -696,30 +696,17 @@ namespace MyLoPhotoViewerNS
         {
             if (_userId != 0)
             {
-                DataSet results  = new DataSet();
-                 
-                results = _photoBrowser.GetPhotosGroupedByLocation();
-
-                if (results.Tables.Count != 0)
+                MyLoMapWPF.MyLoMap myloMap = new MyLoMapWPF.MyLoMap();
+                try
                 {
-                    DataTable locations = new DataTable();
-                    locations = results.Tables[0];
-                    MyLoMapWPF.MyLoMap myloMap = new MyLoMapWPF.MyLoMap();
-                    try
-                    {
-                        myloMap.InitializeComponent();
-                        myloMap.PassedTable = locations;
-                        myloMap.DisplayMap();
-                        myloMap.Show();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Text = ex.Message;
-                    }
+                    myloMap.InitializeComponent();
+                    myloMap.PassedBrowser = _photoBrowser;
+                    myloMap.DisplayMap();
+                    myloMap.Show();
                 }
-                else
+                catch (Exception ex)
                 {
-                    textBox3.Text = String.Format("No Photos to Display on Map");
+                    MessageBox.Text = ex.Message;
                 }
             }
             else
@@ -732,11 +719,6 @@ namespace MyLoPhotoViewerNS
         {
             if (_userId != 0)
             {
-                // Determine what has been select in the Time, Location and People Lists
-                bool timeSelected = _selectedTimePeriod != String.Empty ? true : false;
-                bool locationSelected = _selectedLocation != String.Empty ? true : false;
-                bool partySelected = _selectedParty != String.Empty ? true : false;
-
                 if (queryText.Text == String.Empty)
                 {
                     MessageBox.Text = String.Format("Enter a list of keywords to use this query.");
@@ -781,6 +763,11 @@ namespace MyLoPhotoViewerNS
             {
                 MessageBox.Text = String.Format("Please Enter a Valid MyLo Account Name");
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLoCalendarContextReaderAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLoMapWPF", "MyLoMapWPF\MyLoMapWPF.csproj", "{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapPushpinPhotoDisplay", "MapPushpinPhotoDisplay\MapPushpinPhotoDisplay.csproj", "{F4B3B45F-5D20-48A3-A902-C5965C9DED42}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = MyLoProto.vsmdi
@@ -184,6 +186,16 @@ Global
 		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|Mixed Platforms.Build.0 = Release|x86
 		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|x86.ActiveCfg = Release|x86
 		{70B00DED-48AA-4BDE-A4E0-1B473E143F5B}.Release|x86.Build.0 = Release|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Debug|x86.ActiveCfg = Debug|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Debug|x86.Build.0 = Debug|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Release|Any CPU.ActiveCfg = Release|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Release|x86.ActiveCfg = Release|x86
+		{F4B3B45F-5D20-48A3-A902-C5965C9DED42}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

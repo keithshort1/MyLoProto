@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.MessageBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,7 +42,6 @@
             this.getTripItContextButton = new System.Windows.Forms.Button();
             this.getCalendarContextButton = new System.Windows.Forms.Button();
             this.catalogPhotosButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.getFacebookContextButton = new System.Windows.Forms.Button();
             this.queryBySelectedEvent = new System.Windows.Forms.Button();
             this.queryButton = new System.Windows.Forms.Button();
@@ -61,6 +60,7 @@
             this.eventTreeView = new System.Windows.Forms.TreeView();
             this.queryText = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.queryResultsView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -99,9 +99,9 @@
             this.queryResultsView.AllowUserToAddRows = false;
             this.queryResultsView.AllowUserToDeleteRows = false;
             this.queryResultsView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.queryResultsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.queryResultsView.Location = new System.Drawing.Point(203, 283);
             this.queryResultsView.Name = "queryResultsView";
@@ -141,12 +141,12 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.buildUsingIntervalGPSfit);
             this.panel1.Controls.Add(this.loadPhotosButton);
             this.panel1.Controls.Add(this.getTripItContextButton);
             this.panel1.Controls.Add(this.getCalendarContextButton);
             this.panel1.Controls.Add(this.catalogPhotosButton);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.query3);
             this.panel1.Controls.Add(this.getFacebookContextButton);
             this.panel1.Location = new System.Drawing.Point(8, 12);
@@ -203,14 +203,6 @@
             this.catalogPhotosButton.UseVisualStyleBackColor = true;
             this.catalogPhotosButton.Click += new System.EventHandler(this.catalogPhotosButton_Click);
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(8, 3);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(162, 126);
-            this.textBox3.TabIndex = 1;
-            // 
             // getFacebookContextButton
             // 
             this.getFacebookContextButton.Location = new System.Drawing.Point(8, 135);
@@ -235,7 +227,7 @@
             // 
             this.queryButton.Location = new System.Drawing.Point(203, 249);
             this.queryButton.Name = "queryButton";
-            this.queryButton.Size = new System.Drawing.Size(193, 28);
+            this.queryButton.Size = new System.Drawing.Size(194, 28);
             this.queryButton.TabIndex = 15;
             this.queryButton.Text = "Get Photos By Selected Dimension";
             this.queryButton.UseVisualStyleBackColor = true;
@@ -283,9 +275,10 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(397, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Locations";
+            this.label2.Text = "Addresses";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -383,6 +376,14 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(8, 7);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(160, 118);
+            this.textBox3.TabIndex = 17;
+            // 
             // MyLoPhotoViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,7 +435,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button catalogPhotosButton;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button getFacebookContextButton;
         private System.Windows.Forms.ListBox timeListBox;
         private System.Windows.Forms.ListBox locationListBox;
@@ -457,6 +457,7 @@
         private System.Windows.Forms.TreeView eventTreeView;
         private System.Windows.Forms.TextBox queryText;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
 

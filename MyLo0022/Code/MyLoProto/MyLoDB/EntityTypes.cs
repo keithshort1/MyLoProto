@@ -43,7 +43,7 @@ namespace MyLoDBNS
 
     public class Address
     {
-        public long LocationId { get; set; }
+        public long AddressId { get; set; }
         public string Street { get; set; }
         public string City { get; set; }
         public string State { get; set; }
@@ -59,6 +59,23 @@ namespace MyLoDBNS
             this.State = String.Empty;
             this.Zip = String.Empty;
             this.Country = String.Empty;
+            this.Latitude = 0;
+            this.Longitude = 0;
+        }
+    }
+
+    public class GeoLocation
+    {
+        public long LocationId { get; set; }
+        public string LocationName { get; set; }
+        public string LocationKind { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+
+        public GeoLocation()
+        {
+            this.LocationName = String.Empty;
+            this.LocationKind = String.Empty;
             this.Latitude = 0;
             this.Longitude = 0;
         }

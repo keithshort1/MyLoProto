@@ -172,14 +172,27 @@ JOIN ActivityHierarchy AS AH ON AH.childactivityid = A.activityid
 WHERE A.MyLoAccountId = 1 AND AH.parentactivityid = 29
 ORDER BY A.startdatetime, A.activityname
 
+WITH photies AS 
+(SELECT p.uri, p.datetaken, p.gpslat, p.gpslong, l.locationid from photo AS P
+JOIN Geolocation AS L ON L.LocationId = P.geolocationid
+WHERE P.MyLoAccountId = 1 AND L.locationid = 10
+UNION
+SELECT p.uri, p.datetaken, p.gpslat, p.gpslong, l.locationid FROM photo AS P 
+join activity as A on p.activityid = A.activityid
+join geolocation AS L on A.geolocationid = L.locationid
+WHERE P.MyLoAccountId = 1 AND L.locationid = 10)
+SELECT DISTINCT * FROM photies
+
 select * from activityhierarchy where parentactivityid = 29
 
 select * from partyactivityparticipation
 
 select * from photo_base
 select * from keywords
+select * from geolocation
+select * from activity
 
-select * from keywords as K where K.keywords LIKE '%Wine Club%' AND K.Keywords LIKE '%2012%'
+select * from keywords as K where K.keywords LIKE '%Summer%' AND K.Keywords LIKE '%Cruise%'
 
 
 delete from activity_base where activitykind = 'Calendar'
@@ -187,4 +200,5 @@ delete from activityhierarchy_base
 update photo_base SET activityid = NULL
 delete from activity_base
 delete from photo_base
+delete from keywords_base
 ALTER TABLE activityHierarchy_base ALTER COLUMN parentactivityId DROP NOT NULL;
