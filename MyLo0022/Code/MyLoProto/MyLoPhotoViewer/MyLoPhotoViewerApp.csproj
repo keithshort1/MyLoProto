@@ -111,6 +111,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DisplayOnePhoto\DisplayOnePhoto.csproj">
+      <Project>{0007EF4E-090F-469A-A046-E43651489BD7}</Project>
+      <Name>DisplayOnePhoto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FacebookContextApp\FacebookContextApp.csproj">
       <Project>{D2ACDD72-0DBC-483A-9FD2-31992FD93B29}</Project>
       <Name>FacebookContextApp</Name>

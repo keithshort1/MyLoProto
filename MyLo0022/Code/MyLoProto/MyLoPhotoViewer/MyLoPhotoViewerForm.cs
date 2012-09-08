@@ -29,6 +29,7 @@ using MyLoPhotoViewerNS.BingMapsGeocode;
 using GPSlookupNS;
 using MyLoDBNS;
 using MyLoMapWPF;
+using DisplayOnePhoto;
 
 
 
@@ -301,30 +302,7 @@ namespace MyLoPhotoViewerNS
                  
                 results = _photoBrowser.GetAllPhotos();
 
-                if (results != null)
-                {
-                    DataTable photos = new DataTable();
-                    photos = results.Tables[0];
-                    queryResultsView.DataSource = photos;
-                    foreach (DataRow dr in photos.Rows)
-                    {
-                        PictureBox imageControl = new PictureBox();
-                        imageControl.Height = 100;
-                        imageControl.Width = 100;
-
-                        byte[] byteBLOBData = new byte[1];
-                        byteBLOBData = (byte[])(dr["thumbnail"]);
-                        MemoryStream stmBLOBData = new MemoryStream(byteBLOBData);
-                        stmBLOBData.Position = 0;
-                        Image im = Image.FromStream(stmBLOBData);
-
-                        imageControl.Image = im;
-                        imageControl.Enabled = true;
-                        flowLayoutPanel1.Controls.Add(imageControl);
-                    }
-                    Cursor.Current = Cursors.Default;
-                    MessageBox.Text = String.Format("Found {0} photos.", photos.Rows.Count);
-                }
+                PopulateFlowControlWithThumbs(results);
             }
             else
             {
@@ -403,31 +381,7 @@ namespace MyLoPhotoViewerNS
                         results = _photoBrowser.GetPhotosByDimensionFields(country, city.Trim(), year, month, day, _selectedParty);
                     }
 
-                    if (results.Tables.Count != 0)
-                    {
-                        while (flowLayoutPanel1.Controls.Count > 0) { flowLayoutPanel1.Controls.Clear(); }
-                        DataTable photos = new DataTable();
-                        photos = results.Tables[0];
-                        queryResultsView.DataSource = photos;
-                        foreach (DataRow dr in photos.Rows)
-                        {
-                            PictureBox imageControl = new PictureBox();
-                            imageControl.Height = 100;
-                            imageControl.Width = 100;
-
-                            byte[] byteBLOBData = new byte[1];
-                            byteBLOBData = (byte[])(dr["thumbnail"]);
-                            MemoryStream stmBLOBData = new MemoryStream(byteBLOBData);
-                            stmBLOBData.Position = 0;
-                            Image im = Image.FromStream(stmBLOBData);
-
-                            imageControl.Image = im;
-                            imageControl.Enabled = true;
-                            flowLayoutPanel1.Controls.Add(imageControl);
-                        }
-                        Cursor.Current = Cursors.Default;
-                        MessageBox.Text = String.Format("Found {0} photos.", photos.Rows.Count);
-                    }
+                    PopulateFlowControlWithThumbs(results);
                 }
             }
             else
@@ -488,35 +442,7 @@ namespace MyLoPhotoViewerNS
 
                     results = _photoBrowser.GetPhotosByActivity(eventId);
 
-                    if (results.Tables.Count != 0)
-                    {
-                        while (flowLayoutPanel1.Controls.Count > 0) { flowLayoutPanel1.Controls.Clear(); }
-                        DataTable photos = new DataTable();
-                        photos = results.Tables[0];
-                        queryResultsView.DataSource = photos;
-                        foreach (DataRow dr in photos.Rows)
-                        {
-                            PictureBox imageControl = new PictureBox();
-                            imageControl.Height = 100;
-                            imageControl.Width = 100;
-
-                            byte[] byteBLOBData = new byte[1];
-                            byteBLOBData = (byte[])(dr["thumbnail"]);
-                            MemoryStream stmBLOBData = new MemoryStream(byteBLOBData);
-                            stmBLOBData.Position = 0;
-                            Image im = Image.FromStream(stmBLOBData);
-
-                            imageControl.Image = im;
-                            imageControl.Enabled = true;
-                            flowLayoutPanel1.Controls.Add(imageControl);
-                        }
-                        Cursor.Current = Cursors.Default;
-                        MessageBox.Text = String.Format("Found {0} photos.", photos.Rows.Count);
-                    }
-                    else
-                    {
-                        MessageBox.Text = String.Format("No photos found.");
-                    }
+                    PopulateFlowControlWithThumbs(results);
                 }
                 else
                 {
@@ -728,41 +654,62 @@ namespace MyLoPhotoViewerNS
                     Cursor.Current = Cursors.WaitCursor;
                     DataSet results = new DataSet();
 
-                    string[] keywords = queryText.Text.Split(',');
+                    string[] keywords = queryText.Text.Split(' ');
 
                     results = _photoBrowser.GetPhotosByTextQuery(keywords);
 
-                    if (results.Tables.Count != 0)
-                    {
-                        while (flowLayoutPanel1.Controls.Count > 0) { flowLayoutPanel1.Controls.Clear(); }
-                        DataTable photos = new DataTable();
-                        photos = results.Tables[0];
-                        queryResultsView.DataSource = photos;
-                        foreach (DataRow dr in photos.Rows)
-                        {
-                            PictureBox imageControl = new PictureBox();
-                            imageControl.Height = 100;
-                            imageControl.Width = 100;
-
-                            byte[] byteBLOBData = new byte[1];
-                            byteBLOBData = (byte[])(dr["thumbnail"]);
-                            MemoryStream stmBLOBData = new MemoryStream(byteBLOBData);
-                            stmBLOBData.Position = 0;
-                            Image im = Image.FromStream(stmBLOBData);
-
-                            imageControl.Image = im;
-                            imageControl.Enabled = true;
-                            flowLayoutPanel1.Controls.Add(imageControl);
-                        }
-                        Cursor.Current = Cursors.Default;
-                        MessageBox.Text = String.Format("Found {0} photos.", photos.Rows.Count);
-                    }
+                    PopulateFlowControlWithThumbs(results);
                 }
             }
             else
             {
                 MessageBox.Text = String.Format("Please Enter a Valid MyLo Account Name");
             }
+        }
+
+        private void PopulateFlowControlWithThumbs(DataSet results)
+        {
+            if (results.Tables.Count != 0)
+            {
+                while (flowLayoutPanel1.Controls.Count > 0) { flowLayoutPanel1.Controls.Clear(); }
+                DataTable photos = new DataTable();
+                photos = results.Tables[0];
+                queryResultsView.DataSource = photos;
+                foreach (DataRow dr in photos.Rows)
+                {
+                    PictureBox imageControl = new PictureBox();
+                    imageControl.Height = 100;
+                    imageControl.Width = 100;
+
+                    byte[] byteBLOBData = new byte[1];
+                    byteBLOBData = (byte[])(dr["thumbnail"]);
+                    MemoryStream stmBLOBData = new MemoryStream(byteBLOBData);
+                    stmBLOBData.Position = 0;
+                    Image im = Image.FromStream(stmBLOBData);
+
+                    imageControl.Image = im;
+                    imageControl.Enabled = true;
+                    imageControl.MouseClick += new MouseEventHandler(Image_MouseClick);
+                    imageControl.Tag = (string)dr["uri"];
+                    flowLayoutPanel1.Controls.Add(imageControl);
+                }
+                Cursor.Current = Cursors.Default;
+                MessageBox.Text = String.Format("Found {0} photos.", photos.Rows.Count);
+            }
+            else
+            {
+                MessageBox.Text = String.Format("No photos found.");
+            }
+        }
+
+        public void Image_MouseClick(object sender, EventArgs e)
+        {
+            PictureBox tempImage = (PictureBox)sender;
+            string uri = tempImage.Tag.ToString();
+
+            OnePhoto op = new OnePhoto();
+            op.Uri = uri;
+            op.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)

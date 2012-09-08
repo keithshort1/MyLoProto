@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F4B3B45F-5D20-48A3-A902-C5965C9DED42}</ProjectGuid>
+    <ProjectGuid>{0007EF4E-090F-469A-A046-E43651489BD7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MapPushpinPhotoDisplay</RootNamespace>
-    <AssemblyName>MapPushpinPhotoDisplay</AssemblyName>
+    <RootNamespace>DisplayOnePhoto</RootNamespace>
+    <AssemblyName>DisplayOnePhoto</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PushpinPhotos.cs">
+    <Compile Include="OnePhoto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PushpinPhotos.Designer.cs">
-      <DependentUpon>PushpinPhotos.cs</DependentUpon>
+    <Compile Include="OnePhoto.Designer.cs">
+      <DependentUpon>OnePhoto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PushpinPhotos.resx">
-      <DependentUpon>PushpinPhotos.cs</DependentUpon>
+    <EmbeddedResource Include="OnePhoto.resx">
+      <DependentUpon>OnePhoto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,12 +75,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DisplayOnePhoto\DisplayOnePhoto.csproj">
-      <Project>{0007EF4E-090F-469A-A046-E43651489BD7}</Project>
-      <Name>DisplayOnePhoto</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
