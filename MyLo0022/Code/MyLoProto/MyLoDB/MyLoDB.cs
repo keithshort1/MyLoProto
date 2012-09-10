@@ -230,6 +230,8 @@ namespace MyLoDBNS
         {
             try
             {
+                
+                
                 NpgsqlCommand command = new NpgsqlCommand("AddActivityHierarchical", _conn);
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -293,6 +295,7 @@ namespace MyLoDBNS
                 command.Parameters[24].DbType = DbType.Int64;
                 command.Parameters[24].Value = 0;
                 Debug.WriteLine("AddActivity Loc is: {0}, {1}, {2}, {3}, {4}", command.Parameters[19].Value, command.Parameters[20].Value, command.Parameters[21].Value, command.Parameters[22].Value, command.Parameters[23].Value);
+                Debug.WriteLine("AddActivity Time is: {0}, {1}", command.Parameters[4].Value, command.Parameters[5].Value);
                 long result = (long)command.ExecuteScalar();
                 return result;
             }
@@ -318,7 +321,7 @@ namespace MyLoDBNS
         {
             try
             {
-                indexer.InitializeMyLoIndexer(userId, _conn);
+                indexer.InitializeMyLoIndexer(userId, _conn, this);
                 return indexer.ExecuteIndexerOnDataStore();
             }
             catch (Exception ex)

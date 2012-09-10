@@ -1,4 +1,4 @@
-﻿select * from activity
+﻿Keithselect * from activity
 
 select * from address
 
@@ -187,7 +187,7 @@ select * from activityhierarchy where parentactivityid = 29
 
 select * from partyactivityparticipation
 
-select * from photo_base
+select photoid, datetaken, uri from photo_base order by datetaken
 select * from keywords
 select * from geolocation
 select * from activity

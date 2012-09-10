@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.MessageBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,6 +37,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.buildUsingIntervalGPSfit = new System.Windows.Forms.Button();
             this.loadPhotosButton = new System.Windows.Forms.Button();
             this.getTripItContextButton = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@
             this.eventTreeView = new System.Windows.Forms.TreeView();
             this.queryText = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.queryResultsView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -99,9 +100,9 @@
             this.queryResultsView.AllowUserToAddRows = false;
             this.queryResultsView.AllowUserToDeleteRows = false;
             this.queryResultsView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.queryResultsView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.queryResultsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.queryResultsView.Location = new System.Drawing.Point(203, 283);
             this.queryResultsView.Name = "queryResultsView";
@@ -112,7 +113,7 @@
             // 
             // query3
             // 
-            this.query3.Location = new System.Drawing.Point(8, 264);
+            this.query3.Location = new System.Drawing.Point(8, 292);
             this.query3.Name = "query3";
             this.query3.Size = new System.Drawing.Size(162, 27);
             this.query3.TabIndex = 12;
@@ -141,6 +142,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.buildUsingIntervalGPSfit);
             this.panel1.Controls.Add(this.loadPhotosButton);
@@ -153,6 +155,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 523);
             this.panel1.TabIndex = 15;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(8, 7);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(160, 118);
+            this.textBox3.TabIndex = 17;
             // 
             // buildUsingIntervalGPSfit
             // 
@@ -176,7 +186,7 @@
             // 
             // getTripItContextButton
             // 
-            this.getTripItContextButton.Location = new System.Drawing.Point(8, 326);
+            this.getTripItContextButton.Location = new System.Drawing.Point(8, 354);
             this.getTripItContextButton.Name = "getTripItContextButton";
             this.getTripItContextButton.Size = new System.Drawing.Size(162, 26);
             this.getTripItContextButton.TabIndex = 14;
@@ -185,7 +195,7 @@
             // 
             // getCalendarContextButton
             // 
-            this.getCalendarContextButton.Location = new System.Drawing.Point(8, 297);
+            this.getCalendarContextButton.Location = new System.Drawing.Point(8, 325);
             this.getCalendarContextButton.Name = "getCalendarContextButton";
             this.getCalendarContextButton.Size = new System.Drawing.Size(162, 23);
             this.getCalendarContextButton.TabIndex = 13;
@@ -376,13 +386,15 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // textBox3
+            // button2
             // 
-            this.textBox3.Location = new System.Drawing.Point(8, 7);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 118);
-            this.textBox3.TabIndex = 17;
+            this.button2.Location = new System.Drawing.Point(8, 265);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(162, 23);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Build Clustered Index";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MyLoPhotoViewer
             // 
@@ -458,6 +470,7 @@
         private System.Windows.Forms.TextBox queryText;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button2;
     }
 }
 

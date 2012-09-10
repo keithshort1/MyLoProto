@@ -22,7 +22,7 @@ $$ LANGUAGE SQL;
 
 
 --- TESTS ---------------------
-select GetActivityAndSubActivities(1, 566)
+--select GetActivityAndSubActivities(1, 566)
 
-select datetaken, uri from photo AS P
-	join GetActivityAndSubActivities(1, 563) on P.activityId = GetActivityAndSubActivities
+--select datetaken, uri from photo AS P
+--	join GetActivityAndSubActivities(1, 563) on P.activityId = GetActivityAndSubActivities

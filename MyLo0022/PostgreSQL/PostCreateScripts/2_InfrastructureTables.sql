@@ -224,7 +224,7 @@ DROP SEQUENCE IF EXISTS KeywordsSequence;
   
 CREATE SEQUENCE KeywordsSequence;
 
-DROP TABLE IF EXISTS Keywords;
+DROP TABLE IF EXISTS Keywords_base CASCADE;
 
 CREATE TABLE Keywords_base
 (
@@ -238,7 +238,7 @@ CREATE TABLE Keywords_base
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE keywords OWNER TO postgres;
+ALTER TABLE keywords_base OWNER TO postgres;
 
 
 DROP VIEW IF EXISTS Keywords CASCADE;
@@ -275,7 +275,7 @@ CREATE OR REPLACE RULE KeywordsInsteadOfInsert AS ON INSERT TO Keywords
 DROP INDEX IF EXISTS keywordsforitemabstractrefindex;
 
 CREATE INDEX keywordsforitemabstractrefindex
-  ON keywords
+  ON keywords_base
   USING btree
   (keywordsforitemid, keywordsforitemtable);
 
@@ -283,8 +283,8 @@ CREATE INDEX keywordsforitemabstractrefindex
 
 
 --ALTER TABLE Photo_Base ADD CONSTRAINT PhotoFolderId_FolderId FOREIGN KEY (FolderId) REFERENCES Folder_Base (FolderId) On Delete Cascade;
-ALTER TABLE Photo_Base ADD CONSTRAINT PhotoGeoLocationId_GeoLocationId FOREIGN KEY (GeoLocationId) REFERENCES GeoLocation_Base (GeoLocationId) On Delete Cascade;
-ALTER TABLE Photo_Base ADD CONSTRAINT PhotoActivityId_ActivityId FOREIGN KEY (ActivityId) REFERENCES Activity_Base (ActivityId) On Delete Cascade;
+--ALTER TABLE Photo_Base ADD CONSTRAINT PhotoGeoLocationId_GeoLocationId FOREIGN KEY (GeoLocationId) REFERENCES GeoLocation_Base (GeoLocationId) On Delete No Action;
+--ALTER TABLE Photo_Base ADD CONSTRAINT PhotoActivityId_ActivityId FOREIGN KEY (ActivityId) REFERENCES Activity_Base (ActivityId) On Delete No Action;
 ALTER TABLE UserProfile_Base ADD CONSTRAINT UserProfileUserId_MyLoAccountId FOREIGN KEY (UserId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
 ALTER TABLE UserProfile_Base ADD CONSTRAINT UserProfileMyLoAccountId FOREIGN KEY (MyLoAccountId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;
 ALTER TABLE Preferences_Base ADD CONSTRAINT PreferencesUserId_MyLoAccountId FOREIGN KEY (UserId) REFERENCES MyLoUser_Base (MyLoAccountId) On Delete Cascade;

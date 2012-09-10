@@ -26,6 +26,7 @@ namespace MyLoDBNS
         private NpgsqlConnection _conn;
         private long _userId;
         private int _countIndexed;
+        MyLoDB _store;
 
         public SimpleIntervalGpsFitIndexer()
         {
@@ -36,10 +37,11 @@ namespace MyLoDBNS
         /// </summary>
         /// <param name="userId">A validated MyLo Account Id</param>
         /// <param name="conn">A validated MyLoDB connection</param>
-        public void InitializeMyLoIndexer(long userId, NpgsqlConnection conn)
+        public void InitializeMyLoIndexer(long userId, NpgsqlConnection conn, MyLoDB store)
         {
             _conn = conn;
             _userId = userId;
+            _store = store;
         }
 
         /// <summary>

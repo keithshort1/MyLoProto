@@ -9,7 +9,7 @@ namespace MyLoDBNS
 {
     public interface IMyLoIndexer
     {
-        void InitializeMyLoIndexer(long userId, NpgsqlConnection conn);
+        void InitializeMyLoIndexer(long userId, NpgsqlConnection conn, MyLoDB store);
 
         int ExecuteIndexerOnDataStore();
     }

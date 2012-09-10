@@ -717,5 +717,38 @@ namespace MyLoPhotoViewerNS
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Build Index using Clustering
+            LinearClusterMyLoIndexer clusterIndexer = new LinearClusterMyLoIndexer();
+            MyLoIndexer indexer = new MyLoIndexer(clusterIndexer);
+            indexer.UserLogin(_userId);
+            Stopwatch stopWatch = new Stopwatch();
+            Cursor.Current = Cursors.WaitCursor;
+            stopWatch.Start();
+            if (_userId != 0)
+            {
+                try
+                {
+                    int count = indexer.StartIndexing();
+                    TimeSpan ts = stopWatch.Elapsed;
+                    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+                        ts.Hours, ts.Minutes, ts.Seconds,
+                        ts.Milliseconds / 10);
+                    textBox3.Text = String.Format("Finished Indexing; Time: {0}; Number: {1}", elapsedTime, count);
+                    RefreshAllBoxes();
+                    Cursor.Current = Cursors.Default;
+                }
+                catch (Exception ex)
+                {
+                    textBox3.Text = String.Format(ex.Message);
+                }
+            }
+            else
+            {
+                textBox3.Text = String.Format("Please Enter a Valid MyLo Account Name");
+            }
+        }
+
     }
 }
